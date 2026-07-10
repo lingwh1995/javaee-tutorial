@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.bluebridge</groupId>
-        <artifactId>06-netty-io</artifactId>
+        <artifactId>07-netty-line</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>chapter-01-03-jdk-aio</artifactId>
+    <artifactId>chapter-02-02-line-server</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -18,25 +18,21 @@
     </properties>
 
     <dependencies>
-        <!-- netty开始 -->
+        <!-- 公共包开始 -->
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
+            <groupId>org.bluebridge</groupId>
+            <artifactId>chapter-02-01-line-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!-- netty结束 -->
-        <!-- lombok开始 -->
+        <!-- 公共包结束 -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- lombk结束 -->
-
-        <!-- logback开始 -->
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
-        <!-- logback结束 -->
 
         <!-- junit开始 -->
         <dependency>
@@ -44,5 +40,13 @@
             <artifactId>junit</artifactId>
         </dependency>
         <!-- junit结束 -->
+
+        <!-- netty开始 -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
+        <!-- netty结束 -->
+
     </dependencies>
 </project>
