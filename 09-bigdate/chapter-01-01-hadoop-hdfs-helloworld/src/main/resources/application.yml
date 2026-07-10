@@ -1,12 +1,8 @@
-spring:
-  kafka:
-    # 配置kafka连接地址
-    bootstrap-servers: 192.168.0.5:9092
-    # 配置生产者
-    #producer:
-    # 配置消费者
-    consumer:
-      auto-offset-reset: earliest
-    template:
-      default-topic: hello-topic
+server:
+  port: 8080
 
+hdfs:
+  # HDFS NameNode 地址
+  uri: hdfs://hadoop21:9000
+  # 访问 HDFS 的用户
+  user: hadoop
