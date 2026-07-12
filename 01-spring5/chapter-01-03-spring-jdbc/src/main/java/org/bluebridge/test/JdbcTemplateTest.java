@@ -1,5 +1,4 @@
 package org.bluebridge.test;
-import	java.util.HashMap;
 
 import org.bluebridge.domain.Account;
 import org.junit.Test;
@@ -15,6 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import	java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

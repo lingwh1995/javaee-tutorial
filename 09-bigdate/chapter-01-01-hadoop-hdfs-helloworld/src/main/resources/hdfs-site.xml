@@ -1,0 +1,5 @@
+<!-- HDFS 文件数据块副本数量 -->
+<property>
+    <name>dfs.replication</name>
+    <value>5</value>
+</property>

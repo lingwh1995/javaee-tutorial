@@ -1,10 +1,12 @@
 package org.bluebridge.hdfs.config;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * HDFS 配置属性
  */
+@Data
 @ConfigurationProperties(prefix = "hdfs")
 public class HdfsProperties {
 
@@ -17,20 +19,4 @@ public class HdfsProperties {
      * HDFS 用户
      */
     private String user = "hadoop";
-
-    public String getUri() {
-        return uri;
-    }
-
-    public void setUri(String uri) {
-        this.uri = uri;
-    }
-
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
 }

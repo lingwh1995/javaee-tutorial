@@ -1,7 +1,7 @@
 package org.bluebridge.hdfs.controller;
 
 import org.apache.hadoop.fs.FileStatus;
-import org.bluebridge.hdfs.service.HdfsService;
+import org.bluebridge.hdfs.service.IHdfsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +18,7 @@ import java.util.List;
 public class HdfsController {
 
     @Autowired
-    private HdfsService hdfsService;
+    private IHdfsService hdfsService;
 
     /**
      * 创建目录

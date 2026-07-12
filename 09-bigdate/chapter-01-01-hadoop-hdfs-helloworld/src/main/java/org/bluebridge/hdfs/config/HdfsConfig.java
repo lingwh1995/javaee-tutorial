@@ -20,7 +20,6 @@ public class HdfsConfig {
     @Bean
     public FileSystem fileSystem(HdfsProperties hdfsProperties) throws Exception {
         Configuration configuration = new Configuration();
-        configuration.set("fs.defaultFS", hdfsProperties.getUri());
         return FileSystem.get(new URI(hdfsProperties.getUri()), configuration, hdfsProperties.getUser());
     }
 }
