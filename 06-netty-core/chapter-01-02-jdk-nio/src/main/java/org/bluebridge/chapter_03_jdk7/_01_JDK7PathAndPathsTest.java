@@ -7,8 +7,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
+ * JDK7 新增的 Path 和 Paths 类（ Path 用来表示文件路径、 Paths 是工具类，用来获取 Path 实例）
+ *
  * @author lingwh
- * @desc JDK7 新增的 Path 和 Paths 类（ Path 用来表示文件路径、 Paths 是工具类，用来获取 Path 实例）
  * @date 2025/6/25 16:05
  */
 @Slf4j
@@ -44,5 +45,4 @@ public class _01_JDK7PathAndPathsTest {
         log.info("path: {}", path);
         log.info("正常化路径： {}", path.normalize());
     }
-
 }

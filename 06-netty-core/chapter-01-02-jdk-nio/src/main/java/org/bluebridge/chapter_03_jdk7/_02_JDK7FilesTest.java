@@ -9,8 +9,9 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * JDK7 新增的 Files 类
+ *
  * @author lingwh
- * @desc JDK7 新增的 Files 类
  * @date 2025/6/25 16:05
  */
 @Slf4j
@@ -28,8 +29,9 @@ public class _02_JDK7FilesTest {
 
         /**
          * 创建一级目录
-         *  如果目录已存在，会抛异常 FileAlreadyExistsException
-         *  不能一次创建多级目录，否则会抛异常 NoSuchFileException
+         *
+         * 如果目录已存在，会抛异常 FileAlreadyExistsException
+         * 不能一次创建多级目录，否则会抛异常 NoSuchFileException
          */
 //        path = Paths.get("files/d1");
 //        log.info("绝对路径: {}", path.toAbsolutePath());
@@ -44,35 +46,38 @@ public class _02_JDK7FilesTest {
 
     /**
      * 测试JDK7 新增的 Files 类拷贝文件
-     *  如果文件已存在，会抛异常 FileAlreadyExistsException
-     *  如果希望用 source 覆盖掉 target，需要用 StandardCopyOption 来控制
-     *  Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
+     *
+     * 如果文件已存在，会抛异常 FileAlreadyExistsException
+     * 如果希望用 source 覆盖掉 target，需要用 StandardCopyOption 来控制
+     * Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
      */
     @Test
     public void testJDK7FilesCopyFile() throws IOException {
         Path source = Paths.get("files/files-copy.txt");
         Path target = Paths.get("files/target-copy.txt");
-        //Files.copy(source, target);
+        // Files.copy(source, target);
         Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
     }
 
     /**
      * 测试JDK7 新增的 Files 类移动文件
-     *  如果文件已存在，会抛异常 FileAlreadyExistsException
-     *  StandardCopyOption.ATOMIC_MOVE 保证文件移动的原子性
-     *  Files.move(source, target, StandardCopyOption.ATOMIC_MOVE);
+     *
+     * 如果文件已存在，会抛异常 FileAlreadyExistsException
+     * StandardCopyOption.ATOMIC_MOVE 保证文件移动的原子性
+     * Files.move(source, target, StandardCopyOption.ATOMIC_MOVE);
      */
     @Test
     public void testJDK7FilesMoveFile() throws IOException {
         Path source = Paths.get("files/files-move.txt");
         Path target = Paths.get("files/target-move.txt");
-        //Files.move(source, target);
+        // Files.move(source, target);
         Files.move(source, target, StandardCopyOption.ATOMIC_MOVE);
     }
 
     /**
      * 测试JDK7 新增的 Files 类删除文件
-     *  如果文件不存在，会抛异常 NoSuchFileException
+     *
+     * 如果文件不存在，会抛异常 NoSuchFileException
      */
     @Test
     public void testJDK7FilesDeleteFile() throws IOException {
@@ -82,7 +87,8 @@ public class _02_JDK7FilesTest {
 
     /**
      * 测试JDK7 新增的 Files 类删除文件夹
-     *  如果目录还有内容，会抛异常 DirectoryNotEmptyException
+     *
+     * 如果目录还有内容，会抛异常 DirectoryNotEmptyException
      */
     @Test
     public void testJDK7FilesDeleteDir() throws IOException {
@@ -189,5 +195,4 @@ public class _02_JDK7FilesTest {
         long end = System.currentTimeMillis();
         log.info("end - start: {}", end - start);
     }
-
 }

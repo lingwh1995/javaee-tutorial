@@ -1,6 +1,5 @@
 package org.bluebridge.chapter_01_aio;
 
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.bluebridge.ByteBufferUtil;
 
@@ -12,8 +11,9 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 /**
+ * 基于 AIO 的文件通道读取测试
+ *
  * @author lingwh
- * @desc
  * @date 2025/7/16 18:34
  */
 @Slf4j
@@ -45,5 +45,4 @@ public class _01_FileChannelTest {
         // 默认文件 AIO 使用的线程都是守护线程，所以最后要执行 System.in.read() 以避免守护线程意外结束
         System.in.read();
     }
-
 }

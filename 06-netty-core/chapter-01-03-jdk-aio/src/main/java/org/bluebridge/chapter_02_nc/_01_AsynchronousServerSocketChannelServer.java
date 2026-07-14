@@ -11,8 +11,9 @@ import java.nio.channels.CompletionHandler;
 import java.nio.charset.Charset;
 
 /**
+ * 基于 AIO 的服务器端
+ *
  * @author lingwh
- * @desc 基于 AIO 的服务器端
  * @date 2025/7/18 11:48
  */
 @Slf4j
@@ -38,7 +39,9 @@ public class _01_AsynchronousServerSocketChannelServer {
     }
 
     private static class ReadHandler implements CompletionHandler<Integer, ByteBuffer> {
+
         private final AsynchronousSocketChannel sc;
+
         public ReadHandler(AsynchronousSocketChannel sc) {
             this.sc = sc;
         }
@@ -69,6 +72,7 @@ public class _01_AsynchronousServerSocketChannelServer {
     }
 
     private static class WriteHandler implements CompletionHandler<Integer, ByteBuffer> {
+
         private final AsynchronousSocketChannel sc;
 
         private WriteHandler(AsynchronousSocketChannel sc) {
@@ -91,6 +95,7 @@ public class _01_AsynchronousServerSocketChannelServer {
     }
 
     private static class AcceptHandler implements CompletionHandler<AsynchronousSocketChannel, Object> {
+
         private final AsynchronousServerSocketChannel ssc;
 
         public AcceptHandler(AsynchronousServerSocketChannel ssc) {
@@ -118,5 +123,4 @@ public class _01_AsynchronousServerSocketChannelServer {
             exc.printStackTrace();
         }
     }
-
 }

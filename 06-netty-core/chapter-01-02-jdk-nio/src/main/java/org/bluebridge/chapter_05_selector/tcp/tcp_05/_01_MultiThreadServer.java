@@ -10,18 +10,17 @@ import java.nio.channels.*;
 import java.util.Iterator;
 
 /**
- * @author lingwh
- * @desc 使用 多线程 + selector 实现Server（单个worker版）
- * @date 2025/6/29 9:24
- */
-
-/**
+ * 使用 多线程 + selector 实现Server（单个worker版）
+ *
  * V1.0 客户端无法与服务端可以建立连接，无法正常通信
  *
  * 客户端无法与服务端通信成功原因分析
- *      // 在 worker-0 线程中执行 => main() => worker.register(); => thread.start(); => selector.select(); => selector 阻塞  //会导致 selector 阻塞(处于阻塞状态时其他通道上的事件无法被注册到这个 selector 上)
- *      // 在 boss 线程中执行 => main() => sc.register(worker.selector, SelectionKey.OP_READ, null); => OP_READ事件注册失败
- *      上面 selector 和下面 worker.selector 是同一个对象，上面的方法会导致 selector 阻塞(处于阻塞状态时其他通道上的事件无法被注册到这个 selector 上)，所以下面的方法无法把Channel注册到同一个 selector 中
+ * 1. 在 worker-0 线程中执行 => main() => worker.register(); => thread.start(); => selector.select(); => selector 阻塞  //会导致 selector 阻塞(处于阻塞状态时其他通道上的事件无法被注册到这个 selector 上)
+ * 2. 在 boss 线程中执行 => main() => sc.register(worker.selector, SelectionKey.OP_READ, null); => OP_READ事件注册失败
+ * 3. 上面 selector 和下面 worker.selector 是同一个对象，上面的方法会导致 selector 阻塞(处于阻塞状态时其他通道上的事件无法被注册到这个 selector 上)，所以下面的方法无法把Channel注册到同一个 selector 中
+ *
+ * @author lingwh
+ * @date 2025/6/29 9:24
  */
 @Slf4j
 public class _01_MultiThreadServer {
@@ -63,13 +62,15 @@ public class _01_MultiThreadServer {
     }
 
     static class Worker implements Runnable {
+
         private Thread thread;
         private Selector selector;
         private String name;
+        private volatile boolean start = false;
+
         public Worker(String name) {
             this.name = name;
         }
-        private volatile boolean start = false;
 
         public void init() throws IOException {
             if(!start) {
@@ -105,5 +106,4 @@ public class _01_MultiThreadServer {
             }
         }
     }
-
 }

@@ -1,6 +1,5 @@
 package org.bluebridge.chapter_05_selector.tcp.tcp_02;
 
-
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -14,8 +13,9 @@ import java.nio.charset.Charset;
 import java.util.Iterator;
 
 /**
+ * 写服务器-没有解决写大量数据阻塞问题
+ *
  * @author lingwh
- * @desc 写服务器-没有解决写大量数据阻塞问题
  * @date 2025/6/28 9:06
  */
 @Slf4j
@@ -30,7 +30,7 @@ public class _01_WriteServer {
 
         Selector selector = Selector.open();
         ssc.register(selector, SelectionKey.OP_ACCEPT);
-        // 6.绑定端口号
+        // 6. 绑定端口号
         ssc.bind(new InetSocketAddress(HOST, PORT));
 
         while (true) {
@@ -61,5 +61,4 @@ public class _01_WriteServer {
             }
         }
     }
-
 }

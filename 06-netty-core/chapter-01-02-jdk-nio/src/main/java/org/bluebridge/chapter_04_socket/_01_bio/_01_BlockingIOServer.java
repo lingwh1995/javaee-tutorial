@@ -11,18 +11,16 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * @author lingwh
- * @desc 阻塞方式实现网络通信-基于 BIO 的流理解阻塞通信模型
- * @date 2025/7/7 18:01
- */
-
-/**
- * BIO 模型网络通信 Server 端
- *  V1.0 服务端接收单个客户端多条消息发送和接收需求
+ * 阻塞方式实现网络通信-基于 BIO 的流理解阻塞通信模型
+ *
+ * BIO 模型网络通信 Server 端 - V1.0 服务端接收单个客户端多条消息发送和接收需求
  *
  * 测试方法
- *  1.cmd -> telnet 127.0.0.1 8080/telnet localhost 8080 -> 直接输入内容（只能发送单个字符）/按下Ctrl+]后输入 send + 内容（可以发送字符串） -> 查看idea控制台接收到的信息
- *  2.启动多个客户端
+ * 1. cmd -> telnet 127.0.0.1 8080/telnet localhost 8080 -> 直接输入内容（只能发送单个字符）/按下Ctrl+]后输入 send + 内容（可以发送字符串） -> 查看idea控制台接收到的信息
+ * 2. 启动多个客户端
+ *
+ * @author lingwh
+ * @date 2025/7/7 18:01
  */
 @Slf4j
 public class _01_BlockingIOServer {
@@ -33,17 +31,17 @@ public class _01_BlockingIOServer {
     public static void main(String[] args) {
         BufferedReader bufferedReader = null;
         try {
-            // 1.创建ServerSocket
+            // 1. 创建ServerSocket
             ServerSocket serverSocket = new ServerSocket();
             serverSocket.bind(new InetSocketAddress(HOST, PORT));
             log.info("阻塞服务器启动，端口：{}......", PORT);
-            // 2.获取Socket
+            // 2. 获取Socket
             Socket socket = serverSocket.accept();
-            // 3.获取输入流
+            // 3. 获取输入流
             InputStream socketInputStream = socket.getInputStream();
-            // 4.获取包装后的输入流
+            // 4. 获取包装后的输入流
             bufferedReader = new BufferedReader(new InputStreamReader(socketInputStream));
-            // 5.读取数据
+            // 5. 读取数据
             String message = null;
             while((message = bufferedReader.readLine()) != null) {
                 log.info("来自客户端的消息: {}", message);
@@ -61,5 +59,4 @@ public class _01_BlockingIOServer {
             }
         }
     }
-
 }
