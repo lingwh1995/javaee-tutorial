@@ -1,6 +1,5 @@
 package org.bluebridge.chapter_05_selector.tcp.tcp_02;
 
-
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -14,8 +13,9 @@ import java.nio.charset.Charset;
 import java.util.Iterator;
 
 /**
+ * 写服务器-解决了写大量数据阻塞问题
+ *
  * @author lingwh
- * @desc 写服务器-解决了写大量数据阻塞问题
  * @date 2025/6/28 9:06
  */
 @Slf4j
@@ -75,5 +75,4 @@ public class _02_WriteServer {
             log.info("实际写入字节: {}", totalCount);
         }
     }
-
 }

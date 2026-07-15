@@ -15,12 +15,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 /**
- * @author lingwh
- * @desc 使用 多线程 + selector 实现 Server
- * @date 2025/6/29 15:43
- */
-
-/**
+ * 使用 多线程 + selector 实现 Server
+ *
  * V6.0 客户端与服务端可以建立连接，可以正常通信（多个 worker 版）
  *
  * tag:1 处代码解决了问题
@@ -28,7 +24,10 @@ import java.util.stream.IntStream;
  * 核心思路：保证 sc.register(selector, SelectionKey.OP_READ, null); 执行之前， selector 处于非阻塞状态
  *
  * worker 数量建议设置为cpu核心数
- *      使用 Runtime.getRuntime().availableProcessors() 获取cpu核心数，docker 下获取的是物理机核心数，而非 docker 容器核心数，所以手工指定最好
+ *   使用 Runtime.getRuntime().availableProcessors() 获取cpu核心数，docker 下获取的是物理机核心数，而非 docker 容器核心数，所以手工指定最好
+ *
+ * @author lingwh
+ * @date 2025/6/29 15:43
  */
 @Slf4j
 public class _06_MultiThreadServer {
@@ -47,7 +46,7 @@ public class _06_MultiThreadServer {
         log.info("非阻塞TCP Selector服务器启动，IP：{}，端口：{}......", HOST, PORT);
 
         // 创建固定数量的 worker
-        //Worker[] workers = new Worker[Runtime.getRuntime().availableProcessors()];  // 获取cpu核心数
+        // Worker[] workers = new Worker[Runtime.getRuntime().availableProcessors()];  // 获取cpu核心数
         Worker[] workers = new Worker[3];
         IntStream.range(0, 3).forEach(i -> {
             workers[i] = new Worker("worker-" + i);
@@ -63,7 +62,7 @@ public class _06_MultiThreadServer {
                     SocketChannel sc = ssc.accept();
                     sc.configureBlocking(false);
                     log.info("connected......{}", sc.getRemoteAddress());
-                    // 2.关联worker中的selector
+                    // 2. 关联worker中的selector
                     log.info("before register......{}", sc.getRemoteAddress());
                     workers[index.getAndIncrement() % workers.length].init(sc);  // boss线程调用，初始化selector，启动worker
                     log.info("after register......{}", sc.getRemoteAddress());
@@ -73,13 +72,15 @@ public class _06_MultiThreadServer {
     }
 
     static class Worker implements Runnable {
+
         private Thread thread;
         private Selector selector;
         private String name;
+        private volatile boolean start = false;
+
         public Worker(String name) {
             this.name = name;
         }
-        private volatile boolean start = false;
 
         public void init(SocketChannel sc) throws IOException {
             if(!start) {
@@ -118,5 +119,4 @@ public class _06_MultiThreadServer {
             }
         }
     }
-
 }

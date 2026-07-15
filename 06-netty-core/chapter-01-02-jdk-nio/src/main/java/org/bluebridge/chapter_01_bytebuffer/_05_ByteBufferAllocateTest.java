@@ -6,8 +6,9 @@ import org.junit.Test;
 import java.nio.ByteBuffer;
 
 /**
+ * ByteBuffer 分配空间的两种方式
+ *
  * @author lingwh
- * @desc ByteBuffer 分配空间的两种方式
  * @date 2025/6/22 11:19
  */
 @Slf4j
@@ -26,5 +27,4 @@ public class _05_ByteBufferAllocateTest {
          */
         log.info("直接内存: {}", ByteBuffer.allocateDirect(10).getClass());
     }
-
 }

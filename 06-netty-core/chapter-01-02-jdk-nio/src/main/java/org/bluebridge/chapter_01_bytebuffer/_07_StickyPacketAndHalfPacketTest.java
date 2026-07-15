@@ -7,8 +7,9 @@ import org.junit.Test;
 import java.nio.ByteBuffer;
 
 /**
+ * 处理黏包和半包
+ *
  * @author lingwh
- * @desc 处理黏包和半包
  * @date 2025/6/23 16:35
  */
 @Slf4j
@@ -44,6 +45,7 @@ public class _07_StickyPacketAndHalfPacketTest {
 
     /**
      * 拆包
+     *
      * @param source
      */
     private static void splitPacket(ByteBuffer source) {
@@ -64,5 +66,4 @@ public class _07_StickyPacketAndHalfPacketTest {
         }
         source.compact();
     }
-
 }

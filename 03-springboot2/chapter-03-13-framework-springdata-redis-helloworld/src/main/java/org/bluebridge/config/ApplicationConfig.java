@@ -9,8 +9,11 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 
 /**
  * 自定义RedisTempalte
- * @author ronin
+ *
+ * @author lingwh
+ * @date 2026/7/13 9:00
  */
+
 @Configuration
 public class ApplicationConfig {
 
@@ -23,10 +26,10 @@ public class ApplicationConfig {
     public RedisTemplate<Object, User> userRedisTemplate(RedisConnectionFactory redisConnectionFactory){
         RedisTemplate<Object, User> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(redisConnectionFactory);
-        //设置默认的Json处理器,支持的Json处理器请查看RedisSerializer这个接口
-            //如果不设置,Json转换使用的是JdkSerializationRedisSerializer
+        // 设置默认的Json处理器,支持的Json处理器请查看RedisSerializer这个接口
+            // 如果不设置,Json转换使用的是JdkSerializationRedisSerializer
         Jackson2JsonRedisSerializer<User> serializer = new Jackson2JsonRedisSerializer(User.class);
         redisTemplate.setDefaultSerializer(serializer);
         return redisTemplate;
     }
- }
+}

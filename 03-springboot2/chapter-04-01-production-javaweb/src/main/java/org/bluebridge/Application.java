@@ -5,7 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 /**
- * @author ronin
+ * SpringBoot应用启动类
+ *
+ * @author lingwh
+ * @date 2019/11/19 11:28
  */
 @ServletComponentScan
 @SpringBootApplication
@@ -14,5 +17,4 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
-
 }

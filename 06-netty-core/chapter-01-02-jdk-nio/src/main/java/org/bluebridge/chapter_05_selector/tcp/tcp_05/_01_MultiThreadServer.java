@@ -51,7 +51,7 @@ public class _01_MultiThreadServer {
                     SocketChannel sc = ssc.accept();
                     sc.configureBlocking(false);
                     log.info("connected......{}", sc.getRemoteAddress());
-                    // 2.关联worker中的selector
+                    // 2. 关联worker中的selector
                     log.info("before register......{}", sc.getRemoteAddress());
                     SelectionKey selectionKey = sc.register(worker.selector, SelectionKey.OP_READ, null); // 在boss线程中执行
                     log.info("selectionKey: {}", selectionKey);

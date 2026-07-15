@@ -5,11 +5,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
- * @author ronin
+ * 应用程序启动类
+ *
+ * @author lingwh
+ * @date 2019/11/19 11:28
  */
 @EnableScheduling
 @SpringBootApplication
 public class Application {
+
     //https://blog.csdn.net/qq_45087487/article/details/132063403
     //https://www.w3cschool.cn/quartz_doc/quartz_doc-h4ux2cq6.html
     public static void main(String[] args) {

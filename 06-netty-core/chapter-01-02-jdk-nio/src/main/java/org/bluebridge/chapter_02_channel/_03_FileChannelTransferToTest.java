@@ -7,11 +7,9 @@ import java.io.*;
 import java.nio.channels.FileChannel;
 
 /**
+ * NIO中 FileChannel 的 transferTo() 方法测试
  *
- */
-/**
  * @author lingwh
- * @desc NIO中 FileChannel 的 transferTo() 方法测试
  * @date 2025/6/24 17:08
  */
 @Slf4j
@@ -66,5 +64,4 @@ public class _03_FileChannelTransferToTest {
         long end = System.nanoTime();
         log.info("transferTo 用时: {} 秒", (end - start) / 1000_000_000.0);
     }
-
 }

@@ -7,8 +7,9 @@ import org.junit.Test;
 import java.nio.ByteBuffer;
 
 /**
+ * ByteBuffer 读数据测试
+ *
  * @author lingwh
- * @desc ByteBuffer 读数据测试
  * @date 2025/6/21 10:19
  */
 @Slf4j
@@ -34,5 +35,4 @@ public class _04_ByteBufferReadTest {
         String s = new String(b);
         log.info("s: {}", s);
     }
-
 }

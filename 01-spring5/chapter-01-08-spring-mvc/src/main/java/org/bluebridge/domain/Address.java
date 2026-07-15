@@ -1,9 +1,10 @@
 package org.bluebridge.domain;
 
 /**
+ * Address实体类
+ *
  * @author lingwh
- * @desc   Address实体类
- * @date   2019/6/18 14:09
+ * @date 2019/6/18 14:09
  */
 public class Address {
 
@@ -41,6 +42,5 @@ public class Address {
                 ", city='" + city + '\'' +
                 '}';
     }
-
 }
 

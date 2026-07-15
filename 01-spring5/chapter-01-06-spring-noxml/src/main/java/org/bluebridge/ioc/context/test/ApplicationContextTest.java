@@ -6,9 +6,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
+ * 测试ApplicationContext
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/7 8:21
+ * @date 2019/4/7 8:21
  */
 public class ApplicationContextTest {
 

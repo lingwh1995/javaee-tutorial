@@ -4,7 +4,10 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 /**
- * @author ronin
+ * 异步任务无返回结果服务类
+ *
+ * @author lingwh
+ * @date 2026/7/15 14:08
  */
 @Service
 public class AsyncTaskSuccessWithoutReturnResultService {
@@ -14,7 +17,7 @@ public class AsyncTaskSuccessWithoutReturnResultService {
      * @throws InterruptedException
      */
     @Async
-    public void task1() throws InterruptedException{
+    public void task1() throws InterruptedException {
         long currentTimeMillis = System.currentTimeMillis();
         Thread.sleep(1000);
         long currentTimeMillis1 = System.currentTimeMillis();
@@ -26,7 +29,7 @@ public class AsyncTaskSuccessWithoutReturnResultService {
      * @throws InterruptedException
      */
     @Async
-    public void task2() throws InterruptedException{
+    public void task2() throws InterruptedException {
         long currentTimeMillis = System.currentTimeMillis();
         Thread.sleep(2000);
         long currentTimeMillis1 = System.currentTimeMillis();
@@ -38,7 +41,7 @@ public class AsyncTaskSuccessWithoutReturnResultService {
      * @throws InterruptedException
      */
     @Async
-    public void task3() throws InterruptedException{
+    public void task3() throws InterruptedException {
         long currentTimeMillis = System.currentTimeMillis();
         Thread.sleep(3000);
         long currentTimeMillis1 = System.currentTimeMillis();

@@ -7,9 +7,11 @@ import org.springframework.context.annotation.Configuration;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
-
-/**
- * @author ronin
+ /**
+ * 缓存配置类
+ *
+ * @author lingwh
+ * @date 2026/7/13 9:00
  */
 @Configuration
 public class ApplicationConfig {
@@ -21,7 +23,7 @@ public class ApplicationConfig {
      * @return
      */
     @Bean("myKeyGenerator")
-    public KeyGenerator keyGenerator(){
+    public KeyGenerator keyGenerator() {
         return new KeyGenerator() {
             @Override
             public Object generate(Object o, Method method, Object... objects) {

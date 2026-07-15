@@ -39,8 +39,8 @@ public class _01_FileChannelTest {
                     log.info("读取到的数据：{}", (char)b);
                 }
                 // 6. 一次循环后切换为写模式 [ 复位position limit指针（动不了实际数据） ]
-                //buffer.clear();
-                buffer.compact(); //从上次未读完的地方向前移动，并沿着未读完数据的最后一位往后写
+                // buffer.clear();
+                buffer.compact(); // 从上次未读完的地方向前移动，并沿着未读完数据的最后一位往后写
             }
         }
     }

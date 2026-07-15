@@ -13,17 +13,16 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 
 /**
- * @author lingwh
- * @desc 使用 多线程 + selector 实现 Server（单个 worker 版）
- * @date 2025/6/29 14:28
- */
-
-/**
+ * 使用 多线程 + selector 实现 Server（单个 worker 版）
+ *
  * V5.0 客户端与服务端可以建立连接，可以正常通信
  *
  * tag:1 处代码解决了问题
  *
  * 核心思路：保证 sc.register(selector, SelectionKey.OP_READ, null); 执行之前，selector处于非阻塞状态
+ *
+ * @author lingwh
+ * @date 2025/6/29 14:28
  */
 @Slf4j
 public class _05_MultiThreadServer {
@@ -64,13 +63,15 @@ public class _05_MultiThreadServer {
     }
 
     static class Worker implements Runnable {
+
         private Thread thread;
         private Selector selector;
         private String name;
+        private volatile boolean start = false;
+
         public Worker(String name) {
             this.name = name;
         }
-        private volatile boolean start = false;
 
         public void init() throws IOException {
             if(!start) {
@@ -108,5 +109,4 @@ public class _05_MultiThreadServer {
             }
         }
     }
-
 }

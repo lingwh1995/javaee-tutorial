@@ -5,9 +5,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
+ * 测试无XML配置的AOP
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/14 12:40
+ * @date 2019/4/14 12:40
  */
 public class AopNoXmlTest {
 
@@ -18,5 +19,4 @@ public class AopNoXmlTest {
         int result = caculator.div(10, 2);
         System.out.println(result);
     }
-
 }

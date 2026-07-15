@@ -11,17 +11,16 @@ import java.util.Iterator;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
- * @author lingwh
- * @desc 使用 多线程 + selector 实现 Server
- * @date 2025/6/29 10:12
- */
-
-/**
+ * 使用 多线程 + selector 实现 Server
+ *
  * V3.0 客户端与服务端可以建立连接，可以正常通信（单个worker版）
  *
  * tag:1 和 tag:2 处代码解决了问题
  *
  * 核心思路：保证 sc.register(selector, SelectionKey.OP_READ, null); 执行之前，selector处于非阻塞状态
+ *
+ * @author lingwh
+ * @date 2025/6/29 10:12
  */
 @Slf4j
 public class _03_MultiThreadServer {
@@ -51,7 +50,7 @@ public class _03_MultiThreadServer {
                     SocketChannel sc = ssc.accept();
                     sc.configureBlocking(false);
                     log.info("connected......{}", sc.getRemoteAddress());
-                    // 2.关联 worker 中的selector
+                    // 2. 关联 worker 中的selector
                     log.info("before register......{}", sc.getRemoteAddress());
                     worker.init(sc);
                     log.info("after register......{}", sc.getRemoteAddress());
@@ -61,14 +60,16 @@ public class _03_MultiThreadServer {
     }
 
     static class Worker implements Runnable {
+
         private Thread thread;
         private Selector selector;
         private String name;
+        private volatile boolean start = false;
+        private ConcurrentLinkedQueue<Runnable> tasks = new ConcurrentLinkedQueue<>();
+
         public Worker(String name) {
             this.name = name;
         }
-        private volatile boolean start = false;
-        private ConcurrentLinkedQueue<Runnable> tasks = new ConcurrentLinkedQueue<>();
 
         public void init(SocketChannel sc) throws IOException {
             if(!start) {
@@ -118,5 +119,4 @@ public class _03_MultiThreadServer {
             }
         }
     }
-
 }

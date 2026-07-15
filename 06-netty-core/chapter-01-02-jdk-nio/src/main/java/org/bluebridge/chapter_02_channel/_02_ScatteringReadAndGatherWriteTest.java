@@ -12,8 +12,9 @@ import java.nio.channels.FileChannel;
 import java.nio.charset.StandardCharsets;
 
 /**
+ * NIO 中 FileChannel 的分散读和集中写
+ *
  * @author lingwh
- * @desc NIO 中 FileChannel 的分散读和集中写
  * @date 2025/6/24 16:08
  */
 @Slf4j
@@ -59,5 +60,4 @@ public class _02_ScatteringReadAndGatherWriteTest {
             throw new RuntimeException(e);
         }
     }
-
 }

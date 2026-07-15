@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.HashMap;
 import java.util.Map;
 
-
 /**
  * 测试异步调度失败
- * @author ronin
+ *
+ * @author lingwh
+ * @date 2026/7/15 11:20
  */
 @RequestMapping("/async")
 @Controller
@@ -26,7 +27,7 @@ public class AsyncTaskFailController {
      */
     @ResponseBody
     @RequestMapping("/test-async-fail")
-    public Map<String,String> doTaskFail() throws InterruptedException{
+    public Map<String,String> doTaskFail() throws InterruptedException {
         System.out.println("方法开始执行了......");
         long currentTimeMillis = System.currentTimeMillis();
         this.task1();
@@ -40,9 +41,8 @@ public class AsyncTaskFailController {
         return map;
     }
 
-
     @Async
-    public void task1() throws InterruptedException{
+    public void task1() throws InterruptedException {
         long currentTimeMillis = System.currentTimeMillis();
         Thread.sleep(1000);
         long currentTimeMillis1 = System.currentTimeMillis();
@@ -50,7 +50,7 @@ public class AsyncTaskFailController {
     }
 
     @Async
-    public void task2() throws InterruptedException{
+    public void task2() throws InterruptedException {
         long currentTimeMillis = System.currentTimeMillis();
         Thread.sleep(2000);
         long currentTimeMillis1 = System.currentTimeMillis();
@@ -58,7 +58,7 @@ public class AsyncTaskFailController {
     }
 
     @Async
-    public void task3() throws InterruptedException{
+    public void task3() throws InterruptedException {
         long currentTimeMillis = System.currentTimeMillis();
         Thread.sleep(3000);
         long currentTimeMillis1 = System.currentTimeMillis();

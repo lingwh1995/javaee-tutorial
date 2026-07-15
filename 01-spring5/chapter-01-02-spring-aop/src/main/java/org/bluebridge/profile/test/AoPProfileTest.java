@@ -9,9 +9,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 
 /**
+ * 测试基于配置文件的AOP
+ *
  * @author lingwh
- * @desc   测试基于配置文件的AOP
- * @date   2019/3/21 9:55
+ * @date 2019/3/21 9:55
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext-aop-profile.xml")
@@ -21,25 +22,27 @@ public class AoPProfileTest {
     private CustomerDao customerDao;
 
     @Test
-    public void fun1(){
+    public void fun1() {
         customerDao.save();
     }
 
     /**
      * 测试环绕通知发生异常仍然可以执行
+     *
      * @throws Exception
      */
     @Test
-    public void fun2()  throws Exception{
+    public void fun2() throws Exception {
         customerDao.aroundMethod();
     }
 
     /**
      * 测试PonitCut
+     *
      * @throws Exception
      */
     @Test
-    public void fun3()  throws Exception{
+    public void fun3() throws Exception {
         customerDao.testPointCut();
     }
 }

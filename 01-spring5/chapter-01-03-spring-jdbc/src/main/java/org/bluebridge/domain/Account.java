@@ -1,56 +1,58 @@
 package org.bluebridge.domain;
 
 /**
+ * Account实体类
+ *
  * @author lingwh
- * @desc   Account实体类
- * @date   2019/3/25 11:18
+ * @date 2019/3/25 11:18
  */
 public class Account {
-	
-	private String id;
-	private String name;
-	private Double money;
 
-	public Account() {
-	}
+    private String id;
 
-	public Account(String id, String name, Double money) {
-		this.id = id;
-		this.name = name;
-		this.money = money;
-	}
+    private String name;
 
-	public String getId() {
-		return id;
-	}
+    private Double money;
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public Account() {
+    }
 
-	public String getName() {
-		return name;
-	}
+    public Account(String id, String name, Double money) {
+        this.id = id;
+        this.name = name;
+        this.money = money;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public Double getMoney() {
-		return money;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setMoney(Double money) {
-		this.money = money;
-	}
+    public String getName() {
+        return name;
+    }
 
-	@Override
-	public String toString() {
-		return "Account{" +
-				"id='" + id + '\'' +
-				", name='" + name + '\'' +
-				", money=" + money +
-				'}';
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public Double getMoney() {
+        return money;
+    }
+
+    public void setMoney(Double money) {
+        this.money = money;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", money=" + money +
+                '}';
+    }
 }

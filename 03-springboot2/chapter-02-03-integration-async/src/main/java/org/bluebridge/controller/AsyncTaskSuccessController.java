@@ -14,7 +14,9 @@ import java.util.concurrent.Future;
 
 /**
  * 测试异步调度成功
- * @author ronin
+ *
+ * @author lingwh
+ * @date 2026/7/15 10:35
  */
 @Controller
 @RequestMapping("/async")
@@ -41,7 +43,7 @@ public class AsyncTaskSuccessController {
      */
     @ResponseBody
     @RequestMapping("/test-async-success-with-out-result")
-    public Map<String,String> doTaskSuccessNoResult() throws InterruptedException{
+    public Map<String,String> doTaskSuccessNoResult() throws InterruptedException {
         long currentTimeMillis = System.currentTimeMillis();
         asyncTaskSuccessWithoutReturnResultService.task1();
         asyncTaskSuccessWithoutReturnResultService.task2();
@@ -71,10 +73,10 @@ public class AsyncTaskSuccessController {
                 // 三个任务都调用完成，退出循环等待
                 break;
             }
-            //配合while(true)实现每隔1000ms判断一次是否所有方法都执行完成
+            // 配合while(true)实现每隔1000ms判断一次是否所有方法都执行完成
             Thread.sleep(1000);
         }
-        //注意:异步调用在执行这个代码的时候会导致阻塞,睡眠5000ms后才会去执行下面的代码
+        // 注意:异步调用在执行这个代码的时候会导致阻塞,睡眠5000ms后才会去执行下面的代码
         Thread.sleep(5000);
         long currentTimeMillis1 = System.currentTimeMillis();
         HashMap<String, String> map = new HashMap<>();

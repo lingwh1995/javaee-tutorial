@@ -53,7 +53,7 @@ public class _01_WriteServer {
                     }
                     ByteBuffer buffer = Charset.defaultCharset().encode(sb.toString());
                     while (buffer.hasRemaining()) {
-                        // 2.返回值代表实际写入的字节数
+                        // 2. 返回值代表实际写入的字节数
                         int write = sc.write(buffer);
                         log.info("write: {}", write);
                     }

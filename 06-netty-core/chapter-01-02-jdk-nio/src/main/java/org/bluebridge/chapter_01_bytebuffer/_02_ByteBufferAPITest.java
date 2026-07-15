@@ -13,11 +13,9 @@ import java.nio.charset.StandardCharsets;
  *
  * position()  设置 postion 的值
  * limit()     设置 limit 的值
- *
  * rewind()    把 position 移动到0索引位置
  * mark()      mark 做一个标记，记录 position 位置
  * reset()     reset 是将 position 重置到 mark 位置
- *
  * clear()     切换为写模式
  * put()       写入数据
  *

@@ -16,8 +16,9 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author think
- * @desc
+ * AEP命令发送测试类
+ *
+ * @author lingwh
  * @date 2026/1/27 16:02
  */
 @RunWith(SpringRunner.class)
@@ -28,14 +29,14 @@ public class AepTest {
     private RestTemplate restTemplate;
 
     @Test
-    public void testAep(){
+    public void testAep() {
         String a1Command = "aAGXAIAEAAABoYgAdJeEvUaW4ZAmZws0UTRW1iprGozr0NteOy9kiL5vLdgDA3qDtvBgCdmysilyL5r3AwN6g7bwYAnZsrIpci+a9wMDeoO28GAJ2bKyKXIvmvds2QsCcPQYmDtRdZInWZGI5bH0kUce6zg0/UOdj/9VO8FgvfIdbrUSfsuh6gnOK5lxlKLLduGVHjahyc8CrjcG";
         sendAepCommand(a1Command, "a1Command");
         String ea0Command = "aAE8AIEEAAAB6oiAIMmeBvNqHwPQbsLQvcdWDjmG2sE4ZzE8MIzSoPmNsH2lhH4VNzREBbtHWtamrrYt";
         sendAepCommand(ea0Command, "ea0Command");
         String ea1Command = "aAEaAoIEAAAB6oiAXdrPHlWR2qLPdtysXMakamvuR6RPYx3TV9nHH+tKjiv/RUNBdf7vJ8g/2OroLK13rZ+WM91/UIEiJ+HanOqn2vpNoy5Q0iDug/BVWmV0dfFC9ytIRaMLzjRX/71iKOBeEbNV4w6FUaRMaUCalBwLTRE7DE3aitpVKP9ktDhASyYURN40NjGVJq0GY0UN2JS4t6Z3I9dvdVmYuNh2QH5BUZAv8zANPcfMgHWY3p0VBkS89LGlkOPNJtYsFS4rT3Af+z625FSxPjOSMgeN1P640mrpOLdL2JAp39ejNRhJCi2V064l3FQZ6BnHYBz8pyTK6ph7pP9Muz1K/P7ZGTufCkDBL7fcUdI+RTMaP6JGsOFbQk79IJVEZ975ICPWkVIJBa2HVpwNRVWSUFvdccdWZvLdP7oNX4D4Waf3SJLoKTYC2elINMl+6tZkv1Ip2v4kT2E2I+Quab/oPL/9FShXfrvSQx4YTbPezQTCqXDwy+Zs+fkEj6JRsHy3SG+wEIXFdPXgH0CLH6UCWnPKyN7qqcah+yKKOQ7CXzCXKKjg69d6yv2YCYNua9bkwQRNCBjcF4E0j/uydjR7q7OMzJ3OPkrX+JuXxAEXA33LdZHpJjSNV9gGL6t0jlefqp/l7sMV4dhIphWG5ZWR1u07jaEQmFfcoairecmkZcYtnKTejMPk2zFND4ngqDdzMmuiSh4z";
         sendAepCommand(ea1Command, "ea1Command");
-        String ea2Command = "aAEaAoMEAAAB6oiAShNZB1vV7NrJu7AZ2E/KBDS/knXe8Tf4jsVCmXqQw+i/j+PhFI6wch/NS8GBshRo8BRjRSut102tyGIL1kCuW5TVx9V9I21bBjDuDsaceiiCSPpHTjt42w+L023sn0lqZ8JnAkdPUpmeJsRyH1e2B7t6yV1MPW9I9L/VB7gZllDxIL90r5DfXTx6T0FTwrFFQNiTp0cfbS4H8GvaicxW31cCMGiXZ2/pibehynJVi1Y55KVW3Io5UBLZ4uV3UhjRQqUaSR8V0gG0OE1iuMeUGbfBi75jWd95HIsWw1PhmO77kG4+psa3po8H/IuLJKnySRrK9yo/dO1Ki2T3ZI61GevafpHSnOtU7uATebwKLMtuhfipAcqRdMSM+K/rF6tim9nrO7YjJdD70C+RnH8ET79HfEg3b1ftDRSm5K78YJKD9I4NO8IKgZBxNAHzKtyT1qwN1V4f/ttyHgxRuMrInu7cwtRS6WXevmpdbBX/cYvajov/fpRlV3LCeImc8h9L3+CDAIFTrzOnW0p4aZUY0H2I6JpJPprCH60IEU13sso/m1OZfE3cTtp//c6T1ROm5OH7SIpGW3lfM7SjPa7De5m9rhxZJJ819tUt39XlkaSyN6o8jzlxBoF59fW8XYs/DZcM0HIticD8aXlaHM3l0mIiQ1Q2QXz5IYoyqGu6xRQCWiDboGOjLV1RJD6eqrZt";
+        String ea2Command = "aAEaAoMEAAAB6oiAShNZB1vV7NrJu7AZ2E/KBDS/knXe8Tf4jsVCmXqQw+i/j+PhFI6wch/NS8GBshRo0BRjRSut102tyGIL1kCuW5TVx9V9I21bBjDuDsaceiiCSPpHTjt42w+L023sn0lqZ8JnAkdPUpmeJsRyH1e2B7t6yV1MPW9I9L/VB7gZllDxIL90r5DfXTx6T0FTwrFFQNiTp0cfbS4H8GvaicxW31cCMGiXZ2/pibehynJVi1Y55KVW3Io5UBLZ4uV3UhjRQqUaSR8V0gG0OE1iuMeUGbfBi75jWd95HIsWw1PhmO77kG4+psa3po8H/IuLJKnySRrK9yo/dO1Ki2T3ZI61GevafpHSnOtU7uATebwKLMtuhfipAcqRdMSM+K/rF6tim9nrO7YjJdD70C+RnH8ET79HfEg3b1ftDRSm5K78YJKD9I4NO8IKgZBxNAHzKtyT1qwN1V4f/ttyHgxRuMrInu7cwtRS6WXevmpdbBX/cYvajov/fpRlV3LCeImc8h9L3+CDAIFTrzOnW0p4aZUY0H2I6JpJPprCH60IEU13sso/m1OZfE3cTtp//c6T1ROm5OH7SIpGW3lfM7SjPa7De5m9rhxZJJ819tUt39XlkaSyN6o8jzlxBoF59fW8XYs/DZcM0HIticD8aXlaHM3l0mIiQ1Q2QXz5IYoyqGu6xRQCWiDboGOjLV1RJD6eqrZt";
         sendAepCommand(ea2Command, "ea2Command");
         String ea3Command = "aAEaAoQEAAAB6oiAfC71FOksFErRSKMmueOK3+AGQ7WK5OpA0KG7N9EbvgYYe6vMcEm0yDiz4PUIqt59L/LzD4zfqXFW8pLFtBY7dmPGsMEb6+LJ99XTvmWD+8dQoxPbID7SEf5rEUyp/Fhj9WUNOXNiGi1nHKqDGx9RINXPRpHRbqQqhdNuR3MjNT419eTJWUY6fOXfLSGvwSHNE/yxVR5BkzXgbqRSz0eWWVxVKAvabfovTus61rlEsW9g1lt03yemOXl46brYNlJLl/q6uen34r2d/RIubJuhVc0R4q75WzXCdsZ5n+Fnwu3Lzg/yk+CmunyYQm7eSyD4pQ/qVS95vA8sb1fSLwsp22dc/7W6lbHv9/OqzdlqEE/77PBUe+zSBStnOQ4911dqKgF10a7gEnZdbP+HIs5jY7iRtR0IFxKP4yHDlr17kbpGyyOVmBxnCxy9ldfNTvjTZPQ/GjBu67DlhP5QXsob7WPXJ/1FixVydUEBlBOMSjHZBS5Weut7z9kCu31VX3azVGpQGr8T90q4ZIQ+qwz4CxO5L2TqtWvfkXvYCgBKP3XNXpdsrnTvx5hzqPlju97xMN1lOQkxC2hL9Odqk/fgJDQH92csuSEzpXBBnFwrmeXLzmRQ/g26BFch6usGe4lCWI/OONKVbg3i9368ox+f4GJt4IppxOyRpu0+fI61dN29lq6QeQ7Ua2WproMk6gzK";
         sendAepCommand(ea3Command, "ea3Command");
@@ -108,5 +109,4 @@ public class AepTest {
             Thread.currentThread().interrupt();
         }
     }
-
 }

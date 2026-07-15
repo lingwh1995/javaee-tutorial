@@ -1,11 +1,12 @@
 package org.bluebridge.designpattern.adapter_a;
 
 /**
+ * 注解处理器适配器
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/15 8:49
+ * @date 2019/4/15 8:49
  */
-public class AnnotationHandlerAdapter implements HandlerAdapter{
+public class AnnotationHandlerAdapter implements HandlerAdapter {
 
     @Override
     public boolean supports(Object handler) {
@@ -16,5 +17,4 @@ public class AnnotationHandlerAdapter implements HandlerAdapter{
     public void handle(Object handler) {
         ((AnnotationController)handler).doAnnotationHandler();
     }
-
 }

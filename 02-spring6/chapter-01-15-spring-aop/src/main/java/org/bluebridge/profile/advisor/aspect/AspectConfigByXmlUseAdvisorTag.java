@@ -13,7 +13,11 @@ import java.lang.reflect.Method;
 /**
  * 切面类  使用xml配置
  * 切面 = 切点 + 通知
+ *
+ * @author lingwh
+ * @date 2026/7/13 9:00
  */
+
 public class AspectConfigByXmlUseAdvisorTag implements
         MethodBeforeAdvice, AfterReturningAdvice, MethodInterceptor, ThrowsAdvice {
 
@@ -52,7 +56,7 @@ public class AspectConfigByXmlUseAdvisorTag implements
         String methodName = invocation.getMethod().getName();
         Object[] arguments = invocation.getArguments();
         logger.info("methodName: " + methodName + ",arguments: " + arguments.toString());
-        //执行方法
+        // 执行方法
         invocation.getMethod().invoke(invocation.getThis(),invocation.getArguments());
         Object result = invocation.proceed();
         logger.info("环绕通知的后通知执行了...[使用XML配置文件开发AOP]");
@@ -69,5 +73,4 @@ public class AspectConfigByXmlUseAdvisorTag implements
     public void afterThrowing(Method method, Object[] args, Object target, Exception ex) {
         logger.info("异常通知执行了...[使用XML配置文件开发AOP]");
     }
-
 }

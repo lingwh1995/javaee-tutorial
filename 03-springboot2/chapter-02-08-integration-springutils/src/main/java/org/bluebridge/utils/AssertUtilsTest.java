@@ -8,6 +8,9 @@ import java.util.Map;
 
 /**
  * 断言工具类测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 9:00
  */
 public class AssertUtilsTest {
 
@@ -46,5 +49,4 @@ public class AssertUtilsTest {
         Assert.isTrue(condition, "条件不能为假");
         Assert.isTrue(condition, () -> "条件不能为假");
     }
-
 }

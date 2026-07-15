@@ -1,8 +1,9 @@
 package org.bluebridge.domain;
 
 /**
+ * 抽象响应消息
+ *
  * @author lingwh
- * @desc 抽象响应消息
  * @date 2025/10/25 17:26
  */
 public abstract class AbstractResponseMessage implements Message {
@@ -15,5 +16,4 @@ public abstract class AbstractResponseMessage implements Message {
     public AbstractResponseMessage() {
         this.messageType = getMessageType();
     }
-
 }

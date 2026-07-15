@@ -10,9 +10,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 
 /**
+ * AOP注解测试
+ *
  * @author lingwh
- * @desc
- * @date   2019/3/21 14:40
+ * @date 2019/3/21 14:40
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext-aop-anno.xml")
@@ -28,7 +29,7 @@ public class AoPAnnoTest {
      * 为接口生成代理
      */
     @Test
-    public void fun1(){
+    public void fun1() {
         userService.eat();
     }
 
@@ -36,8 +37,7 @@ public class AoPAnnoTest {
      * 为类生成代理
      */
     @Test
-    public void fun2(){
+    public void fun2() {
         personDao.save();
     }
-
 }
