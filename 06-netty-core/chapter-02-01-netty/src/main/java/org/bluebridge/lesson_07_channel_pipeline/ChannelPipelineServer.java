@@ -11,14 +11,13 @@ import lombok.extern.slf4j.Slf4j;
 import java.nio.charset.Charset;
 
 /**
+ * Netty pipeline 服务端
+ *
+ * 1. pipeline.writeAndFlush(): 从最后一个 Handler 开始找出站处理器
+ * 2. ctx.writeAndFlush(): 从当前 Handler 开始找出站处理器
+ *
  * @author lingwh
- * @desc Netty pipeline 服务端
  * @date 2025/9/24 15:30
- */
-
-/**
- * pipeline.writeAndFlush(): 从最后一个 Handler 开始找出站处理器
- * ctx.writeAndFlush(): 从当前 Handler 开始找出站处理器
  */
 @Slf4j
 public class ChannelPipelineServer {
@@ -85,8 +84,8 @@ public class ChannelPipelineServer {
                     pipeline.addLast("h4", new ChannelOutboundHandlerAdapter() {
                         @Override
                         public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
-                        log.info("h4......");
-                        super.write(ctx, msg, promise);
+                            log.info("h4......");
+                            super.write(ctx, msg, promise);
                         }
                     });
 
@@ -101,8 +100,8 @@ public class ChannelPipelineServer {
                     pipeline.addLast("h6", new ChannelOutboundHandlerAdapter() {
                         @Override
                         public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
-                        log.info("h6......");
-                        super.write(ctx, msg, promise);
+                            log.info("h6......");
+                            super.write(ctx, msg, promise);
                         }
                     });
                 }
@@ -111,4 +110,3 @@ public class ChannelPipelineServer {
     }
 
 }
-

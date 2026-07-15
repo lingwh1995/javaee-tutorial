@@ -4,11 +4,13 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 /**
+ * Cat实体类，演示Bean生命周期
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/10 11:19
+ * @date 2019/4/10 11:19
  */
 public class Cat implements InitializingBean,DisposableBean{
+
     public Cat(){
         System.out.println("Cat Constructor......");
     }

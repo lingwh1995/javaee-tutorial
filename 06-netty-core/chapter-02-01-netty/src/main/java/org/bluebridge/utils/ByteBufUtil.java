@@ -9,6 +9,9 @@ import static io.netty.util.internal.StringUtil.NEWLINE;
 /**
  * 模拟 ByteBufferUtil，用于调试 Netty ByteBuf 的工具类
  * 提供打印完整内容和可读内容的十六进制+ASCII 格式输出
+ *
+ * @author lingwh
+ * @date 2026/7/14 11:10
  */
 public class ByteBufUtil {
 
@@ -64,7 +67,6 @@ public class ByteBufUtil {
             BYTE2CHAR[i] = (i <= 0x1f || i >= 0x7f) ? '.' : (char) i;
         }
     }
-
 
     /**
      * 打印 ByteBuf 所有内容（从 0 到 capacity）
@@ -187,5 +189,4 @@ public class ByteBufUtil {
             dump.append('|');
         }
     }
-
 }

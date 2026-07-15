@@ -16,8 +16,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.nio.charset.Charset;
 
 /**
+ * 使用 ChannelHandlerContext 接口的子类来创建 Bytebuf 服务端
+ *
  * @author lingwh
- * @desc 使用 ChannelHandlerContext 接口的子类来创建 Bytebuf 服务端
  * @date 2025/10/11 15:39
  */
 @Slf4j
@@ -47,5 +48,4 @@ public class ChannelHandlerContextServer {
             })
             .bind(HOST, PORT);
     }
-
 }

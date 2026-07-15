@@ -1,6 +1,5 @@
 package org.bluebridge;
 
-import io.netty.buffer.ByteBuf;
 import io.netty.util.internal.StringUtil;
 
 import java.nio.ByteBuffer;
@@ -10,8 +9,12 @@ import static io.netty.util.internal.StringUtil.NEWLINE;
 
 /**
  * ByteBuffer工具类
+ *
+ * @author lingwh
+ * @date 2026/7/14 10:35
  */
 public class ByteBufferUtil {
+
     private static final char[] BYTE2CHAR = new char[256];
     private static final char[] HEXDUMP_TABLE = new char[256 * 4];
     private static final String[] HEXPADDING = new String[16];
@@ -75,6 +78,7 @@ public class ByteBufferUtil {
 
     /**
      * 带有调用序号打印所有内容
+     *
      * @param order
      * @param buffer
      */
@@ -91,6 +95,7 @@ public class ByteBufferUtil {
 
     /**
      * 打印所有内容
+     *
      * @param buffer
      */
     public static void debugAll(ByteBuffer buffer) {
@@ -106,6 +111,7 @@ public class ByteBufferUtil {
 
     /**
      * 打印可读取内容
+     *
      * @param buffer
      */
     public static void debugRead(ByteBuffer buffer) {

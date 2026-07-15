@@ -1,10 +1,10 @@
 package org.bluebridge.common.exception;
-
 import lombok.Getter;
 import org.bluebridge.common.enums.ResponseStatusEnum;
 
 /**
  * 业务异常类
+ *
  * @author lingwh
  * @date 2025/12/24
  */
@@ -23,6 +23,7 @@ public class BusinessException extends RuntimeException {
 
     /**
      * 构造一个BusinessException异常实例
+     *
      * @param message 异常描述信息
      */
     public BusinessException(String message) {
@@ -35,6 +36,7 @@ public class BusinessException extends RuntimeException {
 
     /**
      * 构造BusinessException异常实例
+     *
      * @param responseStatusEnum 响应状态枚举，包含异常的消息和错误码
      */
     public BusinessException(ResponseStatusEnum responseStatusEnum) {
@@ -45,6 +47,7 @@ public class BusinessException extends RuntimeException {
 
     /**
      * 构造BusinessException异常实例
+     *
      * @param responseStatusEnum 响应状态枚举，包含异常码信息
      * @param message 异常描述信息
      */
@@ -68,6 +71,7 @@ public class BusinessException extends RuntimeException {
 
     /**
      * 构造BusinessException异常实例
+     *
      * @param code 异常代码，用于标识具体的业务异常类型
      * @param message 异常描述信息，提供关于异常的详细说明
      * @param cause 导致此异常的原始异常，用于异常链追踪
@@ -80,6 +84,7 @@ public class BusinessException extends RuntimeException {
 
     /**
      * 构造BusinessException异常实例
+     *
      * @param code 异常代码，用于标识具体的错误类型
      * @param message 异常描述信息，提供错误的详细说明
      * @param cause 导致此异常的原始异常，用于异常链追踪
@@ -93,6 +98,7 @@ public class BusinessException extends RuntimeException {
 
     /**
      * 构造BusinessException异常实例
+     *
      * @param responseStatusEnum 响应状态枚举，用于设置异常的错误码
      * @param message 异常消息描述
      * @param cause 异常原因，用于链式异常处理
@@ -103,5 +109,4 @@ public class BusinessException extends RuntimeException {
         this.code = responseStatusEnum.getCode();
         this.data = data;
     }
-
 }

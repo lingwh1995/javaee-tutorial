@@ -1,11 +1,23 @@
 package org.bluebridge.domain;
 
+/**
+ * 汽车实体类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class Car {
+
     private Long id;
+
     private String carNum;
+
     private String brand;
+
     private Double guidePrice;
+
     private String produceTime;
+
     private String carType;
 
     public Car() {

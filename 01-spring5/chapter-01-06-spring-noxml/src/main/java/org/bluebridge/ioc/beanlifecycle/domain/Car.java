@@ -1,9 +1,10 @@
 package org.bluebridge.ioc.beanlifecycle.domain;
 
 /**
+ * Car实体类，演示Bean生命周期
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/10 11:17
+ * @date 2019/4/10 11:17
  */
 public class Car {
 

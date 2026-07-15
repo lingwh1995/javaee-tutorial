@@ -8,13 +8,17 @@ import java.util.Scanner;
 
 /**
  * BIO聊天室(群聊)
- *    目标：BIO模式下的端口转发思想-Client实现
+ *
+ * 目标：BIO模式下的端口转发思想-Client实现
  *
  * 服务端实现需求：
- *    1.注册端口
- *    2.接收客户端的socket连接，交给一个独立的线程来处理
- *    3.把当前连接的客户端socket存入到一个所谓的在线socket集合中保存
- *    4.接收客户端的消息，然后推送给当前所有的在线socket接收
+ * 1. 注册端口
+ * 2. 接收客户端的socket连接，交给一个独立的线程来处理
+ * 3. 把当前连接的客户端socket存入到一个所谓的在线socket集合中保存
+ * 4. 接收客户端的消息，然后推送给当前所有的在线socket接收
+ *
+ * @author lingwh
+ * @date 2026/7/14 10:31
  */
 @Slf4j
 public class ChatClient {
@@ -24,17 +28,17 @@ public class ChatClient {
 
     public static void main(String[] args){
         try {
-            //1.请求与服务端的Socket对象连接
+            // 1. 请求与服务端的Socket对象连接
             Socket socket = new Socket(HOST, PORT);
             log.info("客户端启动......");
-            //收消息
+            // 收消息
             Thread chatClientThread = new ChatClientThread(socket);
             chatClientThread.start();
             while (true){
-                //发消息
+                // 发消息
                 OutputStream os = socket.getOutputStream();
                 PrintStream ps = new PrintStream(os);
-                //3. 使用循环不断的发送消息给服务端接收
+                // 3. 使用循环不断的发送消息给服务端接收
                 Scanner sc = new Scanner(System.in);
                 String msg =sc.nextLine();
                 ps.println(msg);
@@ -44,11 +48,13 @@ public class ChatClient {
             e.printStackTrace();
         }
     }
-
 }
 
 /**
  * 用于接收服务端消息的线程
+ *
+ * @author lingwh
+ * @date 2026/7/14 10:31
  */
 class ChatClientThread extends Thread {
 
@@ -63,7 +69,7 @@ class ChatClientThread extends Thread {
         try{
             while (true){
                 InputStream is = socket.getInputStream();
-                //4.把字节输入流包装成一个缓存字符输入流
+                // 4. 把字节输入流包装成一个缓存字符输入流
                 BufferedReader br = new BufferedReader(new InputStreamReader(is));
                 String msg;
                 /*

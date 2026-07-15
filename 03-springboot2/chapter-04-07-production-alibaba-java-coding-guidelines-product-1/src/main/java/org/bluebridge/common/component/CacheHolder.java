@@ -1,5 +1,4 @@
 package org.bluebridge.common.component;
-
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -7,8 +6,9 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * 缓存管理器
+ *
  * @author lingwh
- * @desc 缓存管理器
  * @date 2025/12/10 14:05
  */
 @Component
@@ -21,6 +21,7 @@ public class CacheHolder<T> {
 
     /**
      * 获取缓存对象: 使用 Optional 包装，避免调用方直接处理 null
+     *
      * @param key 缓存键
      * @return 缓存的对象
      */
@@ -31,6 +32,7 @@ public class CacheHolder<T> {
 
     /**
      * 缓存对象
+     *
      * @param key 缓存键
      * @param value 缓存值
      */
@@ -51,6 +53,7 @@ public class CacheHolder<T> {
 
     /**
      * 移除缓存对象
+     *
      * @param key 缓存键
      */
     public void remove(String key) {
@@ -61,6 +64,7 @@ public class CacheHolder<T> {
 
     /**
      * 获取缓存大小
+     *
      * @return 缓存大小
      */
     public int size() {
@@ -73,5 +77,4 @@ public class CacheHolder<T> {
     public void clear() {
         pool.clear();
     }
-
 }

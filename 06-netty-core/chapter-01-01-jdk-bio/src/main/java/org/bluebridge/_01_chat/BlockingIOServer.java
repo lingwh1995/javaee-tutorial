@@ -11,8 +11,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
+ * BIO 服务端
+ *
  * @author lingwh
- * @desc BIO 服务端
  * @date 2025/9/23 11:19
  */
 @Slf4j
@@ -73,6 +74,4 @@ public class BlockingIOServer {
             }
         }
     }
-
 }
-

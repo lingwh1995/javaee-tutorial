@@ -3,6 +3,12 @@ package org.bluebridge.designpattern.proxy.dynamicproxy.jdkproxy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * Cat 实现类
+ *
+ * @author lingwh
+ * @date 2026/7/13 11:32
+ */
 public class CatServiceImpl implements ICatService {
 
     private static final Logger logger = LogManager.getLogger(CatServiceImpl.class);
@@ -25,7 +31,7 @@ public class CatServiceImpl implements ICatService {
     @Override
     public Cat getCatById(String id) {
         logger.info("正在执行查询用户操作...");
-        //模拟从数据中根据id查询到了一个用户
+        // 模拟从数据中根据id查询到了一个用户
         Cat cat = new Cat("001","煤球",2);
         return cat;
     }

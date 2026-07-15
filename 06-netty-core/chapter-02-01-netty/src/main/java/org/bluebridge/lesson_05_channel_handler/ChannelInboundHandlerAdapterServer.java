@@ -13,15 +13,13 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 
 /**
+ * ChannelHandler 的具体实现 ChannelInboundHandlerAdapter 服务端
+ *
+ * 1. ChannelPipeline 是由多个 ChannelHander 组成的 包含一组 ChannelHandler，形成一条处理链。
+ * 2. ChannelInboundHandlerAdapter 是 ChannelHandler 的一种具体实现（专注于入站事件）。
+ *
  * @author lingwh
- * @desc ChannelHandler 的具体实现 ChannelInboundHandlerAdapter 服务端
  * @date 2025/10/10 11:32
- */
-
-/**
- * ChannelPipeline 是由多个 ChannelHander 组成的， ChannelHandler和 ChannelInboundHandlerAdapter 之间的关系
- *     ChannelPipeline 是由多个 ChannelHander 组成的 包含一组 ChannelHandler，形成一条处理链。
- *     ChannelInboundHandlerAdapter 是 ChannelHandler 的一种具体实现（专注于入站事件）。
  */
 @Slf4j
 public class ChannelInboundHandlerAdapterServer {
@@ -46,6 +44,7 @@ public class ChannelInboundHandlerAdapterServer {
                          *    初始化与通道相关的资源
                          *    设置通道属性或上下文信息
                          *    执行注册时的业务逻辑
+                         *
                          * @param ctx
                          * @throws Exception
                          */
@@ -63,6 +62,7 @@ public class ChannelInboundHandlerAdapterServer {
                          *    清理与通道相关的资源
                          *    执行取消注册时的业务逻辑
                          *    更新连接统计信息
+                         *
                          * @param ctx
                          * @throws Exception
                          */
@@ -80,6 +80,7 @@ public class ChannelInboundHandlerAdapterServer {
                          *        记录连接建立日志
                          *        初始化连接相关的资源
                          *        发送欢迎消息给客户端
+                         *
                          * @param ctx
                          * @throws Exception
                          */
@@ -98,6 +99,7 @@ public class ChannelInboundHandlerAdapterServer {
                          *        清理与该连接相关的资源
                          *        更新在线用户统计
                          *        执行其他连接断开时需要的业务逻辑
+                         *
                          * @param ctx
                          * @throws Exception
                          */
@@ -110,6 +112,7 @@ public class ChannelInboundHandlerAdapterServer {
                         /**
                          * 方法作用
                          *    读取到数据时调用，处理入站数据，每读取到一条数据就调用一次
+                         *
                          * @param ctx
                          * @param msg
                          * @throws Exception
@@ -129,6 +132,7 @@ public class ChannelInboundHandlerAdapterServer {
                          *    刷新数据: 通常在此方法中调用 ctx.flush() 将缓冲的数据发送出去
                          *    批量处理完成: 标识一批数据处理的结束
                          *    资源清理: 清理与本次读取操作相关的临时资源
+                         *
                          * @param ctx
                          * @throws Exception
                          */
@@ -148,6 +152,7 @@ public class ChannelInboundHandlerAdapterServer {
                          *    处理自定义业务事件
                          *    心跳检测和超时处理
                          *    协议升级等特殊事件处理
+                         *
                          * @param ctx
                          * @param evt
                          * @throws Exception
@@ -174,6 +179,7 @@ public class ChannelInboundHandlerAdapterServer {
                          *    流量控制: 监控和控制数据发送速率
                          *    缓冲区管理: 根据可写状态调整数据写入策略
                          *    性能优化: 在通道不可写时暂停数据发送，避免内存溢出
+                         *
                          * @param ctx
                          * @throws Exception
                          */
@@ -197,6 +203,7 @@ public class ChannelInboundHandlerAdapterServer {
                          *    错误日志记录: 记录异常信息用于调试和监控
                          *    连接清理: 在发生严重异常时关闭连接或执行清理操作
                          *    故障恢复: 根据异常类型采取相应的恢复措施
+                         *
                          * @param ctx
                          * @param cause
                          * @throws Exception

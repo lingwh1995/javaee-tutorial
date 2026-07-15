@@ -1,12 +1,13 @@
 package org.bluebridge.common.domain.entity;
-
 import lombok.Data;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
+ * 基础审计实体类
+ *
  * @author lingwh
- * @desc 基础审计实体类
  * @date 2025/12/17 16:15
  */
 @Data
@@ -38,5 +39,4 @@ public abstract class BaseEntity implements Serializable {
      * 逻辑删除标记 0-未逻辑删除，1-已逻辑删除
      */
     private Integer isDeleted;
-
 }

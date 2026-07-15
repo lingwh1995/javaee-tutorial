@@ -15,7 +15,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * bean工具类测试
+ * Bean生命周期配置测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 11:32
  */
 @Slf4j
 public class BeanUtilsTest {
@@ -86,7 +89,6 @@ public class BeanUtilsTest {
         // 测试字段是否是常量
         log.info("字段是否是常量: {}", ReflectionUtils.isPublicStaticFinal(field));
     }
-
 }
 
 @Data

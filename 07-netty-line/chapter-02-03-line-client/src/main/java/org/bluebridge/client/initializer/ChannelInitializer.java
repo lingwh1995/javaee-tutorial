@@ -17,8 +17,9 @@ import org.bluebridge.protocol.ProcotolFrameDecoder;
 import org.springframework.stereotype.Component;
 
 /**
+ * Channel 初始化配置类 使用@RequiredArgsConstructor + final 简化依赖注入
+ *
  * @author lingwh
- * @desc Channel 初始化配置类 使用@RequiredArgsConstructor + final 简化依赖注入
  * @date 2025/11/10 15:10
  */
 @Slf4j
@@ -54,5 +55,4 @@ public class ChannelInitializer extends io.netty.channel.ChannelInitializer<NioS
         pipeline.addLast(MESSAGE_CODEC_SHARABLE);
         pipeline.addLast(CLIENT_HANDLER);
     }
-
 }

@@ -5,9 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 /**
+ * 图书控制器类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/12 12:17
+ * @date 2019/4/12 12:17
  */
 @Controller
 public class BookController {

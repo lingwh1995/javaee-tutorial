@@ -17,8 +17,9 @@ import org.bluebridge.server.handler.*;
 import org.springframework.stereotype.Component;
 
 /**
+ * Channel 初始化配置类 使用@RequiredArgsConstructor + final 简化依赖注入
+ *
  * @author lingwh
- * @desc Channel 初始化配置类 使用@RequiredArgsConstructor + final 简化依赖注入
  * @date 2025/11/10 10:24
  */
 @Slf4j
@@ -70,5 +71,4 @@ public class ChannelInitializer extends io.netty.channel.ChannelInitializer<NioS
         pipeline.addLast(GROUP_QUIT_REQUEST_MESSAGE_HANDLER);
         pipeline.addLast(QUIT_REQUEST_HANDLER);
     }
-
 }

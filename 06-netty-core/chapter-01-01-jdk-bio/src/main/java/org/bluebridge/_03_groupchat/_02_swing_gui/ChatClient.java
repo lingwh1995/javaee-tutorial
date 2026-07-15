@@ -13,19 +13,22 @@ import java.util.Arrays;
 
 /**
  * 界面版客户端界面(群聊、单聊)
+ *
+ * @author lingwh
+ * @date 2026/7/14 10:33
  */
 public class ChatClient implements ActionListener {
 
     private static final String HOST = "127.0.0.1";
     private static final int PORT = 8080;
 
-    // 1.设计界面
+    // 1. 设计界面
     private JFrame win = new JFrame();
-    // 2.消息内容框架
+    // 2. 消息内容框架
     public JTextArea smsContent = new JTextArea(23,50);
-    // 3.发送消息的框
+    // 3. 发送消息的框
     private JTextArea smsSend = new JTextArea(4,40);
-    // 4.在线人数的区域
+    // 4. 在线人数的区域
     // 展示在线人数的窗口
     public JList<String> onLineUsers = new JList<>();
     // 是否私聊按钮
@@ -42,18 +45,18 @@ public class ChatClient implements ActionListener {
     }
 
     private void initView() {
-        /** 初始化聊天窗口的界面 */
+        // 初始化聊天窗口的界面
         win.setSize(650,600);
-        /** 展示登录界面 */
+        // 展示登录界面
         displayLoginView();
-        /** 展示聊天界面 */
+        // 展示聊天界面
         //displayChatView();
     }
 
     private void displayChatView() {
         JPanel bottomPanel = new JPanel(new BorderLayout());
         //---------------------------------------------------
-        //将消息框和按钮添加到窗口的底端
+        // 将消息框和按钮添加到窗口的底端
         win.add(bottomPanel,BorderLayout.SOUTH);
         bottomPanel.add(smsSend);
         JPanel btns = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -61,26 +64,26 @@ public class ChatClient implements ActionListener {
         btns.add(isPrivateBn);
         bottomPanel.add(btns,BorderLayout.EAST);
         //-----------------------------------------------
-        //给发送消息按钮绑定点击事件监听器
-        //将展示消息区centerPanel添加到窗口的中间
+        // 给发送消息按钮绑定点击事件监听器
+        // 将展示消息区centerPanel添加到窗口的中间
         smsContent.setBackground(new Color(0xdd,0xdd,0xdd));
-        //让展示消息区可以滚动
+        // 让展示消息区可以滚动
         win.add(new JScrollPane(smsContent),BorderLayout.CENTER);
         smsContent.setEditable(false);
         //-------------------------------------------------
-        //用户列表和是否私聊放到窗口的最右边
+        // 用户列表和是否私聊放到窗口的最右边
         Box rightBox = new Box(BoxLayout.Y_AXIS);
         onLineUsers.setFixedCellWidth(120);
         onLineUsers.setVisibleRowCount(13);
         rightBox.add(new JScrollPane(onLineUsers));
         win.add(rightBox,BorderLayout.EAST);
         //-------------------------------------------------
-        //关闭窗口退出当前程序
+        // 关闭窗口退出当前程序
         win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        win.pack();//swing 加上这句 就可以拥有关闭窗口的功能
-        /** 设置窗口居中，显示出来 */
+        win.pack();// swing 加上这句 就可以拥有关闭窗口的功能
+        // 设置窗口居中，显示出来
         setWindowCenter(win,650,600,true);
-        //发送按钮绑定点击事件
+        // 发送按钮绑定点击事件
         sendBn.addActionListener(this);
     }
 
@@ -113,7 +116,7 @@ public class ChatClient implements ActionListener {
         JButton cancle = new JButton("取消");
         btnView.add(cancle);
         loginView.add(btnView);
-        //关闭窗口退出当前程序
+        // 关闭窗口退出当前程序
         loginView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setWindowCenter(loginView,400,260,true);
         /** 给登录和取消绑定点击事件 */
@@ -136,7 +139,7 @@ public class ChatClient implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        //得到点击的事件源
+        // 得到点击的事件源
         JButton btn = (JButton) e.getSource();
         switch (btn.getText()){
             case "登录":
@@ -173,7 +176,7 @@ public class ChatClient implements ActionListener {
                         dos.writeInt(1);
                         dos.writeUTF(name.trim());
                         dos.flush();
-                        //关闭当前窗口 弹出聊天界面
+                        // 关闭当前窗口 弹出聊天界面
                         ClientReader:
                         // 登录窗口销毁
                         loginView.dispose();
@@ -189,7 +192,7 @@ public class ChatClient implements ActionListener {
                 System.exit(0);
                 break;
             case "发送":
-                //得到发送消息的内容
+                // 得到发送消息的内容
                 String msgSend = smsSend.getText().toString();
                 if(!msgSend.trim().equals("")){
                     // 发消息给服务端
@@ -264,5 +267,4 @@ class ChatClientThread extends Thread {
             e.printStackTrace();
         }
     }
-
 }

@@ -8,13 +8,11 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author lingwh
- * @desc 使用 ChannelHandlerContext 接口的子类来创建 Bytebuf 客户端
- * @date 2025/10/11 15:39
- */
-
-/**
+ * 使用 ChannelHandlerContext 接口的子类来创建 Bytebuf 客户端
  * 在 Netty 编程中通常使用 ChannelHandlerContext 接口的子类来创建 Bytebuf ，而不是使用 ByteBufAllocator 或 Unpooled 方式创建 ByteBuf
+ *
+ * @author lingwh
+ * @date 2025/10/11 15:39
  */
 @Slf4j
 public class ChannelHandlerContextClient {
@@ -45,5 +43,4 @@ public class ChannelHandlerContextClient {
             .sync()
             .channel();
     }
-
 }

@@ -12,15 +12,13 @@ import java.net.SocketAddress;
 import java.nio.charset.Charset;
 
 /**
+ * ChannelHandler 的具体实现 ChannelOutboundHandlerAdapter 服务端
+ *
+ * 1. ChannelPipeline 是由多个 ChannelHander 组成的 包含一组 ChannelHandler，形成一条处理链。
+ * 2. ChannelInboundHandlerAdapter 是 ChannelHandler 的一种具体实现（专注于入站事件）。
+ *
  * @author lingwh
- * @desc ChannelHandler 的具体实现 ChannelOutboundHandlerAdapter 服务端
  * @date 2025/10/10 14:39
- */
-
-/**
- * ChannelPipeline 是由多个 ChannelHander 组成的、ChannelHandler、和 ChannelInboundHandlerAdapter 之间的关系
- *     ChannelPipeline 是由多个 ChannelHander 组成的 包含一组 ChannelHandler，形成一条处理链。
- *     ChannelInboundHandlerAdapter 是 ChannelHandler 的一种具体实现（专注于入站事件）。
  */
 @Slf4j
 public class ChannelOutboundHandlerAdapterServer {
@@ -41,21 +39,22 @@ public class ChannelOutboundHandlerAdapterServer {
                         /**
                          * 方法作用
                          *    读取到数据时调用，处理入站数据，每读取到一条数据就调用一次
+                         *
                          * @param ctx
                          * @param msg
                          * @throws Exception
                          */
                         @Override
                         public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-                        ByteBuf byteBuf = (ByteBuf) msg;
-                        String s = byteBuf.toString(Charset.defaultCharset());
-                        log.info("收到客户端消息: {}", s);
-                        // 这里不需要再向下传递了，直接使用出站处理器把数据返回给客户端
-                        //super.channelRead(ctx, msg);
+                            ByteBuf byteBuf = (ByteBuf) msg;
+                            String s = byteBuf.toString(Charset.defaultCharset());
+                            log.info("收到客户端消息: {}", s);
+                            // 这里不需要再向下传递了，直接使用出站处理器把数据返回给客户端
+                            //super.channelRead(ctx, msg);
 
-                        // 写一些数据，触发出站处理器
-                        // 使用pipeline则从最后开始找出站处理器h6->h5->h4
-                        ch.writeAndFlush(ctx.alloc().buffer().writeBytes(s.getBytes()));
+                            // 写一些数据，触发出站处理器
+                            // 使用pipeline则从最后开始找出站处理器h6->h5->h4
+                            ch.writeAndFlush(ctx.alloc().buffer().writeBytes(s.getBytes()));
                         }
 
                     });
@@ -69,6 +68,7 @@ public class ChannelOutboundHandlerAdapterServer {
                          *    日志记录: 记录绑定操作的信息
                          *    权限检查: 检查是否有权限绑定到指定地址
                          *    资源准备: 为绑定操作准备必要的资源
+                         *
                          * @param ctx
                          * @param localAddress
                          * @param promise
@@ -89,6 +89,7 @@ public class ChannelOutboundHandlerAdapterServer {
                          *    日志记录: 记录连接操作的信息
                          *    连接参数设置: 设置连接超时时间、套接字选项等
                          *    权限检查: 检查是否有权限连接到指定地址
+                         *
                          * @param ctx
                          * @param remoteAddress
                          * @param localAddress
@@ -111,6 +112,7 @@ public class ChannelOutboundHandlerAdapterServer {
                          *    日志记录: 记录断开连接的操作信息
                          *    资源释放: 释放与连接相关的资源
                          *    状态更新: 更新连接状态或统计信息
+                         *
                          * @param ctx
                          * @param promise
                          * @throws Exception
@@ -130,6 +132,7 @@ public class ChannelOutboundHandlerAdapterServer {
                          *    日志记录: 记录 Channel 关闭的操作信息
                          *    资源释放: 释放与 Channel 相关的资源
                          *    连接统计: 更新连接统计信息或状态
+                         *
                          * @param ctx
                          * @param promise
                          * @throws Exception
@@ -149,6 +152,7 @@ public class ChannelOutboundHandlerAdapterServer {
                          *    日志记录: 记录 Channel 取消注册的操作信息
                          *    资源释放: 释放与 EventLoop 注册相关的资源
                          *    状态更新: 更新 Channel 的注册状态信息
+                         *
                          * @param ctx
                          * @param promise
                          * @throws Exception
@@ -168,6 +172,7 @@ public class ChannelOutboundHandlerAdapterServer {
                          *    流量控制: 根据应用状态决定何时读取数据
                          *    资源管理: 在资源准备好后再触发读取
                          *    自定义读取策略: 实现特定的读取逻辑
+                         *
                          * @param ctx
                          * @throws Exception
                          */
@@ -190,6 +195,7 @@ public class ChannelOutboundHandlerAdapterServer {
                          *    发送数据日志记录
                          *    流量控制和性能监控
                          *    自定义写入策略
+                         *
                          * @param ctx
                          * @param msg
                          * @param promise
@@ -215,6 +221,7 @@ public class ChannelOutboundHandlerAdapterServer {
                          *    批量发送优化: 结合 write 操作实现批量发送后统一刷新
                          *    性能调优: 控制数据发送时机以优化网络性能
                          *    协议要求: 某些协议要求特定时机发送数据
+                         *
                          * @param ctx
                          * @throws Exception
                          */

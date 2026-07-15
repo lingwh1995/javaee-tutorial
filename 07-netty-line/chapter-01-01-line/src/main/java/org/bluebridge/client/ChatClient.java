@@ -16,7 +16,12 @@ import org.bluebridge.message.PingMessage;
 import org.bluebridge.protocol.MessageCodecSharable;
 import org.bluebridge.protocol.ProcotolFrameDecoder;
 
-
+/**
+ * 聊天客户端
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @Slf4j
 public class ChatClient {
 
@@ -68,5 +73,4 @@ public class ChatClient {
             group.shutdownGracefully();
         }
     }
-
 }

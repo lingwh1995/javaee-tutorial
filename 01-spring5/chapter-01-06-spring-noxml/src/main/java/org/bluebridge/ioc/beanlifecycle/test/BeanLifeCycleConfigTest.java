@@ -6,17 +6,18 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
+ * Bean生命周期配置测试
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/10 11:32
+ * @date 2019/4/10 11:32
  */
 public class BeanLifeCycleConfigTest {
 
-   @Test
-   public void testBeanLifeCycleConfig(){
+    @Test
+    public void testBeanLifeCycleConfig(){
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanLifeCycleConfig.class);
         Car car = context.getBean(Car.class);
         System.out.println(car);
         context.close();
-   }
+    }
 }

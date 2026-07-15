@@ -6,9 +6,10 @@ import org.springframework.stereotype.Repository;
 import javax.inject.Inject;
 
 /**
+ * 图书数据访问类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/12 12:13
+ * @date 2019/4/12 12:13
  */
 @Repository
 public class BookDao {

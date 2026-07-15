@@ -16,8 +16,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.nio.charset.Charset;
 
 /**
+ * ChannelHandler 生命周期
+ *
  * @author lingwh
- * @desc ChannelHandler 生命周期
  * @date 2025/10/16 11:57
  */
 @Slf4j
@@ -101,5 +102,4 @@ public class ChannelHandlerLifeCycleServer {
             })
             .bind(HOST, PORT);
     }
-
 }

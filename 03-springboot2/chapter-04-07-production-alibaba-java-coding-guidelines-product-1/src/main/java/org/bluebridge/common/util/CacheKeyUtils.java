@@ -1,17 +1,18 @@
 package org.bluebridge.common.util;
-
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
 /**
+ * 缓存Key工具类
+ *
  * @author lingwh
- * @desc
  * @date 2026/2/1 15:55
  */
 public class CacheKeyUtils {
 
     /**
      * 支持可变参数的 Key 生成方法
+     *
      * @param params 待转换的对象数组
      * @return 最终的缓存 Key 字符串
      */
@@ -26,5 +27,4 @@ public class CacheKeyUtils {
 
         return ":" + CryptoUtils.Md5.encrypt(combinedJson);
     }
-
 }

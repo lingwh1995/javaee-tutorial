@@ -9,8 +9,9 @@ import org.bluebridge.wrapper.Wrapper;
 import java.lang.reflect.Field;
 
 /**
+ * 通用Mapper SQL提供者
+ *
  * @author lingwh
- * @desc 通用Mapper SQL提供者
  * @date 2025/12/10 18:46
  */
 @Slf4j
@@ -137,5 +138,4 @@ public class BaseSqlProvider {
         }
         return result.toString();
     }
-
 }

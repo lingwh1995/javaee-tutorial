@@ -10,8 +10,9 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
+ * 基础服务实现类，提供通用的CRUD操作
+ *
  * @author lingwh
- * @desc
  * @date 2025/12/10 19:17
  */
 @Service
@@ -20,6 +21,7 @@ public class BaseServiceImpl<T> implements IBaseService<T> {
     // 注入BaseMapper
     @Resource
     private BaseMapper<T> baseMapper;
+
     @Override
     public int save(T entity) {
         return baseMapper.insert(entity);
@@ -54,5 +56,4 @@ public class BaseServiceImpl<T> implements IBaseService<T> {
     public List<T> list(QueryWrapper<T> queryWrapper) {
         return baseMapper.selectList(queryWrapper);
     }
-
 }
