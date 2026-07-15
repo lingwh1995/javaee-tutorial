@@ -1,6 +1,13 @@
 package org.bluebridge.profile.dibysetsenior.domain;
 
+/**
+ * 朋友实体类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class Friend {
+
     private String name;
     private String age;
 

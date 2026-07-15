@@ -4,8 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
+ * 群聊请求消息
+ *
  * @author lingwh
- * @desc 群聊请求消息
  * @date 2025/11/2 20:17
  */
 @Data
@@ -20,5 +21,4 @@ public class GroupChatRequestMessage extends AbstractRequestMessage {
     public int getMessageType() {
         return MessageType.GROUP_CHAT_REQUEST_MESSAGE.getCode();
     }
-
 }

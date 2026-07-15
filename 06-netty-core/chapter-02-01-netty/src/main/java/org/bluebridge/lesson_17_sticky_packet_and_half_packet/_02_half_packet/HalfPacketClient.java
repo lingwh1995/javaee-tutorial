@@ -11,8 +11,9 @@ import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * Netty 半包测试 客户端
+ *
  * @author lingwh
- * @desc Netty 半包测试 客户端
  * @date 2025/10/11 10:43
  */
 @Slf4j
@@ -58,5 +59,4 @@ public class HalfPacketClient {
             worker.shutdownGracefully();
         }
     }
-
 }

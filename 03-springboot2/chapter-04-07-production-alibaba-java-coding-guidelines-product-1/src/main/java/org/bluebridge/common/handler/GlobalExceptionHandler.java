@@ -1,5 +1,4 @@
 package org.bluebridge.common.handler;
-
 import cn.dev33.satoken.exception.NotLoginException;
 import cn.dev33.satoken.exception.SaTokenException;
 import cn.dev33.satoken.util.SaResult;
@@ -13,8 +12,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import javax.naming.NoPermissionException;
 
 /**
+ * 全局异常处理类
+ *
  * @author lingwh
- * @desc 全局异常处理类
  * @date 2025/11/22 17:35
  */
 @Slf4j
@@ -68,6 +68,7 @@ public class GlobalExceptionHandler {
 
     /**
      * 全局异常处理，捕获所有未被其他异常处理程序捕获的异常
+     *
      * @param e
      * @return
      */
@@ -80,6 +81,7 @@ public class GlobalExceptionHandler {
 
     /**
      * 全局异常处理，捕获所有未被其他异常处理程序捕获的异常
+     *
      * @param e
      * @return
      */
@@ -89,5 +91,4 @@ public class GlobalExceptionHandler {
         log.error("系统内部错误: {}", e.getMessage(), e);
         return Result.error(500, "系统内部错误，请稍后重试!");
     }
-
 }

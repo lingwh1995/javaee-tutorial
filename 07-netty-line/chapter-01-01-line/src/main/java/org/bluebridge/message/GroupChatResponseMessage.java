@@ -3,6 +3,12 @@ package org.bluebridge.message;
 import lombok.Data;
 import lombok.ToString;
 
+/**
+ * 聊天组聊天响应消息
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @Data
 @ToString(callSuper = true)
 public class GroupChatResponseMessage extends AbstractResponseMessage {
@@ -18,9 +24,9 @@ public class GroupChatResponseMessage extends AbstractResponseMessage {
         this.from = from;
         this.content = content;
     }
+
     @Override
     public int getMessageType() {
         return GroupChatResponseMessage;
     }
-
 }

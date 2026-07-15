@@ -4,8 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
+ * 创建聊天组响应消息
+ *
  * @author lingwh
- * @desc 创建聊天组响应消息
  * @date 2025/11/01 17:14
  */
 @Data
@@ -21,5 +22,4 @@ public class GroupCreateResponseMessage extends AbstractResponseMessage {
     public int getMessageType() {
         return MessageType.GROUP_CREATE_RESPONSE_MESSAGE.getCode();
     }
-
 }

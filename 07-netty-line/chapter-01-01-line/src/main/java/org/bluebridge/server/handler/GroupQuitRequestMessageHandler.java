@@ -8,6 +8,12 @@ import org.bluebridge.message.GroupQuitRequestMessage;
 import org.bluebridge.server.session.Group;
 import org.bluebridge.server.session.GroupSessionFactory;
 
+/**
+ * 退出聊天组请求消息处理器
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @ChannelHandler.Sharable
 public class GroupQuitRequestMessageHandler extends SimpleChannelInboundHandler<GroupQuitRequestMessage> {
 
@@ -20,5 +26,4 @@ public class GroupQuitRequestMessageHandler extends SimpleChannelInboundHandler<
             ctx.writeAndFlush(new GroupJoinResponseMessage(true, msg.getGroupName() + "群不存在"));
         }
     }
-
 }

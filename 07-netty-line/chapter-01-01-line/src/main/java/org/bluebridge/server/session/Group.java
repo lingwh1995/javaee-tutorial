@@ -5,10 +5,13 @@ import lombok.Data;
 import java.util.Collections;
 import java.util.Set;
 
-@Data
 /**
  * 聊天组，即聊天室
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
  */
+@Data
 public class Group {
 
     // 聊天室名称
@@ -22,5 +25,4 @@ public class Group {
         this.name = name;
         this.members = members;
     }
-
 }

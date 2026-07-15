@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 import java.util.Set;
 
 /**
+ * 创建聊天组请求消息
+ *
  * @author lingwh
- * @desc 创建聊天组请求消息
  * @date 2025/11/01 17:10
  */
 @Data
@@ -23,5 +24,4 @@ public class GroupCreateRequestMessage extends AbstractRequestMessage {
     public int getMessageType() {
         return MessageType.GROUP_CREATE_REQUEST_MESSAGE.getCode();
     }
-
 }

@@ -4,8 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.web.util.HtmlUtils;
 
-import javax.annotation.Resource;
-
 /**
  * html转义工具类测试类
  */
@@ -18,5 +16,4 @@ public class HtmlUtilsTest {
         String escapeHtml = HtmlUtils.htmlEscape(html);
         log.info("escapeHtml:{}", escapeHtml);
     }
-
 }

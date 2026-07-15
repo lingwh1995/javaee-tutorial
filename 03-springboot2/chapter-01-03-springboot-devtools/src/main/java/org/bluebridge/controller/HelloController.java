@@ -5,7 +5,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @author ronin
+ * SpringBoot DevTools 热部署示例的 Hello 控制器
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
  */
 @Controller
 public class HelloController {
@@ -15,5 +18,4 @@ public class HelloController {
     public String hello(){
         return "hello devtools~";
     }
-
 }

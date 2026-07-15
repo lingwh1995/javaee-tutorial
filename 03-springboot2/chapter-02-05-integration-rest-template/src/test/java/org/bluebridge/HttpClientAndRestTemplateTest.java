@@ -19,9 +19,9 @@ import java.util.List;
 
 /**
  * 测试HttpClient原生方式远程调用和使用RestTemplate进行远程调用的区别
- * @author ronin
- * @version V1.0
- * @since 2019/11/15 9:18
+ *
+ * @author lingwh
+ * @date 2019/11/15 9:18
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
@@ -60,15 +60,16 @@ public class HttpClientAndRestTemplateTest {
      * 使用RestTemplate进行远程调用:查询单个
      */
     @Test
-    public void fun3(){
+    public void fun3() {
         User user = restTemplate.getForObject("http://localhost:8080/user/1",User.class);
         System.out.println(user);
     }
+
     /**
      * 使用RestTemplate进行远程调用:查询所有
      */
     @Test
-    public void fun4(){
+    public void fun4() {
         ResponseEntity<List> responseEntity = restTemplate.getForEntity("http://localhost:8080/users",List.class);
         System.out.println(responseEntity);
     }

@@ -5,8 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * 查看群成员请求消息
+ *
  * @author lingwh
- * @desc 查看群成员请求消息
  * @date 2025/11/1 22:09
  */
 @Data
@@ -20,5 +21,4 @@ public class GroupMembersRequestMessage extends AbstractRequestMessage {
     public int getMessageType() {
         return MessageType.GROUP_MEMBERS_REQUEST_MESSAGE.getCode();
     }
-
 }

@@ -9,6 +9,12 @@ import org.bluebridge.server.session.GroupSessionFactory;
 
 import java.util.Set;
 
+/**
+ * 查看群成员请求消息处理器
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @ChannelHandler.Sharable
 public class GroupMembersRequestMessageHandler extends SimpleChannelInboundHandler<GroupMembersRequestMessage> {
 
@@ -18,5 +24,4 @@ public class GroupMembersRequestMessageHandler extends SimpleChannelInboundHandl
                 .getMembers(msg.getGroupName());
         ctx.writeAndFlush(new GroupMembersResponseMessage(members));
     }
-
 }

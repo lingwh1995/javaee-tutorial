@@ -10,6 +10,9 @@ import java.util.Iterator;
 
 /**
  * 目标：服务端群聊系统实现
+ *
+ * @author lingwh
+ * @date 2026/7/14 10:30
  */
 @Slf4j
 public class GroupChatServer {
@@ -45,7 +48,7 @@ public class GroupChatServer {
     }
 
     public void listen() {
-        //System.out.println("监听线程：" + Thread.currentThread().getName());
+        // System.out.println("监听线程：" + Thread.currentThread().getName());
         try {
             while (selector.select() > 0){
                 // 获取选择器中所有注册通道的就绪事件
@@ -67,7 +70,7 @@ public class GroupChatServer {
                         // 处理这个客户端的消息，接收它，然后实现转发逻辑
                         readClientData(sk);
                     }
-                    //处理完毕之后，需要移除当前事件
+                    // 处理完毕之后，需要移除当前事件
                     it.remove();
                 }
             }
@@ -78,6 +81,7 @@ public class GroupChatServer {
 
     /**
      * 接收当前客户端的信息，转发给其他全部客户端通道
+     *
      * @param sk
      */
     private void readClientData(SelectionKey sk) {
@@ -99,8 +103,8 @@ public class GroupChatServer {
         }catch (Exception e){
             try {
                 log.info("有人离线了： {}", channel.getRemoteAddress());
-                //当前客户端离线
-                sk.cancel();//取消注册
+                // 当前客户端离线
+                sk.cancel();// 取消注册
                 channel.close();
             } catch (IOException e1) {
                 e1.printStackTrace();
@@ -110,6 +114,7 @@ public class GroupChatServer {
 
     /**
      * 把当前客户端的消息推送给当前全部在线注册的channel
+     *
      * @param msg
      * @param sChannel
      * @throws IOException
@@ -125,6 +130,4 @@ public class GroupChatServer {
             }
         }
     }
-
 }
-

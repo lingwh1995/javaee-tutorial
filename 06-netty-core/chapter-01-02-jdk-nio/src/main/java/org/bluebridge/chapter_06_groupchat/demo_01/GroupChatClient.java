@@ -11,6 +11,9 @@ import java.util.Scanner;
 
 /**
  * 目标：客户端代码逻辑的实现
+ *
+ * @author lingwh
+ * @date 2026/7/14 10:35
  */
 public class GroupChatClient {
 
@@ -21,6 +24,7 @@ public class GroupChatClient {
     private Selector selector;
 
     private SocketChannel socketChannel;
+
     // 2.初始化客户端信息
     public GroupChatClient(){
         try {
@@ -50,7 +54,7 @@ public class GroupChatClient {
                 }
             }
         }).start();
-        //发消息
+        // 发消息
         Scanner sc = new Scanner(System.in);
         while (sc.hasNextLine()){
             System.out.println("------------------");
@@ -61,6 +65,7 @@ public class GroupChatClient {
 
     /**
      * 发送消息给服务端
+     *
      * @param s
      */
     private void sendToServer(String s) {
@@ -73,6 +78,7 @@ public class GroupChatClient {
 
     /**
      * 读取来自服务端的消息
+     *
      * @throws IOException
      */
     private void readInfo() throws IOException {

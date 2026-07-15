@@ -14,8 +14,9 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
+ * 固定长度解码器解决黏包半包问题 客户端
+ *
  * @author lingwh
- * @desc 固定长度解码器解决黏包半包问题 客户端
  * @date 2025/10/11 10:43
  */
 @Slf4j

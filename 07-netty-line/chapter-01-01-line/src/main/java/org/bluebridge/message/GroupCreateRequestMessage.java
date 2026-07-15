@@ -5,6 +5,12 @@ import lombok.ToString;
 
 import java.util.Set;
 
+/**
+ * 创建聊天组请求消息
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @Data
 @ToString(callSuper = true)
 public class GroupCreateRequestMessage extends Message {
@@ -21,5 +27,4 @@ public class GroupCreateRequestMessage extends Message {
     public int getMessageType() {
         return GroupCreateRequestMessage;
     }
-
 }

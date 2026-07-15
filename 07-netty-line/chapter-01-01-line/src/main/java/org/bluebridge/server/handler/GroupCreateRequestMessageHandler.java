@@ -13,6 +13,12 @@ import org.bluebridge.server.session.GroupSessionFactory;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * 创建聊天组请求消息处理器
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @ChannelHandler.Sharable
 public class GroupCreateRequestMessageHandler extends SimpleChannelInboundHandler<GroupCreateRequestMessage> {
 
@@ -35,5 +41,4 @@ public class GroupCreateRequestMessageHandler extends SimpleChannelInboundHandle
             ctx.writeAndFlush(new GroupCreateResponseMessage(false, groupName + "已经存在"));
         }
     }
-
 }

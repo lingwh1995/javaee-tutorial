@@ -3,6 +3,12 @@ package org.bluebridge.message;
 import lombok.Data;
 import lombok.ToString;
 
+/**
+ * 加入聊天组请求消息
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @Data
 @ToString(callSuper = true)
 public class GroupJoinRequestMessage extends Message {
@@ -19,5 +25,4 @@ public class GroupJoinRequestMessage extends Message {
     public int getMessageType() {
         return GroupJoinRequestMessage;
     }
-
 }

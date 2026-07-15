@@ -11,7 +11,7 @@ public class GunFactory extends WeaponFactory {
      */
     @Override
     public Weapon get() {
-        //注意这里这个对象是我们通过new手动创建的，如果使用简单工厂模式实例化bean，这个对象不能通过Spring的IOC创建
+        // 注意这里这个对象是我们通过new手动创建的，如果使用简单工厂模式实例化bean，这个对象不能通过Spring的IOC创建
         return new Gun();
     }
 }

@@ -6,6 +6,9 @@ import org.bluebridge.cache.domain.Employee;
 
 /**
  * 返回结果为resultMap
+ *
+ * @author lingwh
+ * @date 2026/7/13 18:36
  */
 public interface IEmployeeDao {
 
@@ -20,5 +23,4 @@ public interface IEmployeeDao {
      * 新增Emp对象,返回boolean
      */
     boolean addEmployee(Employee emp);
-
 }

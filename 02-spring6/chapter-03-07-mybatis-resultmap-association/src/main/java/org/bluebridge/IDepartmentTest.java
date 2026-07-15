@@ -6,7 +6,12 @@ import org.bluebridge.domain.Department;
 import org.bluebridge.utils.SqlSessionUtil;
 import org.junit.Test;
 
-
+/**
+ * 部门查询测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class IDepartmentTest {
 
     /**
@@ -15,7 +20,7 @@ public class IDepartmentTest {
     @Test
     public void getDeptByIdTest() {
         SqlSession sqlSession = null;
-        try{
+        try {
             sqlSession = SqlSessionUtil.openSession();
             IDeptDao deptDao = sqlSession.getMapper(IDeptDao.class);
 
@@ -26,7 +31,7 @@ public class IDepartmentTest {
         } catch (Exception e) {
             e.printStackTrace();
             sqlSession.rollback();
-        }finally {
+        } finally {
             sqlSession.close();
         }
     }

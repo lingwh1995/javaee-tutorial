@@ -7,6 +7,9 @@ import java.util.List;
 
 /**
  * 返回结果为resultMap
+ *
+ * @author lingwh
+ * @date 2026/7/13 18:36
  */
 public interface IEmployeeDao {
 
@@ -56,5 +59,4 @@ public interface IEmployeeDao {
      * @return
      */
     Employee getEmployeeAndDepartmentByIdStepUseDiscriminator(String id);
-
 }

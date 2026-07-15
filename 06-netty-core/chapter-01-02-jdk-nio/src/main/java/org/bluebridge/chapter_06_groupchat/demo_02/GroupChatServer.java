@@ -11,8 +11,12 @@ import java.util.Set;
 
 /**
  * NIO群聊服务端
- * 1.服务器启动并监听6667
- * 2.服务器端接收客户端消息,并实现处理上线和离线、转发
+ *
+ * 1. 服务器启动并监听6667
+ * 2. 服务器端接收客户端消息,并实现处理上线和离线、转发
+ *
+ * @author lingwh
+ * @date 2026/7/14 10:40
  */
 @Slf4j
 public class GroupChatServer {
@@ -66,12 +70,12 @@ public class GroupChatServer {
                             sc.register(selector,SelectionKey.OP_READ);
                             log.info("提示: {} 上线",sc.getRemoteAddress());
                         }
-                        //通道是可读状态
+                        // 通道是可读状态
                         if(selectionKey.isReadable()) {
-                            //处理读,专门写方法
+                            // 处理读,专门写方法
                             readDate(selectionKey);
                         }
-                        //处理完成后从SelectionKey集合中删除该SelectionKey,防止重复处理
+                        // 处理完成后从SelectionKey集合中删除该SelectionKey,防止重复处理
                         iterator.remove();
                     }
                 }else {
@@ -86,6 +90,7 @@ public class GroupChatServer {
 
     /**
      * 读取来自客户端的消息
+     *
      * @param selectionKey
      */
     public void readDate(SelectionKey selectionKey) {
@@ -121,6 +126,7 @@ public class GroupChatServer {
 
     /**
      * 把消息转发给其他客户端
+     *
      * @param message
      * @param selfSocketChannel
      * @throws IOException
@@ -145,5 +151,4 @@ public class GroupChatServer {
             }
         }
     }
-
 }

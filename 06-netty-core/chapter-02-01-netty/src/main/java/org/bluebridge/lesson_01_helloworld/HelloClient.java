@@ -13,8 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.net.InetSocketAddress;
 
 /**
+ * netty helloworld 客户端
+ *
  * @author lingwh
- * @desc netty helloworld 客户端
  * @date 2025/8/20 17:24
  */
 @Slf4j
@@ -52,4 +53,3 @@ public class HelloClient {
     }
 
 }
-

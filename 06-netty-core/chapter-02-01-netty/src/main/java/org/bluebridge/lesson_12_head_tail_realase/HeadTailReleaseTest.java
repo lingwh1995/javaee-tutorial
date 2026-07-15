@@ -1,13 +1,16 @@
 package org.bluebridge.lesson_12_head_tail_realase;
 
-
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import org.bluebridge.utils.ByteBufUtil;
 
 /**
  * HeadContext 和 TailContext 释放资源
- *      应当理解到： netty 中的创建的 Bytebuf 使用完成后最终要被释放，而不是什么处理都不做
+ *
+ * 应当理解到： netty 中的创建的 Bytebuf 使用完成后最终必然要被释放，而不是什么处理都不做
+ *
+ * @author lingwh
+ * @date 2026/7/14 10:30
  */
 public class HeadTailReleaseTest {
 
@@ -35,6 +38,7 @@ public class HeadTailReleaseTest {
 
     /**
      * 测试 byteBuf.release(); 方法
+     *
      * @param args
      */
     public static void main(String[] args) {

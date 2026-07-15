@@ -9,6 +9,12 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
+/**
+ * 聊天组会话内存实现
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 public class GroupSessionMemoryImpl implements GroupSession {
 
     private final Map<String, Group> groupMap = new ConcurrentHashMap<>();
@@ -52,5 +58,4 @@ public class GroupSessionMemoryImpl implements GroupSession {
                 .filter(Objects::nonNull)
                 .collect(Collectors.toList());
     }
-
 }

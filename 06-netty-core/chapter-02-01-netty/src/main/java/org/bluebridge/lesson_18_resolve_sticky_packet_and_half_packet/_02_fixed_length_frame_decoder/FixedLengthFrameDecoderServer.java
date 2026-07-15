@@ -11,17 +11,14 @@ import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author lingwh
- * @desc 固定长度解码器解决黏包半包问题 服务端
- * @date 2025/10/11 10:43
- */
-
-/**
- * 使用固定长度解码器解决黏包半包问题
+ * 固定长度解码器解决黏包半包问题 服务端
  *
- * 缺点是，数据包的大小不好把握
- *     长度定的太大，浪费
- *     长度定的太小，对某些数据包又显得不够
+ * 使用固定长度解码器解决黏包半包问题，缺点是数据包的大小不好把握
+ * 1. 长度定的太大，浪费
+ * 2. 长度定的太小，对某些数据包又显得不够
+ *
+ * @author lingwh
+ * @date 2025/10/11 10:43
  */
 @Slf4j
 public class FixedLengthFrameDecoderServer {
@@ -71,5 +68,4 @@ public class FixedLengthFrameDecoderServer {
             log.info("stopped......");
         }
     }
-
 }

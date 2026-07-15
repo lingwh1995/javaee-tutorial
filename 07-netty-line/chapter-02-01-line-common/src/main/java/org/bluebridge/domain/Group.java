@@ -8,8 +8,9 @@ import java.util.Collections;
 import java.util.Set;
 
 /**
+ * 聊天组，即聊天室
+ *
  * @author lingwh
- * @desc 聊天组，即聊天室
  * @date 2025/11/01 17:05
  */
 @Data
@@ -25,5 +26,4 @@ public class Group {
     private String owner;
 
     public static final Group EMPTY_GROUP = new Group("empty", Collections.emptySet(), "");
-
 }

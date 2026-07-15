@@ -22,22 +22,22 @@ public class FileSystemResourceDemo {
      * @throws IOException
      */
     public void loadAndParseFileSystemResource(String path) throws IOException {
-        //1.创建Resource实现类FileSystemResource
+        // 1. 创建Resource实现类FileSystemResource
         Resource resource = new FileSystemResource(path);
-        //2.获取资源信息
-        //获取资源名称
+        // 2. 获取资源信息
+        // 获取资源名称
         String filename = resource.getFilename();
         logger.info("资源名称: " + filename);
-            //获取资源uri
+            // 获取资源uri
         URI uri = resource.getURI();
         logger.info("资源uri: " + uri);
-            //获取资源url
+            // 获取资源url
         URL url = resource.getURL();
         logger.info("资源url: " + url);
-            //获取资源description
+            // 获取资源description
         String description = resource.getDescription();
         logger.info("资源description: " + description);
-            //读取资源内容
+            // 读取资源内容
         logger.info("资源内容: ");
         InputStream inputStream = null;
         try {

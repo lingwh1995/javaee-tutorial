@@ -13,8 +13,9 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 /**
+ * 聊天组聊天请求消息处理器
+ *
  * @author lingwh
- * @desc
  * @date 2025/11/2 20:22
  */
 @Slf4j
@@ -46,5 +47,4 @@ public class GroupChatRequestHandler extends SimpleChannelInboundHandler<GroupCh
             session.getChannel(member).writeAndFlush(groupChatResponseMessage);
         });
     }
-
 }

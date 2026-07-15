@@ -7,9 +7,14 @@ import java.util.logging.Logger;
 
 /**
  * 用来增强Servlet的Filter
+ *
+ * @author lingwh
+ * @date 2026/7/13 10:30
  */
 public class ExpandHttpServletFilter implements Filter {
+
     private static  Logger logger = Logger.getLogger("ExpandHttpServletFilter.class");
+
     /**
      * 缓存项目访问路径
      */
@@ -21,6 +26,7 @@ public class ExpandHttpServletFilter implements Filter {
 
     /**
      * 获取项目完整上下文根路径，并放于request域中
+     *
      * @param servletRequest
      * @param servletResponse
      * @param filterChain

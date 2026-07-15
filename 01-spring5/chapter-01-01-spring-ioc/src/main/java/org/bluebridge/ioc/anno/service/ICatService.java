@@ -1,10 +1,12 @@
 package org.bluebridge.ioc.anno.service;
 
 /**
+ * 猫服务接口
+ *
  * @author lingwh
- * @desc
- * @date   2019/3/20 9:32
+ * @date 2019/3/20 9:32
  */
 public interface ICatService {
-	void eat();
+
+    void eat();
 }

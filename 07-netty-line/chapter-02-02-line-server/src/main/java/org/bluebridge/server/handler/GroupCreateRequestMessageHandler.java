@@ -17,8 +17,9 @@ import java.util.List;
 import java.util.Set;
 
 /**
+ * 聊天组创建请求消息处理器
+ *
  * @author lingwh
- * @desc 聊天组创建请求消息处理器
  * @date 2025/11/1 17:19
  */
 @Slf4j
@@ -56,5 +57,4 @@ public class GroupCreateRequestMessageHandler extends SimpleChannelInboundHandle
             ctx.writeAndFlush(new GroupCreateResponseMessage(false, "聊天组[" + groupName + "]已经存在"));
         }
     }
-
 }

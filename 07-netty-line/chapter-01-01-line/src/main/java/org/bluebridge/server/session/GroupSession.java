@@ -7,6 +7,9 @@ import java.util.Set;
 
 /**
  * 聊天组会话管理接口
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
  */
 public interface GroupSession {
 
@@ -54,5 +57,4 @@ public interface GroupSession {
      * @return 成员 channel 集合
      */
     List<Channel> getMembersChannel(String name);
-
 }

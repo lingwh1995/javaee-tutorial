@@ -6,10 +6,17 @@ import org.bluebridge.domain.Car;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 汽车Mapper接口
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public interface ICarMapper {
 
     /**
      * 使用 #{} 设置参数
+     *
      * @param id
      * @return
      */
@@ -17,6 +24,7 @@ public interface ICarMapper {
 
     /**
      * 使用 ${} 设置参数
+     *
      * @param id
      * @return
      */
@@ -24,6 +32,7 @@ public interface ICarMapper {
 
     /**
      * 使用 ${} 设置排序条件
+     *
      * @param sortOrder 排序条件
      * @return
      */
@@ -31,6 +40,7 @@ public interface ICarMapper {
 
     /**
      * 模糊查询实现方式一：使用mysql的concat()函数实现模糊查询
+     *
      * @param brand
      * @return
      */
@@ -38,6 +48,7 @@ public interface ICarMapper {
 
     /**
      * 模糊查询实现方式二：使用 双引号 + #{} 拼接实现模糊查询
+     *
      * @param brand
      * @return
      */
@@ -45,6 +56,7 @@ public interface ICarMapper {
 
     /**
      * 模糊查询实现方式三：使用 单引号 + || + #{} 拼接实现模糊查询
+     *
      * @param brand
      * @return
      */
@@ -52,6 +64,7 @@ public interface ICarMapper {
 
     /**
      * 模糊查询实现方式四：使用 mybatis的bind标签 拼接实现模糊查询
+     *
      * @param brand
      * @return
      */
@@ -59,6 +72,7 @@ public interface ICarMapper {
 
     /**
      * 模糊查询实现方式五：直接传入拼接好的模糊查询参数 实现模糊查询
+     *
      * @param brand
      * @return
      */
@@ -66,6 +80,7 @@ public interface ICarMapper {
 
     /**
      * Mysql插入数据时设置主键方式一(写法一): 使用Mysql自动设置主键，sql语句中不用出现主键
+     *
      * @param car
      * @return
      */
@@ -73,6 +88,7 @@ public interface ICarMapper {
 
     /**
      * Mysql插入数据时设置主键方式一(写法二): 使用Mysql自动设置主键，sql语句中不用出现主键
+     *
      * @param car
      * @return
      */
@@ -80,6 +96,7 @@ public interface ICarMapper {
 
     /**
      * Mysql插入数据时设置主键方式二(写法一): 使用Mybatis读取Mysql生成的主键，在sql语句中使用，sql语句中要出现主键
+     *
      * @param car
      * @return
      */
@@ -87,6 +104,7 @@ public interface ICarMapper {
 
     /**
      * Mysql插入数据时设置主键方式二(写法二): 使用Mybatis读取Mysql生成的主键，在sql语句中使用，sql语句中要出现主键
+     *
      * @param car
      * @return
      */
@@ -94,6 +112,7 @@ public interface ICarMapper {
 
     /**
      * Mybatis 使用@Param传递多个参数
+     *
      * @param brand
      * @param guidePrice
      * @return
@@ -102,6 +121,7 @@ public interface ICarMapper {
 
     /**
      * Mybatis 使用Map传递多个参数
+     *
      * @param params
      * @return
      */
@@ -109,6 +129,7 @@ public interface ICarMapper {
 
     /**
      * Mybatis 使用@Param + Map传递多个参数
+     *
      * @param params
      * @return
      */
@@ -116,6 +137,7 @@ public interface ICarMapper {
 
     /**
      * Mybatis 读取使用@Param传递的多个参数
+     *
      * @param brand
      * @param guidePrice
      * @return
@@ -124,6 +146,7 @@ public interface ICarMapper {
 
     /**
      * Mybatis 读取使用Map传递的多个参数
+     *
      * @param params
      * @return
      */
@@ -131,6 +154,7 @@ public interface ICarMapper {
 
     /**
      * Mybatis 读取使用@Param + Map传递多个的参数
+     *
      * @param params
      * @return
      */
@@ -138,6 +162,7 @@ public interface ICarMapper {
 
     /**
      * 使用 Pojo 封装查询结果
+     *
      * @param id
      * @return
      */
@@ -145,12 +170,14 @@ public interface ICarMapper {
 
     /**
      * 使用 Pojo 封装查询结果
+     *
      * @return
      */
     List<Car> selectAllCarsUsePojoAsResultType();
 
     /**
      * 使用 map 封装查询结果
+     *
      * @param id
      * @return
      */
@@ -158,8 +185,8 @@ public interface ICarMapper {
 
     /**
      * 使用 map 封装查询结果
+     *
      * @return
      */
     List<Map<String,String>> selectAllCarsUseMapAsResultType();
-
 }

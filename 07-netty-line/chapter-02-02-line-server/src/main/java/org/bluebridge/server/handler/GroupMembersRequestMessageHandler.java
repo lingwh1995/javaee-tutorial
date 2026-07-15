@@ -13,8 +13,9 @@ import javax.annotation.Resource;
 import java.util.Set;
 
 /**
+ * 查看群成员请求消息处理器
+ *
  * @author lingwh
- * @desc 查看群成员请求消息处理器
  * @date 2025/11/1 22:23
  */
 @Slf4j
@@ -41,5 +42,4 @@ public class GroupMembersRequestMessageHandler extends SimpleChannelInboundHandl
         }
         ctx.writeAndFlush(groupMembersResponseMessage);
     }
-
 }

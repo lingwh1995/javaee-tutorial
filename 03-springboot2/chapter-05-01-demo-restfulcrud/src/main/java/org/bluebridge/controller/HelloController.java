@@ -10,7 +10,10 @@ import java.util.Arrays;
 import java.util.Map;
 
 /**
- * @author ronin
+ * Hello控制器，处理基础请求
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
  */
 @Controller
 public class HelloController {
@@ -27,5 +30,4 @@ public class HelloController {
         map.put("users", Arrays.asList("zhangsan","lisi","wangwui"));
         return "success";
     }
-
 }

@@ -13,8 +13,9 @@ import javax.annotation.Resource;
 import java.util.Set;
 
 /**
+ * 退出群组请求消息处理器
+ *
  * @author lingwh
- * @desc 退出群组请求消息处理器
  * @date 2025/11/2 21:50
  */
 @Slf4j
@@ -46,5 +47,4 @@ public class GroupQuitRequestMessageHandler extends SimpleChannelInboundHandler<
             ctx.writeAndFlush(new GroupQuitResponseMessage(true, username + " 退出了群组 " + groupName));
         });
     }
-
 }

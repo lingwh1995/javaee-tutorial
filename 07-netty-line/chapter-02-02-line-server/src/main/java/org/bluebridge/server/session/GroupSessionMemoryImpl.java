@@ -13,8 +13,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 /**
+ * 聊天组会话管理实现类
+ *
  * @author lingwh
- * @desc 聊天组会话管理实现类
  * @date 2025/10/25 12:09
  */
 @Service
@@ -79,5 +80,4 @@ public class GroupSessionMemoryImpl implements GroupSession {
     public boolean isGroupNotExist(String groupName) {
         return GROUP_MAP.getOrDefault(groupName, Group.EMPTY_GROUP) == Group.EMPTY_GROUP;
     }
-
 }

@@ -5,8 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * 退出群聊请求消息
+ *
  * @author lingwh
- * @desc 退出群聊请求消息
  * @date 2025/11/2 21:43
  */
 @Data
@@ -21,5 +22,4 @@ public class GroupQuitRequestMessage extends AbstractRequestMessage {
     public int getMessageType() {
         return MessageType.GROUP_QUIT_REQUEST_MESSAGE.getCode();
     }
-
 }

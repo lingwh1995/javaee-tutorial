@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 import java.util.Set;
 
 /**
+ * 查看群成员响应消息
+ *
  * @author lingwh
- * @desc 查看群成员响应消息
  * @date 2025/11/1 22:16
  */
 @Data
@@ -28,5 +29,4 @@ public class GroupMembersResponseMessage extends AbstractResponseMessage {
     public int getMessageType() {
         return MessageType.GROUP_MEMBERS_RESPONSE_MESSAGE.getCode();
     }
-
 }

@@ -13,8 +13,9 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 /**
+ * 拉人进聊天组请求消息处理器
+ *
  * @author lingwh
- * @desc 拉人进聊天组请求消息处理器
  * @date 2025/11/2 11:21
  */
 @Slf4j
@@ -58,5 +59,4 @@ public class GroupAddRequestMessageHandler extends SimpleChannelInboundHandler<G
             log.info("聊天组创建者 {} 将用户 {} 加入聊天组 {} 失败", owner, username, groupName);
         }
     }
-
 }

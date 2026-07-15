@@ -1,15 +1,13 @@
 package org.bluebridge.service;
 
-import org.bluebridge.entity.Employee;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.bluebridge.entity.Employee;
 
 /**
- * <p>
- *  服务类
- * </p>
+ * 员工服务接口
  *
  * @author lingwh
- * @since 2025-02-27
+ * @date 2025/2/27 09:25
  */
 public interface IEmployeeService extends IService<Employee> {
 

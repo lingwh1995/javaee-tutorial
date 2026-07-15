@@ -11,8 +11,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
+ * 文件传输服务端
+ *
  * @author lingwh
- * @desc 文件传输服务端
  * @date 2025/11/13 15:20
  */
 @Slf4j
@@ -23,22 +24,20 @@ public class FileTransferServer {
 
     public static void main(String[] args) {
         try {
-            // 1.获取ServerSocket
+            // 1. 获取ServerSocket
             InetAddress address = InetAddress.getByName(HOST);
             ServerSocket serverSocket = new ServerSocket(PORT, 50, address);
             log.info("文件传输服务器启动......");
             while (true) {
-                // 2.获取Socket
+                // 2. 获取Socket
                 Socket socket = serverSocket.accept();
-                // 3.接收文件并存储到另一个地方
+                // 3. 接收文件并存储到另一个地方
                 new Thread(new ServerThread(socket)).start();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
 }
 
 @Slf4j
@@ -54,16 +53,16 @@ class ServerThread implements Runnable {
     public void run() {
         FileOutputStream fileOutputStream = null;
         try {
-            // 1.获取输入流
+            // 1. 获取输入流
             InputStream socketInputStream = socket.getInputStream();
-            // 2.获得数据输入流
+            // 2. 获得数据输入流
             DataInputStream dataInputStream = new DataInputStream(socketInputStream);
-            // 3.定义输出流
+            // 3. 定义输出流
             String suffix = dataInputStream.readUTF();
             log.info("服务端成功接收到文件后缀名：{}", suffix);
             String fileName = "a1" + suffix;
             fileOutputStream = new FileOutputStream("D:\\" + fileName);
-            // 4.写文件
+            // 4. 写文件
             int len = 0;
             byte[] buffer = new byte[1024];
             while ((len = dataInputStream.read(buffer)) > 0 ) {

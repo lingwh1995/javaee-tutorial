@@ -5,6 +5,12 @@ import lombok.ToString;
 
 import java.util.Set;
 
+/**
+ * 查看群成员响应消息
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @Data
 @ToString(callSuper = true)
 public class GroupMembersResponseMessage extends Message {
@@ -19,5 +25,4 @@ public class GroupMembersResponseMessage extends Message {
     public int getMessageType() {
         return GroupMembersResponseMessage;
     }
-
 }
