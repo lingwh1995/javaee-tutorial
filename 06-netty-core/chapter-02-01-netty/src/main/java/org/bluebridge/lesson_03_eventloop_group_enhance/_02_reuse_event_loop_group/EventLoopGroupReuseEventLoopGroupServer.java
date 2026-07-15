@@ -9,8 +9,9 @@ import io.netty.handler.codec.string.StringDecoder;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 使用独立的 EventLoopGroup 创建多个Server时复用EventLoopGroup 服务端
+ *
  * @author lingwh
- * @desc 使用独立的 EventLoopGroup 创建多个Server时复用EventLoopGroup 服务端
  * @date 2025/9/23 13:47
  */
 @Slf4j
@@ -58,6 +59,7 @@ public class EventLoopGroupReuseEventLoopGroupServer {
 
     /**
      * 启动服务端
+     *
      * @param host
      * @param port
      */
@@ -96,6 +98,4 @@ public class EventLoopGroupReuseEventLoopGroupServer {
         sharedWorkerGroup.shutdownGracefully();
         log.info("Netty线程池已优雅关闭......");
     }
-
 }
-

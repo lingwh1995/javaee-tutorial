@@ -1,11 +1,21 @@
 package org.bluebridge.domain;
 
+/**
+ * 员工实体类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class Employee {
 
     private String id;
+
     private String lastName;
+
     private String email;
+
     private String gender;
+
     private String deptNo;
 
     public String getId() {

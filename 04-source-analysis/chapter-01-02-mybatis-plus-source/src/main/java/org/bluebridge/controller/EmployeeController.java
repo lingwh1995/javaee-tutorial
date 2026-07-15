@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
 
+/**
+ * 员工控制器
+ *
+ * @author lingwh
+ * @date 2026/7/14 09:19
+ */
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -19,15 +25,15 @@ public class EmployeeController {
 
     /**
      * http://localhost:8080/employee/list
+     *
      * @return
      */
     @GetMapping("/list")
-    public List<Employee> getEmployeeList(){
+    public List<Employee> getEmployeeList() {
         QueryWrapper<Employee> queryWrapper = new QueryWrapper<>(Employee.class);
         queryWrapper.like("last_name", "王");
         List<Employee> employeeList = employeeService.list(queryWrapper);
         System.out.println("employeeList = " + employeeList);
         return employeeList;
     }
-
 }

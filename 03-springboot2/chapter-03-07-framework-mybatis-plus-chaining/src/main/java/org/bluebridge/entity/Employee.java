@@ -9,12 +9,10 @@ import lombok.Builder;
 import lombok.Data;
 
 /**
- * <p>
- * 
- * </p>
+ * 员工实体类
  *
  * @author lingwh
- * @since 2025-02-27
+ * @date 2025/2/27 14:45
  */
 @AllArgsConstructor
 @Builder
@@ -36,5 +34,4 @@ public class Employee {
 
     @TableField("dept_no")
     private String deptNo;
-
 }

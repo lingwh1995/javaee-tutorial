@@ -7,29 +7,46 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * @author ronin
+ * MyBatis全局配置类，保存数据库连接和Mapper映射信息
+ *
+ * @author lingwh
+ * @date 2026/7/13 13:40
  */
 public class Configuration {
 
-    /** 数据库连接驱动类名 */
+    /**
+     * 数据库连接驱动类名
+     */
     private String driver;
 
-    /** 数据库连接URL */
+    /**
+     * 数据库连接URL
+     */
     private String url;
 
-    /** 数据库连接用户名 */
+    /**
+     * 数据库连接用户名
+     */
     private String username;
 
-    /** 密码 */
+    /**
+     * 密码
+     */
     private String password;
 
-    /** 保存所有的MapperStatement对象 */
+    /**
+     * 保存所有的MapperStatement对象
+     */
     private Map<String,MapperStatement> mapStatements = new HashMap<> ();
 
-    /** 保存所有的配置文件 */
+    /**
+     * 保存所有的配置文件
+     */
     private final Properties properties = new Properties();
 
-    /** 保存所有的数据库配置信息 */
+    /**
+     * 保存所有的数据库配置信息
+     */
     private final Map<String,String> dbConfigMap = new HashMap<>();
 
     public String getDriver() {
@@ -83,5 +100,4 @@ public class Configuration {
     public Map<String,String> getDbConfigMap() {
         return dbConfigMap;
     }
-
 }

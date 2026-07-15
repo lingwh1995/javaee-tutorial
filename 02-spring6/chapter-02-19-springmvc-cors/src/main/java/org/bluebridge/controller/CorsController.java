@@ -11,11 +11,13 @@ import java.util.List;
 
 /**
  * 测试跨域功能的后台接口
+ *
+ * @author lingwh
+ * @date 2026/7/13 15:44
  */
 @RequestMapping("/cors")
 @Controller
 public class CorsController {
-
 
     /**
      * 参考文档 //https://zhuanlan.zhihu.com/p/118381660
@@ -30,5 +32,4 @@ public class CorsController {
         userList.add(new User("003","王五",36));
         return userList;
     }
-
 }

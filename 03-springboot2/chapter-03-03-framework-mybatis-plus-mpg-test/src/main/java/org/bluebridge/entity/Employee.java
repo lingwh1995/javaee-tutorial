@@ -8,13 +8,12 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.Accessors;
+
 /**
- * <p>
- * 
- * </p>
+ * 员工实体类
  *
  * @author lingwh
- * @since 2025-02-27
+ * @date 2025/2/27 09:34
  */
 @Getter
 @Setter

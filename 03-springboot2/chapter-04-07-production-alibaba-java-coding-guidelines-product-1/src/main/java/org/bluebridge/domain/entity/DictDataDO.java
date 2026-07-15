@@ -1,12 +1,12 @@
 package org.bluebridge.domain.entity;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.bluebridge.common.domain.entity.BaseEntity;
 
 /**
+ * 字典数据
+ *
  * @author lingwh
- * @desc 字典数据
  * @date 2025/11/15 19:20
  */
 @Data
@@ -52,5 +52,4 @@ public class DictDataDO extends BaseEntity {
      * 排序
      */
     private Integer sortOrder;
-
 }

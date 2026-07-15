@@ -1,9 +1,13 @@
 package org.bluebridge.domian;
 
 /**
- * @author ronin
+ * 狗实体类
+ *
+ * @author lingwh
+ * @date 2020/3/5 11:15
  */
 public class Dog {
+
     private String name;
     private String age;
 

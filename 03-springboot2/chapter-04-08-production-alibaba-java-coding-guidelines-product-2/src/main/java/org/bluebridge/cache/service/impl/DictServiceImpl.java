@@ -1,5 +1,4 @@
 package org.bluebridge.cache.service.impl;
-
 import com.alicp.jetcache.anno.Cached;
 import org.bluebridge.cache.constant.CacheKeyConstants;
 import org.bluebridge.cache.converter.DictConverter;
@@ -17,8 +16,9 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 字典服务实现类
+ *
  * @author lingwh
- * @desc
  * @date 2025/12/9 19:09
  */
 @Service
@@ -59,5 +59,4 @@ public class DictServiceImpl implements DictService {
         List<DictDO> dictDOList = dictMapper.selectDictList(query);
         return dictConverter.toDictVOList(dictDOList);
     }
-
 }

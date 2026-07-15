@@ -5,15 +5,12 @@ import org.apache.ibatis.annotations.Mapper;
 import org.bluebridge.entity.Employee;
 
 /**
- * <p>
- *  Mapper 接口
- * </p>
+ * 员工Mapper接口
  *
  * @author lingwh
- * @since 2025-02-27
+ * @date 2025/2/27 16:08
  */
 @Mapper
 public interface EmployeeMapper extends BaseMapper<Employee> {
 
 }
-

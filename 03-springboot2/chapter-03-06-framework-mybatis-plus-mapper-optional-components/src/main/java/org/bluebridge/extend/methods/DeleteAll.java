@@ -7,9 +7,11 @@ import org.apache.ibatis.mapping.SqlSource;
 
 /**
  * 删除全部
+ *
+ * @author lingwh
+ * @date 2025/2/27 13:52
  */
 public class DeleteAll extends AbstractMethod {
-
 
     public DeleteAll(String methodName) {
         super(methodName);
@@ -24,4 +26,3 @@ public class DeleteAll extends AbstractMethod {
         return this.addDeleteMappedStatement(mapperClass, methodName, sqlSource);
     }
 }
-

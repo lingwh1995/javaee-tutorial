@@ -1,12 +1,17 @@
 package org.bluebridge.config;
 
-
 import org.bluebridge.protocol.Serializer;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/**
+ * 配置类
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 public abstract class Config {
 
     static Properties properties;

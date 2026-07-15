@@ -7,9 +7,10 @@ import org.springframework.lang.Nullable;
 import java.util.Arrays;
 
 /**
+ * 把字符串类型的Employee转换为实体类型的Employee
+ *
  * @author lingwh
- * @desc   把字符串类型的Employee转换为实体类型的Employee
- * @date   2019/6/17 14:58
+ * @date 2019/6/17 14:58
  */
 public class EmployeeConverter implements Converter<String, Employee>{
 

@@ -8,7 +8,14 @@ import org.junit.Test;
 
 import java.io.InputStream;
 
+/**
+ * 创建SqlSession测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class CreateSqlSessionTest {
+
     private static final String ENV = "mysql";
 
     @Test
@@ -30,12 +37,12 @@ public class CreateSqlSessionTest {
             // 4. 创建SqlSession对象
             sqlSession = sqlSessionFactory.openSession();
             System.out.println("创建的SqlSession对象 : " + sqlSession);
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 // 6. 关闭资源（只关闭是不会提交的）
                 sqlSession.close();

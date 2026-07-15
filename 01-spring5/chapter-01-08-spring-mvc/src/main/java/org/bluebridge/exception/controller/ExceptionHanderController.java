@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
+ * SpringMVC高级特性
+ *
  * @author lingwh
- * @desc   SpringMVC高级特性
- * @date   2019/7/25 9:20
+ * @date 2019/7/25 9:20
  */
 @Controller
 public class ExceptionHanderController {
@@ -18,31 +19,34 @@ public class ExceptionHanderController {
      * 注意:
      *     1.要把异常信息带到页面，不能在参数中传入Map，将异常信息放在Map中，然后返回String,要返回ModelAndView
      *     2.ModelAndView要写在方法体中，不能通过方法参数传入
+     *
      * @param e
      * @return
      */
     //使用ModelAndView正确写法
     //异常处理在专门的handler中
-//    @ExceptionHandler(ArithmeticException.class)
-//    public ModelAndView handleArithmeticException(Exception e){
-//        System.out.println(e);
-//        System.out.println("出异常了......");
-//        ModelAndView mv = new ModelAndView();
-//        mv.setViewName("error");
-//        mv.addObject("exceptionMessage",e);
-//        return mv;
-//    }
+    /*
+    @ExceptionHandler(ArithmeticException.class)
+    public ModelAndView handleArithmeticException(Exception e){
+        System.out.println(e);
+        System.out.println("出异常了......");
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("error");
+        mv.addObject("exceptionMessage",e);
+        return mv;
+    }*/
 
     //使用ModelAndView错误写法
-//    @ExceptionHandler(ArithmeticException.class)
-//    public ModelAndView handleArithmeticException(Exception e,ModelAndView mv){
-//        System.out.println(e);
-//        System.out.println("出异常了......");
-//        //ModelAndView mv = new ModelAndView();
-//        mv.setViewName("error");
-//        mv.addObject("exceptionMessage",e);
-//        return mv;
-//    }
+    /*
+    @ExceptionHandler(ArithmeticException.class)
+    public ModelAndView handleArithmeticException(Exception e,ModelAndView mv){
+        System.out.println(e);
+        System.out.println("出异常了......");
+        //ModelAndView mv = new ModelAndView();
+        mv.setViewName("error");
+        mv.addObject("exceptionMessage",e);
+        return mv;
+    }*/
 
     @RequestMapping("/testExceptionHander")
     public String testExceptionHander(){

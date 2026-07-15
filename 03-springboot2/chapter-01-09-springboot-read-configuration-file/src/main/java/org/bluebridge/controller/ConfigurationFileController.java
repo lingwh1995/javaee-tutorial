@@ -10,11 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
- * 通过@value读取比较简单的配置信息
- *      使用@Value("${property}")读取比较简单的配置信息：Spring并不推荐@value这种方式
+ * 简单读取spring配置信息
+ *
+ * 通过@Value("${property}")读取比较简单的配置信息，Spring并不推荐@value这种方式
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
  */
 @Controller
 public class ConfigurationFileController {
@@ -71,10 +74,10 @@ public class ConfigurationFileController {
     private User user;
     //-----------使用@PropertySource读取properties文件内容结束-----------
 
-
     /**
      * 访问   http://localhost:8080/read-configuration     查看效果
-     * @return
+     *
+     * @return 配置内容提示信息
      */
     @ResponseBody
     @RequestMapping("/read-configuration")

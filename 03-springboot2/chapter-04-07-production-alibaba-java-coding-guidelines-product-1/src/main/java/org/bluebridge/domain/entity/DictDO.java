@@ -1,5 +1,4 @@
 package org.bluebridge.domain.entity;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.bluebridge.common.domain.entity.BaseEntity;
@@ -7,8 +6,9 @@ import org.bluebridge.common.domain.entity.BaseEntity;
 import java.util.List;
 
 /**
+ * 字典类型
+ *
  * @author lingwh
- * @desc 字典类型
  * @date 2025/11/15 19:19
  */
 @Data
@@ -54,5 +54,4 @@ public class DictDO extends BaseEntity {
      * 字典数据列表
      */
     private List<DictDataDO> dictDataList;
-
 }

@@ -6,14 +6,13 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author lingwh
- * @desc EventLoopGroup 测试
- * @date 2025/9/23 11:06
- */
-
-/**
+ * EventLoopGroup 测试
+ *
  * 1.EventLoopGroup 本质上是一个线程池， EventLoop 可以理解为线程池中的一个线程
  * 2.NioEventLoop 除了可以处理 io 事件，也可以处理普通任务
+ *
+ * @author lingwh
+ * @date 2025/9/23 11:06
  */
 @Slf4j
 public class EventLoopGroupTest {
@@ -51,5 +50,4 @@ public class EventLoopGroupTest {
         // 6.优雅的关闭(任务全部执行完后关闭)
         //group.shutdownGracefully();
     }
-
 }

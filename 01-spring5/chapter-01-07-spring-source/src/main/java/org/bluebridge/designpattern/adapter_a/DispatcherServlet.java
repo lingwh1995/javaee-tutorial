@@ -1,13 +1,16 @@
 package org.bluebridge.designpattern.adapter_a;
-import	java.util.ArrayList;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 请求分发器，模拟SpringMVC的DispatcherServlet
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/15 8:52
+ * @date 2019/4/15 8:52
  */
 public class DispatcherServlet {
+
     private List<HandlerAdapter> handlerAdapters = new ArrayList < HandlerAdapter>();
 
     public DispatcherServlet() {
@@ -16,7 +19,7 @@ public class DispatcherServlet {
         handlerAdapters.add(new AnnotationHandlerAdapter());
     }
 
-    public void doDispatch(){
+    public void doDispatch() {
         //此处模拟SpringMVC从request取handler的对象，仅仅new出，可以出，
         //不论实现何种Controller，适配器总能经过适配以后得到想要的结果
 //      HttpController controller = new HttpController();
@@ -29,7 +32,7 @@ public class DispatcherServlet {
 
     }
 
-    public HandlerAdapter getHandler(Controller controller){
+    public HandlerAdapter getHandler(Controller controller) {
         for(HandlerAdapter adapter: this.handlerAdapters){
             if(adapter.supports(controller)){
                 return adapter;

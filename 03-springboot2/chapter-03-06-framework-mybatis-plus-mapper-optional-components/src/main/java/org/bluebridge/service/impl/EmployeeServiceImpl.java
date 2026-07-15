@@ -1,6 +1,5 @@
 package org.bluebridge.service.impl;
 
-
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.bluebridge.entity.Employee;
 import org.bluebridge.mapper.EmployeeMapper;
@@ -8,12 +7,10 @@ import org.bluebridge.service.IEmployeeService;
 import org.springframework.stereotype.Service;
 
 /**
- * <p>
- *  服务实现类
- * </p>
+ * 员工服务实现类
  *
  * @author lingwh
- * @since 2025-02-27
+ * @date 2025/2/27 13:20
  */
 @Service
 public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> implements IEmployeeService {

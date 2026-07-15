@@ -14,30 +14,30 @@ import lombok.extern.slf4j.Slf4j;
 import java.nio.charset.Charset;
 
 /**
- * @author lingwh
- * @desc 单事件循环组 服务端
- * @date 2025/9/23 11:58
- */
-
-/**
+ * 单事件循环组 服务端
+ *
  * 单参数版本 => public ServerBootstrap group(EventLoopGroup group)
- * 1.用于父级和子级 EventLoopGroup 使用同一个实例的场景，内部会将同一个 group 同时作为 parentGroup 和 childGroup使用
- * 2.适用于单线程模型的场景，如简单的服务器应用，不需要复杂的线程模型配置
- */
-
-/**
- * 关于 Netty 的 NioEventLoopGroup 的默认线程数量大小，以下是关键信息：
- *   默认线程数：NioEventLoopGroup 默认的线程数量是 CPU 核心数的两倍。
- *   具体来说，其默认构造函数会使用 Runtime.getRuntime().availableProcessors() * 2 作为线程数。
- *   这适用于大多数 I/O 密集型应用，能够较好地利用多核 CPU 性能。
- * 构造方式：
- *   new NioEventLoopGroup()：无参构造函数会自动设置线程数为 CPU 核心数的两倍。
- *   也可以通过 new NioEventLoopGroup(int nThreads) 手动指定线程数。
- * 适用场景：
- *   对于 I/O 密集型任务（如网络通信），默认值通常是合适的。
- *   如果是计算密集型任务，可能需要根据实际情况调整线程数，避免过多线程导致上下文切换开销。
- * 总结：
- *   Netty 的 NioEventLoopGroup 的默认线程数量大小为 CPU 核心数 × 2，这是基于 I/O 多路复用和并发处理的优化设定。
+ * 1. 用于父级和子级 EventLoopGroup 使用同一个实例的场景，内部会将同一个 group 同时作为 parentGroup 和 childGroup使用
+ * 2. 适用于单线程模型的场景，如简单的服务器应用，不需要复杂的线程模型配置
+ *
+ * 关于 Netty 的 NioEventLoopGroup 的默认线程数量大小，以下是关键信息
+ * 1. 默认线程数：NioEventLoopGroup 默认的线程数量是 CPU 核心数的两倍。
+ * 2. 具体来说，其默认构造函数会使用 Runtime.getRuntime().availableProcessors() * 2 作为线程数。
+ * 3. 这适用于大多数 I/O 密集型应用，能够较好地利用多核 CPU 性能。
+ *
+ * 构造方式
+ * 1. new NioEventLoopGroup()：无参构造函数会自动设置线程数为 CPU 核心数的两倍。
+ * 2. 也可以通过 new NioEventLoopGroup(int nThreads) 手动指定线程数。
+ *
+ * 适用场景
+ * 1. 对于 I/O 密集型任务（如网络通信），默认值通常是合适的。
+ * 2. 如果是计算密集型任务，可能需要根据实际情况调整线程数，避免过多线程导致上下文切换开销。
+ *
+ * 总结
+ * Netty 的 NioEventLoopGroup 的默认线程数量大小为 CPU 核心数 × 2，这是基于 I/O 多路复用和并发处理的优化设定。
+ *
+ * @author lingwh
+ * @date 2025/9/23 11:58
  */
 @Slf4j
 public class EventLoopGroupSingleServer {
@@ -68,5 +68,4 @@ public class EventLoopGroupSingleServer {
             })
             .bind(HOST, PORT);
     }
-
 }

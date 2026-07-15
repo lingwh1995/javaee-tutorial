@@ -1,75 +1,86 @@
 package org.bluebridge.domain;
 
+/**
+ * 员工实体类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class Employee {
-	
-	private String id;
-	private String lastName;
-	private String email;
-	private String gender;
-	private String deptNo;
-	private Department department;
 
-	public Employee(){
+    private String id;
 
-	}
+    private String lastName;
 
-	public String getId() {
-		return id;
-	}
+    private String email;
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    private String gender;
 
-	public String getLastName() {
-		return lastName;
-	}
+    private String deptNo;
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    private Department department;
 
-	public String getEmail() {
-		return email;
-	}
+    public Employee(){
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    }
 
-	public String getGender() {
-		return gender;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getDeptNo() {
-		return deptNo;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public void setDeptNo(String deptNo) {
-		this.deptNo = deptNo;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public Department getDepartment() {
-		return department;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public void setDepartment(Department department) {
-		this.department = department;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	@Override
-	public String toString() {
-		return "Employee{" +
-				"id='" + id + '\'' +
-				", lastName='" + lastName + '\'' +
-				", email='" + email + '\'' +
-				", gender='" + gender + '\'' +
-				", deptNo='" + deptNo + '\'' +
-				", department=" + department +
-				'}';
-	}
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getDeptNo() {
+        return deptNo;
+    }
+
+    public void setDeptNo(String deptNo) {
+        this.deptNo = deptNo;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id='" + id + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", gender='" + gender + '\'' +
+                ", deptNo='" + deptNo + '\'' +
+                ", department=" + department +
+                '}';
+    }
 }

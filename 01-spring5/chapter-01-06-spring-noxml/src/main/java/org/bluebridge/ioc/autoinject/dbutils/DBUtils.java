@@ -3,9 +3,10 @@ package org.bluebridge.ioc.autoinject.dbutils;
 import org.springframework.stereotype.Component;
 
 /**
+ * 数据库工具类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/12 12:21
+ * @date 2019/4/12 12:21
  */
 @Component(value="dbutils")
 public class DBUtils {

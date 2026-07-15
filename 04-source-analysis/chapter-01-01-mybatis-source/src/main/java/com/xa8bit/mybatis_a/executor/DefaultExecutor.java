@@ -9,7 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author ronin
+ * Executor的默认实现，通过JdbcUtils执行SQL查询
+ *
+ * @author lingwh
+ * @date 2026/7/13 11:50
  */
 public class DefaultExecutor implements Executor {
 
@@ -29,5 +32,4 @@ public class DefaultExecutor implements Executor {
         }
         return result;
     }
-
 }

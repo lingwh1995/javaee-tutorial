@@ -8,15 +8,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Date;
 
 /**
+ * 测试日期转换器
+ *
  * @author lingwh
- * @desc   测试日期转换器
- * @date   2019/6/17 14:32
+ * @date 2019/6/17 14:32
  */
 @Controller
 public class ConverterHandler {
 
     /**
      * 使用自定义的DateConverter将字符串类型的日期转换为java.util.Date的日期
+     *
      * @param date
      * @return
      */
@@ -28,6 +30,7 @@ public class ConverterHandler {
 
     /**
      * 使用自定义的DateConverter将字符串类型的日期转换为java.util.Date的日期
+     *
      * @param employee  前台输入:1-张三-123456-18
      * @return
      */

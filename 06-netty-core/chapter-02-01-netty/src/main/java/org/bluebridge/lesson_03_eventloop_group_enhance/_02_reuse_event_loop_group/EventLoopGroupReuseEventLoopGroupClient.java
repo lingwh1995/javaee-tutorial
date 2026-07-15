@@ -10,8 +10,9 @@ import io.netty.handler.codec.string.StringEncoder;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 创建多个Client时复用EventLoopGroup 客户端（优化版）
+ *
  * @author lingwh
- * @desc  创建多个Client时复用EventLoopGroup 客户端（优化版）
  * @date 2025/9/23 11:58
  */
 @Slf4j
@@ -59,6 +60,7 @@ public class EventLoopGroupReuseEventLoopGroupClient {
 
     /**
      * 启动客户端
+     *
      * @param host
      * @param port
      * @param msg

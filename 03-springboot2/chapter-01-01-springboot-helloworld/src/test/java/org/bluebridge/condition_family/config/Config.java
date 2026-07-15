@@ -7,9 +7,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/14 10:59
+ * Condition 条件装配示例的配置类
+ *
+ * @author lingwh
+ * @date 2019/11/14 10:59
  */
 @Configuration
 public class Config {
@@ -20,15 +21,12 @@ public class Config {
     }
 
     /**
-     * @ConditionalOnBean
-     *      当给定的在bean存在时,则实例化当前Bean
-     * @ConditionalOnMissingBean
-     *      当给定的在bean不存在时,则实例化当前Bean
-     * @ConditionalOnClass
-     *      当给定的类名在类路径上存在，则实例化当前Bean
-     * @ConditionalOnMissingClass
-     *      当给定的类名在类路径上不存在，则实例化当前Bean
-     * @return
+     * @ConditionalOnBean -当给定的在bean存在时，则实例化当前Bean
+     * @ConditionalOnMissingBean - 当给定的在bean不存在时，则实例化当前Bean
+     * @ConditionalOnClass - 当给定的类名在类路径上存在，则实例化当前Bean
+     * @ConditionalOnMissingClass - 当给定的类名在类路径上不存在，则实例化当前Bean
+     *
+     * @return Person 实例
      */
     @Bean
     @ConditionalOnBean(name = "dog")
@@ -40,4 +38,3 @@ public class Config {
         return person;
     }
 }
-

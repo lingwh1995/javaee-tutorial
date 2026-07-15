@@ -1,15 +1,15 @@
 package org.bluebridge.profile.dao;
 
 /**
+ * 客户数据访问实现类
+ *
  * @author lingwh
- * @desc
- * @date   2019/3/21 9:42
+ * @date 2019/3/21 9:42
  */
-public class CustomerDaoImpl implements CustomerDao{
+public class CustomerDaoImpl implements CustomerDao {
+
     public String save() {
-        /**
-         * 模拟发生了异常，后置通知依然执行，返回值通知不执行
-         */
+        // 模拟发生了异常，后置通知依然执行，返回值通知不执行
         //System.out.println(1 / 0);
         System.out.println("保存操作......");
         return "我是save方法返回值......";
@@ -17,6 +17,8 @@ public class CustomerDaoImpl implements CustomerDao{
 
     /**
      * 测试环绕通知
+     *
+     * @return
      */
     public String aroundMethod() {
         //System.out.println(1/0);

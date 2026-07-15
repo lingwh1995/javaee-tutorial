@@ -4,9 +4,10 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /**
+ * Dog实体类，演示Bean生命周期
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/10 11:22
+ * @date 2019/4/10 11:22
  */
 public class Dog {
 

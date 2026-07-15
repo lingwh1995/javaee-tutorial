@@ -13,9 +13,11 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
 
-
 /**
- * @author ronin
+ * Druid数据源配置类
+ *
+ * @author lingwh
+ * @date 2019/11/18 10:15
  */
 @Configuration
 public class DruidDataSourceConfig {
@@ -26,7 +28,7 @@ public class DruidDataSourceConfig {
      */
     @Bean
     @ConfigurationProperties(prefix ="spring.datasource")
-    public DataSource dataSource(){
+    public DataSource dataSource() {
         return new DruidDataSource();
     }
 
@@ -35,25 +37,25 @@ public class DruidDataSourceConfig {
         ServletRegistrationBean reg = new ServletRegistrationBean();
         reg.setServlet(new StatViewServlet());
         reg.addUrlMappings("/druid/*");
-        //设置控制台管理用户
+        // 设置控制台管理用户
         reg.addInitParameter("loginUsername","root");
         reg.addInitParameter("loginPassword","root");
-        //白名单
+        // 白名单
         reg.addInitParameter("allow","");
-        //reg.addInitParameter("allow", "127.0.0.1");
+        // reg.addInitParameter("allow", "127.0.0.1");
         return reg;
     }
 
     @Bean
     public FilterRegistrationBean filterRegistrationBean() {
-        //创建过滤器
+        // 创建过滤器
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
         filterRegistrationBean.setFilter(new WebStatFilter());
         Map<String, String> initParams = new HashMap<String, String>();
-        //忽略过滤的形式
+        // 忽略过滤的形式
         initParams.put("exclusions", "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*");
         filterRegistrationBean.setInitParameters(initParams);
-        //设置过滤器过滤路径
+        // 设置过滤器过滤路径
         filterRegistrationBean.addUrlPatterns("/*");
         return filterRegistrationBean;
     }

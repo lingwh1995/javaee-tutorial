@@ -1,19 +1,16 @@
 package org.bluebridge.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.bluebridge.extend.base.MyBaseMapper;
 import org.bluebridge.entity.Employee;
+import org.bluebridge.extend.base.MyBaseMapper;
 
 /**
- * <p>
- *  Mapper 接口
- * </p>
+ * 员工Mapper接口
  *
  * @author lingwh
- * @since 2025-02-27
+ * @date 2025/2/27 13:28
  */
 @Mapper
 public interface EmployeeMapper extends MyBaseMapper<Employee> {
 
 }
-

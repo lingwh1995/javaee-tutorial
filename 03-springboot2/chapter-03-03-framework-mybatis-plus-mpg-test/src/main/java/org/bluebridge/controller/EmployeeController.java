@@ -9,12 +9,10 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * <p>
- *  前端控制器
- * </p>
+ * 员工前端控制器
  *
  * @author lingwh
- * @since 2025-02-27
+ * @date 2025/2/27 09:37
  */
 @RestController
 @RequestMapping("/employee")
@@ -23,7 +21,7 @@ public class EmployeeController {
     @Resource
     private IEmployeeService employeeService;
 
-    public List<Employee> getEmployeeList(){
+    public List<Employee> getEmployeeList() {
         return employeeService.list();
     }
 }

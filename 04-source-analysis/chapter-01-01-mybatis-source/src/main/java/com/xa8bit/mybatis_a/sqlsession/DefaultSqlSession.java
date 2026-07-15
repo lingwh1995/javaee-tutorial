@@ -11,10 +11,13 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * mybatis暴露给外部的接口,实现增删改查功能:
- *      1.对象提供数据访问的api
- *      2.对内将请求转发给Executor
- * @author ronin
+ * mybatis暴露给外部的接口，实现增删改查功能
+ *
+ * 1. 对象提供数据访问的api
+ * 2. 对内将请求转发给Executor
+ *
+ * @author lingwh
+ * @date 2026/7/13 17:10
  */
 public class DefaultSqlSession implements SqlSession {
 
@@ -56,5 +59,4 @@ public class DefaultSqlSession implements SqlSession {
         MapperProxy mapperProxy = new MapperProxy(this);
         return (T)Proxy.newProxyInstance(type.getClassLoader(),new Class[]{type},mapperProxy);
     }
-
 }

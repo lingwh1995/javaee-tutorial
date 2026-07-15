@@ -9,15 +9,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Map;
 
 /**
+ * 处理Json数据的控制器
+ *
  * @author lingwh
- * @desc
- * @date   2019/6/19 20:09
+ * @date 2019/6/19 20:09
  */
 @Controller
 public class DealJsonController {
 
     /**
      * 接收前台传递过来的Json对象
+     *
      * @param map
      * @return
      */
@@ -31,6 +33,7 @@ public class DealJsonController {
 
     /**
      * 接收前台传递过来的Json格式的字符串
+     *
      * @param map
      * @return
      */
@@ -41,5 +44,4 @@ public class DealJsonController {
         System.out.println(map);
         return map;
     }
-
 }

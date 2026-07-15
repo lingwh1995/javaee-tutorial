@@ -12,8 +12,9 @@ import java.nio.charset.Charset;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 使用独立的 EventLoopGroup 处理耗时较长的任务 服务端
+ *
  * @author lingwh
- * @desc 使用独立的 EventLoopGroup 处理耗时较长的任务 服务端
  * @date 2025/9/23 13:47
  */
 @Slf4j
@@ -81,5 +82,4 @@ public class EventLoopGroupHandleHighCostTaskServer {
             })
             .bind(HOST, PORT);
     }
-
 }

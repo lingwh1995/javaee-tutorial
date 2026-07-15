@@ -1,5 +1,4 @@
 package org.bluebridge.domain.vo;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
@@ -7,8 +6,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
+ * 字典类型
+ *
  * @author lingwh
- * @desc 字典类型
  * @date 2025/11/15 19:19
  */
 @Data

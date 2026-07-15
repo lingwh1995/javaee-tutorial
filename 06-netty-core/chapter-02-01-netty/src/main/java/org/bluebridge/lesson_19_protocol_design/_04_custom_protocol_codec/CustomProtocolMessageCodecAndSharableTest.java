@@ -27,12 +27,12 @@ public class CustomProtocolMessageCodecAndSharableTest {
         // 日志处理器
         LoggingHandler LOGGING_HANDLER = new LoggingHandler(LogLevel.DEBUG);
         EmbeddedChannel channel = new EmbeddedChannel(
-            // 帧解码器
-            new LengthFieldBasedFrameDecoder(1024, 12, 4, 0, 0),
-            // 日志处理器
-            LOGGING_HANDLER,
-            // 自定义协议编解码器
-            new MessageCodec());
+                // 帧解码器
+                new LengthFieldBasedFrameDecoder(1024, 12, 4, 0, 0),
+                // 日志处理器
+                LOGGING_HANDLER,
+                // 自定义协议编解码器
+                new MessageCodec());
 
         // encode
         LoginRequestMessage message = new LoginRequestMessage("zhangsan", "123", "张三");
@@ -53,5 +53,4 @@ public class CustomProtocolMessageCodecAndSharableTest {
         buf1.retain();                  //引用计数 + 1
         channel.writeInbound(buf2);
     }
-
 }

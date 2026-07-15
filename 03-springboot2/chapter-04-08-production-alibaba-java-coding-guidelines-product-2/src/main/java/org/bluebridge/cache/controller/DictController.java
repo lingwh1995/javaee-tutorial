@@ -1,5 +1,4 @@
 package org.bluebridge.cache.controller;
-
 import org.bluebridge.cache.domain.dto.DictQueryDTO;
 import org.bluebridge.cache.domain.vo.DictVO;
 import org.bluebridge.cache.service.DictService;
@@ -15,8 +14,9 @@ import javax.validation.constraints.Pattern;
 import java.util.List;
 
 /**
+ * 字典控制器
+ *
  * @author lingwh
- * @desc
  * @date 2025/12/10 14:30
  */
 @RestController
@@ -30,6 +30,7 @@ public class DictController {
      * http://localhost:8080/product/api/v1/dicts/DATABASE_TYPE
      *
      * 根据字典编码查询字典
+     *
      * @param dictCode
      * @return
      */
@@ -77,5 +78,4 @@ public class DictController {
         List<DictVO> productVOList = dictService.listDict(query);
         return Result.buildDataResult(productVOList, OperationTypeEnum.QUERY_LIST);
     }
-
 }

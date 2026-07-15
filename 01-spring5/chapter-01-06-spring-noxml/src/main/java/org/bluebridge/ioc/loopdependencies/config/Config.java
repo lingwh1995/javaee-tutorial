@@ -6,9 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 /**
+ * 零配置搭建Spring开发环境测试
+ *
  * @author lingwh
- * @desc   零配置搭建Spring开发环境测试
- * @date   2019/4/4 10:42
+ * @date 2019/4/4 10:42
  */
 @Configuration
 @ComponentScan(value= "org.bluebridge.ioc.loopdependencies",

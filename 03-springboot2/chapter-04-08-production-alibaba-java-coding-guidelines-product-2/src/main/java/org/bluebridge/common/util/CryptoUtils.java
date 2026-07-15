@@ -1,12 +1,12 @@
 package org.bluebridge.common.util;
-
 import cn.hutool.crypto.SecureUtil;
 
 import java.nio.charset.StandardCharsets;
 
 /**
+ * 加密工具类枚举
+ *
  * @author lingwh
- * @desc 加密工具类枚举
  * @date 2026/1/10 16:58
  */
 public class CryptoUtils {
@@ -32,5 +32,4 @@ public class CryptoUtils {
             return SecureUtil.aes(key.getBytes(StandardCharsets.UTF_8)).decryptStr(hex);
         }
     }
-
 }

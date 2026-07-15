@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 
 /**
- * @author ronin
+ * 员工控制器，处理员工增删改查请求
+ *
+ * @author lingwh
  */
 @Controller
 public class EmployeeController {
@@ -25,6 +27,7 @@ public class EmployeeController {
 
     /**
      * 查询所有员工返回列表页面
+     *
      * @return
      */
     @GetMapping("/emps")

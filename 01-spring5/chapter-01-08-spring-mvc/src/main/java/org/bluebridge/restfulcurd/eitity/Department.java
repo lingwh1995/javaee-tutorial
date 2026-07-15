@@ -1,44 +1,45 @@
 package org.bluebridge.restfulcurd.eitity;
 
 /**
+ * 部门实体类
+ *
  * @author lingwh
- * @desc
- * @date   2019/7/20 14:10
+ * @date 2019/7/20 14:10
  */
 public class Department {
 
-	private Integer id;
-	private String departmentName;
+    private Integer id;
 
-	public Department() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Department(int i, String string) {
-		this.id = i;
-		this.departmentName = string;
-	}
+    private String departmentName;
 
-	public Integer getId() {
-		return id;
-	}
+    public Department() {
+        // TODO Auto-generated constructor stub
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public Department(int i, String string) {
+        this.id = i;
+        this.departmentName = string;
+    }
 
-	public String getDepartmentName() {
-		return departmentName;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setDepartmentName(String departmentName) {
-		this.departmentName = departmentName;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	@Override
-	public String toString() {
-		return "Department [id=" + id + ", departmentName=" + departmentName
-				+ "]";
-	}
-	
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
+
+    @Override
+    public String toString() {
+        return "Department [id=" + id + ", departmentName=" + departmentName
+                + "]";
+    }
 }

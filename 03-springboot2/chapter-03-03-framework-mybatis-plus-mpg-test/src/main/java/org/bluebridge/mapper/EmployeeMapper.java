@@ -1,20 +1,16 @@
 package org.bluebridge.mapper;
 
-import org.bluebridge.entity.Employee;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-
 import org.apache.ibatis.annotations.Mapper;
+import org.bluebridge.entity.Employee;
 
 /**
- * <p>
- *  Mapper 接口
- * </p>
+ * 员工Mapper接口
  *
  * @author lingwh
- * @since 2025-02-27
+ * @date 2025/2/27 09:28
  */
 @Mapper
 public interface EmployeeMapper extends BaseMapper<Employee> {
 
 }
-

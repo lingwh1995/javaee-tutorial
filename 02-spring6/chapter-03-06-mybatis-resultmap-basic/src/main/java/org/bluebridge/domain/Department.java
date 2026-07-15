@@ -1,10 +1,17 @@
 package org.bluebridge.domain;
 
-import java.util.List;
-
+/**
+ * 部门实体类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class Department {
+
     private String id;
+
     private String deptName;
+
     private String deptNo;
 
     public Department(){

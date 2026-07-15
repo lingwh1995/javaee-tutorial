@@ -1,12 +1,12 @@
 package org.bluebridge.designpattern.template_a;
 
 /**
+ * 可配置的应用上下文接口
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/15 14:13
+ * @date 2019/4/15 14:13
  */
-public interface ConfigurableApplicationContext{
+public interface ConfigurableApplicationContext {
 
-	void refresh() throws IllegalStateException;
-
+    void refresh() throws IllegalStateException;
 }

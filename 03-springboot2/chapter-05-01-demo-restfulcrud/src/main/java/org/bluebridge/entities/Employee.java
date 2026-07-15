@@ -2,15 +2,25 @@ package org.bluebridge.entities;
 
 import java.util.Date;
 
+/**
+ * 员工实体类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class Employee {
 
-	private Integer id;
+    private Integer id;
+
     private String lastName;
 
     private String email;
+
     //1 male, 0 female
     private Integer gender;
+
     private Department department;
+
     private Date birth;
 
     public Integer getId() {
@@ -60,6 +70,7 @@ public class Employee {
     public void setBirth(Date birth) {
         this.birth = birth;
     }
+
     public Employee(Integer id, String lastName, String email, Integer gender,
                     Department department) {
         super();
@@ -85,6 +96,4 @@ public class Employee {
                 ", birth=" + birth +
                 '}';
     }
-	
-	
 }

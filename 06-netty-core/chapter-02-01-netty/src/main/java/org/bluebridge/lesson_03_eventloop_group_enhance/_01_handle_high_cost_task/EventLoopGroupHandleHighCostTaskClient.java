@@ -10,8 +10,9 @@ import io.netty.handler.codec.string.StringEncoder;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 使用独立的 EventLoopGroup 处理耗时较长的任务客户端
+ *
  * @author lingwh
- * @desc 使用独立的 EventLoopGroup 处理耗时较长的任务客户端
  * @date 2025/9/23 11:58
  */
 @Slf4j
@@ -39,5 +40,4 @@ public class EventLoopGroupHandleHighCostTaskClient {
 //        TimeUnit.MILLISECONDS.sleep(2000);
 //        channel.writeAndFlush("zhangsan");
     }
-
 }

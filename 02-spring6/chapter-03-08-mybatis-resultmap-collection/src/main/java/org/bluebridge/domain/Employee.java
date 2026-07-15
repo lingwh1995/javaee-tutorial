@@ -1,65 +1,75 @@
 package org.bluebridge.domain;
 
+/**
+ * 员工实体类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class Employee {
-	
-	private String id;
-	private String lastName;
-	private String email;
-	private String gender;
-	private String deptNo;
 
-	public Employee(){
+    private String id;
 
-	}
+    private String lastName;
 
-	public String getId() {
-		return id;
-	}
+    private String email;
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    private String gender;
 
-	public String getLastName() {
-		return lastName;
-	}
+    private String deptNo;
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public Employee(){
 
-	public String getEmail() {
-		return email;
-	}
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public String getGender() {
-		return gender;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public String getDeptNo() {
-		return deptNo;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public void setDeptNo(String deptNo) {
-		this.deptNo = deptNo;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	@Override
-	public String toString() {
-		return "Employee{" +
-				"id='" + id + '\'' +
-				", lastName='" + lastName + '\'' +
-				", email='" + email + '\'' +
-				", gender='" + gender + '\'' +
-				", deptNo='" + deptNo + '\'' +
-				'}';
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getDeptNo() {
+        return deptNo;
+    }
+
+    public void setDeptNo(String deptNo) {
+        this.deptNo = deptNo;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id='" + id + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", gender='" + gender + '\'' +
+                ", deptNo='" + deptNo + '\'' +
+                '}';
+    }
 }

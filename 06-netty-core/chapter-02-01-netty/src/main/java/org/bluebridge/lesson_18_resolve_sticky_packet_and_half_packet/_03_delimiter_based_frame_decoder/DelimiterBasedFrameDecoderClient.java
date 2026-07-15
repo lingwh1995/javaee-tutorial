@@ -13,8 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Random;
 
 /**
+ * 自定义分隔符解码器解决黏包半包问题 客户端
+ *
  * @author lingwh
- * @desc 自定义分隔符解码器解决黏包半包问题 客户端
  * @date 2025/10/14 11:48
  */
 @Slf4j
@@ -64,6 +65,7 @@ public class DelimiterBasedFrameDecoderClient {
 
     /**
      * 给消息最后添加换行符
+     *
      * @param c
      * @param len
      * @return

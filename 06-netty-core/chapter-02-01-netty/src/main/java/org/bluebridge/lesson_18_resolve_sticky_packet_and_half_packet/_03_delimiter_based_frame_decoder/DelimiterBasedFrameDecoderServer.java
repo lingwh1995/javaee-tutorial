@@ -13,13 +13,12 @@ import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author lingwh
- * @desc 自定义分隔符解码器解决黏包半包问题 服务端
- * @date 2025/10/14 11:47
- */
-
-/**
+ * 自定义分隔符解码器解决黏包半包问题 服务端
+ *
  * 缺点，处理字符数据比较合适，但如果内容本身包含了分隔符（字节数据常常会有此情况），那么就会解析错误
+ *
+ * @author lingwh
+ * @date 2025/10/14 11:47
  */
 @Slf4j
 public class DelimiterBasedFrameDecoderServer {
