@@ -7,8 +7,9 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 
 /**
+ * 客户端
+ *
  * @author lingwh
- * @desc
  * @date 2025/11/16 15:53
  */
 @Slf4j
@@ -28,5 +29,4 @@ public class Client {
             log.error("连接超时:{}", e);
         }
     }
-
 }

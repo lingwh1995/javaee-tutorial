@@ -10,9 +10,10 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Random;
 
 /**
+ * 条件装配配置类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/8 14:25
+ * @date 2019/4/8 14:25
  */
 @Configuration
 public class ConditionalAutoConfig {

@@ -2,8 +2,6 @@ package org.bluebridge.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
@@ -11,6 +9,9 @@ import java.util.List;
 
 /**
  * 集合工具类测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 20:56
  */
 @Slf4j
 public class CollectionUtilsTest {
@@ -25,5 +26,4 @@ public class CollectionUtilsTest {
             log.info("list is empty");
         }
     }
-
 }

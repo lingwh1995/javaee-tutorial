@@ -7,9 +7,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * Autowired注解位置配置类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/11 10:40
+ * @date 2019/4/11 10:40
  */
 @ComponentScan({"org.bluebridge.ioc.autowiredlocation.controller",
         "org.bluebridge.ioc.autowiredlocation.service",
@@ -22,7 +23,6 @@ public class Config {
      * @param dbutils 这个参数是容器中获取的
      * @return
      */
-
     @Bean(name="userDao2")
     public UserDao userDao(Dbutils dbutils){
         UserDao userDao = new UserDao(dbutils);

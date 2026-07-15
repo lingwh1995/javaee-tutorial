@@ -12,6 +12,12 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
+/**
+ * 聊天请求消息处理器
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @Slf4j
 @Component
 @ChannelHandler.Sharable
@@ -40,5 +46,4 @@ public class ChatRequestMessageHandler extends SimpleChannelInboundHandler<ChatR
             ctx.writeAndFlush(new ChatResponseMessage(false, "对方用户不存在或者不在线"));
         }
     }
-
 }

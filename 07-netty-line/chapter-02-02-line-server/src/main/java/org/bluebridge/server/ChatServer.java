@@ -14,15 +14,14 @@ import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
 /**
- * @author lingwh
- * @desc 聊天服务器
- * @date 2025/10/25 12:17
- */
-
-/**
+ * 聊天服务器
+ *
  * 测试方法
- *  1.cmd -> telnet 127.0.0.1 8080/telnet localhost 8080 -> 直接输入内容（只能发送单个字符）/按下Ctrl+]后输入 send + 内容（可以发送字符串） -> 查看idea控制台接收到的信息
- *  2.启动多个客户端
+ * 1. cmd -> telnet 127.0.0.1 8080/telnet localhost 8080 -> 直接输入内容（只能发送单个字符）/按下Ctrl+]后输入 send + 内容（可以发送字符串） -> 查看idea控制台接收到的信息
+ * 2. 启动多个客户端
+ *
+ * @author lingwh
+ * @date 2025/10/25 12:17
  */
 @Slf4j
 @Component
@@ -60,5 +59,4 @@ public class ChatServer {
         bossGroup.shutdownGracefully();
         workerGroup.shutdownGracefully();
     }
-
 }

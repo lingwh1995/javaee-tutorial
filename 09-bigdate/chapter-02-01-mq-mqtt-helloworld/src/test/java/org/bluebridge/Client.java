@@ -9,6 +9,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 
+/**
+ * 客户端
+ *
+ * @author lingwh
+ * @date 2026/7/13 15:53
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class Client {
@@ -29,5 +35,4 @@ public class Client {
     public void sendMessage() {
         mqttMessageProvider.sendMessage("hello mqtt! I am springboot!", "test/hello-topic");
     }
-
 }

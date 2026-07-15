@@ -3,6 +3,12 @@ package org.bluebridge.message;
 import lombok.Data;
 import lombok.ToString;
 
+/**
+ * 聊天请求消息
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @Data
 @ToString(callSuper = true)
 public class ChatRequestMessage extends Message {
@@ -24,5 +30,4 @@ public class ChatRequestMessage extends Message {
     public int getMessageType() {
         return ChatRequestMessage;
     }
-
 }

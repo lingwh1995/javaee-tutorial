@@ -4,10 +4,12 @@ import org.bluebridge.ioc.factory.domain.ColorFactoryBean;
 import org.springframework.context.annotation.Import;
 
 /**
+ * Spring循环依赖
+ *
  * @author lingwh
- * @desc   Spring循环依赖
- * @date   2019/4/5 14:44
+ * @date 2019/4/5 14:44
  */
 @Import(ColorFactoryBean.class)
 public class Config {
+
 }

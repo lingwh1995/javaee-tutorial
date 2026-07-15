@@ -9,8 +9,9 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
+ * BIO客户端
+ *
  * @author lingwh
- * @desc BIO客户端
  * @date 2025/9/23 11:19
  */
 @Slf4j
@@ -54,6 +55,4 @@ public class Client {
             e.printStackTrace();
         }
     }
-
 }
-

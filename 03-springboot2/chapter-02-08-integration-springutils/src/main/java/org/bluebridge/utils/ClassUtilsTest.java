@@ -7,6 +7,9 @@ import org.springframework.util.ClassUtils;
 
 /**
  * Class工具类测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 12:17
  */
 @Slf4j
 public class ClassUtilsTest {
@@ -33,5 +36,4 @@ public class ClassUtilsTest {
         boolean cglibProxy = ClassUtils.isCglibProxy(new ClassUtilsTest());
         log.info("cglibProxy: {}", cglibProxy);
     }
-
 }

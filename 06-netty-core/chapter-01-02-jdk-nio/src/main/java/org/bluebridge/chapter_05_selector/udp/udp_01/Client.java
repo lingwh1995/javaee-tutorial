@@ -9,11 +9,11 @@ import java.nio.channels.DatagramChannel;
 import java.util.Scanner;
 
 /**
+ * UDP 客户端
+ *
  * @author lingwh
- * @desc
  * @date 2025/11/2 0:29
  */
-
 @Slf4j
 public class Client {
 
@@ -33,12 +33,10 @@ public class Client {
                 String input = scanner.next();
                 buffer.put(input.getBytes());
                 buffer.flip();
-                //ByteBufferUtil.debugAll(buffer);
+                // ByteBufferUtil.debugAll(buffer);
                 channel.send(buffer, new InetSocketAddress(HOST, PORT));
                 buffer.clear();
             }
         }
     }
-
 }
-

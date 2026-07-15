@@ -5,8 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * 聊天请求消息
+ *
  * @author lingwh
- * @desc 聊天请求消息
  * @date 2025/10/29 9:31
  */
 @Data
@@ -22,5 +23,4 @@ public class ChatRequestMessage extends AbstractRequestMessage {
     public int getMessageType() {
         return MessageType.CHAT_REQUEST_MESSAGE.getCode();
     }
-
 }

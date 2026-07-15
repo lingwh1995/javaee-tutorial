@@ -8,6 +8,12 @@ import org.bluebridge.message.ChatRequestMessage;
 import org.bluebridge.message.ChatResponseMessage;
 import org.bluebridge.server.session.SessionFactory;
 
+/**
+ * 聊天请求消息处理器
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @ChannelHandler.Sharable
 public class ChatRequestMessageHandler extends SimpleChannelInboundHandler<ChatRequestMessage> {
 

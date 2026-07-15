@@ -14,8 +14,9 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
+ * 客户端处理器
+ *
  * @author lingwh
- * @desc
  * @date 2025/10/16 10:22
  */
 @Slf4j
@@ -135,5 +136,4 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         log.info("连接已经断开，按任意键退出......{}", cause.getMessage());
         EXIT.set(true);
     }
-
 }

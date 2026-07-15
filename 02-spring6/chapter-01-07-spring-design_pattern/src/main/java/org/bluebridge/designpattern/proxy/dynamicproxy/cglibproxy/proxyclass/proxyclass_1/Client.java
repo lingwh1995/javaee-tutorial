@@ -1,7 +1,12 @@
 package org.bluebridge.designpattern.proxy.dynamicproxy.cglibproxy.proxyclass.proxyclass_1;
 
 /**
+ * 客户端
+ *
  * java8以上环境运行时需要添加VM参数，否则会报错   --add-opens java.base/java.lang=ALL-UNNAMED
+ *
+ * @author lingwh
+ * @date 2026/7/13 8:62
  */
 public class Client {
 
@@ -13,5 +18,4 @@ public class Client {
         userService.findUserList();
         userService.addUser();
     }
-
 }

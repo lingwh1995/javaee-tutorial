@@ -15,8 +15,9 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
+ * 客户端处理器
+ *
  * @author lingwh
- * @desc
  * @date 2025/10/30 20:56
  */
 @Slf4j
@@ -30,6 +31,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 
     /**
      * 当通道激活时调用，发送登录消息
+     *
      * @param ctx
      * @throws Exception
      */
@@ -145,5 +147,4 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         log.error("客户端发生异常", cause);
         ctx.close();
     }
-
 }

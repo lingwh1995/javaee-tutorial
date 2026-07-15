@@ -5,9 +5,10 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
+ * @Conditional可以写在方法上或者类上
+ *
  * @author lingwh
- * @desc   @Conditional可以写在方法上或者类上
- * @date   2019/4/8 14:28
+ * @date 2019/4/8 14:28
  */
 public class ConditionalTest {
 
@@ -19,5 +20,4 @@ public class ConditionalTest {
             System.out.println(beanDefinitionName);
         }
     }
-
 }

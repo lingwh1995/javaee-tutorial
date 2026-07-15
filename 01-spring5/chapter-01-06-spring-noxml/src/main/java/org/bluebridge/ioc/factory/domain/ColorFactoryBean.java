@@ -4,9 +4,10 @@ import org.springframework.beans.factory.FactoryBean;
 import org.springframework.lang.Nullable;
 
 /**
+ * Spring循环依赖
+ *
  * @author lingwh
- * @desc   Spring循环依赖
- * @date   2019/4/5 14:42
+ * @date 2019/4/5 14:42
  */
 public class ColorFactoryBean implements FactoryBean<Color>{
 

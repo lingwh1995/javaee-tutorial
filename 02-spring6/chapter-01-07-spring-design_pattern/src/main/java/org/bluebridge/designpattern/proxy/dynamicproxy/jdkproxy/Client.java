@@ -4,20 +4,26 @@ package org.bluebridge.designpattern.proxy.dynamicproxy.jdkproxy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * 客户端
+ *
+ * @author lingwh
+ * @date 2026/7/13 8:62
+ */
 public class Client {
 
     private static final Logger logger = LogManager.getLogger(Client.class);
 
     public static void main(String[] args) {
-        //1.创建目标对象
+        // 1. 创建目标对象
         ICatService target = new CatServiceImpl();
-        //2.创建代理对象
+        // 2. 创建代理对象
         ProxyFactory proxyFactory = new ProxyFactory(target);
         ICatService CatServiceImplProxy = (ICatService)proxyFactory.getProxyInstance();
-        //3.调用代理对象的方法
-            //调用不带有返回值的方法
+        // 3. 调用代理对象的方法
+            // 调用不带有返回值的方法
         CatServiceImplProxy.addCat(new Cat("001","煤球",1));
-            //调用带有返回值的方法
+            // 调用带有返回值的方法
         Cat cat = CatServiceImplProxy.getCatById("001");
         logger.info(cat.toString());
     }

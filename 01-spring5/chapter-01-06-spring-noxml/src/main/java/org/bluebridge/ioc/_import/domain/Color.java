@@ -1,9 +1,11 @@
 package org.bluebridge.ioc._import.domain;
 
 /**
+ * 颜色
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/13 14:21
+ * @date 2019/4/13 14:21
  */
 public class Color {
+
 }

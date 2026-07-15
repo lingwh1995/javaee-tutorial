@@ -13,13 +13,17 @@ import java.util.List;
 
 /**
  * BIO聊天室(群聊)
- *    目标：BIO模式下的端口转发思想-Server实现
+ *
+ * 目标：BIO模式下的端口转发思想-Server实现
  *
  * 服务端实现需求
- *    1.注册端口
- *    2.接收客户端的socket连接，交给一个独立的线程来处理
- *    3.把当前连接的客户端socket存入到一个所谓的在线socket集合中保存
- *    4.接收客户端的消息，然后推送给当前所有的在线socket接收
+ * 1. 注册端口
+ * 2. 接收客户端的socket连接，交给一个独立的线程来处理
+ * 3. 把当前连接的客户端socket存入到一个所谓的在线socket集合中保存
+ * 4. 接收客户端的消息，然后推送给当前所有的在线socket接收
+ *
+ * @author lingwh
+ * @date 2026/7/14 10:30
  */
 @Slf4j
 public class ChatServer {
@@ -53,6 +57,7 @@ public class ChatServer {
 class ChatServerThread extends Thread{
 
     private Socket socket;
+
     public ChatServerThread(Socket socket) {
         this.socket = socket;
     }
@@ -60,12 +65,12 @@ class ChatServerThread extends Thread{
     @Override
     public void run() {
         try {
-            // 1.从socket中去获取当前客户端的输入流
+            // 1. 从socket中去获取当前客户端的输入流
             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             String msg = null;
             while ((msg = br.readLine()) != null){
                 log.info("服务器收到消息： {}", msg);
-                // 2.服务端接收到了客户端的消息后，需要推送给所有的当前在线的socket
+                // 2. 服务端接收到了客户端的消息后，需要推送给所有的当前在线的socket
                 sendMsgToAllClient(msg,socket);
             }
         }catch (Exception e){
@@ -78,7 +83,10 @@ class ChatServerThread extends Thread{
 
     /**
      * 把当前客户端发送来的消息推送给全部在线的socket
+     *
      * @param msg
+     * @param socket
+     * @throws Exception
      */
     private void sendMsgToAllClient(String msg, Socket socket) throws Exception {
         for(Socket sk : ChatServer.allSocketOnLine){
@@ -90,5 +98,4 @@ class ChatServerThread extends Thread{
             }
         }
     }
-
 }

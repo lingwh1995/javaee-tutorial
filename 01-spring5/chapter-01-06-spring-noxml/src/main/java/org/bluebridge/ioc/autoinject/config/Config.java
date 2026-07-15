@@ -8,9 +8,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 /**
+ * 自动注入配置类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/12 12:19
+ * @date 2019/4/12 12:19
  */
 @Configuration
 @ComponentScan({
@@ -19,6 +20,7 @@ import org.springframework.context.annotation.Primary;
         "org.bluebridge.ioc.autoinject.dao",
         "org.bluebridge.ioc.autoinject.dbutils"})
 public class Config {
+
     @Bean(name="bookDao2")
     public BookDao bookDao(){
         BookDao bookDao = new BookDao();

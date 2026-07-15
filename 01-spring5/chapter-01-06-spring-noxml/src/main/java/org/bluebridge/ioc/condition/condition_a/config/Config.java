@@ -6,12 +6,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 /**
+ * 条件装配配置类
+ *
+ * @Conditional({WindowsConditional.class})
+ * 意味着只有当满足Conditional的子类的方法中的条件,这个类中所有注册bean的方法才会生效
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/8 11:23
+ * @date 2019/4/8 11:23
  */
-//@Conditional({WindowsConditional.class})
-//意味着只有当满足Conditional的子类的方法中的条件,这个类中所有注册bean的方法才会生效
 @Configuration
 @ComponentScan(value= "org.bluebridge.ioc.condition",
         excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION,
@@ -19,13 +21,16 @@ import org.springframework.stereotype.Service;
 public class Config {
 
     /**
-     * 默认：
-     *      1.默认使用方法名作为id
-     *      2.默认创建的bean是单例的
+     * 默认约定
+     * 1. 默认使用方法名作为id
+     * 2. 默认创建的bean是单例的
+     *
      * 也可以使用@Bean的name属性来指定id
-     * @Scope：
-     *      如果为单例:IOC容器初始化的过程会实例化bean
-     *      如果为多例:IOC容器初始化的过程不会实例化bea
+     *
+     * @Scope
+     * 1. 如果为单例:IOC容器初始化的过程会实例化bean
+     * 2. 如果为多例:IOC容器初始化的过程不会实例化bea
+     *
      * @return
      */
     @Conditional({WindowsConditional.class})

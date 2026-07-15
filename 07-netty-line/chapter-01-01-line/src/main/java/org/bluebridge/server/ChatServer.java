@@ -15,6 +15,12 @@ import org.bluebridge.protocol.MessageCodecSharable;
 import org.bluebridge.protocol.ProcotolFrameDecoder;
 import org.bluebridge.server.handler.*;
 
+/**
+ * 聊天服务器
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @Slf4j
 public class ChatServer {
 

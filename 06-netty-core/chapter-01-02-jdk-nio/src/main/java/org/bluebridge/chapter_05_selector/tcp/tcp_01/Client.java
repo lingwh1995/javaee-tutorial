@@ -10,22 +10,24 @@ import java.nio.channels.SocketChannel;
 import java.util.Scanner;
 
 /**
+ * 测试使用 selector 实现 Server 的客户端
+ *
  * @author lingwh
- * @desc 测试使用 selector 实现 Server 的客户端
  * @date 2025/7/8 9:06
  */
 @Slf4j
 public class Client {
+
     private static final int PORT = 8080;
 
     public static void main(String[] args) throws IOException {
-        // 1.创建客户端
+        // 1. 创建客户端
         SocketChannel sc = SocketChannel.open();
-        // 2.连接服务端
+        // 2. 连接服务端
         sc.connect(new InetSocketAddress("localhost", PORT));
         log.info("非阻塞TCP Selector客户端启动......");
         Scanner scanner = new Scanner(System.in);
-        // 3.发送消息
+        // 3. 发送消息
         while (true) {
             log.info("请输入消息......");
             String input = scanner.nextLine();
@@ -36,5 +38,4 @@ public class Client {
             ByteBufferUtil.debugAll(ByteBuffer.wrap(input.getBytes()));
         }
     }
-
 }

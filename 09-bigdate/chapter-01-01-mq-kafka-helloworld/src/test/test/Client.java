@@ -5,12 +5,17 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+/**
+ * 客户端
+ *
+ * @author lingwh
+ * @date 2026/7/13 15:53
+ */
 @SpringBootTest
 public class Client {
 
     @Autowired
     private EventProducer eventProducer;
-
 
     /**
      * 测试生产者

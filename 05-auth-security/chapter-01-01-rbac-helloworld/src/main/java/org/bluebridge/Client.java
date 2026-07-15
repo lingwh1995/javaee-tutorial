@@ -1,6 +1,13 @@
 package org.bluebridge;
 
+/**
+ * 客户端测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class Client {
+
     public static void main(String[] args) {
         /**
          * 16进制格式消息报文
