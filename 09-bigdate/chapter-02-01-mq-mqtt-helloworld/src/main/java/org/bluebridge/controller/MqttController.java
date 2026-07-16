@@ -6,6 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+/**
+ * MqttController
+ *
+ * @author lingwh
+ * @date 2025/8/20 9:30
+ */
 @RestController
 public class MqttController {
 
@@ -14,7 +20,6 @@ public class MqttController {
 
     /**
      * 访问 http://localhost:8080/send
-     * @return
      */
     @GetMapping("/send")
     public String sendTestMessage() {

@@ -9,9 +9,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/18 14:37
+ * Mybatis注解测试类
+ *
+ * @author lingwh
+ * @date 2019/11/18 14:37
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -24,7 +25,7 @@ public class MybatisAnnotationTest {
      * 测试@Cacheable注解
      */
     @Test
-    public void fun1(){
+    public void fun1() {
         System.out.println("--------------------------------------------------");
         User user1 = userController.getUserByIdWithCacheable("003");
         System.out.println(user1);
@@ -38,7 +39,7 @@ public class MybatisAnnotationTest {
      * 测试@Caching注解
      */
     @Test
-    public void fun2(){
+    public void fun2() {
         System.out.println("--------------------------------------------------");
         User user1 = userController.getUserByIdWithCaching("001");
         System.out.println(user1);

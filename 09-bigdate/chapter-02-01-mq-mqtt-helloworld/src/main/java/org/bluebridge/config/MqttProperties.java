@@ -6,16 +6,17 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-
 /**
+ * mqtt配置属性
+ *
  * @author lingwh
- * @desc mqtt配置属性
  * @date 2025/8/20 9:25
  */
 @Data
 @Component
 @ConfigurationProperties(prefix = "spring.mqtt")
 public class MqttProperties {
+
     /**
      * 连接地址
      */
@@ -35,6 +36,7 @@ public class MqttProperties {
      * 密码
      */
     private String password;
+
     /**
      * 连接超时时长
      */

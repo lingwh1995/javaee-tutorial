@@ -9,6 +9,9 @@ import javax.annotation.Resource;
 
 /**
  * 发送入站消息的处理器
+ *
+ * @author lingwh
+ * @date 2025/8/20 9:23
  */
 @Component
 public class MqttMessageSenderHandler {
@@ -18,6 +21,7 @@ public class MqttMessageSenderHandler {
 
     /**
      * 发送mqtt消息到指定主题
+     *
      * @param payload 消息内容
      * @param topic 主题
      */
@@ -29,9 +33,10 @@ public class MqttMessageSenderHandler {
                 .setHeader(MqttHeaders.QOS, 1)
                 .build());
     }
-    
+
     /**
      * 发送mqtt消息到默认主题
+     *
      * @param payload 消息内容
      */
     public void sendMessage(String payload) {
@@ -40,9 +45,10 @@ public class MqttMessageSenderHandler {
                 .setHeader(MqttHeaders.QOS, 1)
                 .build());
     }
-    
+
     /**
      * 发送mqtt消息到指定主题并设置QoS级别
+     *
      * @param payload 消息内容
      * @param topic 主题
      * @param qos QoS级别 (0, 1, 2)
@@ -55,5 +61,4 @@ public class MqttMessageSenderHandler {
                 .setHeader(MqttHeaders.QOS, qos)
                 .build());
     }
-
 }

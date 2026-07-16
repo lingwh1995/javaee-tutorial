@@ -5,23 +5,27 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Pointcut;
 
 /**
+ * AOP切面类
+ *
  * @author lingwh
- * @desc
- * @date   2019/3/21 9:50
+ * @date 2019/3/21 9:50
  */
 public class MyAspectXml {
+
     /**
      * 定义前置通知
      */
-    public void before(){
+    public void before() {
         System.out.println("----------前置通知(before)开始----------");
         System.out.println("----------前置通知(before)结束----------");
     }
 
     /**
      * 定义后置通知
+     *
+     * @param joinPoint
      */
-    public void after(JoinPoint joinPoint){
+    public void after(JoinPoint joinPoint) {
         System.out.println("----------后置通知(after)开始----------");
         // 获取方法信息
         String methodName = joinPoint.getSignature().getName();
@@ -32,8 +36,11 @@ public class MyAspectXml {
 
     /**
      * 返回通知
+     *
+     * @param joinPoint
+     * @param result
      */
-    public void afterReturning(JoinPoint joinPoint, Object result){
+    public void afterReturning(JoinPoint joinPoint, Object result) {
         System.out.println("----------返回通知(afterReturning)开始----------");
         // 获取方法信息
         String methodName = joinPoint.getSignature().getName();
@@ -44,8 +51,11 @@ public class MyAspectXml {
 
     /**
      * 异常通知
+     *
+     * @param joinPoint
+     * @param e
      */
-    public void afterThrowing(JoinPoint joinPoint,Exception e) {
+    public void afterThrowing(JoinPoint joinPoint, Exception e) {
         System.out.println("----------异常通知(afterThrowing)开始----------");
         // 获取方法信息
         String methodName = joinPoint.getSignature().getName();
@@ -56,8 +66,11 @@ public class MyAspectXml {
 
     /**
      * 环绕通知
+     *
+     * @param proceedingJoinPoint
+     * @return
      */
-    public Object around(ProceedingJoinPoint  proceedingJoinPoint ){
+    public Object around(ProceedingJoinPoint proceedingJoinPoint) {
         System.out.println("----------前环绕(前around)...----------");
         Object o = null;
         try {
@@ -71,5 +84,4 @@ public class MyAspectXml {
         System.out.println("----------后环绕(后around)...----------");
         return o;
     }
-
 }

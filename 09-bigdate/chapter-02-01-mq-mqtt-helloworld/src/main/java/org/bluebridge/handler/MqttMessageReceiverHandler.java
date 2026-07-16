@@ -10,6 +10,9 @@ import javax.annotation.Resource;
 
 /**
  * 接收入站消息的处理器
+ *
+ * @author lingwh
+ * @date 2025/8/20 9:15
  */
 @Slf4j
 @MessageEndpoint
@@ -20,6 +23,7 @@ public class MqttMessageReceiverHandler {
 
     /**
      * 处理接收到的消息
+     *
      * @param message
      */
     @ServiceActivator(inputChannel = "mqttInputChannel")
@@ -36,6 +40,7 @@ public class MqttMessageReceiverHandler {
 
     /**
      * 根据主题处理消息
+     *
      * @param topic 主题
      * @param payload 消息内容
      */
@@ -48,5 +53,4 @@ public class MqttMessageReceiverHandler {
             log.info("Processing general message from topic '{}': {}", topic, payload);
         }
     }
-
 }

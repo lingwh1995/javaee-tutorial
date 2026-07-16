@@ -17,6 +17,12 @@ import org.springframework.messaging.MessageHandler;
 import javax.annotation.Resource;
 import java.util.List;
 
+/**
+ * mqtt连接配置
+ *
+ * @author lingwh
+ * @date 2025/8/20 9:11
+ */
 @Configuration
 public class MqttConfig {
 
@@ -24,14 +30,13 @@ public class MqttConfig {
     private MqttProperties mqttProperties;
 
     /**
-     * 1.配置mqtt连接属性
-     * @return
+     * 1. 配置mqtt连接属性
      */
     @Bean
     public MqttConnectOptions mqttConnectOptions() {
         MqttConnectOptions options = new MqttConnectOptions();
         // 设置MQTT版本为自动协商
-        //options.setMqttVersion(MqttConnectOptions.MQTT_VERSION_DEFAULT);
+        // options.setMqttVersion(MqttConnectOptions.MQTT_VERSION_DEFAULT);
         // 设置MQTT版本为3.1.1
         options.setMqttVersion(MqttConnectOptions.MQTT_VERSION_3_1_1);
         // 设置服务器地址
@@ -52,8 +57,7 @@ public class MqttConfig {
     }
 
     /**
-     * 2.创建客户端管理器
-     * @return
+     * 2. 创建客户端管理器
      */
     @Bean
     public MqttPahoClientFactory mqttClientFactory() {
@@ -64,8 +68,7 @@ public class MqttConfig {
     }
 
     /**
-     * 3.创建入站通道
-     * @return
+     * 3. 创建入站通道
      */
     @Bean
     public MessageChannel mqttInputChannel() {
@@ -73,8 +76,7 @@ public class MqttConfig {
     }
 
     /**
-     * 4.配置入站通道（接收消息）
-     * @return
+     * 4. 配置入站通道（接收消息）
      */
     @Bean
     public MessageProducer mqttInbound() {
@@ -96,8 +98,7 @@ public class MqttConfig {
     }
 
     /**
-     * 5.创建出站通道
-     * @return
+     * 5. 创建出站通道
      */
     @Bean
     public MessageChannel mqttOutboundChannel() {
@@ -105,8 +106,7 @@ public class MqttConfig {
     }
 
     /**
-     * 6.配置出站通道（发送消息）
-     * @return
+     * 6. 配置出站通道（发送消息）
      */
     @Bean
     @ServiceActivator(inputChannel = "mqttOutboundChannel")
@@ -118,15 +118,14 @@ public class MqttConfig {
         handler.setAsync(true);
         // 默认发布主题
         handler.setDefaultTopic(mqttProperties.getDefaultTopic());
-        //设置默认QoS
+        // 设置默认QoS
         handler.setDefaultQos(mqttProperties.getQos());
         // 创建Paho消息转换器
         DefaultPahoMessageConverter defaultPahoMessageConverter = new DefaultPahoMessageConverter();
-        //发送默认按字节类型发送消息
+        // 发送默认按字节类型发送消息
 //        defaultPahoMessageConverter.setPayloadAsBytes(true);
         // 设置消息转换器
         handler.setConverter(defaultPahoMessageConverter);
         return handler;
     }
-
 }

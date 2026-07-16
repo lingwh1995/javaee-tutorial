@@ -12,7 +12,10 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Arrays;
 
 /**
- * @author ronin
+ * MVC配置类，注册Servlet、Filter、Listener组件
+ *
+ * @author lingwh
+ * @date 2019/6/21 14:22
  */
 @Configuration
 public class MvcConfig {

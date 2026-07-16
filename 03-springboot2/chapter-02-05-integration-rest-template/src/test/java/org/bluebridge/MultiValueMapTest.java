@@ -5,14 +5,15 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/15 15:04
+ * MultiValueMap测试类
+ *
+ * @author lingwh
+ * @date 2019/11/15 15:04
  */
 public class MultiValueMapTest {
 
     @Test
-    public void fun(){
+    public void fun() {
         MultiValueMap param = new LinkedMultiValueMap();
         param.add("k1", "v1");
         param.add("k2", "v2");
