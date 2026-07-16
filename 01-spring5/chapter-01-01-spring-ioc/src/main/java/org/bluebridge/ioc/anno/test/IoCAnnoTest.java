@@ -9,20 +9,21 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
+ * IoC注解测试
+ *
  * @author lingwh
- * @desc
- * @date   2019/3/20 9:38
+ * @date 2019/3/20 9:38
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext-ioc-anno.xml")
 public class IoCAnnoTest {
 
-	@Test
-	public void testIoCAnno(){
-		ApplicationContext applicationContext = new
-				ClassPathXmlApplicationContext("applicationContext-ioc-anno.xml");
-		CatController catController = applicationContext.getBean("catController", CatController.class);
-		catController.eat();
-	}
+    @Test
+    public void testIoCAnno(){
+        ApplicationContext applicationContext = new
+                ClassPathXmlApplicationContext("applicationContext-ioc-anno.xml");
+        CatController catController = applicationContext.getBean("catController", CatController.class);
+        catController.eat();
+    }
 
 }

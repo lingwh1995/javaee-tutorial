@@ -11,8 +11,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.bluebridge.utils.DebugUtil;
 
 /**
+ * 预设长度解码器 消息中有版本号
+ *
  * @author lingwh
- * @desc 预设长度解码器 消息中有版本号
  * @date 2025/10/14 14:05
  */
 @Slf4j
@@ -54,5 +55,4 @@ public class LengthFieldBasedFrameDecoder_2_Test {
         buffer.writeByte(version);
         buffer.writeBytes(bytes);
     }
-
 }

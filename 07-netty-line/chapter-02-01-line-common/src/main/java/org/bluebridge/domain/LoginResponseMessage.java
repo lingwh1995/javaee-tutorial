@@ -4,8 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
+ * 登录成功的响应消息
+ *
  * @author lingwh
- * @desc 登录成功的响应消息
  * @date 2025/10/25 17:15
  */
 @Data

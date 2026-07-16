@@ -11,17 +11,18 @@ import org.springframework.lang.Nullable;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import javax.annotation.Resource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import	java.util.HashMap;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.annotation.Resource;
 
 /**
+ * 测试SpringJdbcTemplate的操作
+ *
  * @author lingwh
- * @desc   测试SpringJdbcTemplate的操作
- * @date   2019/3/25 15:12
+ * @date 2019/3/25 15:12
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext.xml")
@@ -120,11 +121,13 @@ public class JdbcTemplateTest {
 }
 
 /**
+ * 把单条查询结果封装到实体中
+ *
  * @author lingwh
- * @desc   把单条查询结果封装到实体中
- * @date   2019/3/25 15:20
+ * @date 2019/3/25 15:20
  */
 class BeanMapper implements RowMapper<Account> {
+
     @Override
     public Account mapRow(ResultSet rs, int arg1) throws SQLException {
         Account account = new Account();
@@ -136,11 +139,13 @@ class BeanMapper implements RowMapper<Account> {
 }
 
 /**
+ * 把单条查询结果封装到Map中
+ *
  * @author lingwh
- * @desc   把单条查询结果封装到Map中
- * @date   2019/3/25 15:25
+ * @date 2019/3/25 15:25
  */
 class BeanMapperMap implements RowMapper<Map<String,String>> {
+
     @Nullable
     @Override
     public Map<String, String> mapRow(ResultSet rs, int i) throws SQLException {

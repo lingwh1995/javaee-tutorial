@@ -7,6 +7,12 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
+/**
+ * @ConfigurationProperties 推荐用法配置类
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
+ */
 @Configuration
 public class LibraryConfigConfigurationPropertiesRecommendUsage {
 
@@ -15,5 +21,4 @@ public class LibraryConfigConfigurationPropertiesRecommendUsage {
     public DataSource dataSource(){
         return new DruidDataSource();
     }
-
 }

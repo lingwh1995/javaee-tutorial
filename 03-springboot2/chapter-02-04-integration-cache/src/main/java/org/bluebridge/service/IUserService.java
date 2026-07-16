@@ -3,9 +3,13 @@ package org.bluebridge.service;
 import org.bluebridge.domain.User;
 
 /**
- * @author ronin
+ * 用户服务接口
+ *
+ * @author lingwh
+ * @date 2019/11/18 11:20
  */
 public interface IUserService {
+
     /**
      * 初步测试@Cacheable
      * 根据id获取User对象
@@ -36,6 +40,7 @@ public interface IUserService {
      * @return
      */
     User getUserByIdWithCaching(String id);
+
     /**
      * 测试@Caching()配置复杂缓存策略+@CachePut高级用法:根据username获取User对象部分
      * @param username

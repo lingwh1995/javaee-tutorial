@@ -13,8 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Random;
 
 /**
+ * 预设长度解码器解决黏包半包问题 - 案例一客户端（一个简单的示例）
+ *
  * @author lingwh
- * @desc 预设长度解码器解决黏包半包问题 - 案例一客户端（一个简单的示例）
  * @date 2025/10/14 11:48
  */
 @Slf4j
@@ -66,5 +67,4 @@ public class LengthFieldBasedFrameDecoderClient {
             worker.shutdownGracefully();
         }
     }
-
 }

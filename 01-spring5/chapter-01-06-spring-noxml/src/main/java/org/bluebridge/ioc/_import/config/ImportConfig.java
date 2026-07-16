@@ -6,9 +6,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
+ * Import配置类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/13 14:25
+ * @date 2019/4/13 14:25
  */
 @Configuration
 //导入一个类

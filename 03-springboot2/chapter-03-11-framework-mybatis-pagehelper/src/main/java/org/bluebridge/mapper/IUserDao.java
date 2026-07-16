@@ -7,8 +7,9 @@ import org.bluebridge.domain.User;
 import java.util.List;
 
 /**
+ * 用户数据访问接口
+ *
  * @author lingwh
- * @desc
  * @date 2025/11/23 13:08
  */
 public interface IUserDao {
@@ -32,5 +33,4 @@ public interface IUserDao {
      * @return
      */
     PageInfo<User> listPage(PageEntity<User> pageEntity);
-
 }

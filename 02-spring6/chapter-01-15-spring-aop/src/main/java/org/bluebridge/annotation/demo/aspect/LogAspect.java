@@ -11,7 +11,11 @@ import java.util.Date;
 
 /**
  * 切面类  使用注解配置
+ *
  * 切面 = 切点 + 通知
+ *
+ * @author lingwh
+ * @date 2026/7/13 12:38
  */
 @Aspect
 @Component
@@ -40,8 +44,7 @@ public class LogAspect {
         String date = simpleDateFormat.format(new Date());
         logger.info("操作执行时间: " + date);
         logger.info("前置通知执行了...[使用注解开发AOP]");
-        //String methodName = joinPoint.getSignature().getName();
-        //logger.info("MethodName: " + methodName);
+        // String methodName = joinPoint.getSignature().getName();
+        // logger.info("MethodName: " + methodName);
     }
-
 }

@@ -5,6 +5,12 @@ import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * 控制器
+ *
+ * @author lingwh
+ * @date 2026//13 9:08
+ */
 @RequestMapping(value = "/interceptor")
 @Controller
 public class InterceptorController {
@@ -30,5 +36,4 @@ public class InterceptorController {
         logger.info("这个方法执行时拦截器会执行放行操作...");
         return "success";
     }
-
 }

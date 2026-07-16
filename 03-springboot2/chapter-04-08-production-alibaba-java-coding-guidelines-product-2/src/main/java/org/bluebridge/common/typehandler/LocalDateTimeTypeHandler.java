@@ -1,5 +1,4 @@
 package org.bluebridge.common.typehandler;
-
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.MappedJdbcTypes;
@@ -10,8 +9,9 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 
 /**
+ * LocalDateTime类型处理器 - 用于将Mysql数据库中的Date和TimeStamp类型映射为Java中的LocalDateTime类型
+ *
  * @author lingwh
- * @desc LocalDateTime类型处理器 - 用于将Mysql数据库中的Date和TimeStamp类型映射为Java中的LocalDateTime类型
  * @date 2025/11/23 18:09
  */
 @MappedTypes(LocalDateTime.class)
@@ -49,5 +49,4 @@ public class LocalDateTimeTypeHandler extends BaseTypeHandler<LocalDateTime> {
         }
         return null;
     }
-
 }

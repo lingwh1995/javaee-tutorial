@@ -5,9 +5,10 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
+ * ImportBeanDefinitionRegistrar测试
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/9 14:32
+ * @date 2019/4/9 14:32
  */
 public class ImportBeanDefinitionRegistrarTest {
 
@@ -19,4 +20,5 @@ public class ImportBeanDefinitionRegistrarTest {
             System.out.println(definitionName);
         }
     }
+
 }

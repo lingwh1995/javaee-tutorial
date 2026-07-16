@@ -1,8 +1,17 @@
 package org.bluebridge.domain;
 
+/**
+ * 日志实体类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class Log {
+
     private Integer id;
+
     private String log;
+
     private String time;
 
     public Log() {

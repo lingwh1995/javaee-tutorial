@@ -8,20 +8,24 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * @author ronin
+ * 登录拦截器，校验用户登录状态
+ *
+ * @author lingwh
+ * @date 2026/7/13 8:58
  */
 public class LoginInterceptor implements HandlerInterceptor{
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession();
         Object user = session.getAttribute("loginUser");
         if(null == user){
-            //未登录,返回登录页面
+            // 未登录,返回登录页面
             request.setAttribute("msg","没有权限请先登录");
             request.getRequestDispatcher("/index.html").forward(request, response);
             return false;
         }else{
-            //已登录,放行请求
+            // 已登录,放行请求
             return true;
         }
 

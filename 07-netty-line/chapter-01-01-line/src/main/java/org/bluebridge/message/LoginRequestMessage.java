@@ -3,6 +3,12 @@ package org.bluebridge.message;
 import lombok.Data;
 import lombok.ToString;
 
+/**
+ * 登录请求消息
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @Data
 @ToString(callSuper = true)
 public class LoginRequestMessage extends Message {
@@ -22,5 +28,4 @@ public class LoginRequestMessage extends Message {
     public int getMessageType() {
         return LoginRequestMessage;
     }
-
 }

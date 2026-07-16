@@ -8,6 +8,12 @@ import org.bluebridge.message.LoginResponseMessage;
 import org.bluebridge.server.service.UserServiceFactory;
 import org.bluebridge.server.session.SessionFactory;
 
+/**
+ * 登录请求消息处理器
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @ChannelHandler.Sharable
 public class LoginRequestMessageHandler extends SimpleChannelInboundHandler<LoginRequestMessage> {
 
@@ -25,5 +31,4 @@ public class LoginRequestMessageHandler extends SimpleChannelInboundHandler<Logi
         }
         ctx.writeAndFlush(message);
     }
-
 }

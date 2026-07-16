@@ -11,8 +11,9 @@ import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 固定分隔符解码器解决黏包半包问题 服务端
+ *
  * @author lingwh
- * @desc 固定分隔符解码器解决黏包半包问题 服务端
  * @date 2025/10/14 11:47
  */
 @Slf4j
@@ -63,5 +64,4 @@ public class LineBasedFrameDecoderServer {
             log.info("stopped......");
         }
     }
-
 }

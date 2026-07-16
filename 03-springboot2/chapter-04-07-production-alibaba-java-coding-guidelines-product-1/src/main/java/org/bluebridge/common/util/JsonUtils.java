@@ -1,5 +1,4 @@
 package org.bluebridge.common.util;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
@@ -22,8 +21,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
+ * Json工具类
+ *
  * @author lingwh
- * @desc Json工具类
  * @date 2025/11/22 17:13
  */
 @Slf4j
@@ -89,5 +89,4 @@ public class JsonUtils {
             return null;
         }
     }
-
 }

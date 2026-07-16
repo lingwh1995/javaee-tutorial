@@ -20,7 +20,11 @@ import java.util.Map;
 
 /**
  * 使用JdbcTemplate完成增、删、改、查(查一个、查多个)
+ *
  * 使用RowMapper接口的实现类实现把返回结果封装到任意数据结构中
+ *
+ * @author lingwh
+ * @date 2019/3/25 16:03
  */
 @Component
 public class JdbcTemplateCrud {
@@ -138,10 +142,13 @@ public class JdbcTemplateCrud {
             logger.info("id: " + user.getId() + ",name: " + user.getName() + ",age: " + user.getAge());
         }
     }
-
 }
+
 /**
  * 把单条查询结果封装到Map中
+ *
+ * @author lingwh
+ * @date 2019/3/25 16:03
  */
 class BeanMapperMap implements RowMapper<Map<String,String>> {
 

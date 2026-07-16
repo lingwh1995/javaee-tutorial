@@ -2,6 +2,9 @@ package org.bluebridge.service;
 
 /**
  * 发送邮件接口
+ *
+ * @author lingwh
+ * @date 2026/7/13 9:18
  */
 public interface IMailService {
 
@@ -39,5 +42,4 @@ public interface IMailService {
      * @param rscId
      */
     void sendInlineResourceMail(String to, String subject, String content, String rscPath, String rscId);
-
 }

@@ -3,9 +3,9 @@ package org.bluebridge.mapper.master;
 import org.bluebridge.domain.User;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/18 14:56
+ * 主库用户Mapper接口
+ *
+ * @author lingwh
  */
 public interface IUserMapperMaster {
 

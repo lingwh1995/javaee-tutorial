@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *            返回值会被thymeleaf接管,会自动找到跳转到templates文件夹下的文件
  *       方式2:继承WebMvcConfigurationAdapter
  *           详细见org.bluebridge.config.IndexViewResolver
- * @author ronin
+ *
+ * @author lingwh
  */
 @Controller
 public class IndexController {

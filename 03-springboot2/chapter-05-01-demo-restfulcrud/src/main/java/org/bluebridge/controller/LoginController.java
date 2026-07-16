@@ -9,7 +9,10 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 /**
- * @author ronin
+ * 登录控制器，处理用户登录请求
+ *
+ * @author lingwh
+ * @date 2026/7/13 8:58
  */
 @Controller
 public class LoginController {

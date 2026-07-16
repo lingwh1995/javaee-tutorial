@@ -5,13 +5,14 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.bluebridge.domain.User;
 
-
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/18 14:56
+ * 用户数据访问接口
+ *
+ * @author lingwh
+ * @date 2019/11/18 14:56
  */
 public interface IUserDao {
+
     /**
      * 初步测试@Cacheable
      * 根据id获取User对象

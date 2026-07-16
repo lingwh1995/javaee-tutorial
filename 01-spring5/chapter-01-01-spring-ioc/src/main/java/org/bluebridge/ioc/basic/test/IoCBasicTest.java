@@ -1,16 +1,17 @@
 package org.bluebridge.ioc.basic.test;
 
-import org.bluebridge.ioc.basic.domain.Dog;
 import org.bluebridge.ioc.basic.domain.Car;
+import org.bluebridge.ioc.basic.domain.Dog;
 import org.bluebridge.ioc.basic.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
+ * IoC基础测试
+ *
  * @author lingwh
- * @desc
- * @date   2019/3/17 9:45
+ * @date 2019/3/17 9:45
  */
 public class IoCBasicTest {
 

@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * 访问下面链接测试功能
  *      http://localhost:8080
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
  */
 @Controller
 public class IndexController {
@@ -19,4 +22,5 @@ public class IndexController {
         logger.info("跳转到首页...");
         return "index";
     }
+
 }

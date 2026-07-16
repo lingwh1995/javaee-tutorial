@@ -3,7 +3,9 @@ package org.bluebridge.service;
 import org.bluebridge.domain.User;
 
 /**
- * @author ronin
+ * 用户服务接口
+ *
+ * @author lingwh
  */
 public interface IUserService {
 

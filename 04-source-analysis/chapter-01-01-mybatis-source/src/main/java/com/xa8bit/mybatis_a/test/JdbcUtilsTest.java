@@ -9,14 +9,16 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
+ * 测试 JdbcUtils
+ *
  * @author lingwh
- * @desc 测试 JdbcUtils
  * @date 2025/12/20 13:11
  */
 public class JdbcUtilsTest {
 
     /**
      * 测试基于JDBC打印完整SQL语句
+     *
      * @throws SQLException
      * @throws ClassNotFoundException
      */

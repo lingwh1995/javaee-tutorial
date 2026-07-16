@@ -1,13 +1,13 @@
 package org.bluebridge.aop;
 
-
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 
 /**
+ * 日志切面类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/14 12:38
+ * @date 2019/4/14 12:38
  */
 @Aspect
 public class LogAspect {

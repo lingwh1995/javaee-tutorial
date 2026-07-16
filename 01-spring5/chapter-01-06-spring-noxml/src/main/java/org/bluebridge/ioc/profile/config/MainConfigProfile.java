@@ -9,22 +9,22 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.util.StringValueResolver;
 
-import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
+import javax.sql.DataSource;
 
 /**
+ * @Profile注解
+ *
+ * 注解说明
+ * @Profile 是 Spring / Spring Boot 用于环境隔离的核心注解，可以根据当前激活的环境，动态加载 / 启用不同 Bean、配置、类、方法。
+ * 常用于区分：dev 开发、test 测试、prod 生产、local 本地、uat 预发 等环境。注解的本质是条件注解，不满足环境则该 Bean 不注入容器。
+ *
+ * 注解位置
+ * 1. 类上：整个类、内部所有 Bean 仅在指定环境生效
+ * 2. 方法上：仅当前 @Bean 方法在指定环境生效
+ *
  * @author lingwh
- * @desc   零配置搭建Spring开发环境测试
- * @date   2019/4/2 10:26
- */
-
-/**
- * Profile:
- *      Spring为我们提供的可以根据当前环境,动态的期货和切换一系列组件的功能
- * 开发环境:测试环境、生产环境
- * 数据源:A/B/C
- * @Profile
- * @author ronin
+ * @date 2019/4/2 10:26
  */
 @Profile("default")
 @PropertySource("classpath:/db.properties")
@@ -38,6 +38,8 @@ public class MainConfigProfile implements EmbeddedValueResolverAware {
 
     /**
      * 测试数据源
+     *
+     * @param username
      * @return
      * @throws PropertyVetoException
      */
@@ -60,6 +62,7 @@ public class MainConfigProfile implements EmbeddedValueResolverAware {
 
     /**
      * 开发数据源
+     *
      * @return
      * @throws PropertyVetoException
      */
@@ -73,5 +76,4 @@ public class MainConfigProfile implements EmbeddedValueResolverAware {
         dataSource.setDriverClass("com.mysql.jdbc.Driver");
         return dataSource;
     }
-
 }

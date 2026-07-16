@@ -4,6 +4,12 @@ import org.bluebridge.domain.Log;
 
 import java.util.List;
 
+/**
+ * 日志Mapper接口
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public interface LogMapper {
 
     /**
@@ -13,5 +19,4 @@ public interface LogMapper {
      * @return 与日期对应的数据表中全部信息组成的集合
      */
     List<Log> selectAllLogByTableName(String date);
-
 }

@@ -7,8 +7,9 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /**
+ * 生命周期测试配置类
+ *
  * @author lingwh
- * @desc 生命周期测试配置类
  * @date 2025/10/25 16:55
  */
 @Slf4j
@@ -24,5 +25,4 @@ public class LifeCycleTestBean {
     public void destroy() {
         log.info("当前bean即将销毁......");
     }
-
 }

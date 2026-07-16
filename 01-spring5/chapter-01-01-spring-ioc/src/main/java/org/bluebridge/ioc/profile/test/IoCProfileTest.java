@@ -9,20 +9,21 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
+ * IoC多环境测试
+ *
  * @author lingwh
- * @desc
- * @date   2019/3/19 14:55
+ * @date 2019/3/19 14:55
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext-ioc-profile.xml")
 public class IoCProfileTest {
 
-	@Test
-	public void testIoCProfile(){
-		ApplicationContext applicationContext = new
-				ClassPathXmlApplicationContext("applicationContext-ioc-profile.xml");
-		UserController controller = applicationContext.getBean("userController", UserController.class);
-		controller.say();
-	}
+    @Test
+    public void testIoCProfile(){
+        ApplicationContext applicationContext = new
+                ClassPathXmlApplicationContext("applicationContext-ioc-profile.xml");
+        UserController controller = applicationContext.getBean("userController", UserController.class);
+        controller.say();
+    }
 
 }

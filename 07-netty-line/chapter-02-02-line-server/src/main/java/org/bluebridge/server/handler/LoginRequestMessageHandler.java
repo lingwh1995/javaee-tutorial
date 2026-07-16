@@ -13,8 +13,9 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 /**
+ * 登录请求消息处理器
+ *
  * @author lingwh
- * @desc 登录请求消息处理器
  * @date 2025/10/30 20:11
  */
 @Slf4j
@@ -51,5 +52,4 @@ public class LoginRequestMessageHandler extends SimpleChannelInboundHandler<Logi
         log.info("用户 {} 登录异常", session.getUsername(ctx.channel()), cause);
         super.exceptionCaught(ctx, cause);
     }
-
 }

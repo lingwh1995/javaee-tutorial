@@ -9,6 +9,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * 测试使用Springboot发送各种邮件
+ *
+ * @author lingwh
+ * @date 2026/7/13 11:25
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -19,15 +22,17 @@ public class MailServiceTest {
 
     /**
      * 测试发送普通邮件
+     *
      * @throws Exception
      */
     @Test
     public void testSimpleMail() throws Exception {
-        //mailService.sendSimpleMail("1458687169@qq.com","test simple mail"," hello this is simple mail");
+        // mailService.sendSimpleMail("1458687169@qq.com","test simple mail"," hello this is simple mail");
     }
 
     /**
      * 测试发送html邮件
+     *
      * @throws Exception
      */
     @Test
@@ -57,7 +62,6 @@ public class MailServiceTest {
         String rscId = "001";
         String content="<html><body>这是有图片的邮件：<img src=\'cid:" + rscId + "\' ></body></html>";
         String imgPath = "e:\\a.png";
-
         mailService.sendInlineResourceMail("1458687169@qq.com", "主题：这是有图片的邮件", content, imgPath, rscId);
     }
 }

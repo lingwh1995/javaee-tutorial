@@ -5,6 +5,12 @@ import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * Import功能测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:31
+ */
 @Controller
 public class IndexController {
 
@@ -15,5 +21,4 @@ public class IndexController {
         logger.info("跳转到首页...");
         return "index";
     }
-
 }

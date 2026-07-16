@@ -15,6 +15,12 @@ import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.io.File;
 
+/**
+ * 邮件发送服务实现类
+ *
+ * @author lingwh
+ * @date 2026/7/13 10:42
+ */
 @Service
 public class MailServiceImpl implements IMailService {
 
@@ -28,6 +34,7 @@ public class MailServiceImpl implements IMailService {
 
     /**
      * 发送简单邮件
+     *
      * @param to 邮件接收者
      * @param subject 邮件主题
      * @param content 邮件内容
@@ -50,6 +57,7 @@ public class MailServiceImpl implements IMailService {
 
     /**
      * 发送html邮件
+     *
      * @param to 邮件接收者
      * @param subject 邮件主题
      * @param content 邮件内容
@@ -58,7 +66,7 @@ public class MailServiceImpl implements IMailService {
     public void sendHtmlMail(String to, String subject, String content) {
         try {
             MimeMessage message = mailSender.createMimeMessage();
-            //true表示需要创建一个multipart message
+            // true表示需要创建一个multipart message
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             helper.setFrom(from);
             helper.setTo(to);
@@ -71,16 +79,16 @@ public class MailServiceImpl implements IMailService {
         }
     }
 
-
     /**
      * 发送带有附件的邮件
+     *
      * @param to 邮件接收者
      * @param subject 邮件主题
      * @param content 邮件内容
      * @param filePath 文件路径
      */
     @Override
-    public void sendAttachmentsMail(String to, String subject, String content, String filePath){
+    public void sendAttachmentsMail(String to, String subject, String content, String filePath) {
         try {
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
@@ -92,8 +100,8 @@ public class MailServiceImpl implements IMailService {
             FileSystemResource file = new FileSystemResource(new File(filePath));
             String fileName = filePath.substring(filePath.lastIndexOf(File.separator));
             helper.addAttachment(fileName, file);
-            //添加多个文件
-            //helper.addAttachment("test"+fileName, file);
+            // 添加多个文件
+            // helper.addAttachment("test"+fileName, file);
             mailSender.send(message);
             logger.info("带附件的邮件已经发送。");
         } catch (MessagingException e) {
@@ -101,9 +109,9 @@ public class MailServiceImpl implements IMailService {
         }
     }
 
-
     /**
      * 发送正文中有静态资源（图片）的邮件
+     *
      * @param to 邮件接收人
      * @param subject 邮件主题
      * @param content 邮件内容(Dom片段)
@@ -111,7 +119,7 @@ public class MailServiceImpl implements IMailService {
      * @param rscId 资源id
      */
     @Override
-    public void sendInlineResourceMail(String to, String subject, String content, String rscPath, String rscId){
+    public void sendInlineResourceMail(String to, String subject, String content, String rscPath, String rscId) {
         try {
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true);

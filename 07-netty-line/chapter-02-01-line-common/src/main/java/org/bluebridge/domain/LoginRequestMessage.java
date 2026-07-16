@@ -5,8 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * 登录请求消息
+ *
  * @author lingwh
- * @desc 登录请求消息
  * @date 2025/10/25 17:09
  */
 @Data
@@ -21,5 +22,4 @@ public class LoginRequestMessage extends AbstractRequestMessage {
     public int getMessageType() {
         return MessageType.LOGIN_REQUEST_MESSAGE.getCode();
     }
-
 }

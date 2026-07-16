@@ -4,8 +4,15 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.List;
 
+/**
+ * 使用 @EnableConfigurationProperties 注入的图书馆配置类
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
+ */
 @ConfigurationProperties(prefix = "library")
 public class LibraryConfigInjectByEnableConfigurationProperties {
+
     private String location;
     private List<Book> books;
 
@@ -26,6 +33,7 @@ public class LibraryConfigInjectByEnableConfigurationProperties {
     }
 
     static class Book {
+
         private String name;
         private String description;
 

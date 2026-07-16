@@ -4,9 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
+ * 拦截器测试控制器
+ *
  * @author lingwh
- * @desc
- * @date   2019/6/20 9:08
+ * @date 2019/6/20 9:08
  */
 @Controller
 public class InterceptorController {

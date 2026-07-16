@@ -15,8 +15,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.nio.ByteOrder;
 
 /**
+ * 预设长度解码器解决黏包半包问题 - 案例一服务端（生产级别的示例）
+ *
  * @author lingwh
- * @desc 预设长度解码器解决黏包半包问题 - 案例一服务端（生产级别的示例）
  * @date 2025/10/14 11:47
  */
 @Slf4j
@@ -104,7 +105,6 @@ public class LengthFieldBasedFrameDecoderServer {
                                     log.info("服务端接收到的报文成功的处理了黏包和半包......");
                                 }
                             }
-{                            }
                         });
                     }
                 });
@@ -121,5 +121,4 @@ public class LengthFieldBasedFrameDecoderServer {
             log.info("stopped......");
         }
     }
-
 }

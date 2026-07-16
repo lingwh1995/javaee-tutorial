@@ -7,8 +7,10 @@ import java.lang.reflect.Method;
 import java.util.Collection;
 
 /**
+ * Mapper接口的动态代理，将方法调用转发给SqlSession执行
  *
- * @author ronin
+ * @author lingwh
+ * @date 2026/7/13 18:45
  */
 public class MapperProxy<E> implements InvocationHandler{
 

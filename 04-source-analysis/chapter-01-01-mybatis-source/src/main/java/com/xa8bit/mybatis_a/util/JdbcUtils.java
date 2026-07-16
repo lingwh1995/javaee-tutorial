@@ -11,11 +11,16 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * @author ronin
+ * JDBC工具类，提供连接管理和SQL执行功能
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:45
  */
 public class JdbcUtils {
 
-    /**存放与当前线程绑定的Connection*/
+    /**
+     * 存放与当前线程绑定的Connection
+     */
     private static final ThreadLocal<Connection> connectionContainer = new ThreadLocal<>();
 
     /**
@@ -25,6 +30,7 @@ public class JdbcUtils {
 
     /**
      * 获取连接对象
+     *
      * @return 获取连接对象
      * @throws SQLException 如果参数有误,则抛出此异常
      */
@@ -79,6 +85,7 @@ public class JdbcUtils {
 
     /**
      * 执行查询操作
+     *
      * @param configuration 全局配置文件
      * @param ms 封装了每一个增删改查标签的Model
      * @param params 方法执行需要的参数
@@ -111,4 +118,5 @@ public class JdbcUtils {
         }
         return result;
     }
+
 }

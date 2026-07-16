@@ -5,9 +5,16 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 
+/**
+ * 使用 @Configuration 注入的图书馆配置类
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
+ */
 @ConfigurationProperties(prefix = "library")
 @Configuration  //一般用来声明配置类，可以使用@Component注解替代，不过使用@Configuration注解声明配置类更加语义
 public class LibraryConfigInjectByConfiguration {
+
     private String location;
     private List<Book> books;
 
@@ -28,6 +35,7 @@ public class LibraryConfigInjectByConfiguration {
     }
 
     static class Book {
+
         private String name;
         private String description;
 

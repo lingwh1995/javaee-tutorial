@@ -8,9 +8,9 @@ import org.bluebridge.domain.User;
 import java.util.List;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/18 14:56
+ * 用户服务接口
+ *
+ * @author lingwh
  */
 public interface IUserService {
 
@@ -33,5 +33,4 @@ public interface IUserService {
      * @return
      */
     PageInfo<User> listPage(PageEntity<User> pageEntity);
-
 }

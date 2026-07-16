@@ -5,13 +5,11 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.*;
 
 /**
- * @author lingwh
- * @desc Jdk 自带的 Future 测试
- * @date 2025/9/23 18:13
- */
-
-/**
+ * Jdk 自带的 Future 测试
  * jdk Future 只能同步等待任务结束（或成功、或失败）才能得到结果
+ *
+ * @author lingwh
+ * @date 2025/9/23 18:13
  */
 @Slf4j
 public class JdkFutureTest {

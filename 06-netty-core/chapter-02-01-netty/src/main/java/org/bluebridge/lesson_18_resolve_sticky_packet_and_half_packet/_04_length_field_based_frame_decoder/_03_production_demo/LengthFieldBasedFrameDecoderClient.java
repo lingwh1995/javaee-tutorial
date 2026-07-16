@@ -12,8 +12,9 @@ import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 预设长度解码器解决黏包半包问题 - 案例一客户端（生产级别的示例）
+ *
  * @author lingwh
- * @desc 预设长度解码器解决黏包半包问题 - 案例一客户端（生产级别的示例）
  * @date 2025/10/14 11:48
  */
 @Slf4j
@@ -68,5 +69,4 @@ public class LengthFieldBasedFrameDecoderClient {
             worker.shutdownGracefully();
         }
     }
-
 }
