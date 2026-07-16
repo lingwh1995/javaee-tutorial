@@ -9,9 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * SpringMVC高级特性
+ *
  * @author lingwh
- * @desc   SpringMVC高级特性
- * @date   2019/7/23 11:05
+ * @date 2019/7/23 11:05
  */
 @Controller
 public class RequestContextHolderController {
@@ -21,6 +22,7 @@ public class RequestContextHolderController {
 
     /**
      * 测试在Service层获取HttpServletRequest/HttpServletResponse对象
+     *
      * @return
      */
     @RequestMapping("/testServiceHttpServletRequest")

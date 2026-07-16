@@ -5,11 +5,13 @@ import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
+ * 随机布尔条件判断
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/8 14:19
+ * @date 2019/4/8 14:19
  */
 public class RandBooleanCondition implements Condition {
+
     @Override
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
         return true;

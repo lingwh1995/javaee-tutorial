@@ -15,6 +15,9 @@ import java.util.List;
 
 /**
  * 测试直接解析 flowableui生成的bpmn.xml文件
+ *
+ * @author lingwh
+ * @date 2026/7/13 20:48
  */
 public class ProcessByFlowableUITest {
 
@@ -23,13 +26,13 @@ public class ProcessByFlowableUITest {
     @Before
     public void before() {
         processEngineConfiguration = new StandaloneProcessEngineConfiguration();
-        //配置数据库连接信息
+        // 配置数据库连接信息
         processEngineConfiguration.setJdbcDriver("com.mysql.cj.jdbc.Driver");
         processEngineConfiguration.setJdbcUsername("root");
         processEngineConfiguration.setJdbcPassword("Mysql123456_");
         processEngineConfiguration.setJdbcUrl("jdbc:mysql://192.168.0.5:3306/flowable?useUnicode=true&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai");
 
-        //如果数据库中的表结构不存在就新建
+        // 如果数据库中的表结构不存在就新建
         processEngineConfiguration.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
     }
 
@@ -38,16 +41,16 @@ public class ProcessByFlowableUITest {
      */
     @Test
     public void testDeploy() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         System.out.println(processEngine);
-        //2.获取RepositoryService对象
+        // 2. 获取RepositoryService对象
         RepositoryService repositoryService = processEngine.getRepositoryService();
-        //3.获取DeploymentBuilder对象
+        // 3. 获取DeploymentBuilder对象
         Deployment deploy = repositoryService.createDeployment()
-                .addClasspathResource("holiday-process-flowableui.bpmn20.xml")//关联要部署的流程文件
-                .name("请假流程-FlowableUI版")//设置流程名称
-                .deploy();//部署流程
+                .addClasspathResource("holiday-process-flowableui.bpmn20.xml")// 关联要部署的流程文件
+                .name("请假流程-FlowableUI版")// 设置流程名称
+                .deploy();// 部署流程
         System.out.println("deploy.getId():" + deploy.getId());
         System.out.println("deploy.getName():" + deploy.getName());
     }
@@ -57,10 +60,10 @@ public class ProcessByFlowableUITest {
      */
     @Test
     public void testDeployQuery() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
-        //使用key查询已经定义的流程，这里的key就是流程id
+        // 使用key查询已经定义的流程，这里的key就是流程id
         /**/
         ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery()
                 .processDefinitionKey("holidayProcessFlowableUI")
@@ -77,17 +80,16 @@ public class ProcessByFlowableUITest {
         System.out.println("processDefinition.getId():" + processDefinition.getId());
     }
 
-
     /**
      * 删除已经部署的流程
      */
     @Test
     public void testDeployDelete() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
-        //删除部署的流程，如果流程启动了，就不可以被删除了
-            //第一个参数:流程id  第二个参数: 级联删除，如果流程启动了，相关的任务一并会被删除
+        // 删除部署的流程，如果流程启动了，就不可以被删除了
+            // 第一个参数:流程id  第二个参数: 级联删除，如果流程启动了，相关的任务一并会被删除
         repositoryService.deleteDeployment("92501",true);
     }
 
@@ -96,20 +98,20 @@ public class ProcessByFlowableUITest {
      */
     @Test
     public void testRunProcess() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RuntimeService runtimeService = processEngine.getRuntimeService();
-        //构建流程变量
-            //模拟客户端传递过来的数据
+        // 构建流程变量
+            // 模拟客户端传递过来的数据
         HashMap<String, Object> variables = new HashMap<>();
-        //请假人
+        // 请假人
         variables.put("employee","张三");
-        //请假时长
+        // 请假时长
         variables.put("LeaveDuration",3);
-        //请假原因
+        // 请假原因
         variables.put("LeaveReason","出去旅游");
 
-        //启动流程实例
+        // 启动流程实例
         ProcessInstance holidayProcessByBpmnXml = runtimeService.startProcessInstanceByKey("holidayProcessFlowableUI", variables);
         System.out.println("holidayRequest.getProcessDefinitionId():" + holidayProcessByBpmnXml.getProcessDefinitionId());
         System.out.println("holidayRequest.getActivityId():" + holidayProcessByBpmnXml.getActivityId());
@@ -121,11 +123,11 @@ public class ProcessByFlowableUITest {
      */
     @Test
     public void testQueryTask() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         TaskService taskService = processEngine.getTaskService();
         List<Task> taskList = taskService.createTaskQuery()
-                .processDefinitionKey("holidayProcessFlowableUI")//指定查询的流程编号
+                .processDefinitionKey("holidayProcessFlowableUI")// 指定查询的流程编号
                 .taskAssignee("zhangsan")
                 .list();
 
@@ -143,14 +145,14 @@ public class ProcessByFlowableUITest {
      */
     @Test
     public void testCompleteTask() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         TaskService taskService = processEngine.getTaskService();
         Task task = taskService.createTaskQuery()
                 .processDefinitionKey("holidayProcessFlowableUI")
                 .taskAssignee("lisi")
                 .singleResult();
-        //完成任务
+        // 完成任务
         taskService.complete(task.getId());
     }
 
@@ -159,13 +161,13 @@ public class ProcessByFlowableUITest {
      */
     @Test
     public void testHistoryQuery() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         HistoryService historyService = processEngine.getHistoryService();
         List<HistoricActivityInstance> holidayRequestList = historyService.createHistoricActivityInstanceQuery()
                 .processDefinitionId("holidayProcessFlowableUI:1:100004")
-                .finished()//查询的历史记录状态是已经完成的
-                .orderByHistoricActivityInstanceEndTime().asc()//指定排序的字段和顺序
+                .finished()// 查询的历史记录状态是已经完成的
+                .orderByHistoricActivityInstanceEndTime().asc()// 指定排序的字段和顺序
                 .list();
         holidayRequestList.forEach( holidayRequest -> {
             System.out.println("holidayRequest.getActivityId():" + holidayRequest.getActivityId());

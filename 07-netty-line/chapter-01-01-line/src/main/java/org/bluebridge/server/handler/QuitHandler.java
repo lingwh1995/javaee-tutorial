@@ -6,6 +6,12 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import lombok.extern.slf4j.Slf4j;
 import org.bluebridge.server.session.SessionFactory;
 
+/**
+ * 退出处理器
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @Slf4j
 @ChannelHandler.Sharable
 public class QuitHandler extends ChannelInboundHandlerAdapter {
@@ -23,5 +29,4 @@ public class QuitHandler extends ChannelInboundHandlerAdapter {
         SessionFactory.getSession().unbind(ctx.channel());
         log.info("{} 已经异常断开 异常是{}", ctx.channel(), cause.getMessage());
     }
-
 }

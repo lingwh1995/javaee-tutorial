@@ -4,7 +4,10 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
- * @author yihang
+ * RpcResponseMessage
+ *
+ * @author lingwh
+ * @date 2025/12/13 11:40
  */
 @Data
 @ToString(callSuper = true)
@@ -23,5 +26,4 @@ public class RpcResponseMessage extends Message {
     public int getMessageType() {
         return RPC_MESSAGE_TYPE_RESPONSE;
     }
-
 }

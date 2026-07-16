@@ -5,8 +5,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * 序列化配置类
+ *
  * @author lingwh
- * @desc 序列化配置类
  * @date 2025/10/25 12:36
  */
 @Configuration
@@ -22,5 +23,4 @@ public class SerializerConfig {
             return Serializer.Algorithm.valueOf(serializerAlgorithm);
         }
     }
-
 }

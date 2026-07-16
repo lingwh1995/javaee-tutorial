@@ -12,8 +12,9 @@ import org.bluebridge.protocol.MessageCodecSharable;
 import org.bluebridge.protocol.Serializer;
 
 /**
+ * 序列化测试类
+ *
  * @author lingwh
- * @desc 序列化测试类
  * @date 2025/11/11 16:40
  */
 public class SerializerTest {
@@ -42,5 +43,4 @@ public class SerializerTest {
         out.writeBytes(bytes);
         return out;
     }
-
 }

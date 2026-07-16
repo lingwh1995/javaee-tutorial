@@ -1,6 +1,5 @@
 package org.bluebridge.server.service;
 
-
 import org.bluebridge.config.Config;
 
 import java.io.IOException;
@@ -10,6 +9,12 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * 服务工厂
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 public class ServicesFactory {
 
     static Properties properties;
@@ -35,5 +40,4 @@ public class ServicesFactory {
     public static <T> T getService(Class<T> interfaceClass) {
         return (T) map.get(interfaceClass);
     }
-
 }

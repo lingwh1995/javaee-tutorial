@@ -4,19 +4,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author ronin
- * @version V1.0
- * @description SpringMVC restful风格常用的注解
- * @class RestfulAnnotateController
+ * SpringMVC restful风格常用的注解
+ *
+ * @author lingwh
  * @date 2019/6/20 10:17
  */
-
 @Controller
 public class RestfulAnnotateController {
 
     /**
-     * 注意：id这个参数被接收了两次,一次是接收为Integer类型的数据,一次是被接收为String类型的数据
-     * 使用@PathVariable接收一个参数
+     * 使用@PathVariable接收参数
+     *
+     * 注意：id这个参数被接收了两次，一次是接收为Integer类型的数据，一次是被接收为String类型的数据
+     *
      * @param idStr
      * @param idInt
      * @return
@@ -30,6 +30,7 @@ public class RestfulAnnotateController {
 
     /**
      * 使用@PathVariable接收多个参数
+     *
      * @param name
      * @param age
      * @return
@@ -48,5 +49,4 @@ public class RestfulAnnotateController {
      * 修改:@PutMapping：同PostMapping。在Restful API中代表更新
      * 查询:@GetMapping：同PostMapping。在Restful API中代表查找
      */
-
 }

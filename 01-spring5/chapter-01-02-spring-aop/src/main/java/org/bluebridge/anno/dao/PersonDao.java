@@ -4,13 +4,15 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Repository;
 
 /**
+ * 人员数据访问层
+ *
  * @author lingwh
- * @desc
- * @date   2019/3/21 14:30
+ * @date 2019/3/21 14:30
  */
 @Repository("personDao")
 @EnableAspectJAutoProxy(exposeProxy = true)
 public class PersonDao {
+
     public String save() {
         /**
          * 模拟发生了异常，后置通知依然执行，返回值通知不执行

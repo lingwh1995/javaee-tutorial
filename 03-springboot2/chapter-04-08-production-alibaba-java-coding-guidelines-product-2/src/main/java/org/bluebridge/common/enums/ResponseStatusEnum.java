@@ -1,11 +1,11 @@
 package org.bluebridge.common.enums;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
+ * 响应状态枚举类
+ *
  * @author lingwh
- * @desc 响应状态枚举类
  * @date 2025/11/24 18:30
  */
 @Getter
@@ -74,5 +74,4 @@ public enum ResponseStatusEnum {
         }
         return INTERNAL_SERVER_ERROR;
     }
-
 }

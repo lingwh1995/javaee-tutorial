@@ -1,9 +1,10 @@
 package org.bluebridge.domain;
 
 /**
+ * Person实体类
+ *
  * @author lingwh
- * @desc   Person实体类
- * @date   2019/6/18 14:22
+ * @date 2019/6/18 14:22
  */
 public class Person {
 
@@ -75,5 +76,4 @@ public class Person {
                 ", age=" + age +
                 '}';
     }
-
 }

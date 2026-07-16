@@ -16,6 +16,9 @@ import java.util.Map;
 
 /**
  * 流程变量测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 20:48
  */
 public class ProcessVariableTest {
 
@@ -24,35 +27,36 @@ public class ProcessVariableTest {
     @Before
     public void before() {
         processEngineConfiguration = new StandaloneProcessEngineConfiguration();
-        //配置数据库连接信息
+        // 配置数据库连接信息
         processEngineConfiguration.setJdbcDriver("com.mysql.cj.jdbc.Driver");
         processEngineConfiguration.setJdbcUsername("root");
         processEngineConfiguration.setJdbcPassword("Mysql123456_");
         processEngineConfiguration.setJdbcUrl("jdbc:mysql://192.168.0.5:3306/flowable?useUnicode=true&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai");
 
-        //如果数据库中的表结构不存在就新建
+        // 如果数据库中的表结构不存在就新建
         processEngineConfiguration.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
     }
 
     /**
      * 部署流程
-     *      部署过程涉及到三张表
-     *          流程部署表   ACT_RE_DEPLOYMENT   一次部署流程操作就会产生一条数据
-     *          流程定义表   ACT_RE_PROCDEF      一次部署操作中包括几个流程定义文件就会产生几条记录
-     *          流程资源表   ACT_GE_BYTEARRAY    有多少资源就会生成几条记录
+     *
+     * 部署过程涉及到三张表
+     * 1. 流程部署表   ACT_RE_DEPLOYMENT   一次部署流程操作就会产生一条数据
+     * 2. 流程定义表   ACT_RE_PROCDEF      一次部署操作中包括几个流程定义文件就会产生几条记录
+     * 3. 流程资源表   ACT_GE_BYTEARRAY    有多少资源就会生成几条记录
      */
     @Test
     public void testDeploy() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         System.out.println(processEngine);
-        //2.获取RepositoryService对象
+        // 2. 获取RepositoryService对象
         RepositoryService repositoryService = processEngine.getRepositoryService();
-        //3.获取DeploymentBuilder对象
+        // 3. 获取DeploymentBuilder对象
         Deployment deploy = repositoryService.createDeployment()
-                .addClasspathResource("process-variable.bpmn20.xml")//关联要部署的流程文件
-                .name("出差申请单-流程变量测试")//设置流程名称
-                .deploy();//部署流程
+                .addClasspathResource("process-variable.bpmn20.xml")// 关联要部署的流程文件
+                .name("出差申请单-流程变量测试")// 设置流程名称
+                .deploy();// 部署流程
         System.out.println("deploy.getId():" + deploy.getId());
         System.out.println("deploy.getName():" + deploy.getName());
     }
@@ -62,10 +66,10 @@ public class ProcessVariableTest {
      */
     @Test
     public void testDeployQuery() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
-        //使用key查询已经定义的流程，这里的key就是流程id
+        // 使用key查询已经定义的流程，这里的key就是流程id
         /**/
         ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery()
                 .processDefinitionKey("evection")
@@ -82,17 +86,16 @@ public class ProcessVariableTest {
         System.out.println("processDefinition.getId():" + processDefinition.getId());
     }
 
-
     /**
      * 删除已经部署的流程
      */
     @Test
     public void testDeployDelete() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
-        //删除部署的流程，如果流程启动了，就不可以被删除了
-            //第一个参数:流程id  第二个参数: 级联删除，如果流程启动了，相关的任务一并会被删除
+        // 删除部署的流程，如果流程启动了，就不可以被删除了
+            // 第一个参数:流程id  第二个参数: 级联删除，如果流程启动了，相关的任务一并会被删除
         repositoryService.deleteDeployment("182501",true);
     }
 
@@ -101,17 +104,17 @@ public class ProcessVariableTest {
      */
     @Test
     public void testRunProcess() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RuntimeService runtimeService = processEngine.getRuntimeService();
-        //构建流程变量
-            //模拟客户端传递过来的数据
+        // 构建流程变量
+            // 模拟客户端传递过来的数据
         HashMap<String, Object> variables = new HashMap<>();
         variables.put("assignee0","zhangsan");
         variables.put("assignee1","lisi");
         variables.put("assignee2","wangwu");
         variables.put("assignee3","zhaoliu");
-        //启动流程实例
+        // 启动流程实例
         ProcessInstance holidayProcessByBpmnXml = runtimeService.startProcessInstanceByKey("evection", variables);
         System.out.println("holidayRequest.getProcessDefinitionId():" + holidayProcessByBpmnXml.getProcessDefinitionId());
         System.out.println("holidayRequest.getActivityId():" + holidayProcessByBpmnXml.getActivityId());
@@ -123,11 +126,11 @@ public class ProcessVariableTest {
      */
     @Test
     public void testQueryTask() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         TaskService taskService = processEngine.getTaskService();
         List<Task> taskList = taskService.createTaskQuery()
-                .processDefinitionKey("evection")//指定查询的流程编号
+                .processDefinitionKey("evection")// 指定查询的流程编号
                 .taskAssignee("zhangsan")
                 .list();
 
@@ -145,7 +148,7 @@ public class ProcessVariableTest {
      */
     @Test
     public void testCompleteTask() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         TaskService taskService = processEngine.getTaskService();
         Task task = taskService.createTaskQuery()
@@ -160,7 +163,7 @@ public class ProcessVariableTest {
 
         HashMap<String, Object> variables = new HashMap<>();
         variables.put("days",2);
-        //完成任务
+        // 完成任务
         taskService.complete(task.getId(),variables);
     }
 
@@ -169,13 +172,13 @@ public class ProcessVariableTest {
      */
     @Test
     public void testHistoryQuery() {
-        //1.获取流程引擎对象
+        // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         HistoryService historyService = processEngine.getHistoryService();
         List<HistoricActivityInstance> holidayRequestList = historyService.createHistoricActivityInstanceQuery()
                 .processDefinitionId("evection:1:85003")
-                .finished()//查询的历史记录状态是已经完成的
-                .orderByHistoricActivityInstanceEndTime().asc()//指定排序的字段和顺序
+                .finished()// 查询的历史记录状态是已经完成的
+                .orderByHistoricActivityInstanceEndTime().asc()// 指定排序的字段和顺序
                 .list();
         holidayRequestList.forEach( holidayRequest -> {
             System.out.println("holidayRequest.getActivityId():" + holidayRequest.getActivityId());
@@ -184,7 +187,6 @@ public class ProcessVariableTest {
             System.out.println("holidayRequest.getDurationInMillis():" + holidayRequest.getDurationInMillis());
         });
     }
-
 
     /**
      * 流程的挂起和激活
@@ -197,15 +199,15 @@ public class ProcessVariableTest {
         ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery()
                 .processDefinitionKey("evection")
                 .singleResult();
-        //获取当前定义流程的状态信息
+        // 获取当前定义流程的状态信息
         boolean suspended = processDefinition.isSuspended();
         if(suspended) {
-            //true 当前流程被挂起了
-            //激活流程
+            // true 当前流程被挂起了
+            // 激活流程
             System.out.println("激活流程:" + processDefinition.getId() + processDefinition.getName());
             repositoryService.activateProcessDefinitionById("evection:1:110003");
         }else {
-            //false 当前流程就是激活状态
+            // false 当前流程就是激活状态
             System.out.println("挂起流程:" + processDefinition.getId() + processDefinition.getName());
             repositoryService.suspendProcessDefinitionById("evection:1:110003");
         }

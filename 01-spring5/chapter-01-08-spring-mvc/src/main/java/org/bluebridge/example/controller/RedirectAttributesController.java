@@ -7,33 +7,32 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
- * @author lingwh
- * @desc
- * @date   2019/6/20 15:09
- */
-
-/**
  * SpringMVC重定向时参数传递
- *  1.把参数拼接到URL中
- *  2.把参数放在Session中,重定向到一个页面或者Controlelr
- *  RedirectAttributes的使用:
- *      1.使用RedirectAttributes需要在配置文件中配置<mvc:annotation-driven />
- *      2.常用方法
- *          RedirectAttributes.addFlashAttribute()：把参数拼接存放到Seesion中
- *              -->如果跳转到页面，则Session中存放的数据瞬间一处
- *              -->如果跳转到Controller,使用@ModelAttribute注解可获取该数据，因为该数据是
- *                  存储在Session中的，可以直接使用@ModelAttribute获取
- *          RedirectAttributes.addAttribute():把参数拼接到URL中
- *              -->可以直接跳转到页面
- *              -->如果跳转到Controller，使用@RequestParam获取传递过去的参数值
- *              如:http://localhost:8080/test/views/redirectAttribuate.jsp?name=zhangsan&age=18&school=ufe
+ *
+ * 1. 把参数拼接到URL中
+ * 2. 把参数放在Session中，重定向到一个页面或者Controlelr
+ * 3. 使用 RedirectAttributes 实现重定向
+ *
+ * 使用 RedirectAttributes 实现重定向
+ * 1. 使用RedirectAttributes需要在配置文件中配置<mvc:annotation-driven />
+ * 2. 常用方法
+ *    addFlashAttribute()：把参数拼接存放到Seesion中
+ *    - 如果跳转到页面，则Session中存放的数据瞬间一处
+ *    - 如果跳转到Controller,使用@ModelAttribute注解可获取该数据，因为该数据是存储在Session中的，可以直接使用@ModelAttribute获取
+ *    addAttribute():把参数拼接到URL中
+ *    - 可以直接跳转到页面
+ *    - 如果跳转到Controller，使用@RequestParam获取传递过去的参数值
+ *      如:http://localhost:8080/test/views/redirectAttribuate.jsp?name=zhangsan&age=18&school=ufe
+ *
+ * @author lingwh
+ * @date 2019/6/20 15:09
  */
 @Controller
 public class RedirectAttributesController {
 
     /**
-     * 重定向到一个目标页面
-     * 把参数拼接到URL中,重定向到页面,请注意查看浏览器地址栏中地址已经拼接了参数进去
+     * 重定向到一个目标页面，把参数拼接到URL中，重定向到页面，请注意查看浏览器地址栏中地址已经拼接了参数进去
+     *
      * @param redirectAttributes
      * @return
      */
@@ -44,10 +43,10 @@ public class RedirectAttributesController {
         redirectAttributes.addAttribute("school","ufe");
         return "redirect:/views/redirectAttribuate.jsp";
     }
-    
+
     /**
-     * 重定向到一个目标Controller
-     * 把参数拼接到URL中,重定向到Controller中,请注意查看浏览器地址栏中地址已经拼接了参数进去
+     * 重定向到一个目标Controller，把参数拼接到URL中，重定向到Controller中，请注意查看浏览器地址栏中地址已经拼接了参数进去
+     *
      * @param redirectAttributes
      * @return
      */
@@ -60,8 +59,8 @@ public class RedirectAttributesController {
     }
 
     /**
-     * 目标Controller
-     *      通过@RequestParam注解获取重定向后传递过来的值
+     * 重定向到目标Controller，通过@RequestParam注解获取重定向后传递过来的值
+     *
      * @param name
      * @return
      */
@@ -73,10 +72,10 @@ public class RedirectAttributesController {
         System.out.println("school:"+school);
         return "redirectAttribuate";
     }
-    
+
     /**
-     * 重定向到一个目标页面
-     * 把参数放在Session中,重定向到页面，并在页面获取该值
+     * 重定向到一个目标页面，把参数放在Session中，重定向到页面，并在页面获取该值
+     *
      * @param redirectAttributes
      * @return
      */
@@ -87,8 +86,8 @@ public class RedirectAttributesController {
     }
 
     /**
-     * 重定向到一个目标Controller
-     * 把参数放在Session中,重定向到另一个方法，并在该方法中接收(存放在session中的)参数
+     * 重定向到一个目标Controller，把参数放在Session中，重定向到另一个方法，并在该方法中接收(存放在session中的)参数
+     *
      * @param redirectAttributes
      * @return
      */
@@ -100,6 +99,7 @@ public class RedirectAttributesController {
 
     /**
      * 目标Controller通过@ModelAttribute注解获取重定向后传递过来的值
+     *
      * @param name
      * @return
      */

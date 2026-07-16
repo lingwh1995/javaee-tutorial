@@ -5,15 +5,13 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
+ * RequestHeader注解
+ *
+ * 1. 用法类似于@RequestParam注解,可以获取所有的请求头信息
+ * 2. 也有required属性
+ *
  * @author lingwh
- * @desc
- * @date   2019/6/20 14:22
- */
-
-/**
- * RequestHeader注解:
- *     1.用法类似于@RequestParam注解,可以获取所有的请求头信息
- *     2.也有required属性
+ * @date 2019/6/20 14:22
  */
 @Controller
 public class RequestHeaderController {

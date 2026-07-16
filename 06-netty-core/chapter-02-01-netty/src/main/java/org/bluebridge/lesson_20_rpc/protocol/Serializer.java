@@ -8,6 +8,9 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * 用于扩展序列化、反序列化算法
+ *
+ * @author lingwh
+ * @date 2025/11/2 0:28
  */
 public interface Serializer {
 
@@ -59,6 +62,7 @@ public interface Serializer {
             }
         }
     }
+
     class ClassCodec implements JsonSerializer<Class<?>>, JsonDeserializer<Class<?>> {
 
         @Override
@@ -77,5 +81,4 @@ public interface Serializer {
             return new JsonPrimitive(src.getName());
         }
     }
-
 }

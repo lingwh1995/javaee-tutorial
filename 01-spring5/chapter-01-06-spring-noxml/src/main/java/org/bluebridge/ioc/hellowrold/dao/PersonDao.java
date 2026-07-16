@@ -3,9 +3,10 @@ package org.bluebridge.ioc.hellowrold.dao;
 import org.springframework.stereotype.Repository;
 
 /**
+ * 人员数据访问类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/2 9:12
+ * @date 2019/4/2 9:12
  */
 @Repository
 public class PersonDao {

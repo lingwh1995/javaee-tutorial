@@ -1,5 +1,4 @@
 package org.bluebridge.monitor.component;
-
 import cn.hutool.core.util.StrUtil;
 import com.p6spy.engine.spy.appender.MessageFormattingStrategy;
 import org.bluebridge.monitor.constant.SqlConstants;
@@ -7,8 +6,9 @@ import org.bluebridge.monitor.util.PrintUtils;
 import org.bluebridge.monitor.util.SqlFormatterUtils;
 
 /**
+ * 自定义P6Spy日志格式
+ *
  * @author lingwh
- * @desc 自定义P6Spy日志格式
  * @date 2025/12/27 0:20
  */
 public class PrettyPrintFormat implements MessageFormattingStrategy {
@@ -20,11 +20,11 @@ public class PrettyPrintFormat implements MessageFormattingStrategy {
             return "";
         }
 
-        // 2.移除多余的空格
+        // 2. 移除多余的空格
         prepared = prepared.replaceAll("\\s+", " ").trim();
         sql = sql.replaceAll("\\s+", " ").trim();
 
-        // 3.格式化SQL
+        // 3. 格式化SQL
         prepared = SqlFormatterUtils.format(prepared);
         sql = SqlFormatterUtils.format(sql);
 
@@ -47,5 +47,4 @@ public class PrettyPrintFormat implements MessageFormattingStrategy {
         // 6. 返回格式化并高亮后的SQL日志
         return sql;
     }
-
 }

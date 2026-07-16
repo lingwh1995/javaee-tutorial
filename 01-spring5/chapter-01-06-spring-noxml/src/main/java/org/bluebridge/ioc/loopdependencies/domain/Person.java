@@ -3,15 +3,18 @@ package org.bluebridge.ioc.loopdependencies.domain;
 import org.springframework.stereotype.Controller;
 
 /**
+ * 零配置搭建Spring开发环境测试
+ *
  * @author lingwh
- * @desc   零配置搭建Spring开发环境测试
- * @date   2019/4/4 10:34
+ * @date 2019/4/4 10:34
  */
 @Controller
 public class Person {
 
     private String id;
+
     private String name;
+
     private String age;
 
     public String getId() {

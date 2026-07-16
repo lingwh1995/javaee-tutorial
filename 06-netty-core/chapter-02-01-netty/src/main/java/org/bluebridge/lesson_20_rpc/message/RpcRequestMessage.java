@@ -4,7 +4,10 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * @author yihang
+ * RpcClient
+ *
+ * @author lingwh
+ * @date 2025/12/13 11:40
  */
 @Getter
 @ToString(callSuper = true)
@@ -44,5 +47,4 @@ public class RpcRequestMessage extends Message {
     public int getMessageType() {
         return RPC_MESSAGE_TYPE_REQUEST;
     }
-
 }

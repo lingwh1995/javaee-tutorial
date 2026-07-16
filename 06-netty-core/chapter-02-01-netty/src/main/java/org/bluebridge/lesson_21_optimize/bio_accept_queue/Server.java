@@ -9,7 +9,6 @@ import java.net.Socket;
 
 /**
  * @author lingwh
- * @desc
  * @date 2025/11/16 15:53
  */
 @Slf4j
@@ -24,5 +23,4 @@ public class Server {
         log.info("连接成功:{}",accept);
         System.in.read();
     }
-
 }

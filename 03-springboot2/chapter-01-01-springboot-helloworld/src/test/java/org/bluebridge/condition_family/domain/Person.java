@@ -1,11 +1,13 @@
 package org.bluebridge.condition_family.domain;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/14 10:58
+ * Condition 条件装配示例的 Person 实体
+ *
+ * @author lingwh
+ * @date 2019/11/14 10:58
  */
 public class Person {
+
     private String name;
     private Integer age;
 

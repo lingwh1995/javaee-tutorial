@@ -1,5 +1,4 @@
 package org.bluebridge.product.service.impl;
-
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.bluebridge.common.domain.query.PageQuery;
@@ -21,8 +20,9 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
+ * 商品服务实现类
+ *
  * @author lingwh
- * @desc
  * @date 2025/12/13 11:10
  */
 @Service
@@ -76,35 +76,35 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public int updateProductById(Long id, ProductUpdateDTO productUpdateDTO) {
-        // 1.查询用户是否存在（阿里手册：更新前先查，避免更新不存在的数据）
+        // 1. 查询用户是否存在（阿里手册：更新前先查，避免更新不存在的数据）
         ProductDO productDO = productMapper.selectProductById(id);
         if (productDO == null) {
             throw new BusinessException(ResponseStatusEnum.NOT_FOUND, "商品不存在或已删除，ID: " + id);
         }
 
-        // 2.转换DTO为实体（阿里手册：避免直接操作DTO）
+        // 2. 转换DTO为实体（阿里手册：避免直接操作DTO）
         productDO = productConverter.toProductDO(productUpdateDTO);
         productDO.setId(id);
 
-        // 3.更新商品
+        // 3. 更新商品
         return productMapper.updateProduct(productDO);
     }
 
     @Override
     public int patchProductById(Long id, ProductPatchDTO productPatchDTO) {
-        // 1.查询用户是否存在（阿里手册：更新前先查，避免更新不存在的数据）
+        // 1. 查询用户是否存在（阿里手册：更新前先查，避免更新不存在的数据）
         ProductDO productDO = productMapper.selectProductById(id);
         if (productDO == null) {
             throw new BusinessException(ResponseStatusEnum.NOT_FOUND, "商品不存在或已删除，ID: " + id);
         }
 
-        // 2.转为实体
+        // 2. 转为实体
         productDO = productConverter.toProductDO(productPatchDTO);
 
-        // 3.设置商品ID
+        // 3. 设置商品ID
         productDO.setId(id);
 
-        // 4.更新商品
+        // 4. 更新商品
         return productMapper.patchProduct(productDO);
     }
 
@@ -139,5 +139,4 @@ public class ProductServiceImpl implements ProductService {
 
         return productConverter.toProductVOPageInfo(dataSourceDOPageInfo);
     }
-
 }

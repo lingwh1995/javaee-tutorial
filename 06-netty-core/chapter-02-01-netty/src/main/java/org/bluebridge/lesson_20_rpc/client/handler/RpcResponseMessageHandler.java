@@ -10,6 +10,12 @@ import org.bluebridge.lesson_20_rpc.message.RpcResponseMessage;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * RpcResponseMessageHandler
+ *
+ * @author lingwh
+ * @date 2025/12/13 11:40
+ */
 @Slf4j
 @ChannelHandler.Sharable
 public class RpcResponseMessageHandler extends SimpleChannelInboundHandler<RpcResponseMessage> {
@@ -32,5 +38,4 @@ public class RpcResponseMessageHandler extends SimpleChannelInboundHandler<RpcRe
             }
         }
     }
-
 }

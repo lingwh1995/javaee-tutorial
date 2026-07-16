@@ -4,8 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
+ * 群聊退出响应消息
+ *
  * @author lingwh
- * @desc 群聊退出响应消息
  * @date 2025/11/10 00:01
  */
 @Data
@@ -16,5 +17,4 @@ public class PingMessage extends AbstractRequestMessage {
     public int getMessageType() {
         return MessageType.PING.getCode();
     }
-
 }

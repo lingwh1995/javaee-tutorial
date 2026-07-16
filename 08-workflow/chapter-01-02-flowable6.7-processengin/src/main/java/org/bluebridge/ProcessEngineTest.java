@@ -6,6 +6,12 @@ import org.flowable.engine.ProcessEngines;
 import org.flowable.engine.impl.cfg.StandaloneProcessEngineConfiguration;
 import org.junit.Test;
 
+/**
+ * ProcessEngineTest
+ *
+ * @author lingwh
+ * @date 2026/7/13 20:48
+ */
 public class ProcessEngineTest {
 
     ProcessEngineConfiguration processEngineConfiguration = null;
@@ -13,13 +19,13 @@ public class ProcessEngineTest {
     @Test
     public void processEngine01() {
         processEngineConfiguration = new StandaloneProcessEngineConfiguration();
-        //配置数据库连接信息
+        // 配置数据库连接信息
         processEngineConfiguration.setJdbcDriver("com.mysql.cj.jdbc.Driver");
         processEngineConfiguration.setJdbcUsername("root");
         processEngineConfiguration.setJdbcPassword("Mysql123456_");
         processEngineConfiguration.setJdbcUrl("jdbc:mysql://192.168.0.5:3306/flowable?useUnicode=true&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai");
 
-        //如果数据库中的表结构不存在就新建
+        // 如果数据库中的表结构不存在就新建
         processEngineConfiguration.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
     }
 
@@ -27,7 +33,7 @@ public class ProcessEngineTest {
      * 加载默认的配置文件
      */
     @Test
-    public void processEngin02(){
+    public void processEngin02() {
         ProcessEngine defaultProcessEngine = ProcessEngines.getDefaultProcessEngine();
         System.out.println("defaultProcessEngine = " + defaultProcessEngine);
     }
@@ -42,5 +48,4 @@ public class ProcessEngineTest {
         ProcessEngine processEngine = configuration.buildProcessEngine();
         System.out.println("processEngine = " + processEngine);
     }
-
 }

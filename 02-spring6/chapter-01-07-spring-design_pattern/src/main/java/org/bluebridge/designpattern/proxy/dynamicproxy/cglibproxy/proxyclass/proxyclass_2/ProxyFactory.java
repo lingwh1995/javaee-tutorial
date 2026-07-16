@@ -8,6 +8,12 @@ import org.apache.logging.log4j.Logger;
 
 import java.lang.reflect.Method;
 
+/**
+ * protobuf 测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 16:22
+ */
 public class ProxyFactory{
 
     private static final Logger logger = LogManager.getLogger(ProxyFactory.class);
@@ -23,11 +29,11 @@ public class ProxyFactory{
 
     //返回代理对象
     public Object getProxyInstance(){
-        // 1.创建一个工具类
+        // 1. 创建一个工具类
         Enhancer enhancer = new Enhancer();
-        // 2.设置父类
+        // 2. 设置父类
         enhancer.setSuperclass(target.getClass());
-        // 3.设置回调函数
+        // 3. 设置回调函数
         enhancer.setCallback(
             new MethodInterceptor() {
                 @Override
@@ -40,7 +46,7 @@ public class ProxyFactory{
                 }
             }
         );
-        //4创建子类对象，即代理对象
+        // 4创建子类对象，即代理对象
         return enhancer.create();
     }
 

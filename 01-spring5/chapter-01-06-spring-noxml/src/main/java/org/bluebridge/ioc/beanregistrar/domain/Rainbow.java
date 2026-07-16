@@ -1,9 +1,11 @@
 package org.bluebridge.ioc.beanregistrar.domain;
 
 /**
+ * 彩虹
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/9 14:21
+ * @date 2019/4/9 14:21
  */
 public class Rainbow {
+
 }

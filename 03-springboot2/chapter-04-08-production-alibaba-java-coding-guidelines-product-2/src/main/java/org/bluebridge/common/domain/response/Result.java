@@ -1,13 +1,13 @@
 package org.bluebridge.common.domain.response;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.bluebridge.common.enums.OperationTypeEnum;
 
 /**
+ * 统一API响应结果封装类
+ *
  * @author lingwh
- * @desc 统一API响应结果封装类
  * @date 2025/12/13 11:40
  */
 @Data
@@ -15,15 +15,20 @@ import org.bluebridge.common.enums.OperationTypeEnum;
 @AllArgsConstructor
 public class Result<T> {
 
-    /** 响应码 */
+    /**
+     * 响应码
+     */
     private Integer code;
 
-    /** 响应消息 */
+    /**
+     * 响应消息
+     */
     private String message;
 
-    /** 响应数据 */
+    /**
+     * 响应数据
+     */
     private T data;
-
 
     /**
      * 创建一个包含数据的成功结果对象
@@ -150,5 +155,4 @@ public class Result<T> {
         result.setData(data);
         return result;
     }
-
 }

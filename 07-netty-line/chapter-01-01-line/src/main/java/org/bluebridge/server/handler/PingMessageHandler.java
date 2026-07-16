@@ -7,8 +7,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.bluebridge.message.PingMessage;
 
 /**
+ * 心跳包处理器
+ *
  * @author lingwh
- * @desc 心跳包处理器
  * @date 2025/10/16 10:53
  */
 @Slf4j
@@ -21,6 +22,4 @@ public class PingMessageHandler extends SimpleChannelInboundHandler<PingMessage>
         log.info("收到客户端心跳包: {}", msg);
         // 服务端不需要回复，只需要处理即可重置读空闲计时器
     }
-
 }
-

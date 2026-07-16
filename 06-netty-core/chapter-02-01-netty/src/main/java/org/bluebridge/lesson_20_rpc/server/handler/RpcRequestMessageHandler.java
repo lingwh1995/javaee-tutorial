@@ -12,6 +12,12 @@ import org.bluebridge.lesson_20_rpc.server.service.ServicesFactory;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/**
+ * RpcClient
+ *
+ * @author lingwh
+ * @date 2025/12/13 11:40
+ */
 @Slf4j
 @ChannelHandler.Sharable
 public class RpcRequestMessageHandler extends SimpleChannelInboundHandler<RpcRequestMessage> {
@@ -49,5 +55,4 @@ public class RpcRequestMessageHandler extends SimpleChannelInboundHandler<RpcReq
         Object invoke = method.invoke(service, message.getParameterValue());
         System.out.println(invoke);
     }
-
 }

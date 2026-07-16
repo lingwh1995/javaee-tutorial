@@ -8,8 +8,9 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Collections;
 
 /**
+ * protobuf 配置
+ *
  * @author lingwh
- * @desc protobuf 配置
  * @date 2025/11/4 14:12
  */
 @Configuration
@@ -30,5 +31,4 @@ public class ProtobufConfig {
     RestTemplate restTemplate(ProtobufHttpMessageConverter protobufHttpMessageConverter) {
         return new RestTemplate(Collections.singletonList(protobufHttpMessageConverter));
     }
-
 }

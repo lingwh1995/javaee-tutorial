@@ -14,6 +14,12 @@ import org.bluebridge.lesson_20_rpc.protocol.MessageCodecSharable;
 import org.bluebridge.lesson_20_rpc.protocol.ProcotolFrameDecoder;
 import org.bluebridge.lesson_20_rpc.server.handler.RpcRequestMessageHandler;
 
+/**
+ * RpcServer
+ *
+ * @author lingwh
+ * @date 2025/12/13 11:40
+ */
 @Slf4j
 public class RpcServer {
 
@@ -49,5 +55,4 @@ public class RpcServer {
             worker.shutdownGracefully();
         }
     }
-
 }

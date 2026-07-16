@@ -14,8 +14,9 @@ import javax.annotation.Resource;
 import static org.junit.Assert.assertEquals;
 
 /**
+ * protobuf 测试类
+ *
  * @author lingwh
- * @desc protobuf 测试类
  * @date 2025/11/4 16:22
  */
 @Slf4j
@@ -70,5 +71,4 @@ public class ProtobufControllerTest {
         PersonProto.Person person = response.getBody();
         log.info("person: {}", person);
     }
-
 }

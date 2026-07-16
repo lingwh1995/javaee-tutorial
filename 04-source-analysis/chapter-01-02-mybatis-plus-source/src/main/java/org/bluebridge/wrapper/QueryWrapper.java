@@ -4,14 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 查询条件包装器实现类
+ *
  * @author lingwh
- * @desc
  * @date 2025/12/11 18:37
  */
 public class QueryWrapper<T> implements Wrapper<T> {
 
     private List<String> conditions;
+
     private List<Object> params;
+
     private Class<T> entityClass;
 
     public QueryWrapper() {
@@ -27,6 +30,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 等于条件
+     *
      * @param column 字段名
      * @param value 值
      * @return QueryWrapper
@@ -39,6 +43,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 不等于条件
+     *
      * @param column 字段名
      * @param value 值
      * @return QueryWrapper
@@ -51,6 +56,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 大于条件
+     *
      * @param column 字段名
      * @param value 值
      * @return QueryWrapper
@@ -63,6 +69,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 大于等于条件
+     *
      * @param column 字段名
      * @param value 值
      * @return QueryWrapper
@@ -75,6 +82,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 小于条件
+     *
      * @param column 字段名
      * @param value 值
      * @return QueryWrapper
@@ -87,6 +95,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 小于等于条件
+     *
      * @param column 字段名
      * @param value 值
      * @return QueryWrapper
@@ -99,6 +108,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * LIKE条件
+     *
      * @param column 字段名
      * @param value 值
      * @return QueryWrapper
@@ -111,6 +121,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * IN条件
+     *
      * @param column 字段名
      * @param values 值列表
      * @return QueryWrapper
@@ -132,6 +143,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 排序 ASC
+     *
      * @param column 字段名
      * @return QueryWrapper
      */
@@ -142,6 +154,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 排序 DESC
+     *
      * @param column 字段名
      * @return QueryWrapper
      */
@@ -152,6 +165,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 获取SQL条件部分
+     *
      * @return 条件字符串
      */
     public String getSqlSegment() {
@@ -171,6 +185,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 获取条件SQL（与getSqlSegment相同，为了兼容BaseSqlProvider）
+     *
      * @return 条件字符串
      */
     public String getConditionSql() {
@@ -179,6 +194,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 获取参数列表
+     *
      * @return 参数列表
      */
     public List<Object> getParams() {
@@ -187,6 +203,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 获取实体类的Class对象
+     *
      * @return 实体类的Class对象
      */
     public Class<T> getEntityClass() {
@@ -195,10 +212,10 @@ public class QueryWrapper<T> implements Wrapper<T> {
 
     /**
      * 设置实体类的Class对象
+     *
      * @param entityClass 实体类的Class对象
      */
     public void setEntityClass(Class<T> entityClass) {
         this.entityClass = entityClass;
     }
-
 }

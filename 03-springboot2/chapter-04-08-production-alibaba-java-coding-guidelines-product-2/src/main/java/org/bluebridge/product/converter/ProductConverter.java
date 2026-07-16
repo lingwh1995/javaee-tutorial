@@ -1,5 +1,4 @@
 package org.bluebridge.product.converter;
-
 import com.github.pagehelper.PageInfo;
 import org.bluebridge.product.domain.dto.ProductCreateDTO;
 import org.bluebridge.product.domain.dto.ProductPatchDTO;
@@ -12,8 +11,9 @@ import org.mapstruct.Mapping;
 import java.util.List;
 
 /**
+ * 商品对象映射器
+ *
  * @author lingwh
- * @desc 商品对象映射器
  * @date 2025/12/13 11:20
  */
 // 组件模型设置为Spring，使MapStruct生成的实现类可以被Spring管理
@@ -22,6 +22,7 @@ public interface ProductConverter {
 
     /**
      * 将 CreateProductDTO 转换为 ProductDO 实体
+     *
      * @param createProductDTO 创建商品 DTO
      * @return ProductDO 实体
      */
@@ -30,6 +31,7 @@ public interface ProductConverter {
 
     /**
      * 将 ProductCreateDTOList 转换为 ProductDOList
+     *
      * @param productCreateDTOList
      * @return
      */
@@ -37,6 +39,7 @@ public interface ProductConverter {
 
     /**
      * 将 UpdateProductDTO 转换为 ProductDO 实体
+     *
      * @param updateProductDTO 更新商品 DTO
      * @return ProductDO 实体
      */
@@ -45,6 +48,7 @@ public interface ProductConverter {
 
     /**
      * 将 PatchProductDTO 转换为 ProductDO 实体
+     *
      * @param patchProductDTO 部分更新商品 DTO
      * @return ProductDO 实体
      */
@@ -55,6 +59,7 @@ public interface ProductConverter {
 
     /**
      * 将 ProductDO 转换为 ProductVO
+     *
      * @param productDO 商品实体
      * @return ProductVO 商品视图对象
      */
@@ -62,6 +67,7 @@ public interface ProductConverter {
 
     /**
      * 将 ProductDO 列表转换为 ProductVO 列表
+     *
      * @param productDOList 商品实体列表
      * @return ProductVO 列表
      */
@@ -69,6 +75,7 @@ public interface ProductConverter {
 
     /**
      * 将 PageInfo<ProductDO> 转换为 PageInfo<ProductVO>
+     *
      * @param productDOPageInfo
      * @return
      */

@@ -9,13 +9,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringValueResolver;
 
 /**
+ * Spring框架会回调这些实现了XXXAware的方法
+ *
  * @author lingwh
- * @desc   Spring框架会回调这些实现了XXXAware的方法
- * @date   2019/4/6 13:43
+ * @date 2019/4/6 13:43
  */
 @Component
 public class Red implements ApplicationContextAware,BeanNameAware,
         EmbeddedValueResolverAware{
+
     private ApplicationContext applicationContext;
 
     @Override

@@ -1,5 +1,4 @@
 package org.bluebridge.common.config;
-
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.jsontype.impl.LaissezFaireSubTypeValidator;
@@ -12,8 +11,9 @@ import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSeriali
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
+ * redis序列化配置
+ *
  * @author lingwh
- * @desc redis序列化配置
  * @date 2025/11/22 17:40
  */
 @Configuration
@@ -21,6 +21,7 @@ public class RedisConfig {
 
     /**
      * 配置RedisTemplate实例，用于操作Redis数据库
+     *
      * @param connectionFactory Redis连接工厂
      * @return 配置好的RedisTemplate实例
      */
@@ -51,5 +52,4 @@ public class RedisConfig {
         
         return template;
     }
-
 }

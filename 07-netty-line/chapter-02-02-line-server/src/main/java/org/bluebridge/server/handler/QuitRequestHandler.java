@@ -10,8 +10,9 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 /**
+ * 退出请求处理器
+ *
  * @author lingwh
- * @desc 退出请求处理器
  * @date 2025/11/9 19:15
  */
 @Slf4j
@@ -24,6 +25,7 @@ public class QuitRequestHandler extends ChannelInboundHandlerAdapter {
 
     /**
      * 退出请求处理
+     *
      * @param ctx
      * @throws Exception
      */
@@ -39,5 +41,4 @@ public class QuitRequestHandler extends ChannelInboundHandlerAdapter {
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         log.info("用户 {} 异常退出登录, 异常信息: {}", session.getUsername(ctx.channel()), cause.getMessage());
     }
-
 }

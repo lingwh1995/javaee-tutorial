@@ -8,13 +8,17 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @ConfigurationProperties:将配置文件中配置的每一个属性的值,映射到这个组件中
- *      prefix ="person":
- * @author ronin
+ * 使用 @ConfigurationProperties 获取配置文件中配置
+ *
+ * 将配置文件中配置的每一个属性的值，映射到这个实体中，配置文件和实体中属性应该一一对应
+ *
+ * @author lingwh
+ * @date 2020/3/5 10:47
  */
 @Component("personYml")
 @ConfigurationProperties(prefix ="person")
 public class Person {
+
     private String lastName;
     private Integer age;
     private Boolean boss;

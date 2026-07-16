@@ -11,8 +11,9 @@ import java.nio.charset.Charset;
 import java.util.Iterator;
 
 /**
+ * 从事件驱动角度理解 selector 网络通信
+ *
  * @author lingwh
- * @desc 从事件驱动角度理解 selector 网络通信
  * @date 2025/6/28 17:35
  */
 @Slf4j
@@ -22,17 +23,17 @@ public class SelectorServer {
     private static final int PORT = 8080;
 
     public static void main(String[] args) throws IOException {
-        // 1.创建服务器对象
+        // 1. 创建服务器对象
         ServerSocketChannel ssc = ServerSocketChannel.open();
-        // 2.设置服务器对象
+        // 2. 设置服务器对象
         ssc.configureBlocking(false);
-        // 3.绑定端口号
+        // 3. 绑定端口号
         ssc.bind(new InetSocketAddress(HOST, PORT));
         log.info("非阻塞TCP Selector服务器启动，IP：{}，端口：{}......", HOST, PORT);
 
-        // 4.创建 Selector 对象
+        // 4. 创建 Selector 对象
         Selector selector = Selector.open();
-        // 5.把 Channel 注册到 selector 上
+        // 5. 把 Channel 注册到 selector 上
         ssc.register(selector, SelectionKey.OP_ACCEPT);
         while (true) {
             selector.select();
@@ -72,5 +73,4 @@ public class SelectorServer {
             }
         }
     }
-
 }

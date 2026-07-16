@@ -5,8 +5,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
+ * RestTemplate 配置类
+ *
  * @author lingwh
- * @desc
  * @date 2025/11/4 17:58
  */
 @Configuration

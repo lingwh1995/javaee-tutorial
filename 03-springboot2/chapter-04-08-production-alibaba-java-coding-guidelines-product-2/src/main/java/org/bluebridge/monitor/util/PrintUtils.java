@@ -1,16 +1,17 @@
 package org.bluebridge.monitor.util;
-
 import org.bluebridge.monitor.constant.SqlConstants;
 
 /**
+ * 打印工具类
+ *
  * @author lingwh
- * @desc  打印工具类
  * @date 2026/1/1 20:48
  */
 public class PrintUtils {
 
     /**
      * 获取高亮日志
+     *
      * @param log
      * @return
      */
@@ -34,5 +35,4 @@ public class PrintUtils {
         }
         return log;
     }
-
 }

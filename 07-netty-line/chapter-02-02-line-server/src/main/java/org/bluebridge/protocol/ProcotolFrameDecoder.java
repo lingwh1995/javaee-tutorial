@@ -3,8 +3,9 @@ package org.bluebridge.protocol;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 
 /**
+ * 协议帧格式解码器(解决粘包半包问题)
+ *
  * @author lingwh
- * @desc 协议帧格式解码器(解决粘包半包问题)
  * @date 2025/10/25 12:26
  */
 public class ProcotolFrameDecoder extends LengthFieldBasedFrameDecoder {
@@ -17,5 +18,4 @@ public class ProcotolFrameDecoder extends LengthFieldBasedFrameDecoder {
                                 int lengthAdjustment, int initialBytesToStrip) {
         super(maxFrameLength, lengthFieldOffset, lengthFieldLength, lengthAdjustment, initialBytesToStrip);
     }
-
 }

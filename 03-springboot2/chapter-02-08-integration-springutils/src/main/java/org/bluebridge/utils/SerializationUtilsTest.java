@@ -9,6 +9,9 @@ import java.util.Map;
 
 /**
  * 序列化工具类测试
+ *
+ * @author lingwh
+ * @date 2025/11/2 0:28
  */
 @Slf4j
 public class SerializationUtilsTest {
@@ -23,5 +26,4 @@ public class SerializationUtilsTest {
         Object deserialize = SerializationUtils.deserialize(serialize);
         log.info("{}", deserialize);
     }
-
 }

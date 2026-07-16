@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 在SpingMVC中使用Servlet原生API,HttpServlertRequest HttpServletResponse
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
  */
 @Controller
 public class ServletApiController {
@@ -20,6 +23,7 @@ public class ServletApiController {
 
     /**
      * 在SpingMVC中使用Servlet原生API
+     *
      * @return
      */
     @RequestMapping(value="testServletApi",method = RequestMethod.POST)

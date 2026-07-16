@@ -1,10 +1,5 @@
 package org.bluebridge.chapter_05_selector.udp.udp_01;
 
-/**
- * @author lingwh
- * @desc
- * @date 2025/11/2 0:28
- */
 import lombok.extern.slf4j.Slf4j;
 import org.bluebridge.ByteBufferUtil;
 
@@ -20,9 +15,8 @@ import java.util.Iterator;
 /**
  * UDP server
  *
- * @author jimo
- * @version 1.0.0
- * @date 2020/7/12 11:42
+ * @author lingwh
+ * @date 2025/11/2 0:28
  */
 @Slf4j
 public class SelectorServer {
@@ -58,5 +52,4 @@ public class SelectorServer {
         selector.close();
         channel.close();
     }
-
 }

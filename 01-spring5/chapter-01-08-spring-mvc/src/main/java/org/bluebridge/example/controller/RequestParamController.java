@@ -5,11 +5,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * SpringMVC的RequestParam注解:
- *      value:参数值
- *      required:是否一定要有这个参数，默认为true,前台不传递会报错
- *      defaultValue:设置默认值(如果required=true,前台又没有传递该该参数，
- *                              此时defaultValue设置的值生效,不设置defaultValue时此种情况会报错)
+ * SpringMVC的RequestParam注解
+ *
+ * 1. value：参数值
+ * 2. required：是否一定要有这个参数，默认为true,前台不传递会报错
+ * 3. defaultValue：设置默认值(如果required=true,前台又没有传递该该参数，此时defaultValue设置的值生效，不设置defaultValue时此种情况会报错)
+ *
+ * @author lingwh
+ * @date 2019/6/20 14:22
  */
 @Controller
 public class RequestParamController {
@@ -18,6 +21,7 @@ public class RequestParamController {
 
     /**
      * RequestParam注解
+     *
      * @return
      */
     @RequestMapping(value="testRequestParam")

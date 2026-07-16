@@ -4,9 +4,10 @@ import org.bluebridge.domain.PersonProto;
 import org.springframework.web.bind.annotation.*;
 
 /**
+ * protobuf 测试控制器
+ *
  * @author lingwh
- * @desc  protobuf 测试控制器
- * @date  2025/11/4 15:52
+ * @date 2025/11/4 15:52
  */
 @RestController
 public class ProtobufController {
@@ -35,5 +36,4 @@ public class ProtobufController {
                 .setAddress("beijing")
                 .build();
     }
-
 }
