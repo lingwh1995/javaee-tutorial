@@ -6,6 +6,12 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 消息基类
+ *
+ * @author lingwh
+ * @date 2025/10/15 17:28
+ */
 @Data
 public abstract class Message implements Serializable {
 
@@ -40,10 +46,12 @@ public abstract class Message implements Serializable {
     public static final int GroupMembersResponseMessage = 13;
     public static final int PingMessage = 14;
     public static final int PongMessage = 15;
+
     /**
      * 请求类型 byte 值
      */
     public static final int RPC_MESSAGE_TYPE_REQUEST = 101;
+
     /**
      * 响应类型 byte 值
      */
@@ -55,5 +63,4 @@ public abstract class Message implements Serializable {
         messageClasses.put(RPC_MESSAGE_TYPE_REQUEST, RpcRequestMessage.class);
         messageClasses.put(RPC_MESSAGE_TYPE_RESPONSE, RpcResponseMessage.class);
     }
-
 }

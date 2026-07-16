@@ -15,6 +15,12 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 
+/**
+ * 主库数据源配置类
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
+ */
 @Configuration
 @MapperScan(basePackages = "org.bluebridge.mapper.master", sqlSessionFactoryRef = "masterSqlSessionFactory")
 public class MasterDataSourceConfig {

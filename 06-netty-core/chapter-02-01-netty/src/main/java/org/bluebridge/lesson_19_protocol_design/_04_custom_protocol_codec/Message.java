@@ -1,8 +1,9 @@
 package org.bluebridge.lesson_19_protocol_design._04_custom_protocol_codec;
 
 /**
+ * 消息基类
+ *
  * @author lingwh
- * @desc 消息基类
  * @date 2025/10/15 17:28
  */
 import lombok.Data;
@@ -14,5 +15,4 @@ public abstract class Message implements Serializable {
 
     private int sequenceId;
     private int messageType;
-
 }

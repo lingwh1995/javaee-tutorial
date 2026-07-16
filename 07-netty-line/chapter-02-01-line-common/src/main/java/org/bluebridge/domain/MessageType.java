@@ -1,8 +1,9 @@
 package org.bluebridge.domain;
 
 /**
+ * 消息类型枚举类
+ *
  * @author lingwh
- * @desc 消息类型枚举类
  * @date 2025/11/2 12:56
  */
 public enum MessageType {
@@ -68,5 +69,4 @@ public enum MessageType {
         }
         return null;
     }
-
 }

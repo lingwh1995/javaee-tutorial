@@ -6,11 +6,18 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 消息基类
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 @Data
 public abstract class Message implements Serializable {
 
     /**
      * 根据消息类型字节，获得对应的消息 class
+     *
      * @param messageType 消息类型字节
      * @return 消息 class
      */
@@ -65,5 +72,4 @@ public abstract class Message implements Serializable {
         messageClasses.put(PingMessage, PingMessage.class);
         messageClasses.put(PongMessage, PongMessage.class);
     }
-
 }

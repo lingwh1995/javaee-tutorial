@@ -14,8 +14,9 @@ import java.nio.charset.Charset;
 import java.util.Scanner;
 
 /**
+ * 消息回应 客户端
+ *
  * @author lingwh
- * @desc 消息回应 客户端
  * @date 2025/10/10 9:14
  */
 @Slf4j
@@ -32,17 +33,17 @@ public class MessageEchoClient {
             .handler(new ChannelInitializer<NioSocketChannel>() {
                 @Override
                 protected void initChannel(NioSocketChannel ch) {
-                ChannelPipeline pipeline = ch.pipeline();
-                pipeline.addLast(new LoggingHandler(LogLevel.DEBUG));
-                pipeline.addLast(new StringEncoder(Charset.defaultCharset()));
-                pipeline.addLast(new ChannelInboundHandlerAdapter() {
-                    @Override
-                    public void channelRead(ChannelHandlerContext ctx, Object msg) {
-                    ByteBuf byteBuf = (ByteBuf) msg;
-                    log.info("接收到的来自服务端的消息: {}", byteBuf.toString(Charset.defaultCharset()));
-                    // 思考：需要释放 buffer 吗
-                    }
-                });
+                    ChannelPipeline pipeline = ch.pipeline();
+                    pipeline.addLast(new LoggingHandler(LogLevel.DEBUG));
+                    pipeline.addLast(new StringEncoder(Charset.defaultCharset()));
+                    pipeline.addLast(new ChannelInboundHandlerAdapter() {
+                        @Override
+                        public void channelRead(ChannelHandlerContext ctx, Object msg) {
+                            ByteBuf byteBuf = (ByteBuf) msg;
+                            log.info("接收到的来自服务端的消息: {}", byteBuf.toString(Charset.defaultCharset()));
+                            // 思考：需要释放 buffer 吗
+                        }
+                    });
                 }
             })
             .connect(HOST, PORT)
@@ -66,5 +67,4 @@ public class MessageEchoClient {
             }
         }).start();
     }
-
 }

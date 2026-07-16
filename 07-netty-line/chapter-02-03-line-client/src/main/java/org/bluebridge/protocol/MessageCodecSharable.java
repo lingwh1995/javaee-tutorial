@@ -14,8 +14,9 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
+ * 消息编解码器，必须和 LengthFieldBasedFrameDecoder 一起使用，确保接到的 ByteBuf 消息是完整的
+ *
  * @author lingwh
- * @desc 消息编解码器，必须和 LengthFieldBasedFrameDecoder 一起使用，确保接到的 ByteBuf 消息是完整的
  * @date 2025/10/25 12:47
  */
 @Slf4j
@@ -29,23 +30,23 @@ public class MessageCodecSharable extends MessageToMessageCodec<ByteBuf, Message
     @Override
     public void encode(ChannelHandlerContext ctx, Message msg, List<Object> outList) throws Exception {
         ByteBuf out = ctx.alloc().buffer();
-        // 1.4 字节的魔数
+        // 1. 4字节的魔数
         out.writeBytes(new byte[]{1, 2, 3, 4});
-        // 2.1 字节的版本,
+        // 2. 1字节的版本,
         out.writeByte(1);
-        // 3.1 字节的序列化方式 jdk 0 , json 1
+        // 3. 1字节的序列化方式 jdk 0 , json 1
         out.writeByte(serializerConfig.getSerializerAlgorithm().ordinal());
-        // 4.1 字节的指令类型
+        // 4. 1字节的指令类型
         out.writeByte(msg.getMessageType());
-        // 5.4 个字节
+        // 5. 4个字节
         out.writeInt(msg.getSequenceId());
         // 无意义，对齐填充
         out.writeByte(0xff);
-        // 6.获取内容的字节数组
+        // 6. 获取内容的字节数组
         byte[] bytes = serializerConfig.getSerializerAlgorithm().serialize(msg);
-        // 7.长度
+        // 7. 长度
         out.writeInt(bytes.length);
-        // 8.写入内容
+        // 8. 写入内容
         out.writeBytes(bytes);
         outList.add(out);
     }
@@ -70,5 +71,4 @@ public class MessageCodecSharable extends MessageToMessageCodec<ByteBuf, Message
         log.info("{}, {}, {}, {}, {}, {}", magicNum, version, serializerType, messageType, sequenceId, length);
         out.add(message);
     }
-
 }

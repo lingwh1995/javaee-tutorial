@@ -7,6 +7,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 
+/**
+ * 消息发送控制器
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
+ */
 @Controller
 public class MessageController {
 
@@ -15,7 +21,8 @@ public class MessageController {
 
     /**
      * 访问  http://localhost:8080/send-message    查看效果
-     * @return
+     *
+     * @return 消息发送结果
      */
     @ResponseBody
     @RequestMapping("/send-message")

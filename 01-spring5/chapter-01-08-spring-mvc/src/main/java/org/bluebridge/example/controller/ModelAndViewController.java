@@ -11,17 +11,20 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 /**
+ * SpringMVC使用ModelAndView作为模型:addObject(String attributeName,Object object):默认把值放在request域对象中
+ *
  * @author lingwh
- * @desc   SpringMVC使用ModelAndView作为模型:addObject(String attributeName,Object object):默认把值放在request域对象中
- * @date   2019/6/20 9:15
+ * @date 2019/6/20 9:15
  */
 @Controller
 @SessionAttributes(value="time1")
 public class ModelAndViewController {
+
     private static final String VIEWNAME = "modelView";
 
     /**
      * ModelAndView使用案例1:
+     *
      * @return
      */
     @RequestMapping(value="testModelAndView1")
@@ -33,6 +36,7 @@ public class ModelAndViewController {
 
     /**
      * ModelAndView使用案例2:
+     *
      * @return
      */
     @RequestMapping(value="testModelAndView2")
@@ -45,6 +49,7 @@ public class ModelAndViewController {
 
     /**
      * ModelAndView使用案例3:
+     *
      * @return
      */
     @RequestMapping(value="testModelAndView3")
@@ -56,6 +61,7 @@ public class ModelAndViewController {
 
     /**
      * 重定向到另一个jsp页面,并传递值过去：方式1:HttpServletRequest+ModelAndView
+     *
      * @param request
      * @return
      */
@@ -68,6 +74,7 @@ public class ModelAndViewController {
 
     /**
      * 重定向到另一个jsp页面,并传递值过去：方式2:@SessiuonAttribuates+直接返回String
+     *
      * @param model
      * @return
      */
@@ -79,6 +86,7 @@ public class ModelAndViewController {
 
     /**
      * 重定向到另一个Controller,并传值过去,方式1:@SessiuonAttribuates+ModelAndView
+     *
      * @return
      */
     @RequestMapping(value="testModelAndViewRedirectAnotherController1")
@@ -90,6 +98,7 @@ public class ModelAndViewController {
 
     /**
      * 重定向到另一个Controller,并传值过去,方式2:直接返回String
+     *
      * @return
      */
     @RequestMapping(value="testModelAndViewRedirectAnotherController2")
@@ -100,6 +109,7 @@ public class ModelAndViewController {
 
     /**
      * 转发向到另一个Controller,并传值过去,方式1:ModelAndView
+     *
      * @return
      */
     @RequestMapping(value="testModelAndViewForwardAnotherController1")
@@ -111,6 +121,7 @@ public class ModelAndViewController {
 
     /**
      * 转发向到另一个Controller,并传值过去，方式2:直接返回String
+     *
      * @param model
      * @return
      */
@@ -123,6 +134,7 @@ public class ModelAndViewController {
 
     /**
      * 转发/重定向目标Controlelr
+     *
      * @return
      */
     @RequestMapping(value="forwardOrRedirectTargetController")
@@ -131,5 +143,4 @@ public class ModelAndViewController {
         System.out.println("目标Controlelr......");
         return null;
     }
-
 }
