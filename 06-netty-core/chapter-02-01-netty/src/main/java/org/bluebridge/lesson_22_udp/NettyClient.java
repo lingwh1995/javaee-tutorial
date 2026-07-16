@@ -15,8 +15,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.net.InetSocketAddress;
 
 /**
+ * Netty 客户端UDP版
+ *
  * @author lingwh
- * @desc Netty 客户端UDP版
  * @date 2025/11/12 16:43
  */
 @Slf4j
@@ -68,5 +69,4 @@ public class NettyClient {
             group.shutdownGracefully();
         }
     }
-
 }

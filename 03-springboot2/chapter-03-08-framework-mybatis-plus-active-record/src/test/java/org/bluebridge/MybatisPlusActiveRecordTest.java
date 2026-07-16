@@ -6,7 +6,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
-
+/**
+ * MybatisPlusActiveRecordTest
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 @SpringBootTest
 public class MybatisPlusActiveRecordTest {
 
@@ -60,5 +65,4 @@ public class MybatisPlusActiveRecordTest {
         boolean isDelete = employee.deleteById(1l);
         System.out.println("isDelete = " + isDelete);
     }
-
 }

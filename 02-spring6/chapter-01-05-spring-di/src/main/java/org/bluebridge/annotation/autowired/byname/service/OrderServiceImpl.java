@@ -5,6 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+/**
+ * OrderServiceImpl
+ *
+ * @author lingwh
+ * @date 2026/7/13 20:34
+ */
 @Service
 public class OrderServiceImpl implements IOrderService{
 
@@ -16,5 +22,4 @@ public class OrderServiceImpl implements IOrderService{
     public void deleteById(String id) {
         orderDao.deleteById(id);
     }
-
 }

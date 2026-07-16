@@ -9,13 +9,11 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author lingwh
- * @desc Netty 提供的 Promise 测试
- * @date 2025/9/24 15:24
- */
-
-/**
+ * Netty 提供的 Promise 测试
  * netty Promise 不仅有 netty Future 的功能，而且脱离了任务独立存在，只作为两个线程间传递结果的容器
+ *
+ * @author lingwh
+ * @date 2025/9/24 15:24
  */
 @Slf4j
 public class NettyPromiseTest {
@@ -28,6 +26,7 @@ public class NettyPromiseTest {
 
     /**
      * 同步方式获取 promise 执行结果
+     *
      * @throws InterruptedException
      * @throws ExecutionException
      */
@@ -54,6 +53,7 @@ public class NettyPromiseTest {
 
     /**
      * 异步方式获取 promise 执行结果
+     *
      * @throws InterruptedException
      * @throws ExecutionException
      */

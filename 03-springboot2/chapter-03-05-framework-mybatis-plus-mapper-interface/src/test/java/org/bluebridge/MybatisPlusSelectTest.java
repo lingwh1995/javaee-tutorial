@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * MybatisPlus 查询相关方法
+ *
  * T selectById(Serializable id);   // 根据 ID 查询
  * T selectOne(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);  // 根据 entity 条件，查询一条记录
  * List<T> selectBatchIds(@Param(Constants.COLLECTION) Collection<? extends Serializable> idList);  // 查询（根据ID 批量查询）
@@ -26,6 +28,9 @@ import java.util.Map;
  * IPage<T> selectPage(IPage<T> page, @Param(Constants.WRAPPER) Wrapper<T> queryWrapper);   // 根据 entity 条件，查询全部记录（并翻页）
  * IPage<Map<String, Object>> selectMapsPage(IPage<T> page, @Param(Constants.WRAPPER) Wrapper<T> queryWrapper);     // 根据 Wrapper 条件，查询全部记录（并翻页）
  * Integer selectCount(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);  // 根据 Wrapper 条件，查询总记录数
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 @SpringBootTest
 public class MybatisPlusSelectTest {
@@ -35,9 +40,9 @@ public class MybatisPlusSelectTest {
 
     @Test
     public void init() {
-        //删除数据库中已有数据
+        // 删除数据库中已有数据
         employeeMapper.delete(new QueryWrapper<>());
-        //给数据库中插入数据
+        // 给数据库中插入数据
         List<Employee> employeeList = Arrays.asList(
                 new Employee(1l,"张一", "1111111111@qq.com", "男", "01"),
                 new Employee(2l,"张二", "2222222222@qq.com", "女", "02"),
@@ -53,6 +58,7 @@ public class MybatisPlusSelectTest {
 
     /**
      * 测试 根据 ID 查询
+     *
      * T selectById(Serializable id);
      */
     @Test
@@ -63,6 +69,7 @@ public class MybatisPlusSelectTest {
 
     /**
      * 测试 根据 entity 条件，查询一条记录
+     *
      * T selectOne(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);
      */
     @Test
@@ -75,6 +82,7 @@ public class MybatisPlusSelectTest {
 
     /**
      * 测试 查询（根据ID 批量查询）
+     *
      * List<T> selectBatchIds(@Param(Constants.COLLECTION) Collection<? extends Serializable> idList);
      */
     @Test
@@ -86,6 +94,7 @@ public class MybatisPlusSelectTest {
 
     /**
      * 测试 根据 entity 条件，查询全部记录
+     *
      * List<T> selectList(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);
      */
     @Test
@@ -98,6 +107,7 @@ public class MybatisPlusSelectTest {
 
     /**
      * 测试 查询（根据 columnMap 条件）
+     *
      * List<T> selectByMap(@Param(Constants.COLUMN_MAP) Map<String, Object> columnMap);
      */
     @Test
@@ -110,6 +120,7 @@ public class MybatisPlusSelectTest {
 
     /**
      * 测试 根据 Wrapper 条件，查询全部记录
+     *
      * List<Map<String, Object>> selectMaps(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);
      */
     @Test
@@ -122,6 +133,7 @@ public class MybatisPlusSelectTest {
 
     /**
      * 测试 根据 Wrapper 条件，查询全部记录。注意： 只返回第一个字段的值,这里返回的值实际上是id
+     *
      * List<Object> selectObjs(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);
      */
     @Test
@@ -134,6 +146,7 @@ public class MybatisPlusSelectTest {
 
     /**
      * 测试 根据 entity 条件，查询全部记录（并翻页）
+     *
      * IPage<T> selectPage(IPage<T> page, @Param(Constants.WRAPPER) Wrapper<T> queryWrapper);
      */
     @Test
@@ -150,6 +163,7 @@ public class MybatisPlusSelectTest {
 
     /**
      * 测试 根据 Wrapper 条件，查询全部记录（并翻页）
+     *
      * IPage<Map<String, Object>> selectMapsPage(IPage<T> page, @Param(Constants.WRAPPER) Wrapper<T> queryWrapper);
      */
     @Test
@@ -167,6 +181,7 @@ public class MybatisPlusSelectTest {
 
     /**
      * 测试 根据 Wrapper 条件，查询总记录数
+     *
      * Integer selectCount(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);
      */
     @Test

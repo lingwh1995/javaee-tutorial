@@ -5,9 +5,13 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- * @author ronin
+ * SpringBoot整合Filter的第一种方式示例
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class MyFilter implements Filter{
+
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         System.out.println("filter执行了......");

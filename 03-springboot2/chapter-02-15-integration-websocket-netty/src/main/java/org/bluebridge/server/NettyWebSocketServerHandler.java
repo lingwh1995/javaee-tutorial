@@ -12,8 +12,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * 服务端处理器
+ *
  * @author lingwh
- * @desc 服务端处理器
  * @date 2025/10/21 16:29
  */
 @Slf4j
@@ -61,5 +62,4 @@ public class NettyWebSocketServerHandler extends SimpleChannelInboundHandler<Tex
         cause.printStackTrace();
         ctx.close();
     }
-
 }

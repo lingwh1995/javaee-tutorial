@@ -8,6 +8,9 @@ import java.util.*;
 
 /**
  * Object工具类测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 13:45
  */
 @Slf4j
 public class ObjectUtilsTest {
@@ -73,5 +76,4 @@ public class ObjectUtilsTest {
         String a = "123";
         System.out.println(ObjectUtils.getIdentityHexString(a));
     }
-
 }

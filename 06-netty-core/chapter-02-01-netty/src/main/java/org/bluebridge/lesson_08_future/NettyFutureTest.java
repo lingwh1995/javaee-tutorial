@@ -9,13 +9,13 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * Netty 自带的 Future 测试
+ *
+ * 1. netty Future 提供了更强大的功能，可以实时取到运行状态
+ * 2. netty Future 可以同步等待任务结束得到结果，也可以异步方式得到结果，但都是要等任务结束
+ *
  * @author lingwh
- * @desc Netty 自带的 Future 测试，提供了更强大的功能，可以实时取到运行状态
  * @date 2025/9/23 18:13
- */
-
-/**
- * netty Future 可以同步等待任务结束得到结果，也可以异步方式得到结果，但都是要等任务结束
  */
 @Slf4j
 public class NettyFutureTest {
@@ -46,6 +46,4 @@ public class NettyFutureTest {
             }
         });
     }
-
 }
-

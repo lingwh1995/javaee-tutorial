@@ -1,6 +1,5 @@
 package org.bluebridge.servlet;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -9,9 +8,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * @author ronin
+ * SpringBoot整合Servlet的第一种方式示例
+ *
+ * @author lingwh
+ * @date 2025/2/27 13:56
  */
 public class MyServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request, response);

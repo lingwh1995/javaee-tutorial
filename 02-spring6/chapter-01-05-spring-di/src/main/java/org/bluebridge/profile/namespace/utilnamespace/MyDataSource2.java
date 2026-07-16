@@ -11,6 +11,9 @@ import java.util.logging.Logger;
 
 /**
  * 使用util命名空间实现spring配置文件的复用
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class MyDataSource2 implements DataSource {
 

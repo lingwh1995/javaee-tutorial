@@ -7,9 +7,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.bluebridge.utils.ByteBufUtil;
 import org.junit.Test;
 
-
 /**
  * netty 中的零拷贝
+ *
+ * @author lingwh
+ * @date 2026/7/14 10:32
  */
 @Slf4j
 public class NettyZeroCopyTest {
@@ -17,8 +19,7 @@ public class NettyZeroCopyTest {
     /**
      * 将一个大的 ByteBuf 分片成小的 ByteBuf
      *
-     * 【零拷贝】的体现之一，对原始 ByteBuf 进行切片成多个 ByteBuf，切片后的 ByteBuf 并没有发生内存复制，还
-     *  是使用原始 ByteBuf 的内存，切片后的 ByteBuf 维护独立的 read，write 指针
+     * 零拷贝 的体现之一，对原始 ByteBuf 进行切片成多个 ByteBuf，切片后的 ByteBuf 并没有发生内存复制，还是使用原始 ByteBuf 的内存，切片后的 ByteBuf 维护独立的 read，write 指针
      */
     @Test
     public void testByteBufSlice() {
@@ -39,8 +40,7 @@ public class NettyZeroCopyTest {
     /**
      * 截取原 ByteBuf 的全部内容
      *
-     * 【零拷贝】的体现之一，就好比截取了原始 ByteBuf 所有内容，并且没有 max capacity 的限制，也是与原
-     *  始 ByteBuf 使用同一块底层内存，只是读写指针是独立的
+     * 零拷贝 的体现之一，就好比截取了原始 ByteBuf 所有内容，并且没有 max capacity 的限制，也是与原始 ByteBuf 使用同一块底层内存，只是读写指针是独立的
      */
     @Test
     public void testByteBufDuplicate() {
@@ -86,5 +86,4 @@ public class NettyZeroCopyTest {
         byteBufs.addComponents(true, byteBuf1, byteBuf2);
         ByteBufUtil.debugAll(byteBufs);
     }
-
 }

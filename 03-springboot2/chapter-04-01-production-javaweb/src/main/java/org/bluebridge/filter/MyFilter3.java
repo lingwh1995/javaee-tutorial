@@ -6,10 +6,14 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- * @author ronin
+ * SpringBoot整合Filter的第二种方式示例
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 @WebFilter(urlPatterns ="/myServlet3")
 public class MyFilter3 implements Filter{
+
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         System.out.println("filter执行了......");

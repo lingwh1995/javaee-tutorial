@@ -1,23 +1,28 @@
 package org.bluebridge;
 
+import org.apache.ibatis.session.SqlSession;
 import org.bluebridge.dao.IEmployeeDao;
 import org.bluebridge.domain.Employee;
 import org.bluebridge.utils.SqlSessionUtil;
-import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.util.List;
 
+/**
+ * Mybatis基于接口的CRUD测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class MybatisCrudInterfaceTest {
 
     /**
-     * 接口式编程
-     *      新增测试
+     * 接口式编程 - 新增测试
      */
     @Test
     public void insertTest() {
         SqlSession sqlSession = null;
-        try{
+        try {
             sqlSession = SqlSessionUtil.openSession();
             IEmployeeDao employeeDao = sqlSession.getMapper(IEmployeeDao.class);
 
@@ -26,27 +31,26 @@ public class MybatisCrudInterfaceTest {
             employee.setEmail("2926517283@qq.com");
             employee.setGender("男");
             employee.setDeptNo("80");
-            
+
             int i = employeeDao.insertEmployee(employee);
             System.out.println("受影响的数据:" + i);
 
             sqlSession.commit();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             sqlSession.rollback();
-        }finally {
+        } finally {
             sqlSession.close();
         }
     }
 
     /**
-     * 接口式编程
-     *      删除测试
+     * 接口式编程 - 删除测试
      */
     @Test
     public void deleteTest() {
         SqlSession sqlSession = null;
-        try{
+        try {
             sqlSession = SqlSessionUtil.openSession();
             IEmployeeDao employeeDao = sqlSession.getMapper(IEmployeeDao.class);
 
@@ -54,22 +58,21 @@ public class MybatisCrudInterfaceTest {
             System.out.println("受影响的数据:" + i);
 
             sqlSession.commit();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             sqlSession.rollback();
-        }finally {
+        } finally {
             sqlSession.close();
         }
     }
 
     /**
-     * 接口式编程
-     *      修改测试
+     * 接口式编程 - 修改测试
      */
     @Test
     public void updateTest() {
         SqlSession sqlSession = null;
-        try{
+        try {
             sqlSession = SqlSessionUtil.openSession();
             IEmployeeDao employeeDao = sqlSession.getMapper(IEmployeeDao.class);
 
@@ -79,22 +82,21 @@ public class MybatisCrudInterfaceTest {
             System.out.println("受影响的数据:" + i);
 
             sqlSession.commit();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             sqlSession.rollback();
-        }finally {
+        } finally {
             sqlSession.close();
         }
     }
 
     /**
-     * 接口式编程
-     *      查询单个测试
+     * 接口式编程 - 查询单个测试
      */
     @Test
     public void selectOneTest() {
         SqlSession sqlSession = null;
-        try{
+        try {
             sqlSession = SqlSessionUtil.openSession();
             IEmployeeDao employeeDao = sqlSession.getMapper(IEmployeeDao.class);
 
@@ -102,22 +104,21 @@ public class MybatisCrudInterfaceTest {
             System.out.println(employee);
 
             sqlSession.commit();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             sqlSession.rollback();
-        }finally {
+        } finally {
             sqlSession.close();
         }
     }
 
     /**
-     * 接口式编程
-     *      查询多个测试
+     * 接口式编程 - 查询多个测试
      */
     @Test
     public void selectListTest() {
         SqlSession sqlSession = null;
-        try{
+        try {
             sqlSession = SqlSessionUtil.openSession();
             IEmployeeDao employeeDao = sqlSession.getMapper(IEmployeeDao.class);
 
@@ -125,12 +126,11 @@ public class MybatisCrudInterfaceTest {
             System.out.println(employees);
 
             sqlSession.commit();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             sqlSession.rollback();
-        }finally {
+        } finally {
             sqlSession.close();
         }
     }
-
 }

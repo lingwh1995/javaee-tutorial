@@ -12,20 +12,19 @@ import lombok.extern.slf4j.Slf4j;
 import java.nio.charset.Charset;
 
 /**
- * @author lingwh
- * @desc Netty 版 RedisClient 测试类
- * @date 2025/10/15 9:33
- */
-
-/**
+ * Netty 版 RedisClient 测试类
+ *
  * Windows、Linux、Macos、网络通信中换行符总结
- *   1.\r 对应ASCII码13（0x0D）
- *   2.\n 对应ASCII码10（0x0A）
- *   3.网络协议中常用CRLF（\r\n）作为行分隔符
- *   4.不同操作系统的换行符差异：
- *        Windows: CRLF（\r\n）
- *        Linux/Unix: LF（\n）
- *        MacOS(旧版): CR（\r）
+ * 1. \r 对应ASCII码13（0x0D）
+ * 2. \n 对应ASCII码10（0x0A）
+ * 3. 网络协议中常用CRLF（\r\n）作为行分隔符
+ * 4. 不同操作系统的换行符差异：
+ *    - Windows: CRLF（\r\n）
+ *    - Linux/Unix: LF（\n）
+ *    - MacOS(旧版): CR（\r）
+ *
+ * @author lingwh
+ * @date 2025/10/15 9:33
  */
 @Slf4j
 public class NettyRedisClientTest {
@@ -127,5 +126,4 @@ public class NettyRedisClientTest {
         buf.writeBytes(NEWLINE_CHARACTERS);
         ctx.writeAndFlush(buf);
     }
-
 }

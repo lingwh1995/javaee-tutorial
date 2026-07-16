@@ -13,6 +13,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * MybatisPlus 查询列表相关接口
+ *
  * List<T> list();  // 查询所有
  * List<T> list(Wrapper<T> queryWrapper);   // 查询列表
  * Collection<T> listByIds(Collection<? extends Serializable> idList);  // 查询（根据ID 批量查询）
@@ -21,6 +23,9 @@ import java.util.Map;
  * List<Map<String, Object>> listMaps(Wrapper<T> queryWrapper); // 查询列表
  * List<Object> listObjs(); // 查询全部记录
  * List<Object> listObjs(Wrapper<T> queryWrapper);  // 根据 Wrapper 条件，查询全部记录
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 @SpringBootTest
 public class MybatisPlusListTest {
@@ -33,7 +38,7 @@ public class MybatisPlusListTest {
      */
     @Test
     public void init(){
-        //删除数据库中t_employee表中所有数据
+        // 删除数据库中t_employee表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 
@@ -43,13 +48,14 @@ public class MybatisPlusListTest {
                 new Employee(3l,"张三", "3333333333@qq.com", "男", "03"),
                 new Employee(4l,"张四", "44444444444@qq.com", "男", "03")
         );
-        //给数据库中插入测试数据
+        // 给数据库中插入测试数据
         boolean isSaveBatch = employeeService.saveBatch(employeeList);
         System.out.println("isSaveBatch = " + isSaveBatch);
     }
 
     /**
      * 测试查询所有
+     *
      * List<T> list();
      */
     @Test
@@ -60,6 +66,7 @@ public class MybatisPlusListTest {
 
     /**
      * 测试查询列表
+     *
      * List<T> list(Wrapper<T> queryWrapper);
      */
     @Test
@@ -72,6 +79,7 @@ public class MybatisPlusListTest {
 
     /**
      * 测试查询（根据ID 批量查询）
+     *
      * List<T> list(Wrapper<T> queryWrapper);
      */
     @Test
@@ -83,6 +91,7 @@ public class MybatisPlusListTest {
 
     /**
      * 测试查询（根据 columnMap 条件）
+     *
      * List<T> list(Wrapper<T> queryWrapper);
      */
     @Test
@@ -95,6 +104,7 @@ public class MybatisPlusListTest {
 
     /**
      * 测试查询所有列表
+     *
      * List<Map<String, Object>> listMaps();
      */
     @Test
@@ -105,6 +115,7 @@ public class MybatisPlusListTest {
 
     /**
      * 查询列表
+     *
      * List<Map<String, Object>> listMaps(Wrapper<T> queryWrapper);
      */
     @Test
@@ -117,6 +128,7 @@ public class MybatisPlusListTest {
 
     /**
      * 测试查询全部记录的id
+     *
      * List<Object> listObjs();
      */
     @Test
@@ -127,6 +139,7 @@ public class MybatisPlusListTest {
 
     /**
      * 测试根据 Wrapper 条件，查询全部记录的id
+     *
      * List<Object> listObjs(Wrapper<T> queryWrapper);
      */
     @Test

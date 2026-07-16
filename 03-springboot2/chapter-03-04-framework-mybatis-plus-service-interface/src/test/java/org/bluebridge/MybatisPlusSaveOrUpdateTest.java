@@ -12,10 +12,15 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * MybatisPlus 保存相关方法
+ *
  *  boolean saveOrUpdate(T entity);  // TableId 注解属性值存在则更新记录，否插入一条记录
  *  boolean saveOrUpdate(T entity, Wrapper<T> updateWrapper);  // 根据updateWrapper尝试更新，否继续执行saveOrUpdate(T)方法
  *  boolean saveOrUpdateBatch(Collection<T> entityList); // 批量修改插入
  *  boolean saveOrUpdateBatch(Collection<T> entityList, int batchSize);  // 批量修改插入
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 @SpringBootTest
 public class MybatisPlusSaveOrUpdateTest {
@@ -28,13 +33,14 @@ public class MybatisPlusSaveOrUpdateTest {
      */
     @Test
     public void init(){
-        //删除数据库中t_employee表中所有数据
+        // 删除数据库中t_employee表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
     }
 
     /**
      * 测试TableId 注解属性值存在则更新记录，否插入一条记录
+     *
      * boolean saveOrUpdate(T entity);
      */
     @Test
@@ -51,6 +57,7 @@ public class MybatisPlusSaveOrUpdateTest {
 
     /**
      * 测试根据updateWrapper尝试更新，否继续执行saveOrUpdate(T)方法
+     *
      * boolean saveOrUpdate(T entity, Wrapper<T> updateWrapper);
      */
     @Test
@@ -68,6 +75,7 @@ public class MybatisPlusSaveOrUpdateTest {
 
     /**
      * 测试批量修改插入(不指定批次大小)
+     *
      * boolean saveOrUpdateBatch(Collection<T> entityList);
      */
     @Test
@@ -84,6 +92,7 @@ public class MybatisPlusSaveOrUpdateTest {
 
     /**
      * 测试批量修改插入(指定批次大小)
+     *
      * boolean saveOrUpdateBatch(Collection<T> entityList, int batchSize);
      */
     @Test
@@ -94,7 +103,7 @@ public class MybatisPlusSaveOrUpdateTest {
                 new Employee(null,"张三三", "3333333333@qq.com", "男", "03"),
                 new Employee(null,"张四四", "44444444444@qq.com", "男", "03")
         );
-        //设置批次大小为2
+        // 设置批次大小为2
         boolean isSave = employeeService.saveOrUpdateBatch(employeeList,2);
         System.out.println(isSave);
     }

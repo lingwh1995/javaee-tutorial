@@ -4,11 +4,11 @@ import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
 
 /**
+ * 在ImportSelector中自定义逻辑，返回需要导入的组件
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/13 14:29
+ * @date 2019/4/13 14:29
  */
-//自定义逻辑,返回需要导入的组件
 public class MyImportSelector implements ImportSelector {
 
     /**

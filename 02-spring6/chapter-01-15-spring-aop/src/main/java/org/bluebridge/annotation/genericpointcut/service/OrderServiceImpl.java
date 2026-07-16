@@ -4,6 +4,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
+/**
+ * OrderServiceImpl
+ *
+ * @author lingwh
+ * @date 2026/7/13 20:34
+ */
 @Service("orderService")
 public class OrderServiceImpl implements IOrderService{
 
@@ -12,7 +18,7 @@ public class OrderServiceImpl implements IOrderService{
     @Override
     public Integer deleteOrderById(String id) {
         logger.info("正在执行删除操作...");
-        //返回数据库中被影响的条数
+        // 返回数据库中被影响的条数
         return 1;
     }
 }

@@ -8,13 +8,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
+
+ */
+/**
+ * MybatisPlus 更新相关方法测试
+ *
  * int update(@Param(Constants.ENTITY) T updateEntity, @Param(Constants.WRAPPER) Wrapper<T> whereWrapper);  // 根据 whereWrapper 条件，更新记录
  * int updateById(@Param(Constants.ENTITY) T entity);   // 根据 ID 修改
+ *
+ * @author lingwh
+ * @date 2025/2/27 16:23
  */
 @SpringBootTest
 public class MybatisPlusUpdateTest {
@@ -62,5 +68,4 @@ public class MybatisPlusUpdateTest {
         int i = employeeMapper.updateById(employee);
         System.out.println("i = " + i);
     }
-
 }

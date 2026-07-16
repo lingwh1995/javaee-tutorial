@@ -6,9 +6,13 @@ import com.xa8bit.mybatis_a.sqlsession.SqlSession;
 import java.util.List;
 
 /**
- * @author ronin
+ * MyBatis功能测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 10:15
  */
 public class MybatisTest {
+
     public static void main(String[] args) {
         SqlSessioFactory sqlSessioFactory = new SqlSessioFactory();
         SqlSession sqlSession = sqlSessioFactory.openSession();

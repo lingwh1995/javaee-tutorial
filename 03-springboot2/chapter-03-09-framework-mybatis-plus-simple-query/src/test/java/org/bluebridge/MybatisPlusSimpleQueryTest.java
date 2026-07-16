@@ -16,27 +16,23 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 特别注意：
- *      SimpleQuery相关api需要写mapper,否则会报错
- */
-
-/**
+ * MybatisPlus SimpleQuery测试
+ *
+ * 特别注意：SimpleQuery相关api需要写mapper，否则会报错
+ *
  * List<A> list(LambdaQueryWrapper<E> wrapper, SFunction<E, A> sFunction, Consumer<E>... peeks);    // 查询表内记录，封装返回为 List<属性>
  * List<A> list(LambdaQueryWrapper<E> wrapper, SFunction<E, A> sFunction, boolean isParallel, Consumer<E>... peeks);    // 查询表内记录，封装返回为 List<属性>，考虑了并行流的情况
- *
- *
  * Map<A, E> keyMap(LambdaQueryWrapper<E> wrapper, SFunction<E, A> sFunction, Consumer<E>... peeks);    // 查询表内记录，封装返回为 Map<属性,实体>
  * Map<A, E> keyMap(LambdaQueryWrapper<E> wrapper, SFunction<E, A> sFunction, boolean isParallel, Consumer<E>... peeks);    // 查询表内记录，封装返回为 Map<属性,实体>，考虑了并行流的情况
- *
- *
  * Map<A, P> map(LambdaQueryWrapper<E> wrapper, SFunction<E, A> keyFunc, SFunction<E, P> valueFunc, Consumer<E>... peeks);  // 查询表内记录，封装返回为 Map<属性,属性>
  * Map<A, P> map(LambdaQueryWrapper<E> wrapper, SFunction<E, A> keyFunc, SFunction<E, P> valueFunc, boolean isParallel, Consumer<E>... peeks);  // 查询表内记录，封装返回为 Map<属性,属性>，考虑了并行流的情况
- *
- *
  * Map<K, List<T>> group(LambdaQueryWrapper<T> wrapper, SFunction<T, K> sFunction, Consumer<T>... peeks);   // 查询表内记录，封装返回为 Map<属性,List<实体>>
  * Map<K, List<T>> group(LambdaQueryWrapper<T> wrapper, SFunction<T, K> sFunction, boolean isParallel, Consumer<T>... peeks);   // 查询表内记录，封装返回为 Map<属性,List<实体>>，考虑了并行流的情况
  * M group(LambdaQueryWrapper<T> wrapper, SFunction<T, K> sFunction, Collector<? super T, A, D> downstream, Consumer<T>... peeks);  // 查询表内记录，封装返回为 Map<属性,分组后对集合进行的下游收集器>
  * M group(LambdaQueryWrapper<T> wrapper, SFunction<T, K> sFunction, Collector<? super T, A, D> downstream, boolean isParallel, Consumer<T>... peeks);  // 查询表内记录，封装返回为 Map<属性,分组后对集合进行的下游收集器>，考虑了并行流的情况
+ *
+ * @author lingwh
+ * @date 2025/2/27 16:23
  */
 @SpringBootTest
 public class MybatisPlusSimpleQueryTest {
@@ -46,9 +42,9 @@ public class MybatisPlusSimpleQueryTest {
 
     @Test
     public void init() {
-        //删除数据库中数据
+        // 删除数据库中数据
         employeeMapper.delete(new QueryWrapper<>());
-        //给数据库中插入数据
+        // 给数据库中插入数据
         List<Employee> employeeList = Arrays.asList(
                 new Employee(1l,"张一", "1111111111@qq.com", "男", "01"),
                 new Employee(2l,"张二", "2222222222@qq.com", "女", "02"),
@@ -61,7 +57,6 @@ public class MybatisPlusSimpleQueryTest {
             employeeMapper.insert(employee);
         });
     }
-
 
     /**
      * // 查询表内记录，封装返回为 List<属性>
@@ -87,6 +82,7 @@ public class MybatisPlusSimpleQueryTest {
     /**
      * // 查询表内记录，封装返回为 Map<属性,实体>
      * Map<A, E> keyMap(LambdaQueryWrapper<E> wrapper, SFunction<E, A> sFunction, Consumer<E>... peeks);
+     *
      * // 查询表内记录，封装返回为 Map<属性,实体>，考虑了并行流的情况
      * Map<A, E> keyMap(LambdaQueryWrapper<E> wrapper, SFunction<E, A> sFunction, boolean isParallel, Consumer<E>... peeks);
      */
@@ -94,7 +90,7 @@ public class MybatisPlusSimpleQueryTest {
     public void testSimpleQueryKeyMap() {
         // 假设有一个 Employee 实体类和对应的 BaseMapper
         LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<>();
-        //设置查询条件
+        // 设置查询条件
         queryWrapper.eq(Employee::getGender, "男");
 
         // 使用 keyMap 方法查询并封装结果
@@ -121,7 +117,7 @@ public class MybatisPlusSimpleQueryTest {
     public void testSimpleQueryMap() {
         // 假设有一个 Employee 实体类和对应的 BaseMapper
         LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<>();
-        //设置查询条件
+        // 设置查询条件
         queryWrapper.eq(Employee::getGender, "男");
 
         // 使用 map 方法查询并封装结果
@@ -137,7 +133,6 @@ public class MybatisPlusSimpleQueryTest {
             System.out.println("lastName: " + entry.getKey() + ", deptNo: " + entry.getValue());
         }
     }
-
 
     /**
      * // 查询表内记录，封装返回为 Map<属性,List<实体>>
@@ -156,7 +151,7 @@ public class MybatisPlusSimpleQueryTest {
     public void testSimpleQueryGroup() {
         // 假设有一个 Employee 实体类和对应的 BaseMapper
         LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<>();
-        //设置查询条件
+        // 设置查询条件
         queryWrapper.eq(Employee::getGender, "男");
 
         // 使用 group 方法查询并封装结果，按照用户名分组

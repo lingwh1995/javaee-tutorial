@@ -12,11 +12,16 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * MybatisPlus代码生成器测试
+ *
  * T getById(Serializable id);  // 根据 ID 查询
  * T getOne(Wrapper<T> queryWrapper);   // 根据 Wrapper，查询一条记录。结果集，如果是多个会抛出异常，随机取一条加上限制条件 wrapper.last("LIMIT 1")
  * T getOne(Wrapper<T> queryWrapper, boolean throwEx);  // 根据 Wrapper，查询一条记录
  * Map<String, Object> getMap(Wrapper<T> queryWrapper); // 根据 Wrapper，查询一条记录
  * <V> V getObj(Wrapper<T> queryWrapper, Function<? super Object, V> mapper);   // 根据 Wrapper，查询一条记录
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 @SpringBootTest
 public class MybatisPlusGetTest {
@@ -29,7 +34,7 @@ public class MybatisPlusGetTest {
      */
     @Test
     public void init(){
-        //删除数据库中t_employee表中所有数据
+        // 删除数据库中t_employee表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 
@@ -39,14 +44,13 @@ public class MybatisPlusGetTest {
                 new Employee(3l,"张三", "3333333333@qq.com", "男", "03"),
                 new Employee(4l,"张四", "44444444444@qq.com", "男", "03")
         );
-        //给数据库中插入测试数据
+        // 给数据库中插入测试数据
         boolean isSaveBatch = employeeService.saveBatch(employeeList);
         System.out.println("isSaveBatch = " + isSaveBatch);
     }
 
     /**
      * 测试根据ID查询
-     * T getById(Serializable id);
      */
     @Test
     public void testGetById() {
@@ -55,8 +59,9 @@ public class MybatisPlusGetTest {
     }
 
     /**
-     * 测试根据 Wrapper，查询一条记录。结果集，如果是多个会抛出异常，随机取一条加上限制条件 wrapper.last("LIMIT 1")
-     * T getOne(Wrapper<T> queryWrapper);
+     * 测试根据 Wrapper，查询一条记录。
+     *
+     * 结果集如果是多个会抛出异常，随机取一条加上限制条件 wrapper.last("LIMIT 1")
      */
     @Test
     public void testGetOneThrowException() {
@@ -68,7 +73,6 @@ public class MybatisPlusGetTest {
 
     /**
      * 测试根据 Wrapper，查询一条记录
-     * T getOne(Wrapper<T> queryWrapper, boolean throwEx);
      */
     @Test
     public void testGetOneNotThrowException() {
@@ -80,7 +84,6 @@ public class MybatisPlusGetTest {
 
     /**
      * 测试根据 Wrapper，查询一条记录
-     * Map<String, Object> getMap(Wrapper<T> queryWrapper);
      */
     @Test
     public void testGetMap() {

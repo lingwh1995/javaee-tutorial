@@ -11,8 +11,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * WebSocket处理器
+ *
  * @author lingwh
- * @desc WebSocket处理器
  * @date 2025/10/18 14:10
  */
 @Slf4j
@@ -98,6 +99,7 @@ public class MyWebSocketServerHandler extends TextWebSocketHandler {
 
     /**
      * 发生错误时触发
+     *
      * @param session
      * @param exception
      * @throws Exception
@@ -109,10 +111,10 @@ public class MyWebSocketServerHandler extends TextWebSocketHandler {
 
     /**
      * 获取当前在线用户数（线程安全的同步方法）
+     *
      * @return
      */
     public synchronized int getOnlineCount() {
         return ONLINE_SESSION_ID_USER_ID_POOL.size();
     }
-
 }

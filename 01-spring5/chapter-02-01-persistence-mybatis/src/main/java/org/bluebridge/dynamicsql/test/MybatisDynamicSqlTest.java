@@ -13,9 +13,11 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
 
-
 /**
  * 测试mybatis动态sql
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class MybatisDynamicSqlTest {
 
@@ -25,37 +27,33 @@ public class MybatisDynamicSqlTest {
      * @throws IOException
      */
     public SqlSession getSqlSession() throws IOException{
-        /**
-         * 1.加载配置文件
-         */
+        // 1. 加载配置文件
         InputStream inputStream = Resources.getResourceAsStream("mysql/mybatis-config.xml");
-        /**
-         * 2.获取SqlSession对象
-         */
+        // 2. 获取SqlSession对象
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        /**
-         * 3.获取SqlSession对象
-         */
-        //获取可以自动提交的openSession对象,传入true
-        //SqlSession sqlSession = sqlSessionFactory.openSession(true);
-        //获取需要手动提交的openSession对象,传入fasle或者什么都不传
+        // 3. 获取SqlSession对象
+        // 获取可以自动提交的openSession对象,传入true
+        // SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        // 获取需要手动提交的openSession对象,传入fasle或者什么都不传
         SqlSession sqlSession = sqlSessionFactory.openSession(false);
-        //SqlSession sqlSession = sqlSessionFactory.openSession();
+        // SqlSession sqlSession = sqlSessionFactory.openSession();
         return sqlSession;
     }
 
     /**
      * 使用<if></if>标签进行条件判断
+     *
      * 要求:携带了哪个字段，查询条件就带上这个条件的值
+     *
      * @throws IOException
      */
     @Test
     public void getEmpsConditionsByIfTag() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**4.获取接口实现类对象*/
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**5.查询数据*/
+            // 5. 查询数据
             Emp emp = new Emp();
             emp.setId("1");
             List<Emp> emps = empDaoImpl.getEmpsConditionsByIfTag(emp);
@@ -63,28 +61,30 @@ public class MybatisDynamicSqlTest {
             System.out.println("------------------------");
             emps.forEach(System.out::println);
             System.out.println("------------------------");
-            /**6.手动提交数据*/
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**7.关闭sqlSession*/
+            // 7. 关闭sqlSession
             sqlSession.close();
         }
     }
 
     /**
      * 使用<if></if>标签进行条件判断,<where></where>标签封装查询参数
+     *
      * 要求:携带了哪个字段，查询条件就带上这个条件的值
+     *
      * @throws IOException
      */
     @Test
     public void getEmpsConditionsByIfAndWhereTag() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**4.获取接口实现类对象*/
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**5.查询数据*/
+            // 5. 查询数据
             Emp emp = new Emp();
             emp.setId("1");
             emp.setLastName("z");
@@ -93,41 +93,43 @@ public class MybatisDynamicSqlTest {
             System.out.println("------------------------");
             emps.forEach(System.out::println);
             System.out.println("------------------------");
-            /**6.手动提交数据*/
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**7.关闭sqlSession*/
+            // 7. 关闭sqlSession
             sqlSession.close();
         }
     }
 
     /**
      * 使用<choose></choose>标签进行条件判断
+     *
      * 要求:携带了哪个字段，查询条件就带上这个条件的值
+     *
      * @throws IOException
      */
     @Test
     public void getEmpsConditionsByChooseTage() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**4.获取接口实现类对象*/
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**5.查询数据*/
+            // 5. 查询数据
             Emp emp = new Emp();
-            //emp.setId("1");
+            // emp.setId("1");
             List<Emp> emps = empDaoImpl.getEmpsConditionsByChooseTag(emp);
             System.out.println(emps.size());
             System.out.println("------------------------");
             emps.forEach(System.out::println);
             System.out.println("------------------------");
-            /**6.手动提交数据*/
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**7.关闭sqlSession*/
+            // 7. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -140,9 +142,9 @@ public class MybatisDynamicSqlTest {
     public void updateEmpsConditionsBySetTage() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**4.获取接口实现类对象*/
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**5.查询数据*/
+            // 5. 查询数据
             Emp emp = new Emp();
             emp.setId("1");
             emp.setGender("8");
@@ -150,12 +152,12 @@ public class MybatisDynamicSqlTest {
             System.out.println("------------------------");
             System.out.println("受影响的条数:"+count);
             System.out.println("------------------------");
-            /**6.手动提交数据*/
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**7.关闭sqlSession*/
+            // 7. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -168,9 +170,9 @@ public class MybatisDynamicSqlTest {
     public void updateEmpsConditionsByTrimTage1() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**4.获取接口实现类对象*/
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**5.查询数据*/
+            // 5. 查询数据
             Emp emp = new Emp();
             emp.setId("1");
             emp.setGender("8");
@@ -178,12 +180,12 @@ public class MybatisDynamicSqlTest {
             System.out.println("------------------------");
             System.out.println("受影响的条数:"+count);
             System.out.println("------------------------");
-            /**6.手动提交数据*/
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**7.关闭sqlSession*/
+            // 7. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -196,9 +198,9 @@ public class MybatisDynamicSqlTest {
     public void updateEmpsConditionsByTrimTage2() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**4.获取接口实现类对象*/
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**5.查询数据*/
+            // 5. 查询数据
             Emp emp = new Emp();
             emp.setId("1");
             emp.setGender("8");
@@ -206,12 +208,12 @@ public class MybatisDynamicSqlTest {
             System.out.println("------------------------");
             System.out.println("受影响的条数:"+count);
             System.out.println("------------------------");
-            /**6.手动提交数据*/
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**7.关闭sqlSession*/
+            // 7. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -219,58 +221,63 @@ public class MybatisDynamicSqlTest {
 
     /**
      * 使用<foreach></foreach>实现遍历操作
-     *      拼接出:SELECT * FROM TBL_EMPLOYEE WHERE ID IN(?,?,?)形式的SQL
+     *
+     * 拼接出:SELECT * FROM TBL_EMPLOYEE WHERE ID IN(?,?,?)形式的SQL
+     *
      * @throws IOException
      */
     @Test
     public void getEmpsConditionsByForeachTag1() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**4.获取接口实现类对象*/
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**5.查询数据*/
+            // 5. 查询数据
             List<Emp> emps = empDaoImpl.getEmpsConditionsByForeachTag1(Arrays.asList("1", "2","3"));
             System.out.println("------------------------");
             emps.forEach(System.out::println);
             System.out.println("------------------------");
-            /**6.手动提交数据*/
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**7.关闭sqlSession*/
+            // 7. 关闭sqlSession
             sqlSession.close();
         }
     }
 
     /**
      * 使用<foreach></foreach>实现遍历操作
-     *      拼接出:SELECT * FROM TBL_EMPLOYEE WHERE ID IN(?,?,?)形式的SQL
+     *
+     * 拼接出:SELECT * FROM TBL_EMPLOYEE WHERE ID IN(?,?,?)形式的SQL
+     *
      * @throws IOException
      */
     @Test
     public void getEmpsConditionsByForeachTag2() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**4.获取接口实现类对象*/
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**5.查询数据*/
+            // 5. 查询数据
             List<Emp> emps = empDaoImpl.getEmpsConditionsByForeachTag2(Arrays.asList("1", "2","3"));
             System.out.println("------------------------");
             emps.forEach(System.out::println);
             System.out.println("------------------------");
-            /**6.手动提交数据*/
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**7.关闭sqlSession*/
+            // 7. 关闭sqlSession
             sqlSession.close();
         }
     }
 
     /**
      * 注意:此程序运行会因为数据类型不匹配而报错,是个坑，要注意
+     *
      * 使用<foreach></foreach>实现遍历操作
      * @throws IOException
      */
@@ -278,34 +285,35 @@ public class MybatisDynamicSqlTest {
     public void getEmpsConditionsByForeachTag3() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**4.获取接口实现类对象*/
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**5.查询数据*/
+            // 5. 查询数据
             List<Emp> emps = empDaoImpl.getEmpsConditionsByForeachTag3(Arrays.asList(1, 2,3));
             System.out.println("------------------------");
             emps.forEach(System.out::println);
             System.out.println("------------------------");
-            /**6.手动提交数据*/
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**7.关闭sqlSession*/
+            // 7.关闭sqlSession
             sqlSession.close();
         }
     }
 
     /**
      * 使用<foreach></foreach>实现遍历批量保存操作
+     *
      * @throws IOException
      */
     @Test
     public void batchInsertByForeachTag1() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**4.获取接口实现类对象*/
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**5.查询数据*/
+            // 5. 查询数据
             List<Emp> emps = Arrays.asList(new Emp("18", "aa", "aa.@163.com", "男"),
                     new Emp("28", "bb", "bb.@163.com", "男"),
                     new Emp("38", "cc", "cc.@163.com", "男"));
@@ -313,12 +321,12 @@ public class MybatisDynamicSqlTest {
             System.out.println("------------------------");
             System.out.println("插入的语句条数:"+count);
             System.out.println("------------------------");
-            /**6.手动提交数据*/
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**7.关闭sqlSession*/
+            // 7. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -331,9 +339,9 @@ public class MybatisDynamicSqlTest {
     public void batchInsertByForeachTag2() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**4.获取接口实现类对象*/
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**5.查询数据*/
+            // 5. 查询数据
             List<Emp> emps = Arrays.asList(new Emp("18", "aa", "aa.@163.com", "男"),
                     new Emp("28", "bb", "bb.@163.com", "男"),
                     new Emp("38", "cc", "cc.@163.com", "男"));
@@ -341,15 +349,13 @@ public class MybatisDynamicSqlTest {
             System.out.println("------------------------");
             System.out.println("插入的语句条数:"+count);
             System.out.println("------------------------");
-            /**6.手动提交数据*/
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**7.关闭sqlSession*/
+            // 7. 关闭sqlSession
             sqlSession.close();
         }
     }
-
-
 }

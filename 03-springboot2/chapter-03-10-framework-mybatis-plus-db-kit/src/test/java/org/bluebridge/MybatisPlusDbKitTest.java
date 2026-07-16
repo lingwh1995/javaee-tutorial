@@ -15,7 +15,12 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * mybatis 中的 DbKit
+ *
  * 注意：  DbKit相关api需要写mapper，否则会报错
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 @SpringBootTest
 public class MybatisPlusDbKitTest {
@@ -25,9 +30,9 @@ public class MybatisPlusDbKitTest {
 
     @Test
     public void init() {
-        //删除数据库中数据
+        // 删除数据库中数据
         employeeMapper.delete(new QueryWrapper<>());
-        //给数据库中插入数据
+        // 给数据库中插入数据
         List<Employee> employeeList = Arrays.asList(
                 new Employee(1l,"张一", "1111111111@qq.com", "男", "01"),
                 new Employee(2l,"张二", "2222222222@qq.com", "女", "02"),

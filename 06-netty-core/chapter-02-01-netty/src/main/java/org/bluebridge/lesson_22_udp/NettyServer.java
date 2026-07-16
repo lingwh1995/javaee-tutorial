@@ -11,8 +11,9 @@ import lombok.extern.slf4j.Slf4j;
 
 
 /**
+ * Netty 服务端UDP版
+ *
  * @author lingwh
- * @desc Netty 服务端UDP版
  * @date 2025/11/12 16:42
  */
 @Slf4j
@@ -48,5 +49,4 @@ public class NettyServer {
             group.shutdownGracefully();
         }
     }
-
 }

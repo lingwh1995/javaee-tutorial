@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 
+/**
+ * ObjectMapper控制器
+ *
+ * @author lingwh
+ * @date 2019/12/9 13:45
+ */
 @Controller
 public class ObjectMapperController {
 

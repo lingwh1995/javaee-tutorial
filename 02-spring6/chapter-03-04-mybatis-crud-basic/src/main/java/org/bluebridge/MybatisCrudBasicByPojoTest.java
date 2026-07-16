@@ -1,12 +1,18 @@
 package org.bluebridge;
 
+import org.apache.ibatis.session.SqlSession;
 import org.bluebridge.domain.Employee;
 import org.bluebridge.utils.SqlSessionUtil;
-import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.util.List;
 
+/**
+ * 使用Pojo传递参数进行Mybatis基本CRUD测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class MybatisCrudBasicByPojoTest {
 
     /**
@@ -25,12 +31,12 @@ public class MybatisCrudBasicByPojoTest {
             int count = sqlSession.insert("crudByPojo.insertEmployee",employee);
             System.out.println("插入几条数据：" + count);
             sqlSession.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 sqlSession.close();
             }
@@ -54,12 +60,12 @@ public class MybatisCrudBasicByPojoTest {
             int count = sqlSession.update("crudByPojo.updateEmployee",employee);
             System.out.println("更新几条数据：" + count);
             sqlSession.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 sqlSession.close();
             }
@@ -77,12 +83,12 @@ public class MybatisCrudBasicByPojoTest {
             int count = sqlSession.delete("crudByPojo.deleteEmployee",3);
             System.out.println("删除几条数据：" + count);
             sqlSession.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 sqlSession.close();
             }
@@ -100,12 +106,12 @@ public class MybatisCrudBasicByPojoTest {
             Employee result = (Employee)sqlSession.selectOne("crudByPojo.selectOneEmployee", 1);
             System.out.println("查询到的数据：" + result);
             sqlSession.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 sqlSession.close();
             }
@@ -123,12 +129,12 @@ public class MybatisCrudBasicByPojoTest {
             List<Employee> list = sqlSession.selectList("crudByPojo.selectEmployees");
             System.out.println("查询到的数据：" + list);
             sqlSession.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 sqlSession.close();
             }

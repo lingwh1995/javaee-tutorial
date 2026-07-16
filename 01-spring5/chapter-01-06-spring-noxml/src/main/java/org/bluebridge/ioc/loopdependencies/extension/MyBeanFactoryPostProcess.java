@@ -7,15 +7,17 @@ import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.stereotype.Component;
 
 /**
+ * 零配置搭建Spring开发环境测试
+ *
  * @author lingwh
- * @desc   零配置搭建Spring开发环境测试
- * @date   2019/4/4 10:44
+ * @date 2019/4/4 10:44
  */
 @Component
 public class MyBeanFactoryPostProcess implements BeanFactoryPostProcessor {
+
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
         GenericBeanDefinition beanDefinition = (GenericBeanDefinition)beanFactory.getBeanDefinition("userService");
-        //beanDefinition.setBeanClass(Person.class);
+        // beanDefinition.setBeanClass(Person.class);
     }
 }

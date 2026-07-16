@@ -21,8 +21,9 @@ import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
 /**
+ * Netty WebSocket服务器
+ *
  * @author lingwh
- * @desc
  * @date 2025/10/21 16:28
  */
 @Slf4j
@@ -82,5 +83,4 @@ public class NettyWebSocketServer {
         bossGroup.shutdownGracefully();
         workerGroup.shutdownGracefully();
     }
-
 }

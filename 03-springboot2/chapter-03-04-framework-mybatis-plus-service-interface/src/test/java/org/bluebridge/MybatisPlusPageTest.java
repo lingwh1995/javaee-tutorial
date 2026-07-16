@@ -14,13 +14,17 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 注意：
- *      需要MybatisPlusConfig在中配置分页插件，否则page方法查询返回的total值为0
+ * MybatisPlus 逆向工程分页方法配置
+ *
+ * 需要MybatisPlusConfig在中配置分页插件，否则page方法查询返回的total值为0
  *
  * IPage<T> page(IPage<T> page);    // 无条件分页查询
  * IPage<T> page(IPage<T> page, Wrapper<T> queryWrapper);   // 条件分页查询
  * IPage<Map<String, Object>> pageMaps(IPage<T> page);  // 无条件分页查询
  * IPage<Map<String, Object>> pageMaps(IPage<T> page, Wrapper<T> queryWrapper);   // 条件分页查询
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 @SpringBootTest
 public class MybatisPlusPageTest {
@@ -33,7 +37,7 @@ public class MybatisPlusPageTest {
      */
     @Test
     public void init(){
-        //删除数据库中t_employee表中所有数据
+        // 删除数据库中t_employee表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 
@@ -43,14 +47,15 @@ public class MybatisPlusPageTest {
                 new Employee(3l,"张三", "3333333333@qq.com", "男", "03"),
                 new Employee(4l,"张四", "44444444444@qq.com", "男", "03")
         );
-        //给数据库中插入测试数据
+        // 给数据库中插入测试数据
         boolean isSaveBatch = employeeService.saveBatch(employeeList);
         System.out.println("isSaveBatch = " + isSaveBatch);
     }
 
     /**
      * 测试无条件分页查询
-     *      IPage<T> page(IPage<T> page);
+     *
+     * IPage<T> page(IPage<T> page);
      */
     @Test
     public void testPage() {
@@ -64,7 +69,8 @@ public class MybatisPlusPageTest {
 
     /**
      * 测试条件分页查询
-     *      IPage<T> page(IPage<T> page, Wrapper<T> queryWrapper);
+     *
+     * IPage<T> page(IPage<T> page, Wrapper<T> queryWrapper);
      */
     @Test
     public void testPageByQueryWrapper() {
@@ -80,7 +86,8 @@ public class MybatisPlusPageTest {
 
     /**
      * 测试无条件分页查询
-     *      IPage<Map<String, Object>> pageMaps(IPage<T> page);
+     *
+     * IPage<Map<String, Object>> pageMaps(IPage<T> page);
      */
     @Test
     public void testPageMaps() {
@@ -94,7 +101,8 @@ public class MybatisPlusPageTest {
 
     /**
      * 测试条件分页查询
-     *      IPage<Map<String, Object>> pageMaps(IPage<T> page, Wrapper<T> queryWrapper);
+     *
+     * IPage<Map<String, Object>> pageMaps(IPage<T> page, Wrapper<T> queryWrapper);
      */
     @Test
     public void testPageMapsByQueryWrapper() {

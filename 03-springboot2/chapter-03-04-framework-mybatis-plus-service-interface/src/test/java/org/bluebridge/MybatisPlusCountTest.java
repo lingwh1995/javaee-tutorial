@@ -11,9 +11,12 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * //自3.4.3.2开始,返回值修改为long
+ * 从 3.4.3.2 开始，下面方法返回值修改为long
  * long count();    // 查询总记录数
  * long count(Wrapper<T> queryWrapper); // 根据 Wrapper 条件，查询总记录数
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 @SpringBootTest
 public class MybatisPlusCountTest {
@@ -26,7 +29,7 @@ public class MybatisPlusCountTest {
      */
     @Test
     public void init(){
-        //删除数据库中t_employee表中所有数据
+        // 删除数据库中t_employee表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 
@@ -36,7 +39,7 @@ public class MybatisPlusCountTest {
                 new Employee(3l,"张三", "3333333333@qq.com", "男", "03"),
                 new Employee(4l,"张四", "44444444444@qq.com", "男", "03")
         );
-        //给数据库中插入测试数据
+        // 给数据库中插入测试数据
         boolean isSaveBatch = employeeService.saveBatch(employeeList);
         System.out.println("isSaveBatch = " + isSaveBatch);
     }
@@ -60,5 +63,4 @@ public class MybatisPlusCountTest {
         long count = employeeService.count(queryWrapper);
         System.out.println("count = " + count);
     }
-
 }

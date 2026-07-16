@@ -9,21 +9,17 @@ import java.util.logging.Logger;
 
 /**
  * 使用 context:property-placeholder 引入外部的properties文件
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class MyDataSource5 implements DataSource {
 
-    /**
-     * 数据库连接需要的四个参数
-     */
     private String driver;
     private String username;
     private String password;
     private String url;
 
-    /**
-     * 使用set方式注入为属性赋值
-     * @param driver
-     */
     public void setDriver(String driver) {
         this.driver = driver;
     }

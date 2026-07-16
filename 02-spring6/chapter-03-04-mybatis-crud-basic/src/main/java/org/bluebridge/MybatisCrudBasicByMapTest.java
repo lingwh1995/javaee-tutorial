@@ -1,13 +1,19 @@
 package org.bluebridge;
 
-import org.bluebridge.utils.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
+import org.bluebridge.utils.SqlSessionUtil;
 import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 使用Map传递参数进行Mybatis基本CRUD测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class MybatisCrudBasicByMapTest {
 
     /**
@@ -26,12 +32,12 @@ public class MybatisCrudBasicByMapTest {
             int count = sqlSession.insert("crudByMap.insertEmployee",paramsMap);
             System.out.println("插入几条数据：" + count);
             sqlSession.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 sqlSession.close();
             }
@@ -49,12 +55,12 @@ public class MybatisCrudBasicByMapTest {
             Map<String,Object> result = (Map)sqlSession.selectOne("crudByMap.selectOneEmployee", 1);
             System.out.println("查询到的数据：" + result);
             sqlSession.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 sqlSession.close();
             }
@@ -72,12 +78,12 @@ public class MybatisCrudBasicByMapTest {
             List<Map<String,Object>> list = sqlSession.selectList("crudByMap.selectEmployees");
             System.out.println("查询到的数据：" + list);
             sqlSession.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 sqlSession.close();
             }
@@ -101,12 +107,12 @@ public class MybatisCrudBasicByMapTest {
             int count = sqlSession.update("crudByMap.updateEmployee",paramsMap);
             System.out.println("更新几条数据：" + count);
             sqlSession.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 sqlSession.close();
             }
@@ -124,12 +130,12 @@ public class MybatisCrudBasicByMapTest {
             int count = sqlSession.delete("crudByMap.deleteEmployee",1);
             System.out.println("删除几条数据：" + count);
             sqlSession.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 sqlSession.close();
             }

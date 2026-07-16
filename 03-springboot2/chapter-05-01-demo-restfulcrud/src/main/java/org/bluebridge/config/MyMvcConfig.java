@@ -6,9 +6,11 @@ import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-
 /**
- * @author ronin
+ * MVC配置类，配置视图控制器与区域解析器
+ *
+ * @author lingwh
+ * @date 2019/4/13 14:29
  */
 @Configuration
 public class MyMvcConfig {
@@ -22,12 +24,13 @@ public class MyMvcConfig {
                 registry.addViewController("/index.html").setViewName("login");
                 registry.addViewController("/main.html").setViewName("dashboard");
             }
-            //注册拦截器
-//            @Override
-//            public void addInterceptors(InterceptorRegistry registry){
-//                registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**")
-//                        .excludePathPatterns("/index.html","/","/user/login");
-//            }
+            // 注册拦截器
+            /*
+            @Override
+            public void addInterceptors(InterceptorRegistry registry){
+                registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**")
+                        .excludePathPatterns("/index.html","/","/user/login");
+            }*/
         };
         return adapter;
     }

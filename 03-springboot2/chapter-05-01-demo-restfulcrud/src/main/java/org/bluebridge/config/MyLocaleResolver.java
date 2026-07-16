@@ -8,7 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 
 /**
- * @author ronin
+ * 自定义区域解析器，根据请求参数切换语言
+ *
+ * @author lingwh
+ * @date 2019/4/13 14:29
  */
 public class MyLocaleResolver implements LocaleResolver {
 
@@ -27,5 +30,4 @@ public class MyLocaleResolver implements LocaleResolver {
     public void setLocale(HttpServletRequest request, HttpServletResponse response, Locale locale) {
 
     }
-
 }

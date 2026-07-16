@@ -8,7 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
- * int insert(T entity);    // 插入一条记录
+ * MybatisPlusInsertTest
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 @SpringBootTest
 public class MybatisPlusInsertTest {
@@ -20,7 +23,7 @@ public class MybatisPlusInsertTest {
      */
     @Test
     public void init(){
-        //删除数据库中t_employee表中所有数据
+        // 删除数据库中t_employee表中所有数据
         int delete = employeeMapper.delete(new QueryWrapper<>());
         System.out.println("delete = " + delete);
     }

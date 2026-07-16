@@ -6,9 +6,11 @@ import org.springframework.stereotype.Component;
 
 /**
  * 自定义redis组件监控返回信息
- * 测试url:
- *      http://localhost:8080/actuator/health
- * @author ronin
+ *
+ * 测试url: http://localhost:8080/actuator/health
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
  */
 @Component
 public class MyRedisReactiveHealthIndicator implements HealthIndicator {
@@ -17,5 +19,4 @@ public class MyRedisReactiveHealthIndicator implements HealthIndicator {
     public Health health() {
         return Health.down().withDetail("msg","Redis启动异常").build();
     }
-
 }

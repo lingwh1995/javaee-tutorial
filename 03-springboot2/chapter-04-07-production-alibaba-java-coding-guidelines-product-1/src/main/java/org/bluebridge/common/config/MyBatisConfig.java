@@ -1,5 +1,4 @@
 package org.bluebridge.common.config;
-
 import org.apache.ibatis.logging.nologging.NoLoggingImpl;
 import org.apache.ibatis.logging.slf4j.Slf4jImpl;
 import org.bluebridge.common.constant.EnvironmentConstants;
@@ -10,8 +9,9 @@ import org.springframework.core.env.Environment;
 
 
 /**
+ * MyBatis配置类
+ *
  * @author lingwh
- * @desc
  * @date 2025/11/23 18:00
  */
 
@@ -39,5 +39,4 @@ public class MyBatisConfig {
             configuration.setLogImpl(EnvironmentConstants.DEV.equals(activeProfile) ? NoLoggingImpl.class : Slf4jImpl.class);
         };
     }
-
 }

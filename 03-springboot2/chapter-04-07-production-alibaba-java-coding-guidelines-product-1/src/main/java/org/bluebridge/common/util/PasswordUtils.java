@@ -1,5 +1,4 @@
 package org.bluebridge.common.util;
-
 import cn.hutool.core.util.HexUtil;
 import org.bluebridge.common.constant.Pbkdf2Constants;
 
@@ -10,8 +9,9 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 
 /**
+ * 用户密码加密工具类
+ *
  * @author lingwh
- * @desc 用户密码加密工具类
  * @date 2025/11/22 17:16
  */
 public class PasswordUtils {
@@ -43,13 +43,13 @@ public class PasswordUtils {
      * @throws InvalidKeySpecException
      */
     private static String getPBKDF2(String password, String salt) throws NoSuchAlgorithmException, InvalidKeySpecException {
-        //将16进制字符串形式的salt转换成byte数组
+        // 将16进制字符串形式的salt转换成byte数组
         byte[] saltHexBytes = HexUtil.decodeHex(salt);
         KeySpec spec = new PBEKeySpec(password.toCharArray(), saltHexBytes,
                 Pbkdf2Constants.ITERATION_COUNT, Pbkdf2Constants.KEY_SIZE_BITS);
         SecretKeyFactory secretKeyFactory = SecretKeyFactory.getInstance(Pbkdf2Constants.ALGORITHM);
         byte[] hashBytes = secretKeyFactory.generateSecret(spec).getEncoded();
-        //将byte数组转换为16进制的字符串
+        // 将byte数组转换为16进制的字符串
         return HexUtil.encodeHexStr(hashBytes).toUpperCase();
     }
 
@@ -58,5 +58,4 @@ public class PasswordUtils {
         String password = getPBKDF2("bbt@2025", salt);
         System.out.println(password);
     }
-
 }

@@ -7,12 +7,10 @@ import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 /**
+ * WebSocket处理器
+ *
  * @author lingwh
- * @desc WebSocket处理器
  * @date 2025/10/18 14:20
  */
 @Slf4j
@@ -36,6 +34,7 @@ public class MyWebSocketClientHandler extends TextWebSocketHandler {
 
     /**
      * 发生错误时触发
+     *
      * @param session
      * @param exception
      * @throws Exception
@@ -44,5 +43,4 @@ public class MyWebSocketClientHandler extends TextWebSocketHandler {
     public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
         log.info("WebSocket错误：{}", exception.getMessage());
     }
-
 }

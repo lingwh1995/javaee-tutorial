@@ -19,8 +19,9 @@ import io.netty.handler.logging.LoggingHandler;
 import java.net.URI;
 
 /**
+ * Netty WebSocket客户端
+ *
  * @author lingwh
- * @desc
  * @date 2025/10/21 16:29
  */
 public class NettyWebSocketClient {
@@ -71,5 +72,4 @@ public class NettyWebSocketClient {
             group.shutdownGracefully();
         }
     }
-
 }

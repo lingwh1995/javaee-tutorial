@@ -8,8 +8,9 @@ import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 /**
+ * WebSocket处理器
+ *
  * @author lingwh
- * @desc WebSocket处理器
  * @date 2025/10/18 18:50
  */
 @Slf4j
@@ -33,6 +34,7 @@ public class MySockjsWebSocketClientHandler extends TextWebSocketHandler {
 
     /**
      * 发生错误时触发
+     *
      * @param session
      * @param exception
      * @throws Exception
@@ -41,5 +43,4 @@ public class MySockjsWebSocketClientHandler extends TextWebSocketHandler {
     public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
         log.info("WebSocket错误：{}", exception.getMessage());
     }
-
 }

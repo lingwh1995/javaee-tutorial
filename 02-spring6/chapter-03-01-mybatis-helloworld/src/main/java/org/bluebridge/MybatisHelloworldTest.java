@@ -7,6 +7,12 @@ import org.junit.Test;
 
 import java.io.InputStream;
 
+/**
+ * Mybatis入门程序测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class MybatisHelloworldTest {
 
     private static final String ENV = "mysql";
@@ -27,17 +33,16 @@ public class MybatisHelloworldTest {
             System.out.println("插入几条数据：" + count);
             // 5. 提交（mybatis默认采用的事务管理器是JDBC，默认是不提交的，需要手动提交。）
             sqlSession.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (sqlSession != null) {
                 sqlSession.rollback();
             }
             e.printStackTrace();
-        }finally {
+        } finally {
             if (sqlSession != null) {
                 // 6. 关闭资源（只关闭是不会提交的）
                 sqlSession.close();
             }
         }
     }
-
 }

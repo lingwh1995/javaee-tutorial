@@ -17,6 +17,9 @@ import java.util.Collections;
 
 /**
  * MybatisPlus代码生成器测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class MybatisPlusGeneratorTest {
     // 数据库连接字段配置
@@ -36,12 +39,10 @@ public class MybatisPlusGeneratorTest {
 
 
     public static void main(String[] args) {
-        //获取当前工程路径(这里无需修改)
+        // 获取当前工程路径(这里无需修改)
         String projectPath = System.getProperty("user.dir");
 
-        /**
-         * 1.数据库配置(设置数据源)
-         */
+        // 1. 数据库配置(设置数据源)
         DataSourceConfig.Builder dataSourceConfigBuilder =
                 new DataSourceConfig.Builder(URL, USERNAME, PASSWORD)
                 .dbQuery(new MySqlQuery())
@@ -51,22 +52,18 @@ public class MybatisPlusGeneratorTest {
         FastAutoGenerator fastAutoGenerator = FastAutoGenerator.create(dataSourceConfigBuilder);
 
 
-        /**
-         * 2.全局配置
-         */
+        // 2. 全局配置
         fastAutoGenerator.globalConfig(
                 globalConfigBuilder -> globalConfigBuilder
                         .disableOpenDir()   // 不打开生成文件目录
                         .outputDir(projectPath + "/mybatis-plus-generator/src/main/java") // 指定输出目录,注意斜杠的表示
                         .author("lingwh") // 设置注释的作者
-                        //.commentDate("yyyy-MM-dd HH:mm:ss") // 设置注释的日期格式
-                        //.dateType(DateType.TIME_PACK)   // 使用java8新的时间类型
+                        // .commentDate("yyyy-MM-dd HH:mm:ss") // 设置注释的日期格式
+                        // .dateType(DateType.TIME_PACK)   // 使用java8新的时间类型
 //                        .enableSwagger()    // 开启swagger文档
         );
 
-        /**
-         * 3.包配置
-         */
+        // 3. 包配置
         fastAutoGenerator.packageConfig(
                 packageConfigBuilder -> packageConfigBuilder
                         .parent(PACKAGE_NAME)   // 设置父包名
@@ -81,9 +78,7 @@ public class MybatisPlusGeneratorTest {
         );
 
 
-        /**
-         * 4.策略配置
-         */
+        // 4.策略配置
         fastAutoGenerator.strategyConfig(
                 strategyConfigBuilder -> strategyConfigBuilder
                         .enableCapitalMode()    // 开启大写命名
@@ -94,9 +89,7 @@ public class MybatisPlusGeneratorTest {
         );
 
 
-        /**
-         * 4.1 Entity策略配置
-         */
+        // 4.1. Entity策略配置
         fastAutoGenerator.strategyConfig(
                 strategyConfigBuilder -> strategyConfigBuilder.entityBuilder()
                         .enableFileOverride()   // 开启文件覆盖
@@ -112,25 +105,20 @@ public class MybatisPlusGeneratorTest {
                         .versionColumnName("version")   // 开启乐观锁
                         .disableSerialVersionUID()  // 禁用生成 serialVersionUID，默认值:true
                         .enableChainModel() // 开启实体类链式编程
-                        //.formatFileName("%sEntity") // 实体名称格式化为XXXEntity   formatFileName("%sEntity")
+                        // .formatFileName("%sEntity") // 实体名称格式化为XXXEntity   formatFileName("%sEntity")
                         .formatFileName("%s") // 实体名称格式化为XXXEntity   formatFileName("%sEntity")
                         .enableTableFieldAnnotation()
         );
 
-        /**
-         * 4.2 Controller策略配置
-         */
+        // 4.2. Controller策略配置
         fastAutoGenerator.strategyConfig(
                 strategyConfigBuilder -> strategyConfigBuilder.controllerBuilder()
                         .enableFileOverride() // 开启文件覆盖
                         .enableRestStyle()  // 开启生成@RestController控制器
-                        //.enableHyphenStyle()    // 开启驼峰转连字符 localhost:8080/hello_id_2
+                        // .enableHyphenStyle()    // 开启驼峰转连字符 localhost:8080/hello_id_2
         );
 
-        /**
-         * 4.3 Service策略配置
-         格式化service接口和实现类的文件名称，去掉默认的ServiceName前面的I ----
-         */
+        // 4.3. Service策略配置 格式化service接口和实现类的文件名称，去掉默认的ServiceName前面的I
         fastAutoGenerator.strategyConfig(
                 strategyConfigBuilder -> strategyConfigBuilder.serviceBuilder()
                         .enableFileOverride() // 开启文件覆盖
@@ -138,10 +126,7 @@ public class MybatisPlusGeneratorTest {
                         .formatServiceImplFileName("%sServiceImpl")
         );
 
-        /**
-         * 4.4 Mapper策略配置
-         格式化 mapper文件名,格式化xml实现类文件名称
-         */
+        // 4.4. Mapper策略配置 格式化 mapper文件名,格式化xml实现类文件名称
         fastAutoGenerator.strategyConfig(
                 strategyConfigBuilder -> strategyConfigBuilder.mapperBuilder()
                         .enableFileOverride() // 开启文件覆盖
@@ -150,9 +135,7 @@ public class MybatisPlusGeneratorTest {
                         .formatXmlFileName("%sMapper")
         );   // 开启文件覆盖
 
-        /** 5.生成代码
-         *
-         */
+        // 5. 生成代码
         fastAutoGenerator.templateEngine(new FreemarkerTemplateEngine()) // 使用Freemarker引擎模板，默认的是Velocity引擎模板
         .execute();
     }

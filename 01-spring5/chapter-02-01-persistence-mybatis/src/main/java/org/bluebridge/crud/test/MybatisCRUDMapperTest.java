@@ -14,9 +14,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 /**
  * 测试mybatis接口式编程
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class MybatisCRUDMapperTest {
 
@@ -26,22 +28,16 @@ public class MybatisCRUDMapperTest {
      * @throws IOException
      */
     public SqlSession getSqlSession() throws IOException{
-        /**
-         * 1.加载配置文件
-         */
+        // 1. 加载配置文件
         InputStream inputStream = Resources.getResourceAsStream("mysql/mybatis-config.xml");
-        /**
-         * 2.获取SqlSession对象
-         */
+        // 2. 获取SqlSession对象
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        /**
-         * 3.获取SqlSession对象
-         */
-        //获取可以自动提交的openSession对象,传入true
-        //SqlSession sqlSession = sqlSessionFactory.openSession(true);
-        //获取需要手动提交的openSession对象,传入fasle或者什么都不传
+        // 3. 获取SqlSession对象
+        // 获取可以自动提交的openSession对象,传入true
+        // SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        // 获取需要手动提交的openSession对象,传入fasle或者什么都不传
         SqlSession sqlSession = sqlSessionFactory.openSession(false);
-        //SqlSession sqlSession = sqlSessionFactory.openSession();
+        // SqlSession sqlSession = sqlSessionFactory.openSession();
         return sqlSession;
     }
 
@@ -53,30 +49,19 @@ public class MybatisCRUDMapperTest {
     public void insert() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**
-             * 4.获取接口实现类对象
-             */
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**
-             * 5.插入数据
-             */
-            //empDaoImpl.addEmp(new Emp(null,"zhangsan","ronin@163.com","男"));
+            // 5. 插入数据
+            // empDaoImpl.addEmp(new Emp(null,"zhangsan","ronin@163.com","男"));
 
-            /**
-             * 保存时如果一个字段的值为null
-             * Cause: org.apache.ibatis.type.TypeException: Error setting null for parameter #2 with JdbcType OTHER
-             */
+            // 保存时如果一个字段的值为null，会报 Cause: org.apache.ibatis.type.TypeException: Error setting null for parameter #2 with JdbcType OTHER
             empDaoImpl.addEmp(new Emp(null,null,"ronin@163.com","男"));
-            /**
-             * 6.手动提交数据
-             */
+            // 6. 手动提交数据
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**
-             * 7.关闭sqlSession
-             */
+            // 7. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -89,26 +74,19 @@ public class MybatisCRUDMapperTest {
     public void deleteById() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**
-             * 4.获取接口实现类对象
-             */
+            // 4.获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**
-             * 5.插入数据
-             */
+            // 5.插入数据
             Integer integer = empDaoImpl.deleteById("1");
             System.out.println(integer);
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**
-             * 6.关闭sqlSession
-             */
+            // 6. 关闭sqlSession
             sqlSession.close();
         }
     }
-
 
     /**
      * 根据id更新一个Emp对象,不返回任何值
@@ -118,22 +96,16 @@ public class MybatisCRUDMapperTest {
     public void updateById() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**
-             * 4.获取接口实现类对象
-             */
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**
-             * 5.更新数据
-             */
+            // 5. 更新数据
             boolean b = empDaoImpl.updateById(new Emp("10005", "zhangsan1", "ronin@163.com", "男"));
             System.out.println(b);
             sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**
-             * 6.关闭sqlSession
-             */
+            // 6. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -146,21 +118,15 @@ public class MybatisCRUDMapperTest {
     public void getEmpById() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**
-             * 4.获取接口实现类对象
-             */
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**
-             * 5.根据id获取对象
-             */
+            // 5. 根据id获取对象
             Emp emp = empDaoImpl.getEmpById("4");
             System.out.println("emp:"+emp);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**
-             * 6.关闭sqlSession
-             */
+            // 6. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -173,22 +139,16 @@ public class MybatisCRUDMapperTest {
     public void getMapById() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**
-             * 4.获取接口实现类对象
-             */
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**
-             * 5.根据id获取对象
-             */
+            // 5. 根据id获取对象
             Map<String,Object> map = empDaoImpl.getMapById("1");
             System.out.println(map);
             System.out.println("map:"+map);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**
-             * 6.关闭sqlSession
-             */
+            // 6. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -201,22 +161,16 @@ public class MybatisCRUDMapperTest {
     public void getEmpsMap() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**
-             * 4.获取接口实现类对象
-             */
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**
-             * 5.根据id获取对象
-             */
+            // 5. 根据id获取对象
             Map<String,Emp> map = empDaoImpl.getEmpsMap();
             System.out.println(map);
             System.out.println("map:"+map);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**
-             * 6.关闭sqlSession
-             */
+            // 6. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -229,22 +183,16 @@ public class MybatisCRUDMapperTest {
     public void getEmpLsitMap() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**
-             * 4.获取接口实现类对象
-             */
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**
-             * 5.根据id获取对象
-             */
+            // 5. 根据id获取对象
             List<Map<String, Object>> map = empDaoImpl.getEmpLsitMap();
             System.out.println(map);
             System.out.println("map:"+map);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**
-             * 6.关闭sqlSession
-             */
+            // 6. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -257,21 +205,15 @@ public class MybatisCRUDMapperTest {
     public void getEmpListById() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**
-             * 4.获取接口实现类对象
-             */
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**
-             * 5.根据id获取对象
-             */
+            // 5. 根据id获取对象
             List<Emp> empList = empDaoImpl.getEmpList();
             System.out.println("empList:"+empList);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**
-             * 6.关闭sqlSession
-             */
+            // 6. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -288,21 +230,15 @@ public class MybatisCRUDMapperTest {
     public void getEmpByIdAndLastName() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**
-             * 4.获取接口实现类对象
-             */
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**
-             * 5.根据id获取对象
-             */
+            // 5. 根据id获取对象
             Emp emp = empDaoImpl.getEmpByIdAndLastName("2","zhangsan");
             System.out.println("emp:"+emp);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**
-             * 6.关闭sqlSession
-             */
+            // 6. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -315,21 +251,15 @@ public class MybatisCRUDMapperTest {
     public void getEmpByEmp() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**
-             * 4.获取接口实现类对象
-             */
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**
-             * 5.根据Emp获取对象
-             */
+            // 5.根据Emp获取对象
             Emp emp = empDaoImpl.getEmpByEmp(new Emp("2","zhangsan","",""));
             System.out.println("emp:"+emp);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**
-             * 6.关闭sqlSession
-             */
+            // 6. 关闭sqlSession
             sqlSession.close();
         }
     }
@@ -342,13 +272,9 @@ public class MybatisCRUDMapperTest {
     public void getEmpByMap() throws IOException {
         SqlSession sqlSession = this.getSqlSession();
         try {
-            /**
-             * 4.获取接口实现类对象
-             */
+            // 4. 获取接口实现类对象
             IEmpDao empDaoImpl = sqlSession.getMapper(IEmpDao.class);
-            /**
-             * 5.根据Emp获取对象
-             */
+            // 5. 根据Emp获取对象
             Map<String,String> param = new HashMap<String,String>();
             param.put("id","2");
             param.put("lastName","zhangsan");
@@ -358,11 +284,8 @@ public class MybatisCRUDMapperTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            /**
-             * 6.关闭sqlSession
-             */
+            // 6.关闭sqlSession
             sqlSession.close();
         }
     }
-
 }

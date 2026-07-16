@@ -12,11 +12,16 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * MybatisPlus 更新相关方法
+ *
  * boolean update(Wrapper<T> updateWrapper);    // 根据 UpdateWrapper 条件，更新记录 需要设置sqlset
  * boolean update(T updateEntity, Wrapper<T> whereWrapper);  // 根据 whereWrapper 条件，更新记录
  * boolean updateById(T entity);    // 根据 ID 选择修改
  * boolean updateBatchById(Collection<T> entityList);   // 根据ID 批量更新
  * boolean updateBatchById(Collection<T> entityList, int batchSize);    // 根据ID 批量更新
+ *
+ * @author lingwh
+ * @date 2025/2/27 16:23
  */
 @SpringBootTest
 public class MybatisPlusUpdateTest {
@@ -29,7 +34,7 @@ public class MybatisPlusUpdateTest {
      */
     @Test
     public void init(){
-        //删除数据库中t_employee表中所有数据
+        // 删除数据库中t_employee表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 
@@ -44,13 +49,14 @@ public class MybatisPlusUpdateTest {
                 new Employee(8l,"张八", "55555555555@qq.com", "男", "03"),
                 new Employee(9l,"张九", "55555555555@qq.com", "男", "03")
         );
-        //给数据库中插入测试数据
+        // 给数据库中插入测试数据
         boolean isSaveBatch = employeeService.saveBatch(employeeList);
         System.out.println("isSaveBatch = " + isSaveBatch);
     }
 
     /**
      * 测试根据 UpdateWrapper 条件，更新记录 需要设置sqlset
+     *
      * boolean update(Wrapper<T> updateWrapper);
      */
     @Test
@@ -64,6 +70,7 @@ public class MybatisPlusUpdateTest {
 
     /**
      * 测试根据 whereWrapper 条件，更新记录
+     *
      * boolean update(T updateEntity, Wrapper<T> whereWrapper);
      */
     @Test
@@ -77,6 +84,7 @@ public class MybatisPlusUpdateTest {
 
     /**
      * 测试根据 ID 选择修改
+     *
      * boolean updateById(T entity);
      */
     @Test
@@ -91,6 +99,7 @@ public class MybatisPlusUpdateTest {
 
     /**
      * 测试根据ID 批量更新
+     *
      * boolean updateBatchById(Collection<T> entityList);
      */
     @Test
@@ -105,6 +114,7 @@ public class MybatisPlusUpdateTest {
 
     /**
      * 测试根据ID 批量更新
+     *
      * boolean updateBatchById(Collection<T> entityList, int batchSize);
      */
     @Test

@@ -11,16 +11,21 @@ import java.util.List;
 
 /**
  * Mybatis 读取传递多个参数
- *      1. 直接传递多个参数
- *      2. 使用@Param传递多个参数
- *      3. 使用Map传递多个参数
- *      4. 使用@Param + Map 传递多个参数
- *      5. 使用pojo传递多个参数(这里未做演示)
+ *
+ * 1. 直接传递多个参数
+ * 2. 使用@Param传递多个参数
+ * 3. 使用Map传递多个参数
+ * 4. 使用@Param + Map 传递多个参数
+ * 5. 使用pojo传递多个参数(这里未做演示)
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class MybatisReadTransferMultiplyParamsTest {
 
     /**
      * 读取使用@Param传递多个的参数的两种方式
+     *
      * @throws Exception
      */
     @Test
@@ -34,6 +39,7 @@ public class MybatisReadTransferMultiplyParamsTest {
 
     /**
      * 读取使用Map传递的多个参数的一种方式(只有这一种方式可以读取到map中封装的参数)
+     *
      * @throws Exception
      */
     @Test
@@ -47,8 +53,10 @@ public class MybatisReadTransferMultiplyParamsTest {
         System.out.println("cars = " + cars);
         sqlSession.close();
     }
+
     /**
      * 使用@Param + @Param传递多个参数的两种方式
+     *
      * @throws Exception
      */
     @Test

@@ -1,11 +1,17 @@
 package org.bluebridge;
 
+import org.apache.ibatis.session.SqlSession;
 import org.bluebridge.dao.IEmployeeDao;
 import org.bluebridge.domain.Employee;
 import org.bluebridge.utils.SqlSessionUtil;
-import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+/**
+ * Mybatis ResultMap 基础测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class MybatisResultMapBasicTest {
 
     /**
@@ -14,7 +20,7 @@ public class MybatisResultMapBasicTest {
     @Test
     public void getEmployeeById() {
         SqlSession sqlSession = null;
-        try{
+        try {
             sqlSession = SqlSessionUtil.openSession();
             IEmployeeDao employeeDao = sqlSession.getMapper(IEmployeeDao.class);
 
@@ -25,7 +31,7 @@ public class MybatisResultMapBasicTest {
         } catch (Exception e) {
             e.printStackTrace();
             sqlSession.rollback();
-        }finally {
+        } finally {
             sqlSession.close();
         }
     }
@@ -36,7 +42,7 @@ public class MybatisResultMapBasicTest {
     @Test
     public void getEmployeeAndDepartmentById() {
         SqlSession sqlSession = null;
-        try{
+        try {
             sqlSession = SqlSessionUtil.openSession();
             IEmployeeDao employeeDao = sqlSession.getMapper(IEmployeeDao.class);
 
@@ -47,9 +53,8 @@ public class MybatisResultMapBasicTest {
         } catch (Exception e) {
             e.printStackTrace();
             sqlSession.rollback();
-        }finally {
+        } finally {
             sqlSession.close();
         }
     }
-
 }

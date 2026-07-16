@@ -12,12 +12,18 @@ import org.bluebridge.extend.methods.FindOne;
 
 import java.util.List;
 
+/**
+ * 自定义SQL注入器
+ *
+ * @author lingwh
+ * @date 2025/2/27 13:36
+ */
 public class MySqlInjector extends DefaultSqlInjector {
 
     @Override
     public List<AbstractMethod> getMethodList(Class<?> mapperClass, TableInfo tableInfo) {
         List<AbstractMethod> methodList = super.getMethodList(mapperClass, tableInfo);
-        //增加自定义方法
+        // 增加自定义方法
         methodList.add(new DeleteAll("deleteAll"));
         methodList.add(new FindOne("findOne"));
         /**
@@ -31,4 +37,3 @@ public class MySqlInjector extends DefaultSqlInjector {
         return methodList;
     }
 }
-

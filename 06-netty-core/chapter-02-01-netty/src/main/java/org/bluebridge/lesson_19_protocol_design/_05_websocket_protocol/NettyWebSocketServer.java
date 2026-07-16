@@ -14,8 +14,9 @@ import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler;
 import io.netty.handler.stream.ChunkedWriteHandler;
 
 /**
+ * 基于 Netty 的 WebSocket 服务器
+ *
  * @author lingwh
- * @desc 基于 Netty 的 WebSocket 服务器
  * @date 2025/10/16 14:07
  */
 public class NettyWebSocketServer {

@@ -7,9 +7,10 @@ import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.type.AnnotationMetadata;
 
 /**
+ * 自定义ImportBeanDefinitionRegistrar
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/9 14:29
+ * @date 2019/4/9 14:29
  */
 public class MyImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar {
 

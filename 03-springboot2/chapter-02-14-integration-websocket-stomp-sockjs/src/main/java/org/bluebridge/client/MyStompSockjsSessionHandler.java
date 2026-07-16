@@ -8,8 +8,9 @@ import java.lang.reflect.Type;
 import java.util.Scanner;
 
 /**
+ * stomp会话处理器
+ *
  * @author lingwh
- * @desc stomp会话处理器
  * @date 2025/10/21 11:10
  */
 @Slf4j
@@ -129,5 +130,4 @@ public class MyStompSockjsSessionHandler extends StompSessionHandlerAdapter {
     public void handleTransportError(StompSession session, Throwable exception) {
         log.info("发生Transport异常，异常信息：{}", exception.getMessage());
     }
-
 }

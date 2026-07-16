@@ -13,10 +13,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * MybatisPlus 删除相关方法
+ *
  * boolean remove(Wrapper<T> queryWrapper);  // 根据 queryWrapper 设置的条件，删除记录
  * boolean removeById(Serializable id);  // 根据 ID 删除
  * boolean removeByMap(Map<String, Object> columnMap);  // 根据 columnMap 条件，删除记录
  * boolean removeByIds(Collection<? extends Serializable> idList);  // 删除（根据ID 批量删除）
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 @SpringBootTest
 public class MybatisPlusRemoveTest {
@@ -29,7 +34,7 @@ public class MybatisPlusRemoveTest {
      */
     @Test
     public void init(){
-        //删除数据库中t_employee表中所有数据
+        // 删除数据库中t_employee表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 
@@ -45,13 +50,14 @@ public class MybatisPlusRemoveTest {
                 new Employee(9l,"张九", "9999999999@qq.com", "男", "03"),
                 new Employee(10l,"张A", "aaaaaaaaaa@qq.com", "男", "03")
         );
-        //给数据库中插入测试数据
+        // 给数据库中插入测试数据
         boolean isSaveBatch = employeeService.saveBatch(employeeList);
         System.out.println("isSaveBatch = " + isSaveBatch);
     }
 
     /**
      * 测试根据 queryWrapper 设置的条件，删除记录
+     *
      * boolean remove(Wrapper<T> queryWrapper);
      */
     @Test
@@ -64,6 +70,7 @@ public class MybatisPlusRemoveTest {
 
     /**
      * 测试根据 ID 删除
+     *
      * boolean removeById(Serializable id);
      */
     @Test
@@ -74,6 +81,7 @@ public class MybatisPlusRemoveTest {
 
     /**
      * 测试根据 columnMap 条件，删除记录
+     *
      * boolean removeByMap(Map<String, Object> columnMap);
      */
     @Test
@@ -86,6 +94,7 @@ public class MybatisPlusRemoveTest {
 
     /**
      * 测试删除（根据ID 批量删除）
+     *
      * boolean removeByIds(Collection<? extends Serializable> idList);
      */
     @Test
@@ -97,6 +106,7 @@ public class MybatisPlusRemoveTest {
 
     /**
      * 测试删除（根据ID 批量删除）
+     *
      * boolean removeByIds(Collection<? extends Serializable> idList);
      */
     @Test
@@ -108,12 +118,13 @@ public class MybatisPlusRemoveTest {
 
     /**
      * 测试删除（根据ID 批量删除）
+     *
      * boolean removeByIds(Collection<? extends Serializable> idList);
      */
     @Test
     public void testRemoveByIdsWithBatchSize() {
         List<Long> idList = Arrays.asList(9l, 10l);
-        //设置batchSize为2
+        // 设置batchSize为2
         boolean isRemoveBatchByIds = employeeService.removeBatchByIds(idList,2);
         System.out.println("isRemoveBatchByIds = " + isRemoveBatchByIds);
     }

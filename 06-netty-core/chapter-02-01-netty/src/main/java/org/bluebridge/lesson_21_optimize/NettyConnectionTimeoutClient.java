@@ -11,8 +11,9 @@ import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 测试连接超时
+ *
  * @author lingwh
- * @desc 测试连接超时
  * @date 2025/11/11 23:09
  */
 @Slf4j
@@ -52,5 +53,4 @@ public class NettyConnectionTimeoutClient {
             group.shutdownGracefully();
         }
     }
-
 }

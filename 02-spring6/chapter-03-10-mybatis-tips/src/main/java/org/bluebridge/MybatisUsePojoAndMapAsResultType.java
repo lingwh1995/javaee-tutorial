@@ -11,6 +11,9 @@ import java.util.Map;
 
 /**
  * Mybatis使用pojo和map封装查询结果
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class MybatisUsePojoAndMapAsResultType {
 

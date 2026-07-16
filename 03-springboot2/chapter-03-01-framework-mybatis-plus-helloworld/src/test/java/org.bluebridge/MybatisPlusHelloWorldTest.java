@@ -8,6 +8,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
+/**
+ * MybatisPlusHelloWorldTest
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 @SpringBootTest
 public class MybatisPlusHelloWorldTest {
 
@@ -20,5 +26,4 @@ public class MybatisPlusHelloWorldTest {
         List<Employee> userList = employeeMapper.selectList(null);
         userList.forEach(System.out::println);
     }
-
 }

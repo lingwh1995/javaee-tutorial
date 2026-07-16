@@ -16,13 +16,12 @@ import static io.netty.handler.codec.http.HttpHeaderNames.CONTENT_LENGTH;
 import static io.netty.handler.codec.http.HttpHeaderNames.CONTENT_TYPE;
 
 /**
- * @author lingwh
- * @desc 基于 Netty 的 HTTP 服务器
- * @date 2025/10/15 10:13
- */
-
-/**
+ * 基于 Netty 的 HTTP 服务器
+ *
  * 测试方法： 访问 http://localhost:8080/
+ *
+ * @author lingwh
+ * @date 2025/10/15 10:13
  */
 @Slf4j
 public class NettyHttpServer {
@@ -118,7 +117,5 @@ public class NettyHttpServer {
             boss.shutdownGracefully();
             worker.shutdownGracefully();
         }
-
     }
-
 }

@@ -1,10 +1,10 @@
 package org.bluebridge.common.enums;
-
 import lombok.Getter;
 
 /**
+ * 操作类型枚举
+ *
  * @author lingwh
- * @desc
  * @date 2025/12/22 20:34
  */
 @Getter
@@ -34,5 +34,4 @@ public enum OperationTypeEnum {
     OperationTypeEnum(String desc) {
         this.desc = desc;
     }
-
 }

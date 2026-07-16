@@ -12,22 +12,20 @@ import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author lingwh
- * @desc 测试SO_BACKLOG参数
- * @date 2025/11/12 22:42
- */
-
-/**
- * 测试方法：
- *    1.启动服务端
- *    2.在 NioEventLoop中 private void processSelectedKey(SelectionKey k, AbstractNioChannel ch) {} 中
- *      if ((readyOps & (SelectionKey.OP_READ | SelectionKey.OP_ACCEPT)) != 0 || readyOps == 0) {} 代码处打断点
- *    3.启动三个客户端，会观察到 当启动前两个客户端时，一切正常，当启动第三个客户端时，服务端会拒绝连接，异常信息为
- *      Caused by: java.net.ConnectException: Connection refused: no further information
+ * 测试SO_BACKLOG参数方法
+ *
+ * 1. 启动服务端
+ * 2. 在 NioEventLoop中 private void processSelectedKey(SelectionKey k, AbstractNioChannel ch) {} 中
+ *    if ((readyOps & (SelectionKey.OP_READ | SelectionKey.OP_ACCEPT)) != 0 || readyOps == 0) {} 代码处打断点
+ * 3. 启动三个客户端，会观察到 当启动前两个客户端时，一切正常，当启动第三个客户端时，服务端会拒绝连接，异常信息为
+ *    Caused by: java.net.ConnectException: Connection refused: no further information
  *
  * 为什么可以这样测试呢？
  *   因为服务端和客户端三次握手成功后，说明通通道畅通，然后服务端和客户端会建立连接，如果此时客户端没有连接，则这个通信通道会加入全连接
- *   队列中，这里我们测试时，每次通信通道建立后，客户端没有消费这个通信通道，所以这个通信通道会临时被添加到全连接队列中.
+ *   队列中，这里我们测试时，每次通信通道建立后，客户端没有消费这个通信通道，所以这个通信通道会临时被添加到全连接队列中。
+ *
+ * @author lingwh
+ * @date 2025/11/12 22:42
  */
 @Slf4j
 public class NettySoBacklogServer {
@@ -54,5 +52,4 @@ public class NettySoBacklogServer {
             })
             .bind(HOST, PORT);
     }
-
 }

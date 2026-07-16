@@ -11,9 +11,14 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * MybatisPlus 批量保存相关方法
+ *
  * boolean save(T entity);  // 插入一条记录（选择字段，策略插入）
  * boolean saveBatch(Collection<T> entityList); // 插入（批量）
  * boolean saveBatch(Collection<T> entityList, int batchSize); // 插入（批量）
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 @SpringBootTest
 public class MybatisPlusSaveTest {
@@ -26,7 +31,7 @@ public class MybatisPlusSaveTest {
      */
     @Test
     public void init(){
-        //删除数据库中t_employee表中所有数据
+        // 删除数据库中t_employee表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
     }
@@ -49,6 +54,7 @@ public class MybatisPlusSaveTest {
 
     /**
      * 测试批量插入(不指定批次大小)
+     *
      * boolean saveBatch(Collection<T> entityList);
      */
     @Test
@@ -65,6 +71,7 @@ public class MybatisPlusSaveTest {
 
     /**
      * 测试批量插入(指定批次大小)
+     *
      * boolean saveBatch(Collection<T> entityList, int batchSize);
      */
     @Test
@@ -75,7 +82,7 @@ public class MybatisPlusSaveTest {
                 new Employee(8l,"张八", "8888888888@qq.com", "男", "03"),
                 new Employee(9l,"张九", "9999999999@qq.com", "男", "03")
         );
-        //指定批次大小
+        // 指定批次大小
         boolean isSave = employeeService.saveBatch(employeeList,2);
         System.out.println(isSave);
     }

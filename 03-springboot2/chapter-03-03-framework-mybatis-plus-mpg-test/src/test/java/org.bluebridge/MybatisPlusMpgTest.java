@@ -8,6 +8,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
+/**
+ * MybatisPlus 逆向工程
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 @SpringBootTest
 public class MybatisPlusMpgTest {
 
@@ -22,5 +28,4 @@ public class MybatisPlusMpgTest {
         List<Employee> employeeList = employeeController.getEmployeeList();
         employeeList.forEach(System.out::println);
     }
-
 }

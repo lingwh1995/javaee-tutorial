@@ -9,13 +9,17 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * SpringBoot整合Servelt第二种方式:
- *  1.在Servelt类上加@WebServlet
- *  2.在启动类上加@ServletComponentScan
- * @author ronin
+ * SpringBoot整合Servelt第二种方式
+ *
+ * 1. 在Servelt类上加@WebServlet
+ * 2. 在启动类上加@ServletComponentScan
+ *
+ * @author lingwh
+ * @date 2025/2/27 13:56
  */
 @WebServlet(name="myServlet3",urlPatterns ="/myServlet3")
 public class MyServlet3 extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request, response);

@@ -15,8 +15,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * 基于 Netty 的 HTTP 服务器
+ *
  * @author lingwh
- * @desc 基于 Netty 的 HTTP 服务器
  * @date 2025/10/15 14:42
  */
 @Slf4j
@@ -99,7 +100,7 @@ public class NettyHttpServer {
                         });
                     }
                 });
-            // 完成绑定,内部如果异步实现bind，因此需要阻塞拿到返回结果
+            // 完成绑定，内部如果异步实现bind，因此需要阻塞拿到返回结果
             ChannelFuture future = bootstrap.bind().sync();
             // 关闭future时也需要阻塞，内部也采用的是异步操作
             future.channel().closeFuture().sync();
@@ -114,5 +115,4 @@ public class NettyHttpServer {
             }
         }
     }
-
 }

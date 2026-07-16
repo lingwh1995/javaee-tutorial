@@ -5,6 +5,12 @@ import org.apache.logging.log4j.Logger;
 import org.bluebridge.noxml.demo.domain.Order;
 import org.springframework.stereotype.Repository;
 
+/**
+ * OrderDao
+ *
+ * @author lingwh
+ * @date 2026/7/13 20:34
+ */
 @Repository
 public class OrderDao {
 
@@ -24,7 +30,7 @@ public class OrderDao {
 
     public Order getOrderById(String id) {
         logger.info("正在执行查询订单操作...");
-        //模拟从数据库查询到了一条记录
+        // 模拟从数据库查询到了一条记录
         Order order = new Order("001", "25.8");
         return order;
     }

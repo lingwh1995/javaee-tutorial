@@ -12,8 +12,9 @@ import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 用于测试时充当临时 客户端
+ *
  * @author lingwh
- * @desc 用于测试时充当临时 客户端
  * @date 2025/9/23 11:58
  */
 @Slf4j
@@ -40,5 +41,4 @@ public class NettyClient {
             .channel();
         channel.writeAndFlush("我是nio");
     }
-
 }

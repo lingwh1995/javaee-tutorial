@@ -3,15 +3,18 @@ package org.bluebridge.ioc.hellowrold.domain;
 import org.springframework.stereotype.Controller;
 
 /**
+ * 人员实体类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/2 9:10
+ * @date 2019/4/2 9:10
  */
 @Controller
 public class Person {
 
     private String id;
+
     private String name;
+
     private String age;
 
     public String getId() {
