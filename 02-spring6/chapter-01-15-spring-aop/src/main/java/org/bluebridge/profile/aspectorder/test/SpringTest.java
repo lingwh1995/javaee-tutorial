@@ -5,6 +5,12 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * 命名空间注入测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     @Test
@@ -13,5 +19,4 @@ public class SpringTest {
         ICatService catService = applicationContext.getBean("catService", ICatService.class);
         catService.deleteCatById("001");
     }
-
 }

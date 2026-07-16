@@ -1,5 +1,4 @@
 package org.bluebridge.common.config;
-
 import lombok.extern.slf4j.Slf4j;
 import org.bluebridge.common.constant.SqlConstants;
 import org.bluebridge.common.enums.SlowSqlThresholdTypeEnum;
@@ -16,8 +15,9 @@ import java.util.List;
 import java.util.TimeZone;
 
 /**
+ * 启动初始化配置（所有的初始化配置工作都在这里面完成）
+ *
  * @author lingwh
- * @desc 启动初始化配置（所有的初始化配置工作都在这里面完成）
  * @date 2025/12/9 10:53
  */
 @Slf4j
@@ -144,5 +144,4 @@ public class StartupConfig {
             log.error(" ===>   [NO] Redis 连通性异常......{}", e.getMessage());
         }
     }
-
 }

@@ -7,7 +7,12 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-
+/**
+ * set方式注入专题测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
@@ -70,9 +75,9 @@ public class SpringTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("profile/dibysetsenior/applicationContext-di-profile-set-senior.xml");
         UserInjectNULLAndEmptyStringBySetter user = applicationContext.getBean("userInjectNULLAndEmptyStringBySetter", UserInjectNULLAndEmptyStringBySetter.class);
         logger.info(user.toString());
-        //测试注入的是NULL还是null字符串，如果是注入的是NULL会报空指针异常(放开代码执行会报异常)
-        //user.getId().toString();
-        //测试注入的是空字符串，如果是注入的是空字符串不会报错
+        // 测试注入的是NULL还是null字符串，如果是注入的是NULL会报空指针异常(放开代码执行会报异常)
+        // user.getId().toString();
+        // 测试注入的是空字符串，如果是注入的是空字符串不会报错
         logger.info("-----------------------");
         logger.info(user.getAge().toString());
         logger.info("-----------------------");
@@ -87,5 +92,4 @@ public class SpringTest {
         MathInjectSpecialsymbolsBySetter math = applicationContext.getBean("mathInjectSpecialsymbolsBySetter", MathInjectSpecialsymbolsBySetter.class);
         logger.info(math.toString());
     }
-
 }

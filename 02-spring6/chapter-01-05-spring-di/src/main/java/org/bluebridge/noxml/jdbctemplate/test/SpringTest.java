@@ -9,6 +9,12 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(StudentDao.class);
@@ -23,5 +29,4 @@ public class SpringTest {
         User user = userDao.getUserById("001");
         logger.info(user.toString());
     }
-
 }

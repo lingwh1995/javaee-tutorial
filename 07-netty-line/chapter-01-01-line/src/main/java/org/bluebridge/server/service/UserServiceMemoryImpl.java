@@ -1,9 +1,14 @@
 package org.bluebridge.server.service;
 
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * 用户服务内存实现
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 public class UserServiceMemoryImpl implements UserService {
 
     private static Map<String, String> ALL_USER_MAP = new ConcurrentHashMap<>();
@@ -24,5 +29,4 @@ public class UserServiceMemoryImpl implements UserService {
         }
         return pass.equals(password);
     }
-
 }

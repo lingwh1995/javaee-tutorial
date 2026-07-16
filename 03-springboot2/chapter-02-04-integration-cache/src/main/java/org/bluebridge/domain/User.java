@@ -1,11 +1,13 @@
 package org.bluebridge.domain;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/18 14:51
+ * 用户实体类
+ *
+ * @author lingwh
+ * @date 2019/11/18 14:51
  */
 public class User {
+
     private String id;
     private String username;
     private String password;

@@ -6,6 +6,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.SQLException;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     /**
@@ -18,5 +24,4 @@ public class SpringTest {
         MyDataSource1 myDataSource1 = applicationContext.getBean("myDataSource1", MyDataSource1.class);
         myDataSource1.getConnection();
     }
-
 }

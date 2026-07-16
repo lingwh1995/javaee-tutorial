@@ -12,6 +12,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.SQLException;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);

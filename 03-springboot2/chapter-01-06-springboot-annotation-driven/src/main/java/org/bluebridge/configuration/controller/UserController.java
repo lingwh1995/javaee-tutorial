@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * SpringBoot通过 @Configuration + @Bean 配置Controller
- * 这里这个接口直接实现了标记接口,标记接口是被@Controller注解修饰的
- *      public class UserController implements MarkController{}
+ *
+ * 这里这个接口直接实现了标记接口，标记接口是被 @Controller 注解修饰的
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
  */
 public class UserController implements MarkController {
 
@@ -18,16 +21,19 @@ public class UserController implements MarkController {
 
     /**
      * 使用set方式注入
-     * @param userService
+     *
+     * @param userService 用户服务实例
      */
     public void setUserService(IUserService userService) {
         this.userService = userService;
     }
 
     /**
-     * 访问   http://localhost:8080/add-user
      * 新增user
-     * @return
+     *
+     * 访问   http://localhost:8080/add-user
+     *
+     * @return 响应结果
      */
     @RequestMapping(value = "/add-user",method = RequestMethod.GET)
     public ResponseEntity addUser() {

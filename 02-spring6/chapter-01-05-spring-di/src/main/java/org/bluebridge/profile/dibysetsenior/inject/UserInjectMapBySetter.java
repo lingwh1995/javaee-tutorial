@@ -6,6 +6,9 @@ import java.util.Map;
 
 /**
  * set方式注入专题之注入   Map集合
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class UserInjectMapBySetter {
 

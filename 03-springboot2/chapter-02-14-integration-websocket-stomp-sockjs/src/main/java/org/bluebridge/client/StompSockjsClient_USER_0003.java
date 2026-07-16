@@ -14,8 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Stomp版WebSocket客户端2
+ *
  * @author lingwh
- * @desc Stomp版WebSocket客户端2
  * @date 2025/10/21 11:15
  */
 @Slf4j
@@ -29,9 +30,11 @@ public class StompSockjsClient_USER_0003 {
 
     /**
      * 测试数据
-     *    普通消息  01Hello
-     *    定向消息  020002Hello => 发给 0002 用户
-     *    广播消息  03Hello
+     *
+     * 普通消息  01Hello
+     * 定向消息  020002Hello => 发给 0002 用户
+     * 广播消息  03Hello
+     *
      * @param args
      * @throws Exception
      */
@@ -78,8 +81,4 @@ public class StompSockjsClient_USER_0003 {
         // 连接到STOMP端点
         webSocketStompClient.connect(FULL_WS_URL, sessionHandler);
     }
-
-
 }
-
-

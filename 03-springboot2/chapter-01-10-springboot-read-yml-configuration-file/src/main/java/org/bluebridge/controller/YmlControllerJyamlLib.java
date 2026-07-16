@@ -12,11 +12,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 方式五获取YML中的值:
- *      使用Jyaml类库解析YML
- * 注意:
- *      1.实体要有无参构造
- *      2.要额外引入相关类库
+ * 方式五获取YML中的值
+ * 使用Jyaml类库解析YML
+ *
+ * 注意
+ * 1. 实体要有无参构造
+ * 2. 要额外引入相关类库
+ *
+ * @author lingwh
+ * @date 2020/3/5 15:48
  */
 @RestController
 public class YmlControllerJyamlLib {
@@ -27,7 +31,7 @@ public class YmlControllerJyamlLib {
      * @return
      */
     @Bean(name="jyaml")
-    public Yaml yaml(){
+    public Yaml yaml() {
         return new Yaml();
     }
 
@@ -38,7 +42,7 @@ public class YmlControllerJyamlLib {
      * 使用Jyaml将yml文件解析成实体
      */
     @GetMapping("/yml/jyaml/student")
-    public Student getStudent(){
+    public Student getStudent() {
         Student student = null;
         try {
             student = jyaml.loadType(YmlControllerJyamlLib.class.getResourceAsStream("/student.yml"), Student.class);
@@ -53,7 +57,7 @@ public class YmlControllerJyamlLib {
      *  注意:如果想要使用Map接收解析结果,则Yaml.loadType()的第二个参数一定要为Map的实现类
      */
     @GetMapping("/yml/jyaml/studentmap")
-    public Map getStudentMap(){
+    public Map getStudentMap() {
         Map studentMap = null;
         try {
             studentMap = jyaml.loadType(YmlControllerJyamlLib.class.getResourceAsStream("/student.yml"), HashMap.class);
@@ -63,4 +67,3 @@ public class YmlControllerJyamlLib {
         return studentMap;
     }
 }
-

@@ -10,9 +10,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
-
 /**
- * @author ronin
+ * 用户服务实现类
+ *
+ * @author lingwh
+ * @date 2019/11/18 13:30
  */
 @Service
 @CacheConfig(cacheNames={"user"})
@@ -25,7 +27,7 @@ public class UserServiceImpl implements IUserService {
     private CacheManager cacheManager;
 
     /**
-     * 测试@Cacheable注解:
+     * 测试@Cacheable注解
      *      将方法的运行结果进行缓存,以后再查询相同的数据,直接从缓存中获取,调用时机:查询时先看缓存
      *          中有没有,有的话直接去缓存中获取,缓存中不存在的话再去数据库中查询获取
      *      注解属性:
@@ -172,10 +174,10 @@ public class UserServiceImpl implements IUserService {
     @Override
     public String cacheManager() {
         System.out.println(cacheManager.getClass());
-        //获取所有缓存的名称
+        // 获取所有缓存的名称
         Collection<String> cacheNames = cacheManager.getCacheNames();
         System.out.println(cacheNames.toString());
-        //根据缓存名称获取具体的缓存对象
+        // 根据缓存名称获取具体的缓存对象
         Cache user = cacheManager.getCache("user");
         return "{\"MESSAGE\":\"我是用来测试CacheManager的API的\"}";
     }

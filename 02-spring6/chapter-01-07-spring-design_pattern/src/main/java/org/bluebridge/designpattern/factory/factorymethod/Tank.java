@@ -5,6 +5,9 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * 坦克类
+ *
+ * @author lingwh
+ * @date 2026/7/13 10:07
  */
 public class Tank extends Weapon{
 
@@ -14,5 +17,4 @@ public class Tank extends Weapon{
     public void attack() {
         logger.info("坦克发动了攻击...");
     }
-
 }

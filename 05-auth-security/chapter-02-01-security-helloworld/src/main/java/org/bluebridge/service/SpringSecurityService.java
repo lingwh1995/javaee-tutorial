@@ -10,8 +10,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+/**
+ * 自定义用户
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 @Service
-/*自定义用户*/
 public class SpringSecurityService implements UserDetailsService {
 
     @Autowired
@@ -29,4 +34,3 @@ public class SpringSecurityService implements UserDetailsService {
         return new User(s,pw, AuthorityUtils.commaSeparatedStringToAuthorityList("admin,normal"));
     }
 }
-

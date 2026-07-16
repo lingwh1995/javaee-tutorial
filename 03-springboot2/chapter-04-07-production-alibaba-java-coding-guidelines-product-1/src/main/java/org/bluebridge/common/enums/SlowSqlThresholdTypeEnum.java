@@ -1,10 +1,10 @@
 package org.bluebridge.common.enums;
-
 import lombok.Getter;
 
 /**
+ * 慢SQL阈值类型枚举
+ *
  * @author lingwh
- * @desc
  * @date 2025/12/31 23:06
  */
 @Getter
@@ -39,5 +39,4 @@ public enum SlowSqlThresholdTypeEnum {
         this.type = type;
         this.desc = desc;
     }
-
 }

@@ -3,9 +3,10 @@ package org.bluebridge.domain;
 import java.io.Serializable;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/18 14:51
+ * 用户实体类
+ *
+ * @author lingwh
+ * @date 2026/7/13
  */
 public class User implements Serializable {
 

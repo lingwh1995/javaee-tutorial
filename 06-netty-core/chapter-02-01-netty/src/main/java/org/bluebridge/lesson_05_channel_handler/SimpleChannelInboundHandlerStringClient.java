@@ -11,8 +11,9 @@ import io.netty.handler.codec.string.StringEncoder;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * ChannelHandler 的具体实现 SimpleChannelInboundHandler 客户端
+ *
  * @author lingwh
- * @desc ChannelHandler 的具体实现 SimpleChannelInboundHandler 客户端
  * @date 2025/9/23 11:58
  */
 @Slf4j
@@ -41,5 +42,4 @@ public class SimpleChannelInboundHandlerStringClient {
         // 将student对象转为字符串并发送
         channel.writeAndFlush(JSONUtil.toJsonStr(student));
     }
-
 }

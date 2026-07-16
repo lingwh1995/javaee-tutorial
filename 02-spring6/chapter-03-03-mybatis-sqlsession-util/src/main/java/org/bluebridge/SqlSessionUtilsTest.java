@@ -5,6 +5,12 @@ import org.bluebridge.utils.SqlSessionUtil;
 import org.bluebridge.utils.SqlSessionUtilThreadLocal;
 import org.junit.Test;
 
+/**
+ * SqlSession工具类测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SqlSessionUtilsTest {
 
     /**
@@ -29,11 +35,10 @@ public class SqlSessionUtilsTest {
         SqlSession sqlSession2 = SqlSessionUtilThreadLocal.openSession();
         System.out.println("sqlSession2 = " + sqlSession2);
 
-        //关闭SqlSession
+        // 关闭SqlSession
         SqlSessionUtilThreadLocal.close(sqlSession2);
 
         SqlSession sqlSession3 = SqlSessionUtilThreadLocal.openSession();
         System.out.println("sqlSession3 = " + sqlSession3);
     }
-
 }

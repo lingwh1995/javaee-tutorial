@@ -5,8 +5,9 @@ import java.net.URI;
 import java.util.Scanner;
 
 /**
+ * WebSocket客户端测试类1
+ *
  * @author lingwh
- * @desc WebSocket客户端测试类1
  * @date 2025/10/18 14:25
  */
 public class SpringWebSocketClient_USER_0001_Test {
@@ -20,6 +21,7 @@ public class SpringWebSocketClient_USER_0001_Test {
      *    普通消息  01Hello
      *    定向消息  020002Hello => 发给 0002 用户
      *    广播消息  03Hello
+     *
      * @param args
      * @throws Exception
      */
@@ -48,5 +50,4 @@ public class SpringWebSocketClient_USER_0001_Test {
         // 关闭连接
         springWebSocketClient.close();
     }
-
 }

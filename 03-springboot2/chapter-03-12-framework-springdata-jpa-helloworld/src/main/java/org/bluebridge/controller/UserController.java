@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/19 13:48
+ * 用户控制器
+ *
+ * @author lingwh
+ * @date 2025/11/23 13:10
  */
 @Controller
 public class UserController {

@@ -8,12 +8,13 @@ import javax.servlet.http.HttpServletResponseWrapper;
 import java.io.IOException;
 
 /**
- * @author ronin
- * @version V1.0
- * @desc
- * @since 2019/7/26 15:26
+ * 包装HttpServletRequest和HttpServletResponse的过滤器
+ *
+ * @author lingwh
+ * @date 2019/7/26 15:26
  */
 public class WarpperHttpServletFilter implements Filter{
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
@@ -35,12 +36,14 @@ public class WarpperHttpServletFilter implements Filter{
      * 包装的HttpServletRequest
      */
     private class WarpperHttpServletRquest extends HttpServletRequestWrapper {
+
         public WarpperHttpServletRquest(HttpServletRequest request) {
             super(request);
         }
 
         /**
          * 对getParameter()这个方法进行增强
+         *
          * @param name
          * @return
          */
@@ -54,6 +57,7 @@ public class WarpperHttpServletFilter implements Filter{
      * 包装的HttpServletResponse
      */
     private class WarpperHttpServletResponse extends HttpServletResponseWrapper {
+
         public WarpperHttpServletResponse(HttpServletResponse response) {
             super(response);
         }

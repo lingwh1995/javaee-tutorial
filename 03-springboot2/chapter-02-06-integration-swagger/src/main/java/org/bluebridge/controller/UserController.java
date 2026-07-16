@@ -8,9 +8,10 @@ import org.bluebridge.domain.User;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/12/9 11:35
+ * 用户控制器
+ *
+ * @author lingwh
+ * @date 2019/12/9 11:35
  */
 @RestController
 @Api(tags = "用户管理相关接口")

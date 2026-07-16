@@ -13,8 +13,9 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
+ * 用户控制器
+ *
  * @author lingwh
- * @desc 
  * @date 2025/11/23 13:10
  */
 @Controller
@@ -25,6 +26,7 @@ public class UserController {
 
     /**
      * 访问   http://localhost:8080/user
+     *
      * @return
      */
     @ResponseBody
@@ -52,6 +54,7 @@ public class UserController {
 
     /**
      * 访问   http://localhost:8080/user/1
+     *
      * @return
      */
     @ResponseBody
@@ -59,5 +62,4 @@ public class UserController {
     public User getUserById(@PathVariable("id") int id) {
         return userService.getById(id);
     }
-
 }

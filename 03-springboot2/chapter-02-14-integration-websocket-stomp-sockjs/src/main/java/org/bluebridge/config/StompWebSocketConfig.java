@@ -18,18 +18,16 @@ import java.security.Principal;
 import java.util.Map;
 
 /**
- * @author lingwh
- * @desc WebSocket配置类
- * @date 2025/10/19 10:07
- */
-
-/**
+ * WebSocket配置类
+ *
  * STOMP WebSocket客户端特点
  * 协议支持：STOMP是一个简单的文本消息协议，为WebSocket增加了语义层
  * 消息路由：支持基于目的地（destination）的消息路由机制
  * 订阅机制：客户端可以订阅特定的消息主题或队列
+ *
+ * @author lingwh
+ * @date 2025/10/19 10:07
  */
-
 @Slf4j
 @Configuration
 // 注解开启使用STOMP协议来传输基于代理(message broker)的消息,这时控制器支持使用@MessageMapping,就像使用@RequestMapping一样
@@ -43,27 +41,30 @@ public class StompWebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void configureMessageBroker(MessageBrokerRegistry config) {
         /**
          * 配置后端推送给前端路径前缀
-         *    1.用户可以订阅来自以"/topic", "/user"为前缀的消息，广播式应配置一个/topic消息代理，点对点应配置一个/user消息代理
-         *    2.必须和controller中的@SendTo配置的地址前缀一样或者全匹配
-         *    3.客户端只可以订阅这两个前缀的主题
+         * 1. 用户可以订阅来自以"/topic", "/user"为前缀的消息，广播式应配置一个/topic消息代理，点对点应配置一个/user消息代理
+         * 2. 必须和controller中的@SendTo配置的地址前缀一样或者全匹配
+         * 3. 客户端只可以订阅这两个前缀的主题
          */
         config.enableSimpleBroker("/topic", "/user");
 
         /**
          * 配置前端发送消息给后端路径前缀
-         *   客户端发送过来的消息，需要以"/websocket-stomp-ws"为前缀，再经过Broker转发给响应的Controller
+         *
+         * 客户端发送过来的消息，需要以"/websocket-stomp-ws"为前缀，再经过Broker转发给响应的Controller
          */
         config.setApplicationDestinationPrefixes(webSocketProperties.getEndpointPathPrefix());
 
         /**
          * 配置用户目的地前缀
-         *    点对点使用的订阅前缀（客户端订阅路径上会体现出来），不设置的话，默认也是/user/
+         *
+         * 点对点使用的订阅前缀（客户端订阅路径上会体现出来），不设置的话，默认也是/user/
          */
         config.setUserDestinationPrefix("/user");
     }
 
     /**
      * 原生websocket版
+     *
      * @param registry
      */
     @Override
@@ -102,6 +103,4 @@ public class StompWebSocketConfig implements WebSocketMessageBrokerConfigurer {
             }
         };
     }
-
 }
-

@@ -11,6 +11,12 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
 
+/**
+ * 用户服务实现类
+ *
+ * @author lingwh
+ * @date 2019/11/18 13:30
+ */
 @Service
 public class UserServiceImpl implements IUserService {
 
@@ -35,5 +41,4 @@ public class UserServiceImpl implements IUserService {
         List<User> userList = userDao.list();
         return PageInfo.of(userList);
     }
-
 }

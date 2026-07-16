@@ -4,12 +4,15 @@ import org.springframework.beans.factory.FactoryBean;
 
 /**
  * 坦克工厂
+ *
+ * @author lingwh
+ * @date 2026/7/13 10:07
  */
 public class TankFactoryBean implements FactoryBean<Weapon> {
 
     @Override
     public Weapon getObject() throws Exception {
-        //注意这里这个对象是我们通过new手动创建的，如果使用简单工厂模式实例化bean，这个对象不能通过Spring的IOC创建
+        // 注意这里这个对象是我们通过new手动创建的，如果使用简单工厂模式实例化bean，这个对象不能通过Spring的IOC创建
         return new Tank();
     }
 

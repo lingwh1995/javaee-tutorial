@@ -6,8 +6,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * 用户管理内存实现类
+ *
  * @author lingwh
- * @desc
  * @date 2025/10/25 11:20
  */
 @Service
@@ -31,5 +32,4 @@ public class UserServiceMemoryImpl implements IUserService{
         }
         return password.equals(passwd);
     }
-
 }

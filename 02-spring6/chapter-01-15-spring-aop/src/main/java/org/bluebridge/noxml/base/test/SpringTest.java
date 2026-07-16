@@ -6,6 +6,12 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     /**
@@ -14,7 +20,7 @@ public class SpringTest {
     @Test
     public void testGetBean() {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfig.class);
-        //特别注意：当使用AOP功能时，getBean()方法的第二个参数必须是接口类型
+        // 特别注意：当使用AOP功能时，getBean()方法的第二个参数必须是接口类型
         IStudentService studentService = applicationContext.getBean("studentService", IStudentService.class);
         studentService.deleteStudentById("001");
     }

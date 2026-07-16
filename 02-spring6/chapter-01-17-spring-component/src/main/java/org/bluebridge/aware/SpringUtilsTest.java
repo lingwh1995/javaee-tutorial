@@ -8,8 +8,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
+ * Spring 工具类测试类
+ *
  * @author lingwh
- * @desc Spring 工具类测试类
  * @date 2026/1/10 12:01
  */
 public class SpringUtilsTest {
@@ -27,5 +28,4 @@ public class SpringUtilsTest {
             logger.info("beanDefinitionName: " + beanDefinitionName);
         }
     }
-
 }

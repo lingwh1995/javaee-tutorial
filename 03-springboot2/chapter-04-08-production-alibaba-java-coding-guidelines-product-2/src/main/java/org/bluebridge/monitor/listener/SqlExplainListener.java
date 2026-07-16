@@ -1,5 +1,4 @@
 package org.bluebridge.monitor.listener;
-
 import com.p6spy.engine.common.PreparedStatementInformation;
 import com.p6spy.engine.event.JdbcEventListener;
 import lombok.extern.slf4j.Slf4j;
@@ -14,8 +13,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
+ * P6Spy SQL 分析监听器，自动分析 SELECT 语句的执行计划，识别全表扫描等风险
+ *
  * @author lingwh
- * @desc P6Spy SQL 分析监听器，自动分析 SELECT 语句的执行计划，识别全表扫描等风险
  * @date 2026/1/1 18:08
  */
 @Slf4j

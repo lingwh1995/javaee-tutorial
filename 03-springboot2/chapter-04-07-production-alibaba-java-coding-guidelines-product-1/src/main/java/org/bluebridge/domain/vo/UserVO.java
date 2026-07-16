@@ -1,13 +1,13 @@
 package org.bluebridge.domain.vo;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 /**
+ * 用户实体
+ *
  * @author lingwh
- * @desc 用户实体
  * @date 2025/11/22 17:21
  */
 @Data
@@ -49,5 +49,4 @@ public class UserVO {
      */
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime updateTime;
-
 }

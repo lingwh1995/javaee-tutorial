@@ -12,20 +12,17 @@ import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import lombok.extern.slf4j.Slf4j;
 
-
 /**
- * @author lingwh
- * @desc ChannelHandler 的具体实现 SimpleChannelInboundHandler 服务端
- * @date 2025/10/10 11:32
- */
-
-/**
- * SimpleChannelInboundHandler
- *    1.SimpleChannelInboundHandler 是ChannelInboundHandlerAdapter 的子类，可以重写父类的所有方法
- *    2.SimpleChannelInboundHandler 可以使用泛型来指定接收的消息类型，这样的好处是不用手动强制类型转换
- *    3.当SimpleChannelInboundHandler 接收到消息时，会自动调用 channelRead0()，将消息作为参数传递给该方法
+ * ChannelHandler 的具体实现 SimpleChannelInboundHandler 服务端
+ *
+ * 1. SimpleChannelInboundHandler 是ChannelInboundHandlerAdapter 的子类，可以重写父类的所有方法
+ * 2. SimpleChannelInboundHandler 可以使用泛型来指定接收的消息类型，这样的好处是不用手动强制类型转换
+ * 3. 当SimpleChannelInboundHandler 接收到消息时，会自动调用 channelRead0()，将消息作为参数传递给该方法
  *
  * 本程序演示了使用 Student 来作为 SimpleChannelInboundHandler
+ *
+ * @author lingwh
+ * @date 2025/10/10 11:32
  */
 @Slf4j
 public class SimpleChannelInboundHandlerObjectServer {

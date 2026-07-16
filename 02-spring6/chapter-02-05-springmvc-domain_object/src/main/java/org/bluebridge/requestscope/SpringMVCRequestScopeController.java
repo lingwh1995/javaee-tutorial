@@ -14,22 +14,27 @@ import java.util.Map;
 public class SpringMVCRequestScopeController {
 
     /**
-     * ModelAndView同时具有Model和View的功能
-     *  Model   主要用于向请求域共享数据
-     *  View    主要用于设置视图，实现页面跳转
+     * Model、View、ModelAndView
+     *
+     * 1. Model 主要用于向请求域共享数据
+     * 2. View 主要用于设置视图，实现页面跳转
+     * 3. ModelAndView 同时具有 Model 和 View 的功能
+     *
+     * @author lingwh
+     * @date 2019/7/22 14:26
      */
     @RequestMapping(value = "/springmvc/requestScope/modelAndView")
     public ModelAndView requestScopeBySpringMVCByModelAndView(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
-        //向请求域共享数据
+        // 向请求域共享数据
         modelAndView.addObject("requestScope","存放在request域对象中的值[基于SpringMVC提供的ModelAndView]");
-        //设置视图，实现页面跳转
+        // 设置视图，实现页面跳转
         modelAndView.setViewName("success");
         return modelAndView;
     }
 
     /**
-     *  Model   主要用于向请求域共享数据
+     *  Model 主要用于向请求域共享数据
      */
     @RequestMapping(value = "/springmvc/requestScope/model")
     public String requestScopeBySpringMVCByModel(Model model) {
@@ -38,7 +43,7 @@ public class SpringMVCRequestScopeController {
     }
 
     /**
-     *  Map   主要用于向请求域共享数据
+     *  Map 主要用于向请求域共享数据
      */
     @RequestMapping(value = "/springmvc/requestScope/map")
     public String requestScopeBySpringMVCByMap(Map<String,Object> map) {
@@ -47,12 +52,11 @@ public class SpringMVCRequestScopeController {
     }
 
     /**
-     *  ModelMap   主要用于向请求域共享数据
+     *  ModelMap 主要用于向请求域共享数据
      */
     @RequestMapping(value = "/springmvc/requestScope/modelMap")
     public String requestScopeBySpringMVCByModelMap(ModelMap modelMap) {
         modelMap.addAttribute("requestScope","存放在request域对象中的值[基于SpringMVC提供的ModelMap]");
         return "success";
     }
-
 }

@@ -1,6 +1,5 @@
 package org.bluebridge.example.controller;
 
-
 import org.bluebridge.domain.Address;
 import org.bluebridge.domain.User;
 import org.springframework.stereotype.Controller;
@@ -10,11 +9,13 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import java.util.Date;
 
-
 /**
- * SessionAttribuates注解:把数据放在request域的同时放入session域中:
- *      value:map的key值，用法见①②③④
- *      type:map的value的Class类型，用法见④
+ * 使用 @SessionAttribuate 把数据放在request域的同时放入session域中
+ * 1. value:map的key值，用法见①②③④
+ * 2. type:map的value的Class类型，用法见④
+ *
+ * @author lingwh
+ * @date 2026/7/13 11:34
  */
 @Controller
 //@SessionAttributes("address")//①

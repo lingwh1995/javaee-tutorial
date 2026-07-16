@@ -7,6 +7,12 @@ import org.bluebridge.annotation.base.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * UserServiceImpl
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 @Service
 public class UserServiceImpl implements IUserService {
 
@@ -40,5 +46,4 @@ public class UserServiceImpl implements IUserService {
         int i = 1 / 0;
         userDao.login();
     }
-
 }

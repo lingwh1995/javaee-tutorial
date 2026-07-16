@@ -1,5 +1,4 @@
 package org.bluebridge.monitor.component;
-
 import cn.hutool.core.util.StrUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.bluebridge.monitor.constant.SqlConstants;
@@ -12,8 +11,9 @@ import org.springframework.core.convert.ConversionFailedException;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
+ * SQL常量配置处理器
+ *
  * @author lingwh
- * @desc SQL常量配置处理器
  * @date 2025/12/31 17:53
  */
 @Slf4j
@@ -74,5 +74,4 @@ public class SqlConstantsProcessor implements EnvironmentPostProcessor {
             }
         }
     }
-
 }

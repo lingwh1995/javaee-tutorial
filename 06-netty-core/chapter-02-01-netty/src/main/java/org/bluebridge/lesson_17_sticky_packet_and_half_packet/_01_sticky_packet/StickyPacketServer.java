@@ -10,17 +10,9 @@ import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author lingwh
- * @desc Netty 黏包测试 服务端
- * @date 2025/10/11 10:43
- */
-
-/**
- * 黏包现象分析
- *   客户端总共发送10次消息，每次消息是16字节
- *   服务器端一次就接收了160个字节，而非分10次接收，这样就发生了黏包现象
+ * Netty 黏包测试 服务端
  *
- * 粘包
+ * 1. 粘包
  *    现象
  *       发送 abc def，接收 abcdef
  *    原因
@@ -29,6 +21,11 @@ import lombok.extern.slf4j.Slf4j;
  *       Nagle 算法：会造成粘包
  *    本质原因
  *       TCP 是流式协议，消息无边界，所以接收方无法知道消息的边界，只能根据滑动窗口大小来判断是否接收完整
+ * 2. 实际开发中的黏包现象
+ *    客户端总共发送10次消息，每次消息是16字节，服务器端一次就接收了160个字节，而非分10次接收，这样就发生了黏包现象
+ *
+ * @author lingwh
+ * @date 2025/10/11 10:43
  */
 @Slf4j
 public class StickyPacketServer {
@@ -76,5 +73,4 @@ public class StickyPacketServer {
             log.info("stopped......");
         }
     }
-
 }

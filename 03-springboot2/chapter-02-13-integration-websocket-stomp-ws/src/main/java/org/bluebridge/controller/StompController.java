@@ -10,15 +10,13 @@ import javax.annotation.Resource;
 import java.security.Principal;
 
 /**
- * @author lingwh
- * @desc STOMP控制器类
- * @date 2025/10/19 10:12
- */
-
-/**
  * 基于Stomp的WebSocket的开发两个重要注解
- *    @MessageMapping("/chat/broadcast") // @MessageMapping 和 @RequestMapping 功能类似，处理来自客户端的消息。
- *    @SendTo("/topic/broadcast") // 如果服务器接受到了消息，就会对订阅了 @SendTo 括号中的地址的客户端发送消息。
+ *
+ * 1. @MessageMapping("/chat/broadcast") // @MessageMapping 和 @RequestMapping 功能类似，处理来自客户端的消息。
+ * 2. @SendTo("/topic/broadcast") // 如果服务器接受到了消息，就会对订阅了 @SendTo 括号中的地址的客户端发送消息。
+ *
+ * @author lingwh
+ * @date 2025/10/19 10:12
  */
 @Slf4j
 @Controller
@@ -29,6 +27,7 @@ public class StompController {
 
     /**
      * 处理普通消息
+     *
      * @param message
      * @return
      */
@@ -45,6 +44,7 @@ public class StompController {
 
     /**
      * 处理定向消息
+     *
      * @param message
      * @return
      */
@@ -65,6 +65,7 @@ public class StompController {
 
     /**
      * 处理广播消息
+     *
      * @param message
      * @return
      */
@@ -78,6 +79,4 @@ public class StompController {
         String messageContent = message.substring(2);
         return messageContent;
     }
-
 }
-

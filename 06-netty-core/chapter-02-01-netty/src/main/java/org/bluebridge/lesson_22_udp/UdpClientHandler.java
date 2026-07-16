@@ -8,8 +8,9 @@ import lombok.extern.slf4j.Slf4j;
 
 
 /**
+ * 客户端UDP处理器
+ *
  * @author lingwh
- * @desc 客户端UDP处理器
  * @date 2025/11/12 16:56
  */
 @Slf4j
@@ -28,5 +29,4 @@ public class UdpClientHandler extends SimpleChannelInboundHandler<DatagramPacket
         cause.printStackTrace();
         ctx.close();
     }
-
 }

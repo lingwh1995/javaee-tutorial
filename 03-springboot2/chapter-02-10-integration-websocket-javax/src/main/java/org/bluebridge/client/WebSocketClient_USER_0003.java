@@ -7,8 +7,9 @@ import java.net.URI;
 import java.util.Scanner;
 
 /**
+ * WebSocket客户端端点3
+ *
  * @author lingwh
- * @desc WebSocket客户端端点3
  * @date 2025/10/17 16:42
  */
 @Slf4j
@@ -21,9 +22,11 @@ public class WebSocketClient_USER_0003 {
 
     /**
      * 测试数据
-     *    普通消息  01Hello
-     *    定向消息  020001Hello => 发给 0001 用户
-     *    广播消息  03Hello
+     *
+     * 普通消息  01Hello
+     * 定向消息  020001Hello => 发给 0001 用户
+     * 广播消息  03Hello
+     *
      * @param args
      * @throws Exception
      */
@@ -50,6 +53,7 @@ public class WebSocketClient_USER_0003 {
 
     /**
      * 连接建立时触发
+     *
      * @param session
      */
     @OnOpen
@@ -68,6 +72,7 @@ public class WebSocketClient_USER_0003 {
 
     /**
      * 连接关闭时触发
+     *
      * @param reason
      */
     @OnClose
@@ -77,12 +82,12 @@ public class WebSocketClient_USER_0003 {
 
     /**
      * 发生错误时触发
+     *
      * @param error
      */
     @OnError
     public void onError(Throwable error) {
         log.info("客户端错误： {}", error.getMessage());
     }
-
 }
 

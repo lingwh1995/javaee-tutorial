@@ -3,6 +3,12 @@ package org.bluebridge.service;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+/**
+ * SpringAndMVCServiceImpl
+ *
+ * @author lingwh
+ * @date 2025/12/18 10:30
+ */
 @Service
 public class SpringAndMVCServiceImpl implements ISpringAndMVCService {
 
@@ -28,6 +34,4 @@ public class SpringAndMVCServiceImpl implements ISpringAndMVCService {
         System.out.println("save.....");
         System.out.println("------------------Service中save方法------------------");
     }
-
-
 }

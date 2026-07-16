@@ -3,8 +3,9 @@ package org.bluebridge.event_driven;
 import org.springframework.context.ApplicationEvent;
 
 /**
+ * 用户注册事件
+ *
  * @author lingwh
- * @desc
  * @date 2026/1/10 12:30
  */
 public class UserRegisterEvent extends ApplicationEvent {
@@ -19,6 +20,8 @@ public class UserRegisterEvent extends ApplicationEvent {
         this.username = username;
     }
 
-    public String getUsername() { return username; }
+    public String getUsername() {
+        return username;
+    }
 
 }

@@ -12,6 +12,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
+/**
+ * StreamController
+ *
+ * @author lingwh
+ * @date 2026/7/13 10:07
+ */
 @RestController
 @RequestMapping("/api/stream")
 public class StreamController {
@@ -22,7 +28,7 @@ public class StreamController {
     @GetMapping(value = "/basic", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public ResponseBodyEmitter basicStream() {
         // 30秒超时
-        //ResponseBodyEmitter emitter = new ResponseBodyEmitter(30 * 1000L);
+        // ResponseBodyEmitter emitter = new ResponseBodyEmitter(30 * 1000L);
         // 不超时，直接返回
         ResponseBodyEmitter emitter = new ResponseBodyEmitter();
 
@@ -33,7 +39,7 @@ public class StreamController {
                     emitter.send("Message " + ++i + "\n");
                     Thread.sleep(1000);
                 }
-                //emitter.complete();
+                // emitter.complete();
             } catch (Exception e) {
                 emitter.completeWithError(e);
             }

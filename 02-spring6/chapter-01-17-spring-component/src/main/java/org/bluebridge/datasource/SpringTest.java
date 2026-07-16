@@ -10,6 +10,12 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
@@ -24,5 +30,4 @@ public class SpringTest {
         Connection connection = dataSource.getConnection();
         logger.info("Spring提供的数据源实现" + connection.toString());
     }
-
 }

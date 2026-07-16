@@ -7,8 +7,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
+ * Spring 工具类测试类
+ *
  * @author lingwh
- * @desc Spring 工具类测试类
  * @date 2026/1/10 12:01
  */
 // 使用 Spring 的运行器
@@ -28,5 +29,4 @@ public class SpringEventDrivenTest {
         // 发布事件
         userService.register("zhangsan");
     }
-
 }

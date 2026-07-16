@@ -10,8 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Scanner;
 
 /**
+ * 客户端处理器
+ *
  * @author lingwh
- * @desc 客户端处理器
  * @date 2025/10/21 16:31
  */
 @Slf4j
@@ -53,5 +54,4 @@ public class WebSocketClientHandler extends SimpleChannelInboundHandler<TextWebS
     protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
         log.info("收到服务器消息: {}", msg.text());
     }
-
 }

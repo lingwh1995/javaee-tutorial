@@ -1,13 +1,14 @@
 package org.bluebridge.example.controller;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
-
 /**
- * SessionAttribuate注解:获取已经存在的session数据
+ * 使用 @SessionAttribuate 获取已经存在的session数据
+ *
+ * @author lingwh
+ * @date 2026/7/13 11:34
  */
 @Controller
 public class SessionAttribuateController {

@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 /**
  * set方式注入专题之注入   数组
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class UserInjectArrayBySetter {
 

@@ -8,8 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * WebSocket配置属性
+ *
  * @author lingwh
- * @desc WebSocket配置属性
  * @date 2025/10/18 14:15
  */
 @Configuration
@@ -23,6 +24,5 @@ public class WebSocketProperties {
     private List<String> allowedOrigins = Arrays.asList("*");
     // 是否启用sockjs
     private boolean enableSockjs = true;
-
 }
 

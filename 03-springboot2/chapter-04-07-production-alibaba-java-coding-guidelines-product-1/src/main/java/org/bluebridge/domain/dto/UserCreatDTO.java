@@ -1,8 +1,9 @@
 package org.bluebridge.domain.dto;
 
 /**
+ * 用户创建数据传输对象
+ *
  * @author lingwh
- * @desc
  * @date 2025/12/28 12:23
  */
 public class UserCreatDTO {
@@ -26,5 +27,4 @@ public class UserCreatDTO {
      * 邮箱
      */
     private String email;
-
 }

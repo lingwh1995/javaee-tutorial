@@ -18,8 +18,9 @@ import java.net.URI;
 import java.util.Map;
 
 /**
+ * WebSocket配置类
+ *
  * @author lingwh
- * @desc WebSocket配置类
  * @date 2025/10/18 14:05
  */
 @Slf4j
@@ -81,5 +82,4 @@ public class WebSocketConfig implements WebSocketConfigurer {
             }
         };
     }
-
 }

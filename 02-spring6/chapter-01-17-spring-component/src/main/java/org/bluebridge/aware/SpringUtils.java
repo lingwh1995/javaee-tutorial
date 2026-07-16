@@ -11,13 +11,15 @@ import org.springframework.core.env.Environment;
 import java.util.Arrays;
 
 /**
+ * Spring 工具类
+ *
+ * 以 ApplicationContextAware 为例说明其工作流程
+ * Spring 容器在启动时，会自动扫描所有实现了 ApplicationContextAware 接口的类。
+ * 动作： 一旦扫描到，Spring 就会自动调用 setApplicationContext 方法。
+ * 结果： 它把整个 Spring 容器的引用（context）传给了你的静态变量 applicationContext。
+ * 意义： 这样你就在这个类里拿到了一把打开 Spring 仓库的"万能钥匙"。
+ *
  * @author lingwh
- * @desc Spring 工具类
- *       以 ApplicationContextAware 为例说明其工作流程
- *       Spring 容器在启动时，会自动扫描所有实现了 ApplicationContextAware 接口的类。
- *       动作： 一旦扫描到，Spring 就会自动调用 setApplicationContext 方法。
- *       结果： 它把整个 Spring 容器的引用（context）传给了你的静态变量 applicationContext。
- *       意义： 这样你就在这个类里拿到了一把打开 Spring 仓库的"万能钥匙"。
  * @date 2026/1/10 11:47
  */
 public class SpringUtils implements ApplicationContextAware, EnvironmentAware, BeanNameAware {
@@ -39,6 +41,7 @@ public class SpringUtils implements ApplicationContextAware, EnvironmentAware, B
 
     /**
      * 感知 BeanName：Spring 告诉你的 Bean 在容器里叫什么
+     *
      * @param beanName
      */
     @Override
@@ -48,6 +51,7 @@ public class SpringUtils implements ApplicationContextAware, EnvironmentAware, B
 
     /**
      * 感知 Environment：获取 application.yml 中的配置
+     *
      * @param environment
      */
     @Override
@@ -57,6 +61,7 @@ public class SpringUtils implements ApplicationContextAware, EnvironmentAware, B
 
     /**
      * 感知 ApplicationContext：获取整个 Spring 容器
+     *
      * @param applicationContext
      * @throws BeansException
      */
@@ -67,6 +72,7 @@ public class SpringUtils implements ApplicationContextAware, EnvironmentAware, B
 
     /**
      * 手动从容器中获取指定的 Bean
+     *
      * @param clazz
      * @return
      * @param <T>
@@ -77,6 +83,7 @@ public class SpringUtils implements ApplicationContextAware, EnvironmentAware, B
 
     /**
      * 获取容器中所有 Bean 的名称
+     *
      * @return
      */
     public static String[] getBeanDefinitionNames() {
@@ -85,6 +92,7 @@ public class SpringUtils implements ApplicationContextAware, EnvironmentAware, B
 
     /**
      * 获取容器中 Bean 的数量
+     *
      * @return
      */
     public static int getBeanDefinitionCount() {
@@ -93,6 +101,7 @@ public class SpringUtils implements ApplicationContextAware, EnvironmentAware, B
 
     /**
      * 手动从容器中获取指定的 Bean
+     *
      * @param beanName
      * @param clazz
      * @return
@@ -104,6 +113,7 @@ public class SpringUtils implements ApplicationContextAware, EnvironmentAware, B
 
     /**
      * 判断当前是否为开发环境 (dev)
+     *
      * @return
      */
     public static boolean isDevMode() {
@@ -113,6 +123,7 @@ public class SpringUtils implements ApplicationContextAware, EnvironmentAware, B
 
     /**
      * 获取配置属性
+     *
      * @param key
      * @return
      */
@@ -122,6 +133,7 @@ public class SpringUtils implements ApplicationContextAware, EnvironmentAware, B
 
     /**
      * 发布事件
+     *
      * @param event
      */
     public static void publishEvent(ApplicationEvent event) {

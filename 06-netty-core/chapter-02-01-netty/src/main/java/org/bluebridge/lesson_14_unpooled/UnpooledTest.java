@@ -6,12 +6,7 @@ import io.netty.buffer.ByteBufUtil;
 import io.netty.buffer.Unpooled;
 
 /**
- * @author lingwh
- * @desc Unpooled 是 Netty 提供的一个工具类，用于创建和操作 ByteBuf 实例。
- * @date 2025/10/10 15:05
- */
-
-/**
+ * Unpooled 是 Netty 提供的一个工具类，用于创建和操作 ByteBuf 实例。
  * 主要功能：
  * - 创建各种类型的 ByteBuf 缓冲区（堆内存、直接内存等）
  * - 提供零拷贝的缓冲区组合和切片操作
@@ -27,6 +22,9 @@ import io.netty.buffer.Unpooled;
  * - 不依赖于内存池，直接分配和释放内存
  * - 适用于临时缓冲区或简单场景
  * - wrappedBuffer() 方法支持零拷贝方式组合多个 ByteBuf
+ *
+ * @author lingwh
+ * @date 2025/10/10 15:05
  */
 public class UnpooledTest {
 
@@ -40,5 +38,4 @@ public class UnpooledTest {
         ByteBuf byteBuf3 = Unpooled.wrappedBuffer(byteBuf1, byteBuf2);
         System.out.println(ByteBufUtil.prettyHexDump(byteBuf3));
     }
-
 }

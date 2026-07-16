@@ -8,13 +8,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.SQLException;
 
-
+/**
+ * 引入properties文件测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
      * 测试使用 context:property-placeholder 引入外部的properties文件
+     *
      * key的命名是不规范的，无法获取到properties文件中正确的username属性的值
      */
     @Test
@@ -26,6 +32,7 @@ public class SpringTest {
 
     /**
      * 测试使用 context:property-placeholder 引入外部的properties文件
+     *
      * key的命名是标准的，可以获取到properties文件中正确的jdbc.username属性的值
      */
     @Test
@@ -34,5 +41,4 @@ public class SpringTest {
         MyDataSource5 myDataSource5KeyStandard = applicationContext.getBean("myDataSource5KeyStandard", MyDataSource5.class);
         myDataSource5KeyStandard.getConnection();
     }
-
 }

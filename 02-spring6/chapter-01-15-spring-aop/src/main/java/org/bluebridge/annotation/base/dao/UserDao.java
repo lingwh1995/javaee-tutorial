@@ -5,7 +5,12 @@ import org.apache.logging.log4j.Logger;
 import org.bluebridge.annotation.base.domain.User;
 import org.springframework.stereotype.Repository;
 
-
+/**
+ * UserDao
+ *
+ * @author lingwh
+ * @date 2019/7/22 14:29
+ */
 @Repository
 public class UserDao {
 
@@ -17,7 +22,7 @@ public class UserDao {
 
     public int deleteUserById(String id) {
         logger.info("正在执行删除用户操作...");
-        //返回数据库中被影响的条数
+        // 返回数据库中被影响的条数
         return 1;
     }
 
@@ -27,7 +32,7 @@ public class UserDao {
 
     public User getUserById(String id) {
         logger.info("正在执行查询用户操作...");
-        //模拟从数据库中查询到了一个User对象
+        // 模拟从数据库中查询到了一个User对象
         User user = new User("001", "张三", 20);
         return user;
     }

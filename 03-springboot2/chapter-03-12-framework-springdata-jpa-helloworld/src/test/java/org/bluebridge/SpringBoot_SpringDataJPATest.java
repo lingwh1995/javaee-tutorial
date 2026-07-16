@@ -8,12 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-
 /**
  * 测试SpringBoot环境下使用SpringDataJPA
- * @author ronin
- * @version V1.0
- * @since 2019/11/19 11:26
+ *
+ * @author lingwh
+ * @date 2019/11/19 11:26
  */
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -29,15 +28,14 @@ public class SpringBoot_SpringDataJPATest {
     @Test
     public void fun(){
         User user = userDao.findById("1").get();
-        System.out.println("============================");
-        System.out.println("============================");
-        System.out.println("============================");
-        System.out.println("============================");
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
         System.out.println(user);
-        System.out.println("============================");
-        System.out.println("============================");
-        System.out.println("============================");
-        System.out.println("============================");
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
     }
-
 }

@@ -7,9 +7,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
+ * 零配置搭建Spring开发环境测试
+ *
  * @author lingwh
- * @desc   零配置搭建Spring开发环境测试
- * @date   2019/4/3 14:34
+ * @date 2019/4/3 14:34
  */
 public class ValueTest {
 

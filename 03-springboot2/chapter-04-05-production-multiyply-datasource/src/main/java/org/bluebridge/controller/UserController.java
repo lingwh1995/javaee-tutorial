@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 
+/**
+ * 用户控制器，处理主从库用户查询请求
+ *
+ * @author lingwh
+ * @date 2025/11/23 13:10
+ */
 @Controller
 public class UserController {
 
@@ -21,6 +27,7 @@ public class UserController {
 
     /**
      * 访问   http://localhost:8080/user/master/1
+     *
      * @param id
      * @return
      */
@@ -32,6 +39,7 @@ public class UserController {
 
     /**
      * 访问   http://localhost:8080/user/slave/1
+     *
      * @param id
      * @return
      */

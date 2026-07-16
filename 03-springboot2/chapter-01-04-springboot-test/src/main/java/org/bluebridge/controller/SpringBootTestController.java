@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 
 /**
+ * SpringBoot 测试示例的 Controller
+ *
  * @author lingwh
- * @desc
  * @date 2025/11/4 17:57
  */
 @Controller
@@ -23,5 +24,4 @@ public class SpringBootTestController {
     public String hello(){
         return springBootTestService.hello();
     }
-
 }

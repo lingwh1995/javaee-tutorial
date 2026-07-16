@@ -1,8 +1,9 @@
 package org.bluebridge.monitor.enums;
 
 /**
+ * SQL 高亮颜色枚举
+ *
  * @author lingwh
- * @desc SQL 高亮颜色枚举
  * @date 2025/12/27 18:55
  */
 public enum SqlHighlightColorEnum {
@@ -23,5 +24,4 @@ public enum SqlHighlightColorEnum {
      * 蓝色
      */
     BLUE
-
 }

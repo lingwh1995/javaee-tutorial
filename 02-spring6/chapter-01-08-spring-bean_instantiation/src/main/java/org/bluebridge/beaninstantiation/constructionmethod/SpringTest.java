@@ -2,14 +2,16 @@ package org.bluebridge.beaninstantiation.constructionmethod;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.bluebridge.beaninstantiation.factorybeaninterface.Tank;
-import org.bluebridge.beaninstantiation.factorybeaninterface.demo.User;
-import org.bluebridge.beaninstantiation.factorymethod.Gun;
-import org.bluebridge.beaninstantiation.simplefactory.Car;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
@@ -23,5 +25,4 @@ public class SpringTest {
         SpringBean springBean = applicationContext.getBean("springBean", SpringBean.class);
         logger.info(springBean.toString());
     }
-
 }

@@ -11,6 +11,12 @@ import org.summerframework.core.ClassPathXmlApplicationContext;
 
 import java.lang.reflect.InvocationTargetException;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     private Logger logger = LogManager.getLogger(SpringTest.class);
@@ -18,13 +24,12 @@ public class SpringTest {
     @Test
     public void testBeanFactory() throws DocumentException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, NoSuchFieldException {
         BeanFactory applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        //测试当property为简单类型的数据时
+        // 测试当property为简单类型的数据时
         User user = (User) applicationContext.getBean("user");
         logger.info(user.toString());
 
-        //测试当property为引用类型的数据时
+        // 测试当property为引用类型的数据时
         UserController userController = (UserController) applicationContext.getBean("userController");
         userController.deleteUserById("001");
     }
-
 }

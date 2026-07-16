@@ -7,8 +7,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * 会话管理内存实现类
+ *
  * @author lingwh
- * @desc 会话管理内存实现类
  * @date 2025/10/25 11:44
  */
 @Service
@@ -54,5 +55,4 @@ public class SessionMemoryImpl implements  Session{
     public String getUsername(Channel channel) {
         return CHANNEL_USERNAME_MAP.get(channel);
     }
-
 }

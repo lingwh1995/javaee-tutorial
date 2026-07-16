@@ -1,12 +1,12 @@
 package org.bluebridge.monitor.constant;
-
 import org.bluebridge.monitor.enums.SlowSqlThresholdTypeEnum;
 import org.bluebridge.monitor.enums.SqlHighlightColorEnum;
 import org.bluebridge.monitor.enums.SqlShowFormattedStyleEnum;
 
 /**
+ * SQL 配置常量
+ *
  * @author lingwh
- * @desc SQL 配置常量
  * @date 2025/1/03 18:59
  */
 public final class SqlConstants {
@@ -46,5 +46,4 @@ public final class SqlConstants {
      */
     public static final String P6SPY_FORMATTER_CLASS =
             SqlConstants.class.getPackage().getName().replace("constant", "component") + "." + "PrettyPrintFormat";
-
 }

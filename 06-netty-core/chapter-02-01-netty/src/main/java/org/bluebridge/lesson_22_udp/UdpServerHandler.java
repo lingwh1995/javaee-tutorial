@@ -7,8 +7,9 @@ import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 服务端UDP处理器
+ *
  * @author lingwh
- * @desc 服务端UDP处理器
  * @date 2025/11/12 16:53
  */
 @Slf4j
@@ -35,5 +36,4 @@ public class UdpServerHandler extends SimpleChannelInboundHandler<DatagramPacket
         cause.printStackTrace();
         ctx.close();
     }
-
 }

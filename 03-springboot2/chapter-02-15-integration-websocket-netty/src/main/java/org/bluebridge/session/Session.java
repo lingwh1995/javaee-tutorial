@@ -1,15 +1,18 @@
 package org.bluebridge.session;
 
-
 import io.netty.channel.Channel;
 
 /**
  * 会话管理接口
+ *
+ * @author lingwh
+ * @date 2025/10/21 16:25
  */
 public interface Session {
 
     /**
      * 绑定会话
+     *
      * @param channel 和哪个 username 绑定会话
      * @param username 会话绑定用户
      */
@@ -17,12 +20,14 @@ public interface Session {
 
     /**
      * 解绑会话
+     *
      * @param channel 哪个 username 要解绑会话
      */
     void unbind(Channel channel);
 
     /**
      * 获取属性
+     *
      * @param channel 哪个 channel
      * @param name 属性名
      * @return 属性值
@@ -31,6 +36,7 @@ public interface Session {
 
     /**
      * 设置属性
+     *
      * @param channel 哪个 channel
      * @param name 属性名
      * @param value 属性值
@@ -39,9 +45,9 @@ public interface Session {
 
     /**
      * 根据用户名获取 channel
+     *
      * @param username 用户名
      * @return channel
      */
     Channel getChannel(String username);
-
 }

@@ -1,22 +1,24 @@
 package org.bluebridge.utils;
 
-
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import java.io.InputStream;
-
 /**
  * MyBatis工具类
  *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class SqlSessionUtil {
+
     private static final String ENV = "mysql";
+
     private static SqlSessionFactory sqlSessionFactory;
 
     private SqlSessionUtil() {}
+
     /**
      * 类加载时初始化sqlSessionFactory对象
      */

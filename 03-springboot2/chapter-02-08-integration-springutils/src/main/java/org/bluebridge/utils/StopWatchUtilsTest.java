@@ -8,6 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 秒表工具类测试
+ *
+ * @author lingwh
+ * @date 2026/7/13 10:07
  */
 @Slf4j
 public class StopWatchUtilsTest {
@@ -29,8 +32,8 @@ public class StopWatchUtilsTest {
 
     /**
      * 测试StopWatch
-     *  1.多个任务执行时间统计
-     *  2.优雅的打印执行结果
+     * 1. 多个任务执行时间统计
+     * 2. 优雅的打印执行结果
      */
     @Test
     public void testStopWatch() throws InterruptedException {
@@ -63,5 +66,4 @@ public class StopWatchUtilsTest {
     private void task2() throws InterruptedException {
         TimeUnit.MILLISECONDS.sleep(2000);
     }
-
 }

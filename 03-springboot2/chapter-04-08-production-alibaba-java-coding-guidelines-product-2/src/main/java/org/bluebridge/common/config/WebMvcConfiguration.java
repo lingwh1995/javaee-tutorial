@@ -1,5 +1,4 @@
 package org.bluebridge.common.config;
-
 import cn.dev33.satoken.interceptor.SaInterceptor;
 import cn.dev33.satoken.stp.StpUtil;
 import org.bluebridge.common.constant.EnvironmentConstants;
@@ -16,8 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * WebMvc 配置
+ *
  * @author lingwh
- * @desc WebMvc 配置
  * @date 2025/11/22 17:45
  */
 @Configuration
@@ -38,6 +38,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 
     /**
      * 添加拦截器
+     *
      * @param registry
      */
     @Override
@@ -49,7 +50,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
             return;
         }
 
-        //存放拦截器放行的的路径
+        // 存放拦截器放行的的路径
         List<String> excludePathPatterns = new ArrayList<>();
         excludePathPatterns.add("/");
         excludePathPatterns.add("/logo.ico");
@@ -66,6 +67,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 
     /**
      * 添加@RequestMapping路径前缀
+     *
      * @param configurer
      */
     @Override
@@ -75,5 +77,4 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
                 c -> c.isAnnotationPresent(Controller.class)
                         || c.isAnnotationPresent(RestController.class));
     }
-
 }

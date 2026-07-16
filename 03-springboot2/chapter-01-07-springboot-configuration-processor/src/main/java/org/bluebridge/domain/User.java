@@ -4,18 +4,20 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * 第一步：
- *  在pom中引入 spring-boot-configuration-processor 这个依赖
- * 第二步：
- *  在实体类上配置 @ConfigurationProperties(prefix = "user")
- * 第三步：
- *  编译代码，在/target/classes/META-INF/下会生成 spring-configuration-metadata.json
- * 第四步：
- *  在application.yml或application.properties中使用时可以看见有相应的提示，方便我们使用
+ * 配置属性绑定用户实体
+ *
+ * 1. 在pom中引入 spring-boot-configuration-processor 这个依赖
+ * 2. 在实体类上配置 @ConfigurationProperties(prefix = "user")
+ * 3. 编译代码，在/target/classes/META-INF/下会生成 spring-configuration-metadata.json
+ * 4. 在application.yml或application.properties中使用时可以看见有相应的提示，方便我们使用
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
  */
 @ConfigurationProperties(prefix = "user")
 @Component
 public class User {
+
     public String id;
     private String name;
     private String password;

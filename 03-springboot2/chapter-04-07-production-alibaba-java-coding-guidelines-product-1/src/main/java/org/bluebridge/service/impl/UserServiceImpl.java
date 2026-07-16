@@ -1,5 +1,4 @@
 package org.bluebridge.service.impl;
-
 import org.bluebridge.common.util.PasswordUtils;
 import org.bluebridge.converter.UserConverter;
 import org.bluebridge.domain.dto.UserLoginDTO;
@@ -13,8 +12,9 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 
 /**
+ * 用户服务实现类
+ *
  * @author lingwh
- * @desc
  * @date 2025/11/22 17:27
  */
 @Service
@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
         if (userLoginDTO == null) {
             return false;
         }
-        // 2.转换为数据库对象
+        // 2. 转换为数据库对象
         UserDO userDO = userConverter.toUserDO(userLoginDTO);
 
         // 3. 语义化命名：强调这是从数据库查出的“持久化”或“已存在”用户
@@ -50,5 +50,4 @@ public class UserServiceImpl implements UserService {
                 existingUser.getPassword()
         );
     }
-
 }

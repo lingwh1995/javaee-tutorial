@@ -6,6 +6,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     /**
@@ -19,5 +25,4 @@ public class SpringTest {
         String path = "applicationContext-resource.xml";
         classPathResourceDemo.loadAndParseClassPathResource(path);
     }
-
 }

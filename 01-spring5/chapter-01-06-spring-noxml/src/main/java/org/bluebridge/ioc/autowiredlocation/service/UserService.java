@@ -5,9 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
+ * 用户服务类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/11 10:35
+ * @date 2019/4/11 10:35
  */
 @Service
 public class UserService {
@@ -20,6 +21,7 @@ public class UserService {
 
     /**
      * 测试Auto标注在Setter方法上
+     *
      * @param userDao
      */
     @Autowired

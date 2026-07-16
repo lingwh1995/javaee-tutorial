@@ -10,8 +10,9 @@ import io.netty.handler.codec.serialization.ObjectEncoder;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * ChannelHandler 的具体实现 SimpleChannelInboundHandler 客户端
+ *
  * @author lingwh
- * @desc ChannelHandler 的具体实现 SimpleChannelInboundHandler 客户端
  * @date 2025/9/23 11:58
  */
 @Slf4j
@@ -40,5 +41,4 @@ public class SimpleChannelInboundHandlerObjectClient {
         Student student = new Student("张三");
         channel.writeAndFlush(student);
     }
-
 }

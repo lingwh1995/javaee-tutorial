@@ -6,8 +6,9 @@ import org.bluebridge.aware.SpringUtils;
 import org.springframework.stereotype.Service;
 
 /**
+ * 用户服务类，处理用户注册
+ *
  * @author lingwh
- * @desc
  * @date 2026/1/10 12:31
  */
 @Service
@@ -21,5 +22,4 @@ public class UserService {
         // 使用 SpringUtils 发布事件，或者注入 ApplicationEventPublisher
         SpringUtils.publishEvent(new UserRegisterEvent(this, name));
     }
-
 }

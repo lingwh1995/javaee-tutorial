@@ -4,8 +4,12 @@ import org.bluebridge.profile.namespace.domain.Cat;
 
 /**
  * set方式注入之P命名空间注入  其底层还是依赖set方式实现注入，只不过P命名空间注入能让Spring的配置变得更为简单
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class UserInjectValueByPNamespace {
+
     private String name;
     private String age;
     private Cat cat;

@@ -1,9 +1,10 @@
 package org.bluebridge.domain;
 
 /**
+ * User实体类
+ *
  * @author lingwh
- * @desc   User实体类
- * @date   2019/6/18 14:32
+ * @date 2019/6/18 14:32
  */
 public class User {
 

@@ -1,5 +1,4 @@
 package org.bluebridge.common.util;
-
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -11,13 +10,15 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
 /**
+ * Spring 工具类
+ *
+ * 核心机制：ApplicationContextAware
+ * Spring 容器在启动时，会自动扫描所有实现了 ApplicationContextAware 接口的类。
+ * 动作： 一旦扫描到，Spring 就会自动调用 setApplicationContext 方法。
+ * 结果： 它把整个 Spring 容器的引用（context）传给了你的静态变量 applicationContext。
+ * 意义： 这样你就在这个类里拿到了一把打开 Spring 仓库的"万能钥匙"。
+ *
  * @author lingwh
- * @desc Spring 工具类
- *       核心机制：ApplicationContextAware
- *       Spring 容器在启动时，会自动扫描所有实现了 ApplicationContextAware 接口的类。
- *       动作： 一旦扫描到，Spring 就会自动调用 setApplicationContext 方法。
- *       结果： 它把整个 Spring 容器的引用（context）传给了你的静态变量 applicationContext。
- *       意义： 这样你就在这个类里拿到了一把打开 Spring 仓库的"万能钥匙"。
  * @date 2026/1/10 10:06
  */
 @Component
@@ -55,6 +56,7 @@ public class SpringUtils implements  ApplicationContextAware, EnvironmentAware, 
 
     /**
      * 获取当前类的代理对象
+     *
      * @param clazz
      * @return
      * @param <T>
@@ -65,6 +67,7 @@ public class SpringUtils implements  ApplicationContextAware, EnvironmentAware, 
 
     /**
      * 获取当前配置文件的属性值
+     *
      * @param key
      * @return
      */
@@ -74,6 +77,7 @@ public class SpringUtils implements  ApplicationContextAware, EnvironmentAware, 
 
     /**
      * 获取当前激活的 Profile (dev/test/prod)
+     *
      * @return
      */
     public static String getActiveProfile() {
@@ -82,6 +86,7 @@ public class SpringUtils implements  ApplicationContextAware, EnvironmentAware, 
 
     /**
      * 检查当前容器中是否存在指定名称的 Bean
+     *
      * @param beanName
      * @return
      */
@@ -91,6 +96,7 @@ public class SpringUtils implements  ApplicationContextAware, EnvironmentAware, 
 
     /**
      * 判断当前是否为开发环境 (dev)
+     *
      * @return
      */
     public static boolean isDevMode() {
@@ -100,10 +106,10 @@ public class SpringUtils implements  ApplicationContextAware, EnvironmentAware, 
 
     /**
      * 发布自定义事件
+     *
      * @param event
      */
     public static void publishEvent(ApplicationEvent event) {
         applicationContext.publishEvent(event);
     }
-
 }

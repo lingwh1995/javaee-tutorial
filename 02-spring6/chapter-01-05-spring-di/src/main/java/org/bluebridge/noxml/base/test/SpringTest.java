@@ -5,6 +5,12 @@ import org.bluebridge.noxml.base.controller.TeacherController;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     /**
@@ -16,5 +22,4 @@ public class SpringTest {
         TeacherController teacherController = applicationContext.getBean("teacherController", TeacherController.class);
         teacherController.deleteById("001");
     }
-
 }

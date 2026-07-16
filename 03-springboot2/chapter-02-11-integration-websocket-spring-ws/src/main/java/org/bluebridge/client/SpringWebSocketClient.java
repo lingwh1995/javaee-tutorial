@@ -3,19 +3,14 @@ package org.bluebridge.client;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.socket.*;
 import org.springframework.web.socket.client.standard.StandardWebSocketClient;
-import org.springframework.web.socket.sockjs.client.RestTemplateXhrTransport;
-import org.springframework.web.socket.sockjs.client.SockJsClient;
-import org.springframework.web.socket.sockjs.client.Transport;
-import org.springframework.web.socket.sockjs.client.WebSocketTransport;
 
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 /**
+ * WebSocket客户端
+ *
  * @author lingwh
- * @desc WebSocket客户端
  * @date 2025/10/18 14:23
  */
 @Slf4j
@@ -25,6 +20,7 @@ public class SpringWebSocketClient {
 
     /**
      * 初始化客户端并连接服务端
+     *
      * @param webSocketUri
      * @throws ExecutionException
      * @throws InterruptedException
@@ -67,6 +63,7 @@ public class SpringWebSocketClient {
 
     /**
      * 发送文本消息
+     *
      * @param message
      * @throws Exception
      */
@@ -83,5 +80,4 @@ public class SpringWebSocketClient {
     public void close() throws Exception {
         session.close();
     }
-
 }

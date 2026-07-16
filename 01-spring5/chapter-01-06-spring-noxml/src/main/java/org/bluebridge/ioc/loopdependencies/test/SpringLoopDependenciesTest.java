@@ -6,9 +6,10 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
+ * Spring循环依赖
+ *
  * @author lingwh
- * @desc   Spring循环依赖
- * @date   2019/4/4 10:46
+ * @date 2019/4/4 10:46
  */
 public class SpringLoopDependenciesTest {
 
@@ -18,5 +19,4 @@ public class SpringLoopDependenciesTest {
         UserService userService = context.getBean("userService", UserService.class);
         userService.getPersonService();
     }
-
 }

@@ -10,6 +10,9 @@ import org.springframework.core.io.ResourceLoader;
 
 /**
  * 测试Spring的IoC容器将自身的引用赋值给ResourceLoaderAware的实现类中的ResourceLoader类型的属性
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class SpringTest {
 
@@ -17,24 +20,23 @@ public class SpringTest {
 
     @Test
     public void testSpringIocContainerAsResourceLoader() {
-        //Spring的IoC容器的实例
+        // Spring的IoC容器的实例
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-resource_aware.xml");
-        //从Spring的IoC容器中共获取ResourceLoaderAware的实现类
+        // 从Spring的IoC容器中共获取ResourceLoaderAware的实现类
         SpringIocContainerAsResourceLoader springIocContainerAsResourceLoader = applicationContext.getBean("springIocContainerAsResourceLoader", SpringIocContainerAsResourceLoader.class);
-        //获取ResourceLoaderAware的实现类中的ResourceLoader类型的属性的值
+        // 获取ResourceLoaderAware的实现类中的ResourceLoader类型的属性的值
         ResourceLoader resourceLoader = springIocContainerAsResourceLoader.getResourceLoader();
         logger.info(String.valueOf(applicationContext == resourceLoader));
 
-        //使用ResourceLoaderAware的实现类中的ResourceLoader加载文件
-        //当传入的路径带有 classpath 时，ReosurceLoader会自动选择ClassPathResource作为实现类
+        // 使用ResourceLoaderAware的实现类中的ResourceLoader加载文件
+        // 当传入的路径带有 classpath 时，ReosurceLoader会自动选择ClassPathResource作为实现类
         Resource classPathResource = resourceLoader.getResource("classpath:applicationContext-resource.xml");
         logger.info(classPathResource.getClass().getName());
-        //当传入的路径带有 file 时，ReosurceLoader会自动选择FileUrlResource作为实现类
+        // 当传入的路径带有 file 时，ReosurceLoader会自动选择FileUrlResource作为实现类
         Resource fileUrlResource = resourceLoader.getResource("file:applicationContext-resource.xml");
         logger.info(fileUrlResource.getClass().getName());
-        //当传入的路径带有 http 时，ReosurceLoader会自动选择UrlResource作为实现类
+        // 当传入的路径带有 http 时，ReosurceLoader会自动选择UrlResource作为实现类
         Resource urlResource = resourceLoader.getResource("http://www.baidu.com");
         logger.info(urlResource.getClass().getName());
     }
-
 }

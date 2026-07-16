@@ -11,13 +11,15 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/12/9 10:59
+ * Swagger配置类
+ *
+ * @author lingwh
+ * @date 2019/12/9 10:59
  */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
+
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)

@@ -1,8 +1,10 @@
 package org.bluebridge.profile.dibysetsenior.inject;
 
-
 /**
  * set方式注入专题之注入   NULL和空字符串
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
  */
 public class UserInjectNULLAndEmptyStringBySetter {
 
@@ -16,6 +18,7 @@ public class UserInjectNULLAndEmptyStringBySetter {
 
     /**
      * 用于测试注入的值是NULL还是空字符串
+     *
      * @return
      */
     public Integer getId() {
@@ -32,6 +35,7 @@ public class UserInjectNULLAndEmptyStringBySetter {
 
     /**
      * 用于测试注入的值是NULL还是空字符串
+     *
      * @return
      */
     public String getAge() {

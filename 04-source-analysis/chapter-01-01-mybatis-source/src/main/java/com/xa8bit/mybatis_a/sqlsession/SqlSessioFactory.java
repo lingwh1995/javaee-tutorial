@@ -15,7 +15,10 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * @author ronin
+ * SqlSession工厂，负责解析全局配置文件并创建SqlSession
+ *
+ * @author lingwh
+ * @date 2026/7/13 16:25
  */
 public class SqlSessioFactory {
 
@@ -31,8 +34,8 @@ public class SqlSessioFactory {
     }
 
     /**
-     *
      * 加载全局配置文件
+     *
      * @throws SAXException
      * @throws IOException
      */
@@ -62,6 +65,7 @@ public class SqlSessioFactory {
 
     /**
      * 解析Mappers标签
+     *
      * @param root
      */
     private void parseMappersTag(Element root) throws DocumentException {
@@ -96,6 +100,7 @@ public class SqlSessioFactory {
     /**
      * 解析environments标签，这里只解析出environments下environment下dataSource中的子标签
      * 并将dataSource标签中的<driver></driver> <url></url>等标签设置保存到map中
+     *
      * @param root
      */
     private void parseEnvironmentsTag(Element root) {
@@ -121,6 +126,7 @@ public class SqlSessioFactory {
 
     /**
      * 解析所有的properties标签
+     *
      * @param root 跟节点
      * @throws IOException
      */
@@ -138,5 +144,4 @@ public class SqlSessioFactory {
     public SqlSession openSession(){
         return new DefaultSqlSession(config);
     }
-
 }

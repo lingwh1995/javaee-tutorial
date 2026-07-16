@@ -1,6 +1,5 @@
 package org.bluebridge.ioc.condition.condition_a.config;
 
-
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.annotation.Condition;
@@ -8,11 +7,11 @@ import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.env.Environment;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
-
 /**
+ * Windows环境条件判断
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/8 11:25
+ * @date 2019/4/8 11:25
  */
 public class WindowsConditional implements Condition {
 

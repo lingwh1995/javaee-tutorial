@@ -6,12 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 /**
+ * SpringMVC JUnit测试
+ *
  * @author lingwh
- * @desc
- * @date   2019/7/22 14:26
+ * @date 2019/7/22 14:26
  */
 @Controller
 public class SpringMVCJUnit  extends BaseTest{
+
     @Autowired
     private IUserService userService;
 
@@ -23,5 +25,4 @@ public class SpringMVCJUnit  extends BaseTest{
     public void fun(){
         userService.eat();
     }
-
 }

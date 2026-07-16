@@ -1,12 +1,12 @@
 package org.bluebridge.guard.domain.entity;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.bluebridge.common.domain.entity.BaseEntity;
 
 /**
+ * 用户实体
+ *
  * @author lingwh
- * @desc 用户实体
  * @date 2025/11/22 17:21
  */
 @Data
@@ -47,5 +47,4 @@ public class UserDO extends BaseEntity {
      * 创建人id
      */
     private Long createUser;
-
 }

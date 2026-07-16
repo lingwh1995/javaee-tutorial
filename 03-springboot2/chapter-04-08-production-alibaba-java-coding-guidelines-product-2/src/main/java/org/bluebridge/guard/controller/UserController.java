@@ -1,5 +1,4 @@
 package org.bluebridge.guard.controller;
-
 import cn.dev33.satoken.annotation.SaCheckLogin;
 import cn.dev33.satoken.annotation.SaIgnore;
 import cn.dev33.satoken.stp.SaTokenInfo;
@@ -18,8 +17,9 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 
 /**
+ * 用户控制器
+ *
  * @author lingwh
- * @desc
  * @date 2025/11/22 17:30
  */
 @RestController
@@ -34,11 +34,11 @@ public class UserController {
     public Result login(@RequestBody @Valid UserLoginDTO userLoginDTO) throws NoSuchAlgorithmException, InvalidKeySpecException {
         boolean isLogin = userService.login(userLoginDTO);
         if (isLogin) {
-            // 第1步，先登录上
+            // 1. 先登录上
             StpUtil.login(userLoginDTO.getUsername());
-            // 第2步，获取 Token  相关参数
+            // 2. 获取 Token  相关参数
             SaTokenInfo tokenInfo = StpUtil.getTokenInfo();
-            // 第3步，返回给前端
+            // 3. 返回给前端
             return Result.buildDataResult(tokenInfo, OperationTypeEnum.USER_LOGIN);
         } else {
             ResponseStatusEnum invalidCredentials = ResponseStatusEnum.INVALID_CREDENTIALS;
@@ -52,5 +52,4 @@ public class UserController {
         StpUtil.logout();
         return SaResult.ok();
     }
-
 }

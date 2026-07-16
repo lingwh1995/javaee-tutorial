@@ -6,8 +6,9 @@ import org.springframework.web.socket.client.standard.StandardWebSocketClient;
 import org.springframework.web.socket.messaging.WebSocketStompClient;
 
 /**
+ * Stomp版WebSocket客户端2
+ *
  * @author lingwh
- * @desc Stomp版WebSocket客户端2
  * @date 2025/10/21 11:13
  */
 public class StompClient_USER_0002 {
@@ -23,6 +24,7 @@ public class StompClient_USER_0002 {
      *    普通消息  01Hello
      *    定向消息  020002Hello => 发给 0002 用户
      *    广播消息  03Hello
+     *
      * @param args
      * @throws Exception
      */
@@ -70,7 +72,4 @@ public class StompClient_USER_0002 {
         // 连接到STOMP端点
         webSocketStompClient.connect(FULL_WS_URL, sessionHandler);
     }
-
 }
-
-

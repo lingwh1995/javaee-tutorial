@@ -5,6 +5,12 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     /**
@@ -16,5 +22,4 @@ public class SpringTest {
         UserController userController = applicationContext.getBean("userController", UserController.class);
         userController.deleteById("001");
     }
-
 }

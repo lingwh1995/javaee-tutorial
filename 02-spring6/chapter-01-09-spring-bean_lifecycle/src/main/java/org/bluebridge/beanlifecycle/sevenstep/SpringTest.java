@@ -6,6 +6,12 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
@@ -18,9 +24,8 @@ public class SpringTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-sevenstep.xml");
         SpringBeanLifeCycleSevenStep springBeanLifeCycleSevenStep = applicationContext.getBean("springBeanLifeCycleSevenStep", SpringBeanLifeCycleSevenStep.class);
         logger.info("第六步：使用Bean-" + springBeanLifeCycleSevenStep.toString());
-        //手动关闭Spring容器
+        // 手动关闭Spring容器
         ClassPathXmlApplicationContext context = (ClassPathXmlApplicationContext) applicationContext;
         context.close();
     }
-
 }

@@ -5,9 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**
+ * 用户数据访问类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/11 10:32
+ * @date 2019/4/11 10:32
  */
 @Repository
 public class UserDao {
@@ -16,7 +17,9 @@ public class UserDao {
 
     /**
      * 测试使用@Autowired注解标注在构造方法中
+     *
      * 注意:如果只有一个有参构造器,参数位置的@Autowired可以省略,参数位置的组件可以自动从容器中获取
+     *
      * @param dbutils
      */
     public UserDao(@Autowired Dbutils dbutils) {
@@ -34,6 +37,7 @@ public class UserDao {
 
     /**
      * 把@Auwired 标注在setter方法的参数位置是无效的,只能标注在构造方法的参数位置
+     *
      * @param dbutils
      */
     public void setDbutils(Dbutils dbutils) {

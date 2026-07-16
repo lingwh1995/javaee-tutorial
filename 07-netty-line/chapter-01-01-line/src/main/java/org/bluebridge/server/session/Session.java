@@ -1,10 +1,12 @@
 package org.bluebridge.server.session;
 
-
 import io.netty.channel.Channel;
 
 /**
  * 会话管理接口
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
  */
 public interface Session {
 
@@ -43,5 +45,4 @@ public interface Session {
      * @return channel
      */
     Channel getChannel(String username);
-
 }

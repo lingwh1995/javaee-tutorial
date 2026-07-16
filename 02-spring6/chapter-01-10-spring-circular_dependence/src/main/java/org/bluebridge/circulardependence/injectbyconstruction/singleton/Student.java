@@ -1,6 +1,13 @@
 package org.bluebridge.circulardependence.injectbyconstruction.singleton;
 
+/**
+ * Student 实体
+ *
+ * @author lingwh
+ * @date 2026/7/13 10:07
+ */
 public class Student {
+
     private String name;
     private Teacher teacher;
 

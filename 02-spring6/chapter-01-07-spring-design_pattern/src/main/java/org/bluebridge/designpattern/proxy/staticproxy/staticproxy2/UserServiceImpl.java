@@ -3,6 +3,12 @@ package org.bluebridge.designpattern.proxy.staticproxy.staticproxy2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * UserServiceImpl
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class UserServiceImpl implements IUserService{
 
     private static final Logger logger = LogManager.getLogger(UserServiceImpl.class);
@@ -25,7 +31,7 @@ public class UserServiceImpl implements IUserService{
     @Override
     public User getUserById(String id) {
         logger.info("正在执行查询用户操作...");
-        //模拟从数据中根据id查询到了一个用户
+        // 模拟从数据中根据id查询到了一个用户
         User user = new User("001","张三",25);
         return user;
     }

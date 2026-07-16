@@ -1,14 +1,14 @@
 package org.bluebridge.designpattern.adapter_a;
 
 /**
+ * 简单控制器
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/15 8:37
+ * @date 2019/4/15 8:37
  */
-public class SimpleController implements Controller{
+public class SimpleController implements Controller {
 
-    public void doSimplerHandler(){
+    public void doSimplerHandler() {
         System.out.println("simple...");
     }
-
 }

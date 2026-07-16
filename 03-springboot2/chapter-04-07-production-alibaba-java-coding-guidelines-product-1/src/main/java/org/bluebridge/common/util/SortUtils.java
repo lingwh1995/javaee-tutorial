@@ -1,5 +1,4 @@
 package org.bluebridge.common.util;
-
 import org.bluebridge.common.domain.query.Sort;
 
 import java.util.ArrayList;
@@ -8,8 +7,9 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
+ * 排序工具类
+ *
  * @author lingwh
- * @desc 排序工具类
  * @date 2025/12/18 10:30
  */
 public class SortUtils {
@@ -53,5 +53,4 @@ public class SortUtils {
                 .map(dto -> dto.getOrderBy() + " " + dto.getOrder())
                 .collect(Collectors.joining(", "));
     }
-
 }

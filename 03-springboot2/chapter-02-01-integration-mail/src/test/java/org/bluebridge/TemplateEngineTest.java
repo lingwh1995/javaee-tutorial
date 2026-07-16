@@ -10,9 +10,10 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/28 13:24
+ * 模板引擎邮件发送测试类
+ *
+ * @author lingwh
+ * @date 2019/11/28 13:24
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -26,10 +27,10 @@ public class TemplateEngineTest {
 
     @Test
     public void sendTemplateMail() {
-        //创建邮件正文
+        // 创建邮件正文
         Context context = new Context();
         context.setVariable("id", "006");
         String emailContent = templateEngine.process("emailTemplate", context);
-        //templateEnginMailService.sendHtmlMail("1458687169@qq.com","主题：这是模板邮件",emailContent);
+        // templateEnginMailService.sendHtmlMail("1458687169@qq.com","主题：这是模板邮件",emailContent);
     }
 }

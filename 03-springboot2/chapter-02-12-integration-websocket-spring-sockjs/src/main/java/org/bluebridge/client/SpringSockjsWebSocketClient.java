@@ -15,8 +15,9 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 /**
+ * WebSocket客户端
+ *
  * @author lingwh
- * @desc WebSocket客户端
  * @date 2025/10/18 18:54
  */
 @Slf4j
@@ -26,6 +27,7 @@ public class SpringSockjsWebSocketClient {
 
     /**
      * 初始化客户端并连接服务端
+     *
      * @param webSocketUri
      * @throws ExecutionException
      * @throws InterruptedException
@@ -68,6 +70,7 @@ public class SpringSockjsWebSocketClient {
 
     /**
      * 发送文本消息
+     *
      * @param message
      * @throws Exception
      */
@@ -84,5 +87,4 @@ public class SpringSockjsWebSocketClient {
     public void close() throws Exception {
         session.close();
     }
-
 }

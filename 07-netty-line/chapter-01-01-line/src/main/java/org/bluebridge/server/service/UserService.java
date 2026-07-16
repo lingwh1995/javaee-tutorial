@@ -2,6 +2,9 @@ package org.bluebridge.server.service;
 
 /**
  * 用户管理接口
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
  */
 public interface UserService {
 
@@ -12,5 +15,4 @@ public interface UserService {
      * @return 登录成功返回 true, 否则返回 false
      */
     boolean login(String username, String password);
-
 }

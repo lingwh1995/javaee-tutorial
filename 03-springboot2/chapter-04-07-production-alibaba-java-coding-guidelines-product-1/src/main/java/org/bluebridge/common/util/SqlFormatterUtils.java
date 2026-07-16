@@ -1,17 +1,18 @@
 package org.bluebridge.common.util;
-
 import cn.hutool.db.sql.SqlFormatter;
 import org.bluebridge.common.constant.SqlConstants;
 
 /**
+ * SQL格式化工具类
+ *
  * @author lingwh
- * @desc SQL格式化工具类
  * @date 2025/12/27 20:16
  */
 public class SqlFormatterUtils {
 
     /**
      * 格式化SQL语句
+     *
      * @param sql
      * @return
      */
@@ -31,11 +32,11 @@ public class SqlFormatterUtils {
 
     /**
      * 使用Hutool格式化SQL语句
+     *
      * @param sql
      * @return
      */
     private static String formatSqlByHutool(String sql) {
         return SqlFormatter.format(sql);
     }
-
 }

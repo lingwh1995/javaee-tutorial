@@ -5,6 +5,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     /**
@@ -13,9 +19,8 @@ public class SpringTest {
     @Test
     public void testAutoChoiceResourceBySpringIoC() throws IOException {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-auto_choice_resource.xml");
-        //让Spring容器根据
+        // 让Spring容器根据
         AutoChoiceResourceBySpringIoC autoChoiceResourceBySpringIoC = applicationContext.getBean("autoChoiceResourceBySpringIoC", AutoChoiceResourceBySpringIoC.class);
         autoChoiceResourceBySpringIoC.parseResource();
     }
-
 }

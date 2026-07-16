@@ -1,15 +1,22 @@
 package org.bluebridge.utils;
 
-
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
 import java.io.IOException;
 
+/**
+ * MyBatis工具类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SqlSessionUtil {
 
     private static SqlSessionFactory sqlSessionFactory = null; // 默认使用数据库环境对应的SqlSessionFactory
+
     private static ThreadLocal<SqlSession> local = new ThreadLocal<>(); // 保证一个线程对应一个SqlSession
 
     static {

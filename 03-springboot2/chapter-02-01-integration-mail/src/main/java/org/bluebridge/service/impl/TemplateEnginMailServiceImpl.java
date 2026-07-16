@@ -13,9 +13,10 @@ import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/28 13:26
+ * 模板引擎邮件发送服务实现类
+ *
+ * @author lingwh
+ * @date 2019/11/28 13:26
  */
 @Service
 public class TemplateEnginMailServiceImpl implements ITemplateEnginMailService {
@@ -27,8 +28,10 @@ public class TemplateEnginMailServiceImpl implements ITemplateEnginMailService {
 
     @Autowired
     private JavaMailSender mailSender;
+
     /**
      * 发送html邮件
+     *
      * @param to 邮件接收者
      * @param subject 邮件主题
      * @param content 邮件内容
@@ -37,7 +40,7 @@ public class TemplateEnginMailServiceImpl implements ITemplateEnginMailService {
     public void sendHtmlMail(String to, String subject, String content) {
         try {
             MimeMessage message = mailSender.createMimeMessage();
-            //true表示需要创建一个multipart message
+            // true表示需要创建一个multipart message
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             helper.setFrom(from);
             helper.setTo(to);

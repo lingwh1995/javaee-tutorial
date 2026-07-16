@@ -5,6 +5,12 @@ import io.netty.channel.Channel;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * 会话内存实现
+ *
+ * @author lingwh
+ * @date 2026/7/10 10:58
+ */
 public class SessionMemoryImpl implements Session {
 
     private final Map<String, Channel> usernameChannelMap = new ConcurrentHashMap<>();
@@ -44,5 +50,4 @@ public class SessionMemoryImpl implements Session {
     public String toString() {
         return usernameChannelMap.toString();
     }
-
 }

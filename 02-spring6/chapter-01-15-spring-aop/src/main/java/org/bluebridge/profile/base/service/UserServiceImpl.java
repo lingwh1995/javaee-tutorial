@@ -5,6 +5,12 @@ import org.apache.logging.log4j.Logger;
 import org.bluebridge.profile.base.dao.UserDao;
 import org.bluebridge.profile.base.domain.User;
 
+/**
+ * UserServiceImpl
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class UserServiceImpl implements IUserService{
 
     private static final Logger logger = LogManager.getLogger(UserServiceImpl.class);
@@ -40,5 +46,4 @@ public class UserServiceImpl implements IUserService{
         int i = 1 / 0;
         userDao.login();
     }
-
 }

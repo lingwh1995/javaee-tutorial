@@ -6,12 +6,19 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
      * 测试 singleton + setter模式
+     *
      * 结论：不会出现循环依赖问题
      */
     @Test
@@ -22,5 +29,4 @@ public class SpringTest {
         Husband husband = applicationContext.getBean("husband", Husband.class);
         logger.info(husband.toString());
     }
-
 }

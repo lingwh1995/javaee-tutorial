@@ -5,12 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 /**
+ * 用户控制器类
+ *
  * @author lingwh
- * @desc
- * @date   2019/4/11 10:37
+ * @date 2019/4/11 10:37
  */
 @Controller
 public class UserController {
+
     /**
      * 测试@Autowired写在字段上
      */

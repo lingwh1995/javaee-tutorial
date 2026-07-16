@@ -3,21 +3,27 @@ package org.bluebridge.propertySource;
 import org.springframework.beans.factory.annotation.Value;
 
 /**
- * @author ronin
+ * 使用 @Value 读取 properties 配置文件的用户实体
+ *
+ * @author lingwh
+ * @date 2026/7/13 09:30
  */
 public class User {
+
     /**
      * 使用@Value赋值:
-     *  1.基本数值
-     *  2.可以写SpEL
-     *  3.可以写${},取出配置文件中的值
+     * 1. 基本数值
+     * 2. 可以写SpEL
+     * 3. 可以写${},取出配置文件中的值
      */
     //使用@Value直接赋值
     @Value("zhangsan")
     private String name;
+
     //使用SpEL直接执行计算
     @Value("#{20-4}")
     private Integer age;
+
     //读取properties中的配置
     @Value("${person.school}")
     private String school;

@@ -6,6 +6,12 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * 基于内存的会话管理实现类
+ *
+ * @author lingwh
+ * @date 2025/10/21 16:25
+ */
 @Component
 public class SessionMemoryImpl implements Session {
 
@@ -46,5 +52,4 @@ public class SessionMemoryImpl implements Session {
     public String toString() {
         return usernameChannelMap.toString();
     }
-
 }

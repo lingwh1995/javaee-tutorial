@@ -6,7 +6,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 
-
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     /**
@@ -17,9 +22,8 @@ public class SpringTest {
     public void testLoadAndReadUrlResource() throws IOException {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-resource.xml");
         UrlResourceDemo urlResourceDemo = applicationContext.getBean("urlResourceDemo",UrlResourceDemo.class);
-        //String path = "file:pom.xml";
+        // String path = "file:pom.xml";
         String path = "https://www.baidu.com";
         urlResourceDemo.loadAndParseUrlResource(path);
     }
-
 }

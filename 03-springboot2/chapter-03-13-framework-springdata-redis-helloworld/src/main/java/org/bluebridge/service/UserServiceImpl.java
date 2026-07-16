@@ -7,7 +7,10 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 /**
- * @author ronin
+ * UserServiceImpl
+ *
+ * @author lingwh
+ * @date 2019/11/19 13:46
  */
 @Service
 public class UserServiceImpl implements IUserService{
@@ -16,10 +19,11 @@ public class UserServiceImpl implements IUserService{
     private UserDao userDao;
 
     /**
-     * SpringBoot缓存原理:
-     *      CacheManager创建缓存组件(如Redis缓存组件),由缓存组件来对缓存执行实际的CRUD操作
-     *      加入Redis启动器后,容器中保存的是RedisManager
-     *      RedisManager帮我们创建RedisCache作为缓存组件,RedisCache通过操作Redis来缓存数据
+     * SpringBoot缓存原理
+     *
+     * CacheManager创建缓存组件(如Redis缓存组件)，由缓存组件来对缓存执行实际的CRUD操作
+     * 加入Redis启动器后，容器中保存的是RedisManager
+     * RedisManager帮我们创建RedisCache作为缓存组件，RedisCache通过操作Redis来缓存数据
      */
     @Override
     @Cacheable(cacheNames = {"user"},key = "#id")

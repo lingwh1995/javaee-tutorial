@@ -5,6 +5,12 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * ServletSessionScopeController
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 @RequestMapping(value = {"/domainObject"})
 @Controller
 public class ServletSessionScopeController {
@@ -31,5 +37,4 @@ public class ServletSessionScopeController {
         session.setAttribute("sessionScope","存放在session域对象中的值[基于Servlet提供的HttpSession]");
         return "success";
     }
-
 }

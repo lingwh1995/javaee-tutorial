@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 /**
- * @author ronin
- * @version V1.0
- * @since 2019/11/18 14:56
+ * 从库用户服务实现类
+ *
+ * @author lingwh
+ * @date 2025/11/22 17:27
  */
 @Service
 public class UserServiceImplSlave implements IUserServiceSlave {

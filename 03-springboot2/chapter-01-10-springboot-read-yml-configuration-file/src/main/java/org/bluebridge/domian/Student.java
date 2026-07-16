@@ -3,14 +3,20 @@ package org.bluebridge.domian;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 学生实体类
+ *
+ * @author lingwh
+ * @date 2020/3/5 9:23
+ */
 public class Student {
+
     private String name;
     private Integer age;
     private Map<String,Object> hobbies;
     private List<Object> favoriteBooks;
 
-    public Student(){
-
+    public Student() {
     }
 
     public Student(String name, Integer age, Map<String, Object> hobbies, List<Object> favoriteBooks) {

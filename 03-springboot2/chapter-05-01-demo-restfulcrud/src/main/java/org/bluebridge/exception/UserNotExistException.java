@@ -1,9 +1,12 @@
 package org.bluebridge.exception;
 
 /**
- * @author ronin
+ * 用户不存在异常类
+ *
+ * @author lingwh
  */
 public class UserNotExistException extends RuntimeException {
+
     public UserNotExistException() {
     }
 }

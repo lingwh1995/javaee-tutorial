@@ -6,7 +6,12 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-
+/**
+ * Spring测试类
+ *
+ * @author lingwh
+ * @date 2026/7/13 14:30
+ */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
@@ -20,5 +25,4 @@ public class SpringTest {
         UserInjectValueBySetter user = applicationContext.getBean("userInjectValueBySetter", UserInjectValueBySetter.class);
         logger.info(user.toString());
     }
-
 }
