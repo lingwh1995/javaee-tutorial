@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * SpringBoot JSON 与 XML 响应示例启动类
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 16:05
  */
 @SpringBootApplication
 public class Application {

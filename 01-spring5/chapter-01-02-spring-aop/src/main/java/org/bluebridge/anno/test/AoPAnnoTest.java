@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 
 /**
- * AOP注解测试
+ * AOP 注解测试
  *
  * @author lingwh
  * @date 2019/3/21 14:40

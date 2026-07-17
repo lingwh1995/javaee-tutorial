@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * 测试无XML配置的AOP
+ * 测试无 XML 配置的 AOP
  *
  * @author lingwh
  * @date 2019/4/14 12:40

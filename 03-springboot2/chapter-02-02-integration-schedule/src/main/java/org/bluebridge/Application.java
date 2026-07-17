@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
- * SpringBoot集成定时任务启动类
+ * SpringBoot 集成定时任务启动类
  *
  * @author lingwh
  * @date 2026/7/14 9:30

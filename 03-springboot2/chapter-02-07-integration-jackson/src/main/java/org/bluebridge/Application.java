@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * SpringBoot启动类
+ * SpringBoot 启动类
  *
  * @author lingwh
- * @date 2026/7/13 9:00
+ * @date 2019/12/9 9:00
  */
 @SpringBootApplication
 public class Application {

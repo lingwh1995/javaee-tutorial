@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 
 /**
- * 测试基于配置文件的AOP
+ * 测试基于配置文件的 AOP
  *
  * @author lingwh
  * @date 2019/3/21 9:55
@@ -37,7 +37,7 @@ public class AoPProfileTest {
     }
 
     /**
-     * 测试PonitCut
+     * 测试 PonitCut
      *
      * @throws Exception
      */

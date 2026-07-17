@@ -1,7 +1,7 @@
 package org.bluebridge.domain;
 
 /**
- * Account实体类
+ * Account 实体类
  *
  * @author lingwh
  * @date 2019/3/25 11:18

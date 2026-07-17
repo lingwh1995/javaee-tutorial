@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * AEP命令发送测试类
+ * AEP 命令发送测试类
  *
  * @author lingwh
  * @date 2026/1/27 16:02

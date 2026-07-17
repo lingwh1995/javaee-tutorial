@@ -5,7 +5,6 @@ import org.bluebridge.ByteBufferUtil;
 import org.junit.Test;
 
 import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -90,12 +89,12 @@ public class _02_ByteBufferAPITest {
         // mark 做一个标记，记录 position 位置，reset 是将 position 重置到 mark 位置
         log.info("(char)buffer.get() = {}", (char)buffer.get());
         log.info("(char)buffer.get() = {}", (char)buffer.get());
-        // 加标记，索引2位置
+        // 加标记，索引 2 位置
         buffer.mark();
         log.info("(char)buffer.get() = {}", (char)buffer.get());
         log.info("(char)buffer.get() = {}", (char)buffer.get());
         ByteBufferUtil.debugAll(buffer, 4);
-        // 将position重置到索引2位置
+        // 将 position 重置到索引 2 位置
         buffer.reset();
         log.info("(char)buffer.get() = {}", (char)buffer.get());
         log.info("(char)buffer.get() = {}", (char)buffer.get());
@@ -108,13 +107,13 @@ public class _02_ByteBufferAPITest {
      */
     @Test
     public void testByteBufferClearAndPut() {
-        // 创建ByteBuffer
+        // 创建 ByteBuffer
         ByteBuffer buffer = ByteBuffer.allocate(10);
         ByteBufferUtil.debugAll(buffer, 1);
-        // 给ByteBuffer中放入数据
+        // 给 ByteBuffer 中放入数据
         buffer.put(new byte[]{ 'a', 'b', 'c', 'd', 'e' });
         ByteBufferUtil.debugAll(buffer, 2);
-        // 切换为写模式，特别注意：切换为写模式，只是把position的位置设置0，里面的数据并没有发生变化
+        // 切换为写模式，特别注意：切换为写模式，只是把 position 的位置设置 0，里面的数据并没有发生变化
         buffer.clear();
         ByteBufferUtil.debugAll(buffer, 3);
         // 写入数据，调用下面的方法只会覆盖第一个位置的值，不会覆盖后面的数据

@@ -17,7 +17,7 @@ public class _03_ByteBufferReadWriteTest {
 
     @Test
     public void testByteBufferReadWrite() {
-        // 创建src ByteBuffer
+        // 创建 src ByteBuffer
         ByteBuffer source = ByteBuffer.allocate(10);
         source.put("hello".getBytes());
         ByteBufferUtil.debugAll(source);
