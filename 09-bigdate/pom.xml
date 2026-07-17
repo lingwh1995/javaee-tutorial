@@ -23,9 +23,10 @@
     </properties>
 
     <modules>
-        <module>chapter-01-01-hadoop-hdfs-helloworld</module>
-        <module>chapter-01-01-mq-kafka-helloworld</module>
-        <module>chapter-02-01-mq-mqtt-helloworld</module>
+        <module>chapter-01-01-hadoop-hdfs</module>
+        <module>chapter-01-02-hadoop-mapreduce</module>
+        <module>chapter-01-04-mq-kafka</module>
+        <module>chapter-01-05-mq-mqtt</module>
     </modules>
 
     <dependencyManagement>
