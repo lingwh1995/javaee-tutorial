@@ -22,8 +22,7 @@ import java.net.URL;
  */
 public class WordCountDriver {
 
-    public static void main(String[] args)
-            throws IOException, InterruptedException, ClassNotFoundException, URISyntaxException {
+    public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException, URISyntaxException {
         // 1. 创建配置对象
         Configuration conf = new Configuration();
 
