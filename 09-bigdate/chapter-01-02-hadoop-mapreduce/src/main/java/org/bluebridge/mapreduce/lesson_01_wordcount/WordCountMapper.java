@@ -1,4 +1,4 @@
-package org.bluebridge.mapreduce.lesson_01_helloworld;
+package org.bluebridge.mapreduce.lesson_01_wordcount;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
