@@ -53,7 +53,7 @@
     </dependencies>
 
     <build>
-        <finalName>wordcount</finalName>
+        <finalName>hadoop-mapreduce</finalName>
         <plugins>
             <!-- 跳过 spring-boot-maven-plugin 的 repackage，产出 thin jar -->
             <!-- hadoop jar 命令会自动将集群 Hadoop 库加入 classpath，无需打入 fat jar -->
