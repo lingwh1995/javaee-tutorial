@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * 扩展新端点
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/7/13 14:08
  */
 @Component
 @WebEndpoint(id = "customPoint")

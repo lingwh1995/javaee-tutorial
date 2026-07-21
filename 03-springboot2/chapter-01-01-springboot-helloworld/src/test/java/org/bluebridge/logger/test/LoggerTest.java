@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * 日志级别与输出配置测试
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/14 09:42
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes={Application.class})
@@ -23,13 +23,13 @@ public class LoggerTest {
     /**
      * 1. 设置日志级别
      *    logger.level
-     *    注意:在设置日志输出级别的时候要规定包的范围
+     *    注意：在设置日志输出级别的时候要规定包的范围
      * 2. 设置路径输出到哪个文件
      *    logging.file
      * 3. 设置文件输出的路径
      *    logging.path
-     *    注意:一般设置了path就可以了,不用再设置file了
-     * 4. 设置控制台输出的格式:
+     *    注意：一般设置了 path 就可以了，不用再设置 file 了
+     * 4. 设置控制台输出的格式：
      *    logging.pattern.console
      */
     @Test

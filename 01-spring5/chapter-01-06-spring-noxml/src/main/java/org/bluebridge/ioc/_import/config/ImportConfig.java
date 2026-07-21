@@ -6,13 +6,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * Import配置类
+ * Import 配置类
  *
  * @author lingwh
  * @date 2019/4/13 14:25
  */
 @Configuration
-//导入一个类
+// 导入一个类
 //@Import(Color.class)
 @Import({Color.class, Red.class})
 public class ImportConfig {

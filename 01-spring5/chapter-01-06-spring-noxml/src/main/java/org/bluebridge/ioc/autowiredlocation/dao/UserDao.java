@@ -16,9 +16,9 @@ public class UserDao {
     private Dbutils dbutils;
 
     /**
-     * 测试使用@Autowired注解标注在构造方法中
+     * 测试使用 @Autowired 注解标注在构造方法中
      *
-     * 注意:如果只有一个有参构造器,参数位置的@Autowired可以省略,参数位置的组件可以自动从容器中获取
+     * 注意：如果只有一个有参构造器，参数位置的 @Autowired 可以省略，参数位置的组件可以自动从容器中获取
      *
      * @param dbutils
      */
@@ -26,7 +26,7 @@ public class UserDao {
         this.dbutils = dbutils;
     }
 
-    //注意:这个写法等同于上面的写法
+    // 注意：这个写法等同于上面的写法
 //    public UserDao(Dbutils dbutils) {
 //        this.dbutils = dbutils;
 //    }
@@ -36,7 +36,7 @@ public class UserDao {
     }
 
     /**
-     * 把@Auwired 标注在setter方法的参数位置是无效的,只能标注在构造方法的参数位置
+     * 把 @Auwired 标注在 setter 方法的参数位置是无效的，只能标注在构造方法的参数位置
      *
      * @param dbutils
      */

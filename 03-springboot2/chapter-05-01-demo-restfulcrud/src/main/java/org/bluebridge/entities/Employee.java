@@ -6,7 +6,7 @@ import java.util.Date;
  * 员工实体类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2019/4/13 14:42
  */
 public class Employee {
 
@@ -16,7 +16,7 @@ public class Employee {
 
     private String email;
 
-    //1 male, 0 female
+    //1 male， 0 female
     private Integer gender;
 
     private Department department;

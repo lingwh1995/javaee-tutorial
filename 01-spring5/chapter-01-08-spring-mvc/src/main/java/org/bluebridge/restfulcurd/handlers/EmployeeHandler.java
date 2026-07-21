@@ -15,7 +15,7 @@ import javax.validation.Valid;
 import java.util.Collection;
 
 /**
- * 请求URI相同,请求方式不同,如请求URI都是 /emp,一个请求方法是GET,一个请求方法是POST,也可以被识别为不同的方法
+ * 请求 URI 相同，请求方式不同，如请求 URI 都是 /emp，一个请求方法是 GET，一个请求方法是 POST，也可以被识别为不同的方法
  *
  * @author lingwh
  * @date 2019/7/20 14:19
@@ -30,8 +30,8 @@ public class EmployeeHandler {
     private DepartmentDao departmentDao;
 
     /**
-     * 跳转到lsit展示页面
-     * 查询:GET请求
+     * 跳转到 lsit 展示页面
+     * 查询：GET 请求
      *
      * @return
      */
@@ -56,7 +56,7 @@ public class EmployeeHandler {
     }
 
     /**
-     * 新增:POST请求
+     * 新增：POST 请求
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class EmployeeHandler {
             for(FieldError error:bindingResult.getFieldErrors()){
                 System.out.println(error.getField()+":"+error.getDefaultMessage());
             }
-            //获取下拉菜单的数据
+            // 获取下拉菜单的数据
             Collection<Department> departments = departmentDao.getDepartments();
             model.addAttribute("departments",departments);
             return "addOrEditEmp";
@@ -80,17 +80,17 @@ public class EmployeeHandler {
 
     /**
      * 跳转到编辑页面
-     * 注意:这个方法和跳转到新增页面用的方法名是相同的,只不过这个方法传入了一个参数id,跳转到新增页面的方法没有传入id这个参数
+     * 注意：这个方法和跳转到新增页面用的方法名是相同的，只不过这个方法传入了一个参数 id，跳转到新增页面的方法没有传入 id 这个参数
      *
      * @param id
      * @return
      */
     @RequestMapping("addOrEditempPage/{id}")
     public String addOrEditempPage(@PathVariable("id") Integer id,Model model){
-        //获取下拉菜单的数据
+        // 获取下拉菜单的数据
         Collection<Department> departments = departmentDao.getDepartments();
         model.addAttribute("departments",departments);
-        //回显表单数据
+        // 回显表单数据
         Employee employee = employeeDao.get(id);
         model.addAttribute("employee",employee);
         return "addOrEditEmp";
@@ -99,14 +99,14 @@ public class EmployeeHandler {
     @ModelAttribute
     public void getEmp(@RequestParam(value="id",required = false) Integer id,Model model){
         if(id != null){
-            //模拟查库
+            // 模拟查库
             Employee employee = employeeDao.get(id);
             model.addAttribute("employee",employee);
         }
     }
 
     /**
-     * 编辑:PUT请求
+     * 编辑：PUT 请求
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class EmployeeHandler {
     }
 
     /**
-     * 删除:DELETE请求
+     * 删除：DELETE 请求
      *
      * @return
      */
@@ -128,7 +128,7 @@ public class EmployeeHandler {
     }
 
     /**
-     * 使用实体接收表单参数的时候，lastName属性不会被封装到实体中
+     * 使用实体接收表单参数的时候，lastName 属性不会被封装到实体中
      */
 //    @InitBinder
 //    public void  initBinder(WebDataBinder webDataBinder){

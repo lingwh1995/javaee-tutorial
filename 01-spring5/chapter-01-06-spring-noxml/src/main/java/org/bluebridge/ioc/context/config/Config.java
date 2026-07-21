@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Spring无XML配置类
+ * Spring 无 XML 配置类
  *
  * @author lingwh
  * @date 2019/4/7 8:19

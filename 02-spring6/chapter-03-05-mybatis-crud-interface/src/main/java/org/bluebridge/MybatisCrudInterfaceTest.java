@@ -9,7 +9,7 @@ import org.junit.Test;
 import java.util.List;
 
 /**
- * Mybatis基于接口的CRUD测试
+ * Mybatis 基于接口的 CRUD 测试
  *
  * @author lingwh
  * @date 2026/7/13 14:30

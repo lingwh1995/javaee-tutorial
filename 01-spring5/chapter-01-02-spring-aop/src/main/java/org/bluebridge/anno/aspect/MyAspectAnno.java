@@ -6,7 +6,7 @@ import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 /**
- * AOP注解切面类
+ * AOP 注解切面类
  *
  * @author lingwh
  * @date 2019/3/21 14:38

@@ -11,7 +11,7 @@ import static io.netty.util.internal.StringUtil.NEWLINE;
  * 提供打印完整内容和可读内容的十六进制+ASCII 格式输出
  *
  * @author lingwh
- * @date 2026/7/14 11:10
+ * @date 2025/8/20 18:15
  */
 public class ByteBufUtil {
 
@@ -23,7 +23,7 @@ public class ByteBufUtil {
     private static final String[] BYTEPADDING = new String[16];
 
     static {
-        // 初始化十六进制和ASCII转换表（与 ByteBufferUtil 逻辑一致）
+        // 初始化十六进制和 ASCII 转换表（与 ByteBufferUtil 逻辑一致）
         final char[] DIGITS = "0123456789abcdef".toCharArray();
         for (int i = 0; i < 256; i++) {
             HEXDUMP_TABLE[i << 1] = DIGITS[i >>> 4 & 0x0F];
@@ -62,7 +62,7 @@ public class ByteBufUtil {
             BYTEPADDING[i] = buf.toString();
         }
 
-        // 初始化字节转ASCII字符（不可见字符用 '.' 代替）
+        // 初始化字节转 ASCII 字符（不可见字符用 '.' 代替）
         for (i = 0; i < BYTE2CHAR.length; i++) {
             BYTE2CHAR[i] = (i <= 0x1f || i >= 0x7f) ? '.' : (char) i;
         }
@@ -82,7 +82,7 @@ public class ByteBufUtil {
         duplicate.writerIndex(duplicate.capacity());
 
         StringBuilder dump = new StringBuilder(256);
-        // 修复：确保传递正确的offset和length参数
+        // 修复：确保传递正确的 offset 和 length 参数
         int readableBytes = duplicate.readableBytes();
         if (readableBytes > 0) {
             appendPrettyHexDump(dump, duplicate, 0, readableBytes);
@@ -128,7 +128,7 @@ public class ByteBufUtil {
                     NEWLINE + "+--------+-------------------------------------------------+----------------+");
 
         final int startIndex = offset;
-        final int fullRows = length >>> 4; // 完整行（16字节/行）
+        final int fullRows = length >>> 4; // 完整行（16 字节/行）
         final int remainder = length & 0xF; // 当前行剩余字节
 
         // 打印完整行
@@ -142,7 +142,7 @@ public class ByteBufUtil {
             }
             dump.append(" |");
 
-            // ASCII部分
+            // ASCII 部分
             for (int j = rowStartIndex; j < rowStartIndex + 16; j++) {
                 dump.append(BYTE2CHAR[getUnsignedByte(buf, j)]);
             }
@@ -158,14 +158,14 @@ public class ByteBufUtil {
             for (int j = rowStartIndex; j < rowStartIndex + remainder; j++) {
                 dump.append(BYTE2HEX[getUnsignedByte(buf, j)]);
             }
-            dump.append(HEXPADDING[remainder]); // 不足16字节补空格
+            dump.append(HEXPADDING[remainder]); // 不足 16 字节补空格
             dump.append(" |");
 
-            // ASCII部分（带填充）
+            // ASCII 部分（带填充）
             for (int j = rowStartIndex; j < rowStartIndex + remainder; j++) {
                 dump.append(BYTE2CHAR[getUnsignedByte(buf, j)]);
             }
-            dump.append(BYTEPADDING[remainder]); // 不足16字节补空格
+            dump.append(BYTEPADDING[remainder]); // 不足 16 字节补空格
             dump.append('|');
         }
 

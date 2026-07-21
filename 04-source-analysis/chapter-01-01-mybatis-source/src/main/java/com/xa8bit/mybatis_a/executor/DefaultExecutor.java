@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Executor的默认实现，通过JdbcUtils执行SQL查询
+ * Executor 的默认实现，通过 JdbcUtils 执行 SQL 查询
  *
  * @author lingwh
- * @date 2026/7/13 11:50
+ * @date 2025/12/20 11:50
  */
 public class DefaultExecutor implements Executor {
 

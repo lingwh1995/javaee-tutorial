@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * 条件装配配置类
  *
  * @Conditional({WindowsConditional.class})
- * 意味着只有当满足Conditional的子类的方法中的条件,这个类中所有注册bean的方法才会生效
+ * 意味着只有当满足 Conditional 的子类的方法中的条件，这个类中所有注册 bean 的方法才会生效
  *
  * @author lingwh
  * @date 2019/4/8 11:23
@@ -22,14 +22,14 @@ public class Config {
 
     /**
      * 默认约定
-     * 1. 默认使用方法名作为id
-     * 2. 默认创建的bean是单例的
+     * 1. 默认使用方法名作为 id
+     * 2. 默认创建的 bean 是单例的
      *
-     * 也可以使用@Bean的name属性来指定id
+     * 也可以使用 @Bean 的 name 属性来指定 id
      *
      * @Scope
-     * 1. 如果为单例:IOC容器初始化的过程会实例化bean
-     * 2. 如果为多例:IOC容器初始化的过程不会实例化bea
+     * 1. 如果为单例：IOC 容器初始化的过程会实例化 bean
+     * 2. 如果为多例：IOC 容器初始化的过程不会实例化 bea
      *
      * @return
      */

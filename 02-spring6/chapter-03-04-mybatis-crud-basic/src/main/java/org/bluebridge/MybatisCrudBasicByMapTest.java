@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 使用Map传递参数进行Mybatis基本CRUD测试
+ * 使用 Map 传递参数进行 Mybatis 基本 CRUD 测试
  *
  * @author lingwh
  * @date 2026/7/13 14:30
@@ -17,7 +17,7 @@ import java.util.Map;
 public class MybatisCrudBasicByMapTest {
 
     /**
-     * 使用Map传递参数实现新增功能
+     * 使用 Map 传递参数实现新增功能
      */
     @Test
     public void testMybatisInsertByMap() {
@@ -45,7 +45,7 @@ public class MybatisCrudBasicByMapTest {
     }
 
     /**
-     * 使用Map传递参数实现查询一个Employee功能
+     * 使用 Map 传递参数实现查询一个 Employee 功能
      */
     @Test
     public void testMybatisSelectOne() {
@@ -68,7 +68,7 @@ public class MybatisCrudBasicByMapTest {
     }
 
     /**
-     * 查询多个Employee功能
+     * 查询多个 Employee 功能
      */
     @Test
     public void testMybatisSelectList() {
@@ -91,7 +91,7 @@ public class MybatisCrudBasicByMapTest {
     }
 
     /**
-     * 使用Map传递参数实现更新功能
+     * 使用 Map 传递参数实现更新功能
      */
     @Test
     public void testMybatisUpdateByMap() {
@@ -120,7 +120,7 @@ public class MybatisCrudBasicByMapTest {
     }
 
     /**
-     * 使用Map传递参数实现删除功能
+     * 使用 Map 传递参数实现删除功能
      */
     @Test
     public void testMybatisDeleteByMap() {

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
  * 微信消息发送服务实现类
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 13:42
  */
 @Primary
 @Service

@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
  * 聊天响应消息
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/25 17:30
  */
 @Data
 @NoArgsConstructor

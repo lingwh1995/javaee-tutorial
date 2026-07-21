@@ -8,7 +8,7 @@ import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 /**
- * WebSocket处理器
+ * WebSocket 处理器
  *
  * @author lingwh
  * @date 2025/10/18 18:50

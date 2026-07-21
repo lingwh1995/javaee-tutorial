@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * 测试HttpClient原生方式远程调用和使用RestTemplate进行远程调用的区别
+ * 测试 HttpClient 原生方式远程调用和使用 RestTemplate 进行远程调用的区别
  *
  * @author lingwh
  * @date 2019/11/15 9:18
@@ -31,7 +31,7 @@ public class HttpClientAndRestTemplateTest {
     private RestTemplate restTemplate;
 
     /**
-     * 使用httpClient测试get请求:获取所有
+     * 使用 httpClient 测试 get 请求：获取所有
      * @throws IOException
      */
     @Test
@@ -44,7 +44,7 @@ public class HttpClientAndRestTemplateTest {
     }
 
     /**
-     * 使用httpClient测试get请求:获取单个
+     * 使用 httpClient 测试 get 请求：获取单个
      * @throws IOException
      */
     @Test
@@ -57,7 +57,7 @@ public class HttpClientAndRestTemplateTest {
     }
 
     /**
-     * 使用RestTemplate进行远程调用:查询单个
+     * 使用 RestTemplate 进行远程调用：查询单个
      */
     @Test
     public void fun3() {
@@ -66,7 +66,7 @@ public class HttpClientAndRestTemplateTest {
     }
 
     /**
-     * 使用RestTemplate进行远程调用:查询所有
+     * 使用 RestTemplate 进行远程调用：查询所有
      */
     @Test
     public void fun4() {

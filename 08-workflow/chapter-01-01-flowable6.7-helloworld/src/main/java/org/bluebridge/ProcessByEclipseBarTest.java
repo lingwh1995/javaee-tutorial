@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.zip.ZipInputStream;
 
 /**
- * 测试解析 eclipse打包生成的bar文件
+ * 测试解析 eclipse 打包生成的 bar 文件
  *
  * @author lingwh
  * @date 2026/1/1 20:48
@@ -46,7 +46,7 @@ public class ProcessByEclipseBarTest {
         // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         System.out.println(processEngine);
-        // 2. 获取RepositoryService对象
+        // 2. 获取 RepositoryService 对象
         RepositoryService repositoryService = processEngine.getRepositoryService();
         InputStream in = this.getClass().getClassLoader().getResourceAsStream("holiday-process-eclipse.bar");
         ZipInputStream zipInputStream = new ZipInputStream(in);
@@ -68,14 +68,14 @@ public class ProcessByEclipseBarTest {
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
 
-        // 使用key查询已经定义的流程，这里的key就是流程id
+        // 使用 key 查询已经定义的流程，这里的 key 就是流程 id
         /*
         ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery()
                 .processDefinitionKey("holidayProcessEclipse")
                 .singleResult();
         */
 
-        // 使用deploymentId查询已经定义的流程
+        // 使用 deploymentId 查询已经定义的流程
         ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery()
                 .deploymentId("62501")
                 .singleResult();
@@ -94,7 +94,7 @@ public class ProcessByEclipseBarTest {
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
         // 删除部署的流程，如果流程启动了，就不可以被删除了
-            // 第一个参数:流程id  第二个参数: 级联删除，如果流程启动了，相关的任务一并会被删除
+            // 第一个参数：流程 id  第二个参数： 级联删除，如果流程启动了，相关的任务一并会被删除
         repositoryService.deleteDeployment("62501",true);
     }
 
@@ -155,7 +155,7 @@ public class ProcessByEclipseBarTest {
         TaskService taskService = processEngine.getTaskService();
 
         System.out.println("zhangsan开始处理任务=============>");
-        // zhangsan处理任务
+        // zhangsan 处理任务
         Task zhagnsanTask = taskService.createTaskQuery()
                 .processDefinitionKey("holidayProcessEclipse")
                 .taskAssignee("zhangsan")
@@ -164,7 +164,7 @@ public class ProcessByEclipseBarTest {
         System.out.println("zhangsan完成处理任务=============>");
 
         System.out.println("lisi开始处理任务=============>");
-        // lisi完成任务
+        // lisi 完成任务
         Task lisiTask = taskService.createTaskQuery()
                 .processDefinitionKey("holidayProcessEclipse")
                 .taskAssignee("lisi")

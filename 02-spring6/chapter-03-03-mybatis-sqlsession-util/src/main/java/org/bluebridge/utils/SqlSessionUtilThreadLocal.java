@@ -6,9 +6,9 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 /**
- * MyBatis工具类 ThreadLocal 版
+ * MyBatis 工具类 ThreadLocal 版
  *
- * 1. 可以在 Service 和 Dao 层中通过 threadlocal 获取到同一个 SqlSession对象
+ * 1. 可以在 Service 和 Dao 层中通过 threadlocal 获取到同一个 SqlSession 对象
  * 2. 同时也有一个缓存效果，这样有利于资源的节省
  * 3. 这个 threadlocal 中存放的 SqlSession 对象一定要回收，否则会引起内存泄露
  *
@@ -24,7 +24,7 @@ public class SqlSessionUtilThreadLocal {
     private static ThreadLocal<SqlSession> local = new ThreadLocal();
 
     /**
-     * 类加载时初始化sqlSessionFactory对象
+     * 类加载时初始化 sqlSessionFactory 对象
      */
     static {
         try {
@@ -43,9 +43,9 @@ public class SqlSessionUtilThreadLocal {
     public static SqlSession openSession() {
         SqlSession sqlSession = local.get();
         if (sqlSession == null) {
-            //开启会话并获取会话对象
+            // 开启会话并获取会话对象
             sqlSession = sqlSessionFactory.openSession();
-            //将sqlSession绑定到当前线程上
+            // 将 sqlSession 绑定到当前线程上
             local.set(sqlSession);
         }
         return sqlSession;
@@ -59,7 +59,7 @@ public class SqlSessionUtilThreadLocal {
     public static void close(SqlSession sqlSession) {
         if (sqlSession != null) {
             sqlSession.close();
-            // 注意移除SqlSession对象和当前线程的绑定关系，防止内存泄露
+            // 注意移除 SqlSession 对象和当前线程的绑定关系，防止内存泄露
             local.remove();
         }
     }

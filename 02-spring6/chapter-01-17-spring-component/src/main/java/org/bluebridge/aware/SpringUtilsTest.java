@@ -22,7 +22,7 @@ public class SpringUtilsTest {
      */
     @Test
     public void testSpringUtils() {
-        // 加载配置文件并启动Spring容器，没有这一步，Spring容器没有启动起来
+        // 加载配置文件并启动 Spring 容器，没有这一步，Spring 容器没有启动起来
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-aware.xml");
         for (String beanDefinitionName : SpringUtils.getBeanDefinitionNames()) {
             logger.info("beanDefinitionName: " + beanDefinitionName);

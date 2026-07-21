@@ -18,7 +18,7 @@ import org.junit.Test;
  *
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/11/11 17:22
  */
 public class MessageCodecEmbeddedChannelTest {
 

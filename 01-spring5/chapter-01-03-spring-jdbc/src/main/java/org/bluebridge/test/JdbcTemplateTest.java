@@ -19,7 +19,7 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 /**
- * 测试SpringJdbcTemplate的操作
+ * 测试 SpringJdbcTemplate 的操作
  *
  * @author lingwh
  * @date 2019/3/25 15:12
@@ -86,7 +86,7 @@ public class JdbcTemplateTest {
     }
 
     /**
-     * 查询所有记录，使用BeanMapper将单条数据封装到实体中
+     * 查询所有记录，使用 BeanMapper 将单条数据封装到实体中
      */
     @Test
     public void fun5(){
@@ -97,7 +97,7 @@ public class JdbcTemplateTest {
     }
 
     /**
-     * 查询所有记录，使用BeanMapper将单条数据封装到Map中
+     * 查询所有记录，使用 BeanMapper 将单条数据封装到 Map 中
      */
     @Test
     public void fun6(){
@@ -108,8 +108,8 @@ public class JdbcTemplateTest {
     }
 
     /**
-     * 查询所有的姓名，并把查询结果封装到一个List<String>中
-     * 使用SingleColumnRowMapper封装数据
+     * 查询所有的姓名，并把查询结果封装到一个 List<String> 中
+     * 使用 SingleColumnRowMapper 封装数据
      */
     @Test
     public void fun7(){
@@ -139,7 +139,7 @@ class BeanMapper implements RowMapper<Account> {
 }
 
 /**
- * 把单条查询结果封装到Map中
+ * 把单条查询结果封装到 Map 中
  *
  * @author lingwh
  * @date 2019/3/25 15:25

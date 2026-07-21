@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * SpringMVC提供的@CookieValue注解进行解析Cookie中的参数
+ * SpringMVC 提供的 @CookieValue 注解进行解析 Cookie 中的参数
  */
 @RequestMapping(value = "/parseCookie")
 @Controller

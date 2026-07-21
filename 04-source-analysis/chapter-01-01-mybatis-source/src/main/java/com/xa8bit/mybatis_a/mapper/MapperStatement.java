@@ -1,35 +1,35 @@
 package com.xa8bit.mybatis_a.mapper;
 
 /**
- * 封装Mapper.xml中CRUD标签信息的实体类
+ * 封装 Mapper.xml 中 CRUD 标签信息的实体类
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2025/12/20 09:30
  */
 public class MapperStatement {
 
     /**
-     * crud标签的类型 SELECT | UPDATE| DELETE | INSERT
+     * crud 标签的类型 SELECT | UPDATE| DELETE | INSERT
      */
     private String tagType;
 
     /**
-     * Mapper.xml文件的名称空间
+     * Mapper.xml 文件的名称空间
      */
     private String namespace;
 
     /**
-     * crud标签的id
+     * crud 标签的 id
      */
     private String id;
 
     /**
-     * crud标签的返回值类型
+     * crud 标签的返回值类型
      */
     private String resultType;
 
     /**
-     * crud标签里面的sql
+     * crud 标签里面的 sql
      */
     private String sql;
 

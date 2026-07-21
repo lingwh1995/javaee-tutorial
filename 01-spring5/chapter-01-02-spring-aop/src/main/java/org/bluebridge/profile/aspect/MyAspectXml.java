@@ -5,7 +5,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Pointcut;
 
 /**
- * AOP切面类
+ * AOP 切面类
  *
  * @author lingwh
  * @date 2019/3/21 9:50

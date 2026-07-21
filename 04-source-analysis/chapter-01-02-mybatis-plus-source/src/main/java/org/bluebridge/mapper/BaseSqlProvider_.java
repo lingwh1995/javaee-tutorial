@@ -9,14 +9,14 @@
 //
 ///**
 // * @author lingwh
-// * @desc 通用Mapper SQL提供者
+// * @desc 通用 Mapper SQL 提供者
 // * @date 2025/12/10 18:46
 // */
 //@Slf4j
 //public class BaseSqlProvider_<T> {
 //
 //    /**
-//     * 通用插入SQL生成
+//     * 通用插入 SQL 生成
 //     */
 //    public String insert(T entity) {
 //        if (entity == null) {
@@ -45,7 +45,7 @@
 //    }
 //
 //    /**
-//     * 根据ID删除SQL生成
+//     * 根据 ID 删除 SQL 生成
 //     */
 //    public String deleteById(Map<String, Object> params) {
 //        String tableName = (String) params.get("tableName");
@@ -63,7 +63,7 @@
 //    }
 //
 //    /**
-//     * 根据QueryWrapper删除SQL生成
+//     * 根据 QueryWrapper 删除 SQL 生成
 //     */
 //    public String delete(QueryWrapper<T> queryWrapper) {
 //        if (queryWrapper == null) {
@@ -86,7 +86,7 @@
 //    }
 //
 //    /**
-//     * 更新SQL生成
+//     * 更新 SQL 生成
 //     */
 //    public String update(T entity) {
 //        if (entity == null) {
@@ -101,7 +101,7 @@
 //
 //            Field[] fields = clazz.getDeclaredFields();
 //            boolean hasSetClause = false;
-//            // 添加SET子句
+//            // 添加 SET 子句
 //            for (Field field : fields) {
 //                field.setAccessible(true);
 //                try {
@@ -115,12 +115,12 @@
 //                }
 //            }
 //
-//            // 必须至少有一个SET子句
+//            // 必须至少有一个 SET 子句
 //            if (!hasSetClause) {
 //                throw new IllegalArgumentException("Update operation requires at least one field to update");
 //            }
 //
-//            // 添加WHERE条件
+//            // 添加 WHERE 条件
 //            boolean hasWhereClause = false;
 //            for (Field field : fields) {
 //                if (isPrimaryKey(field)) {
@@ -137,7 +137,7 @@
 //                }
 //            }
 //
-//            // 必须有WHERE条件
+//            // 必须有 WHERE 条件
 //            if (!hasWhereClause) {
 //                throw new IllegalArgumentException("Update operation requires WHERE condition with primary key");
 //            }
@@ -145,7 +145,7 @@
 //    }
 //
 //    /**
-//     * 根据ID查询SQL生成
+//     * 根据 ID 查询 SQL 生成
 //     */
 //    public String selectById(Map<String, Object> params) {
 //        String tableName = (String) params.get("tableName");
@@ -164,7 +164,7 @@
 //    }
 //
 //    /**
-//     * 根据QueryWrapper查询单条记录SQL生成
+//     * 根据 QueryWrapper 查询单条记录 SQL 生成
 //     */
 //    public String select(QueryWrapper<T> queryWrapper) {
 //        if (queryWrapper == null) {
@@ -188,7 +188,7 @@
 //    }
 //
 //    /**
-//     * 根据QueryWrapper查询列表SQL生成
+//     * 根据 QueryWrapper 查询列表 SQL 生成
 //     */
 //    public String selectList(QueryWrapper<T> queryWrapper) {
 //        if (queryWrapper == null) {
@@ -260,7 +260,7 @@
 //     * 可以扩展为通过注解判断
 //     */
 //    private boolean isPrimaryKey(Field field) {
-//        // 可以通过@Id等注解来判断主键
+//        // 可以通过 @Id 等注解来判断主键
 //        return "id".equalsIgnoreCase(field.getName());
 //    }
 //

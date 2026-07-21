@@ -8,7 +8,7 @@ import org.junit.Test;
 import java.util.List;
 
 /**
- * 使用Pojo传递参数进行Mybatis基本CRUD测试
+ * 使用 Pojo 传递参数进行 Mybatis 基本 CRUD 测试
  *
  * @author lingwh
  * @date 2026/7/13 14:30
@@ -16,7 +16,7 @@ import java.util.List;
 public class MybatisCrudBasicByPojoTest {
 
     /**
-     * 使用Pojo传递参数实现新增功能
+     * 使用 Pojo 传递参数实现新增功能
      */
     @Test
     public void testMybatisInsertByPojo() {
@@ -44,7 +44,7 @@ public class MybatisCrudBasicByPojoTest {
     }
 
     /**
-     * 使用Pojo传递参数实现更新功能
+     * 使用 Pojo 传递参数实现更新功能
      */
     @Test
     public void testMybatisUpdateByPojo() {
@@ -73,7 +73,7 @@ public class MybatisCrudBasicByPojoTest {
     }
 
     /**
-     * 使用Pojo传递参数实现删除功能
+     * 使用 Pojo 传递参数实现删除功能
      */
     @Test
     public void testMybatisDeleteByPojo() {
@@ -96,7 +96,7 @@ public class MybatisCrudBasicByPojoTest {
     }
 
     /**
-     * 使用Pojo传递参数实现查询一个Employee功能
+     * 使用 Pojo 传递参数实现查询一个 Employee 功能
      */
     @Test
     public void testMybatisSelectOne() {
@@ -119,7 +119,7 @@ public class MybatisCrudBasicByPojoTest {
     }
 
     /**
-     * 查询多个Employee功能
+     * 查询多个 Employee 功能
      */
     @Test
     public void testMybatisSelectList() {

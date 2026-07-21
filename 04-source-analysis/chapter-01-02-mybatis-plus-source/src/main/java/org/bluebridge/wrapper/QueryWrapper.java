@@ -107,7 +107,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
     }
 
     /**
-     * LIKE条件
+     * LIKE 条件
      *
      * @param column 字段名
      * @param value 值
@@ -120,7 +120,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
     }
 
     /**
-     * IN条件
+     * IN 条件
      *
      * @param column 字段名
      * @param values 值列表
@@ -164,7 +164,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
     }
 
     /**
-     * 获取SQL条件部分
+     * 获取 SQL 条件部分
      *
      * @return 条件字符串
      */
@@ -184,7 +184,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
     }
 
     /**
-     * 获取条件SQL（与getSqlSegment相同，为了兼容BaseSqlProvider）
+     * 获取条件 SQL（与 getSqlSegment 相同，为了兼容 BaseSqlProvider）
      *
      * @return 条件字符串
      */

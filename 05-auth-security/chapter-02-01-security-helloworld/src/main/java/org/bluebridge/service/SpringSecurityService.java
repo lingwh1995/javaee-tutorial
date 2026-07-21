@@ -14,7 +14,7 @@ import org.springframework.util.StringUtils;
  * 自定义用户
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2025/12/10 14:45
  */
 @Service
 public class SpringSecurityService implements UserDetailsService {
@@ -30,7 +30,7 @@ public class SpringSecurityService implements UserDetailsService {
         }
         //密码加密
         String pw = passwordEncoder.encode("123456");
-        //返回一个用户,以及权限或角色
+        //返回一个用户，以及权限或角色
         return new User(s,pw, AuthorityUtils.commaSeparatedStringToAuthorityList("admin,normal"));
     }
 }

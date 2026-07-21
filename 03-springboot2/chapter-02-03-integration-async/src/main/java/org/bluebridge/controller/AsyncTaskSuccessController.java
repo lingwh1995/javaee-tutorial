@@ -76,7 +76,7 @@ public class AsyncTaskSuccessController {
             // 配合while(true)实现每隔1000ms判断一次是否所有方法都执行完成
             Thread.sleep(1000);
         }
-        // 注意:异步调用在执行这个代码的时候会导致阻塞,睡眠5000ms后才会去执行下面的代码
+        // 注意：异步调用在执行这个代码的时候会导致阻塞，睡眠 5000ms 后才会去执行下面的代码
         Thread.sleep(5000);
         long currentTimeMillis1 = System.currentTimeMillis();
         HashMap<String, String> map = new HashMap<>();

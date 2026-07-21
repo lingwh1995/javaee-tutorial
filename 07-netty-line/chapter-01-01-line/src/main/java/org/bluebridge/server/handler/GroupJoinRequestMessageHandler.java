@@ -12,7 +12,7 @@ import org.bluebridge.server.session.GroupSessionFactory;
  * 加入聊天组请求消息处理器
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 18:10
  */
 @ChannelHandler.Sharable
 public class GroupJoinRequestMessageHandler extends SimpleChannelInboundHandler<GroupJoinRequestMessage> {

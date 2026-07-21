@@ -18,12 +18,12 @@ import java.util.List;
  *
  * 服务端实现需求
  * 1. 注册端口
- * 2. 接收客户端的socket连接，交给一个独立的线程来处理
+ * 2. 接收客户端的 socket 连接，交给一个独立的线程来处理
  * 3. 把当前连接的客户端socket存入到一个所谓的在线socket集合中保存
  * 4. 接收客户端的消息，然后推送给当前所有的在线socket接收
  *
  * @author lingwh
- * @date 2026/7/14 10:30
+ * @date 2025/9/23 14:30
  */
 @Slf4j
 public class ChatServer {
@@ -65,7 +65,7 @@ class ChatServerThread extends Thread{
     @Override
     public void run() {
         try {
-            // 1. 从socket中去获取当前客户端的输入流
+            // 1. 从 socket 中去获取当前客户端的输入流
             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             String msg = null;
             while ((msg = br.readLine()) != null){
@@ -82,7 +82,7 @@ class ChatServerThread extends Thread{
     }
 
     /**
-     * 把当前客户端发送来的消息推送给全部在线的socket
+     * 把当前客户端发送来的消息推送给全部在线的 socket
      *
      * @param msg
      * @param socket

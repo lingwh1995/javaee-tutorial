@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponseWrapper;
 import java.io.IOException;
 
 /**
- * 包装HttpServletRequest和HttpServletResponse的过滤器
+ * 包装 HttpServletRequest 和 HttpServletResponse 的过滤器
  *
  * @author lingwh
  * @date 2019/7/26 15:26
@@ -33,7 +33,7 @@ public class WarpperHttpServletFilter implements Filter{
     }
 
     /**
-     * 包装的HttpServletRequest
+     * 包装的 HttpServletRequest
      */
     private class WarpperHttpServletRquest extends HttpServletRequestWrapper {
 
@@ -54,7 +54,7 @@ public class WarpperHttpServletFilter implements Filter{
     }
 
     /**
-     * 包装的HttpServletResponse
+     * 包装的 HttpServletResponse
      */
     private class WarpperHttpServletResponse extends HttpServletResponseWrapper {
 

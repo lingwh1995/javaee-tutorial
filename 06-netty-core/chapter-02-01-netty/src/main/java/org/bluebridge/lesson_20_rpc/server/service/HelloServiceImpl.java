@@ -4,7 +4,7 @@ package org.bluebridge.lesson_20_rpc.server.service;
  * HelloServiceImpl
  *
  * @author lingwh
- * @date 2026/7/13 17:24
+ * @date 2025/10/27 15:20
  */
 public class HelloServiceImpl implements HelloService {
     @Override

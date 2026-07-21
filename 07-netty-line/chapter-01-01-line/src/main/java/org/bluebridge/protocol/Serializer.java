@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
  * 用于扩展序列化、反序列化算法
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/25 11:45
  */
 public interface Serializer {
 

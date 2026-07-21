@@ -66,7 +66,7 @@ public class EventLoopGroupReuseEventLoopGroupServer {
     public void startServer(String host, Integer port) {
         try {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
-            // 直接复用全局的bossGroup和workerGroup
+            // 直接复用全局的 bossGroup 和 workerGroup
             serverBootstrap.group(sharedBossGroup, sharedWorkerGroup)
                 .channel(NioServerSocketChannel.class)
                 .option(ChannelOption.SO_BACKLOG, 512)
@@ -74,7 +74,7 @@ public class EventLoopGroupReuseEventLoopGroupServer {
                     @Override
                     protected void initChannel(SocketChannel ch) {
                         ChannelPipeline pipeline = ch.pipeline();
-                        // 配置当前服务器的ChannelPipeline
+                        // 配置当前服务器的 ChannelPipeline
                         pipeline.addLast(new StringDecoder());
                         pipeline.addLast(new SimpleChannelInboundHandler<String>() {
                             @Override

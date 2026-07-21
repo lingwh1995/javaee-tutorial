@@ -4,7 +4,7 @@ package org.bluebridge.server.service;
  * 用户管理接口
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 17:15
  */
 public interface UserService {
 

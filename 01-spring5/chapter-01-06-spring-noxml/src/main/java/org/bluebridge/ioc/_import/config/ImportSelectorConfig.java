@@ -3,7 +3,7 @@ package org.bluebridge.ioc._import.config;
 import org.springframework.context.annotation.Import;
 
 /**
- * ImportSelector配置类
+ * ImportSelector 配置类
  *
  * @author lingwh
  * @date 2019/4/13 14:27

@@ -6,20 +6,20 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.io.IOException;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 10:40
  */
 public class SpringTest {
 
     /**
-     * 测试在IoC容器中根据配置的Resouce类型的属性的value的值的前缀自动注入一个Resource接口的实现类
+     * 测试在 IoC 容器中根据配置的 Resouce 类型的属性的 value 的值的前缀自动注入一个 Resource 接口的实现类
      */
     @Test
     public void testAutoChoiceResourceBySpringIoC() throws IOException {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-auto_choice_resource.xml");
-        // 让Spring容器根据
+        // 让 Spring 容器根据
         AutoChoiceResourceBySpringIoC autoChoiceResourceBySpringIoC = applicationContext.getBean("autoChoiceResourceBySpringIoC", AutoChoiceResourceBySpringIoC.class);
         autoChoiceResourceBySpringIoC.parseResource();
     }

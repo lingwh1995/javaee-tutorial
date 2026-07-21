@@ -6,7 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 /**
- * 测试使用自己创建的数据源创建JdbcTemplate
+ * 测试使用自己创建的数据源创建 JdbcTemplate
  *
  * @author lingwh
  * @date 2019/3/25 14:32
@@ -22,7 +22,7 @@ public class JdbcTemplateDataSourceTest {
         dataSource.setUrl("jdbc:mysql://host.docker.internal:3306/javaee");
         dataSource.setUsername("root");
         dataSource.setPassword("123456");
-        // 创建JdbcTemplate
+        // 创建 JdbcTemplate
         jdbcTemplate = new JdbcTemplate(dataSource);
         System.out.println(jdbcTemplate);
         System.out.println("-----------------------------");

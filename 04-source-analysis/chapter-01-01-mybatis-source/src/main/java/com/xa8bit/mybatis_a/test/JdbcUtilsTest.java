@@ -17,7 +17,7 @@ import java.sql.SQLException;
 public class JdbcUtilsTest {
 
     /**
-     * 测试基于JDBC打印完整SQL语句
+     * 测试基于 JDBC 打印完整 SQL 语句
      *
      * @throws SQLException
      * @throws ClassNotFoundException

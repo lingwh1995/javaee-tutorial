@@ -9,7 +9,7 @@ import java.util.Set;
  * 聊天组，即聊天室
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 16:15
  */
 @Data
 public class Group {

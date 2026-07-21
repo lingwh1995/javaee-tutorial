@@ -50,7 +50,7 @@ public class EventLoopGroupReuseEventLoopGroupClient {
         client.startClient(HOST, PORT_SECOND, "这是第二个客户端发给第二个服务器的数据......");
         client.startClient(HOST, PORT_THIRD, "这是第三个客户端发给第三个服务器的数据......");
 
-        // 应用退出时，统一关闭共享的EventLoopGroup（此处仅做演示，实际可通过钩子函数关闭）
+        // 应用退出时，统一关闭共享的 EventLoopGroup（此处仅做演示，实际可通过钩子函数关闭）
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             log.info("开始优雅关闭共享EventLoopGroup......");
             client.sharedEventLoopGroup.shutdownGracefully();
@@ -68,7 +68,7 @@ public class EventLoopGroupReuseEventLoopGroupClient {
     public void startClient(String host, Integer port, String msg) {
         try {
             Channel channel = new Bootstrap()
-                // 复用全局共享的EventLoopGroup
+                // 复用全局共享的 EventLoopGroup
                 .group(sharedEventLoopGroup)
                 .channel(NioSocketChannel.class)
                 .handler(new ChannelInitializer<NioSocketChannel>() {

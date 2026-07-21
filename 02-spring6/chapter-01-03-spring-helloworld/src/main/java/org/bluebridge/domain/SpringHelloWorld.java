@@ -1,10 +1,10 @@
 package org.bluebridge.domain;
 
 /**
- * Spring HelloWorld示例类
+ * Spring HelloWorld 示例类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 15:25
  */
 public class SpringHelloWorld {
 

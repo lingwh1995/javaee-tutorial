@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Spring Security 启动类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2025/12/10 09:20
  */
 @SpringBootApplication
 public class SpringSecurityApplication {

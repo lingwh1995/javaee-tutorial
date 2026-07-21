@@ -14,7 +14,7 @@ import org.springframework.stereotype.Controller;
 public class UserController {
 
     /**
-     * 测试@Autowired写在字段上
+     * 测试 @Autowired 写在字段上
      */
     @Autowired
     private UserService userService;

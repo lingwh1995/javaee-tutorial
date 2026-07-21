@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.UUID;
 
 /**
- * Import功能测试
+ * Import 功能测试
  *
  * @author lingwh
- * @date 2026/7/13 14:31
+ * @date 2019/7/22 09:15
  */
 @Controller
 public class IndexController {
@@ -22,7 +22,7 @@ public class IndexController {
 
     @RequestMapping("/")
     public String index(HttpServletResponse response) {
-        // 为了测试@CookieValue注解，这里我们手动添加一个Cookie
+        // 为了测试 @CookieValue 注解，这里我们手动添加一个 Cookie
         Cookie cookie = new Cookie("token", UUID.randomUUID().toString().toLowerCase().replace("-",""));
         response.addCookie(cookie);
 

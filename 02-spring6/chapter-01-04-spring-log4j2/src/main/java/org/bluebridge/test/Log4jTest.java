@@ -8,32 +8,32 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Log4j2日志测试类
+ * Log4j2 日志测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 09:35
  */
 public class Log4jTest {
 
     private static final  Logger logger = LogManager.getLogger(Log4jTest.class);
 
     /**
-     * 测试Spring 整合log4j2
+     * 测试 Spring 整合 log4j2
      *
-     * 直接运行，控制台就已经可以出现debug级别的日志了
+     * 直接运行，控制台就已经可以出现 debug 级别的日志了
      */
     @Test
     public void testSpringLog4j2() {
-        // 1. 启动Spring容器，并加载所有配置文件，并在容器中根据配置文件创建所有Bean
+        // 1. 启动 Spring 容器，并加载所有配置文件，并在容器中根据配置文件创建所有 Bean
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        // 2. 根据Bean的id从容器中获取指定的Bean
+        // 2. 根据 Bean 的 id 从容器中获取指定的 Bean
         User user = applicationContext.getBean("user", User.class);
         System.out.println(user.getClass());
     }
 
     /**
-     * 测试在Spring项目中使用log4j2记录日志
-     *  直接运行，控制台就已经可以出现debug级别的日志了
+     * 测试在 Spring 项目中使用 log4j2 记录日志
+     *  直接运行，控制台就已经可以出现 debug 级别的日志了
      */
     @Test
     public void testApplicationUseLog4j2() {

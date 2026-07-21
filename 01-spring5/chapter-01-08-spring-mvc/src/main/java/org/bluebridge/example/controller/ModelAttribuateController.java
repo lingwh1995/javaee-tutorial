@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @ModelAttribute注解概述
+ * @ModelAttribute 注解概述
  *
  * 1. 何时运行
  *    被 @ModelAttribute 标注的方法，SpringMVC 执行每一个方法的时候都会被调用一次
@@ -30,7 +30,7 @@ import java.util.Map;
  * @ModelAttribute 的常用用法
  *
  * 1. 绑定请求参数到命令对象
- * 2. 暴露表单引用对象为模型数据,即把一个数据放入到模型中，模型指的是Model、Map、ModelMap
+ * 2. 暴露表单引用对象为模型数据，即把一个数据放入到模型中，模型指的是 Model、Map、ModelMap
  *    注意事项
  *    - 此操作相当于在控制路由跳转的方法中，先查库，获取数据后，再把数据放入到模型中
  *    - 此操作已经将数据放入域中了，可以在页面直接使用了
@@ -38,13 +38,13 @@ import java.util.Map;
  * 3. 通过 @ModelAttribute 自动将数据暴露在模型中，不需要再方法入参中写 Model/Model/ModelMap(注意:不包含 ModelAndView)
  * 4. 数据封装
  *    编辑页面只能部分修改部分字段的的时候，如密码字段不能被修改
- *    常规做法:把密码和其他字段都放入到域中，密码的值存放在隐藏域中，设置一个name，传递到后台，不改变这个字段的值就可以了
+ *    常规做法：把密码和其他字段都放入到域中，密码的值存放在隐藏域中，设置一个 name，传递到后台，不改变这个字段的值就可以了
  *    使用 @ModelAttribute：不把密码往前台传递，再执行更新操作的时候使用该注解封将表单数据和数据库中的数据合并后封装到实体中
  *
  * @ModelAttribute 的使用总结
  * 1. 被 @ModelAttribute 修饰对象会直接放入到 Request 域中
- * 2. @ModelAttribute 默认使用的key是对象名首字母小写，要想改这个值，在方法入参中传入 Model/ModelMap/Map/ModelAndView，把值添加到这几个模型中即可
- * 3. 运用在参数上，会将客户端传递过来的参数按名称注入到指定对象中，并且会将这个对象自动加入模型中，便于View层使用
+ * 2. @ModelAttribute 默认使用的 key 是对象名首字母小写，要想改这个值，在方法入参中传入 Model/ModelMap/Map/ModelAndView，把值添加到这几个模型中即可
+ * 3. 运用在参数上，会将客户端传递过来的参数按名称注入到指定对象中，并且会将这个对象自动加入模型中，便于 View 层使用
  *    在被 @RequestMapping 标注的方法中，如果方法的入参中传入的参数被 @ModelAttribute 修饰了，那个这个参数直接被暴露在模型中
  * 4. 用在方法上，会在每一个 @@RequestMapping 标注的方法前执行，如果有返回值，则自动将该返回值加入到 ModelMap 中
  *
@@ -61,7 +61,7 @@ public class ModelAttribuateController {
     /**
      * 模拟更新操作
      *
-     * 根据id是否为空判断是否为更新操作，并把从数据库中查询出来的数据放在map中
+     * 根据 id 是否为空判断是否为更新操作，并把从数据库中查询出来的数据放在 map 中
      *
      * @param id
      * @param map
@@ -82,7 +82,7 @@ public class ModelAttribuateController {
     /**
      * 模拟更新操作
      *
-     * 根据id是否为空判断是否为更新操作，并把从数据库中查询出来的数据放在Model中
+     * 根据 id 是否为空判断是否为更新操作，并把从数据库中查询出来的数据放在 Model 中
      * @param id
      * @param model
      */
@@ -102,7 +102,7 @@ public class ModelAttribuateController {
     /**
      * 模拟更新操作
      *
-     * 根据id是否为空判断是否为更新操作，并把从数据库中查询出来的数据放在ModelMap中
+     * 根据 id 是否为空判断是否为更新操作，并把从数据库中查询出来的数据放在 ModelMap 中
      * 注意:ModelAttribuate注解(不用在方法参数中)
      *
      * @param id
@@ -123,7 +123,7 @@ public class ModelAttribuateController {
     /**
      * 模拟更新操作
      *
-     * 根据id是否为空判断是否为更新操作，并把从数据库中查询出来的数据放在ModelMap中
+     * 根据 id 是否为空判断是否为更新操作，并把从数据库中查询出来的数据放在 ModelMap 中
      * 注意:ModelAttribuate注解(使用在方法参数中)
      *
      * @param id
@@ -190,7 +190,7 @@ public class ModelAttribuateController {
      * 将URI模板变量的值自动自动绑定到命令对象中，当你请求的URL中包含“&username=zhang”会自动绑定到命令对象User上，因为User对象中有一个属性是username
      *
      * 注意事项
-     * 当URI模板变量和请求参数同名时， 请求参数 具有高优先权。
+     * 当 URI 模板变量和请求参数同名时， 请求参数 具有高优先权。
      *
      * @param user
      * @return
@@ -202,7 +202,7 @@ public class ModelAttribuateController {
     }
 
     /**
-     * 使用ModelAttribute把数据放入到模型中，模型指的是Model、Map、ModelMap
+     * 使用 ModelAttribute 把数据放入到模型中，模型指的是 Model、Map、ModelMap
      *
      * @return
      */
@@ -212,9 +212,9 @@ public class ModelAttribuateController {
     }
 
     /**
-     * 暴露表单引用对象为模型数据,即把一个数据放入到模型中,并从模型中获取该数据
+     * 暴露表单引用对象为模型数据，即把一个数据放入到模型中，并从模型中获取该数据
      *
-     * 注意：SpringMVC提供三种模型，指的是Model、Map、ModelMap
+     * 注意：SpringMVC 提供三种模型，指的是 Model、Map、ModelMap
      *
      * @param model
      * @return
@@ -223,30 +223,30 @@ public class ModelAttribuateController {
     public String exposedatatomodel(Model model, ModelMap modelMap, Map map, ModelAndView mv){
         model.addAttribute("modelattributeexposedatatomodel",true);
         /**
-         * 从Model模型中获取使用@ModelAttribute放入到模型中的数据
+         * 从 Model 模型中获取使用 @ModelAttribute 放入到模型中的数据
          */
         List<String> listFromModel = (List)model.asMap().get("cityList");
         for(String s : listFromModel){
             System.out.println("s==="+s);
         }
         /**
-         * 从ModelMap模型中获取使用@ModelAttribute放入到模型中的数据
+         * 从 ModelMap 模型中获取使用 @ModelAttribute 放入到模型中的数据
          */
         List<String> listFromModelMap = (List)modelMap.get("cityList");
         for(String s : listFromModelMap){
             System.out.println("s==="+s);
         }
         /**
-         * 从Map模型中获取使用@ModelAttribute放入到模型中的数据
+         * 从 Map 模型中获取使用 @ModelAttribute 放入到模型中的数据
          */
         List<String> listFromMap = (List)map.get("cityList");
         for(String s : listFromMap){
             System.out.println("s==="+s);
         }
         /**
-         * 从ModelMap的Model模型中获取使用@ModelAttribute放入到模型中的数据
+         * 从 ModelMap 的 Model 模型中获取使用 @ModelAttribute 放入到模型中的数据
          *
-         * 注意:下面的代码放开注释会报错
+         * 注意：下面的代码放开注释会报错
          */
         /*
         Map<String, Object> modelFromModelAndView = mv.getModel();
@@ -256,9 +256,9 @@ public class ModelAttribuateController {
         }*/
 
         /**
-         * 从ModelMap的ModelAndView模型中获取使用@ModelAttribute放入到模型中的数据
+         * 从 ModelMap 的 ModelAndView 模型中获取使用 @ModelAttribute 放入到模型中的数据
          *
-         * 注意:下面的代码放开注释会报错
+         * 注意：下面的代码放开注释会报错
          */
         /*
         ModelMap modelMapFromModelAndView = mv.getModelMap();

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * SpringMVC转发和重定向: 注意:返回的逻辑视图要加前后缀，否则页面会报404
+ * SpringMVC 转发和重定向：注意：返回的逻辑视图要加前后缀，否则页面会报 404
  *
  * @author lingwh
  * @date 2019/6/20 14:37

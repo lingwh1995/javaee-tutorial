@@ -53,7 +53,7 @@ public class ChannelOutboundHandlerAdapterServer {
                             //super.channelRead(ctx, msg);
 
                             // 写一些数据，触发出站处理器
-                            // 使用pipeline则从最后开始找出站处理器h6->h5->h4
+                            // 使用 pipeline 则从最后开始找出站处理器 h6->h5->h4
                             ch.writeAndFlush(ctx.alloc().buffer().writeBytes(s.getBytes()));
                         }
 

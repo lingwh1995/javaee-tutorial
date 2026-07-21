@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * SpringMVC提供的@RequestHeader注解进行解析请求头中的参数
+ * SpringMVC 提供的 @RequestHeader 注解进行解析请求头中的参数
  */
 @RequestMapping(value = "/parseRequestHeader")
 @Controller

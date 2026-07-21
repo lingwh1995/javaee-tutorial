@@ -17,7 +17,7 @@ import java.util.Date;
 public class ConverterHandler {
 
     /**
-     * 使用自定义的DateConverter将字符串类型的日期转换为java.util.Date的日期
+     * 使用自定义的 DateConverter 将字符串类型的日期转换为 java.util.Date 的日期
      *
      * @param date
      * @return
@@ -29,9 +29,9 @@ public class ConverterHandler {
     }
 
     /**
-     * 使用自定义的DateConverter将字符串类型的日期转换为java.util.Date的日期
+     * 使用自定义的 DateConverter 将字符串类型的日期转换为 java.util.Date 的日期
      *
-     * @param employee  前台输入:1-张三-123456-18
+     * @param employee  前台输入：1-张三-123456-18
      * @return
      */
     @RequestMapping("/testConvererStringToEmployee")

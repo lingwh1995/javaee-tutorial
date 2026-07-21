@@ -8,7 +8,7 @@ import java.lang.reflect.Type;
 import java.util.Scanner;
 
 /**
- * stomp会话处理器
+ * stomp 会话处理器
  *
  * @author lingwh
  * @date 2025/10/21 11:10
@@ -17,9 +17,9 @@ import java.util.Scanner;
 @AllArgsConstructor
 public class MyStompSockjsSessionHandler extends StompSessionHandlerAdapter {
 
-    // 接收外部传递来的用户id
+    // 接收外部传递来的用户 id
     private String userId;
-    // websocket端点路径前缀
+    // websocket 端点路径前缀
     private String endpointPathPrefix;
 
     @Override
@@ -89,17 +89,17 @@ public class MyStompSockjsSessionHandler extends StompSessionHandlerAdapter {
                     // 获取消息类型
                     String messageType = message.substring(0, 2);
                     switch (messageType) {
-                        // 普通消息： 消息类型为00
+                        // 普通消息： 消息类型为 00
                         case "01":
                             // 发送普通消息
                             session.send(endpointPathPrefix + "/chat/ordinary", message);
                             break;
-                        // 定向消息： 消息类型为02
+                        // 定向消息： 消息类型为 02
                         case "02":
                             // 发送定向消息
                             session.send(endpointPathPrefix + "/chat/private", message);
                             break;
-                        // 广播消息： 消息类型为03
+                        // 广播消息： 消息类型为 03
                         case "03":
                             // 发送广播消息
                             session.send(endpointPathPrefix + "/chat/broadcast", message);

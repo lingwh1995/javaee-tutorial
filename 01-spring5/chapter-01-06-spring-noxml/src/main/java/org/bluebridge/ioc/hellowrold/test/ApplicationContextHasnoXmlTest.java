@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * 零配置搭建Spring开发环境测试
+ * 零配置搭建 Spring 开发环境测试
  *
  * @author lingwh
  * @date 2019/4/2 9:20
@@ -24,7 +24,7 @@ public class ApplicationContextHasnoXmlTest {
 
     @Test
     public void fun2(){
-        //构造参数传入Config.class，即配置类的class
+        // 构造参数传入 Config.class，即配置类的 class
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         System.out.println("------------------IOC容器初始化完成---------------------------");
         Person person = context.getBean("person",Person.class);
@@ -33,7 +33,7 @@ public class ApplicationContextHasnoXmlTest {
 
     @Test
     public void fun3(){
-        //构造参数传入Config.class，即配置类的class
+        // 构造参数传入 Config.class，即配置类的 class
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         String[] beanDefinitionNames = context.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {

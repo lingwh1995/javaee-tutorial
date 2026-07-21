@@ -4,7 +4,7 @@ package org.bulebridge.domain;
  * 用户实体类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2023/10/12 15:50
  */
 public class User {
 

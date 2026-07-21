@@ -1,7 +1,7 @@
 package org.bluebridge.converter.entity;
 
 /**
- * Employee实体类
+ * Employee 实体类
  *
  * @author lingwh
  * @date 2019/6/17 14:02

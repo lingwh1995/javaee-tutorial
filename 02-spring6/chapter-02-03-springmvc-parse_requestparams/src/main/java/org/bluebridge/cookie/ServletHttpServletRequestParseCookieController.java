@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Arrays;
 
 /**
- * 使用Servlet原生api解析Cookie
+ * 使用 Servlet 原生 api 解析 Cookie
  */
 @RequestMapping(value = "/parseCookie")
 @Controller

@@ -6,10 +6,10 @@ import com.xa8bit.mybatis_a.sqlsession.SqlSession;
 import java.util.List;
 
 /**
- * MyBatis功能测试类
+ * MyBatis 功能测试类
  *
  * @author lingwh
- * @date 2026/7/13 10:15
+ * @date 2025/12/20 10:30
  */
 public class MybatisTest {
 
@@ -24,7 +24,7 @@ public class MybatisTest {
             System.out.println(employee);
         }
         System.out.println("-------------------------------------------------");
-        // 获取EmployeeMapper接口的代理对象
+        // 获取 EmployeeMapper 接口的代理对象
         EmployeeMapper employeeMapper = sqlSession.getMapper(EmployeeMapper.class);
         Employee employee = employeeMapper.getEmployeeById("4");
         System.out.println(employee);

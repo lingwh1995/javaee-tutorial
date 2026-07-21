@@ -9,10 +9,10 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * 使用Servlet原生api解析请求参数
+ * 使用 Servlet 原生 api 解析请求参数
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2019/7/22 10:30
  */
 @RequestMapping(value = "/parseRequestParams")
 @Controller
@@ -20,16 +20,16 @@ public class ServletHttpServletRequestParseRequestParamsController {
 
     @RequestMapping(value = "/servlet/httpServletRequest")
     public String parseRequestParamsByServletByHttpServletRequest(HttpServletRequest request) {
-        // 获取一个key对应一个value的请求参数
+        // 获取一个 key 对应一个 value 的请求参数
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         System.out.println("一个key对应一个value的请求参数 - username: " + username + ",password:" + password);
 
-        // 获取一个key对应多个value的请求参数
+        // 获取一个 key 对应多个 value 的请求参数
         String[] hobbies = request.getParameterValues("hobbies");
         System.out.println("一个key对应多个value的请求参数 - hobbies: " + Arrays.toString(hobbies));
 
-        // 获取一个key对应多个value的请求参数
+        // 获取一个 key 对应多个 value 的请求参数
         Map<String, String[]> parameters = request.getParameterMap();
         Iterator<Map.Entry<String, String[]>> iterator = parameters.entrySet().iterator();
         while (iterator.hasNext()) {

@@ -7,7 +7,7 @@ import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.stereotype.Component;
 
 /**
- * 零配置搭建Spring开发环境测试
+ * 零配置搭建 Spring 开发环境测试
  *
  * @author lingwh
  * @date 2019/4/4 10:44

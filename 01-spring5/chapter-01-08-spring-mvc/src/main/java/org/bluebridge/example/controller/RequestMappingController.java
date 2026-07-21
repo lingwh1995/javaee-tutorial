@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * SpringMVC的RequestMapping注解
+ * SpringMVC 的 RequestMapping 注解
  *
- * 1. 用法类似于@RequestParam注解,可以获取所有的请求头信息
- * 2. 也有required属性
+ * 1. 用法类似于 @RequestParam 注解，可以获取所有的请求头信息
+ * 2. 也有 required 属性
  *
  * @author lingwh
  * @date 2019/6/20 14:22
@@ -20,7 +20,7 @@ public class RequestMappingController {
     private static final String SUCCESS = "success";
 
     /**
-     * 简单的Spring入门demo
+     * 简单的 Spring 入门 demo
      *
      * @return
      */
@@ -31,11 +31,11 @@ public class RequestMappingController {
     }
 
     /**
-     * RequestMapping注解:
-     *      value:请求url
-     *      method:请求方式GET/POST
-     *      params:支持简单的表达式,必须有name参数而且age参数的值不等于10
-     *      headers:支持简单的表达式
+     * RequestMapping 注解：
+     *      value：请求 url
+     *      method：请求方式 GET/POST
+     *      params：支持简单的表达式，必须有 name 参数而且 age 参数的值不等于 10
+     *      headers：支持简单的表达式
      *
      * @return
      */

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * 使用Servlet原生api解析Cookie
+ * 使用 Servlet 原生 api 解析 Cookie
  */
 @RequestMapping(value = "/parseRequestHeader")
 @Controller

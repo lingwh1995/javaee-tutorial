@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 /**
- * 用来增强Servlet的Filter
+ * 用来增强 Servlet 的 Filter
  *
  * @author lingwh
  * @date 2026/7/13 10:30
@@ -25,7 +25,7 @@ public class ExpandHttpServletFilter implements Filter {
     }
 
     /**
-     * 获取项目完整上下文根路径，并放于request域中
+     * 获取项目完整上下文根路径，并放于 request 域中
      *
      * @param servletRequest
      * @param servletResponse

@@ -8,7 +8,7 @@ import java.util.List;
 public interface CarMapper {
 
     /**
-     * 分页查询-使用mysql原生方式分页
+     * 分页查询-使用 mysql 原生方式分页
      * @param startIndex 起始下标
      * @param pageSize 每页显示的记录条数
      * @return
@@ -16,7 +16,7 @@ public interface CarMapper {
     List<Car> selectByPageUseMysqlNative(@Param("startIndex") int startIndex, @Param("pageSize") int pageSize);
 
     /**
-     * 分页查询-使用PageHelper插件分页
+     * 分页查询-使用 PageHelper 插件分页
      * @return
      */
     List<Car> selectByPageUsePageHelper();

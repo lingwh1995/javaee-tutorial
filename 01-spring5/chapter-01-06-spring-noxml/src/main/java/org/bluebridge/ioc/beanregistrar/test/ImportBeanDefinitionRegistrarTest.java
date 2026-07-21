@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * ImportBeanDefinitionRegistrar测试
+ * ImportBeanDefinitionRegistrar 测试
  *
  * @author lingwh
  * @date 2019/4/9 14:32

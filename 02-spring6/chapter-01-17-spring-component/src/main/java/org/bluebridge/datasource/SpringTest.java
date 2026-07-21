@@ -11,17 +11,17 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 10:25
  */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
-     * 测试Spring框架为我们提供的DataSource实现
+     * 测试 Spring 框架为我们提供的 DataSource 实现
      */
     @Test
     public void testDriverManagerDataSource() throws SQLException {

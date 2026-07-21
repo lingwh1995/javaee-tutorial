@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 基础服务接口，定义通用的CRUD操作
+ * 基础服务接口，定义通用的 CRUD 操作
  *
  * @author lingwh
  * @date 2025/12/10 19:15

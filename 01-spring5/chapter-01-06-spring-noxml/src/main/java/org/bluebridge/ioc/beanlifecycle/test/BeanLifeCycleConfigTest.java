@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * Bean生命周期配置测试
+ * Bean 生命周期配置测试
  *
  * @author lingwh
  * @date 2019/4/10 11:32

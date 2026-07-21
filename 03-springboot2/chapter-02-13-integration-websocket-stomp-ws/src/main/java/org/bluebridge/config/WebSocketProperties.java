@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
 /**
- * WebSocket配置属性
+ * WebSocket 配置属性
  *
  * @author lingwh
  * @date 2025/10/18 18:25
@@ -17,10 +17,10 @@ import java.util.List;
 @Data
 public class WebSocketProperties {
 
-    // websocket端点路径前缀
+    // websocket 端点路径前缀
     private String endpointPathPrefix;
     // 允许的跨域来源
     private List<String> allowedOrigins;
-    // 是否启用sockjs
+    // 是否启用 sockjs
     private boolean enableSockjs;
 }

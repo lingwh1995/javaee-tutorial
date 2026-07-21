@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 基础Mapper接口，定义了通用的CRUD操作方法
+ * 基础 Mapper 接口，定义了通用的 CRUD 操作方法
  *
  * @author lingwh
  * @date 2025/12/10 18:45
@@ -25,7 +25,7 @@ public interface BaseMapper<T> {
     int insert(T entity);
 
     /**
-     * 根据ID删除记录
+     * 根据 ID 删除记录
      *
      * @param id 主键ID
      * @return 影响行数
@@ -45,7 +45,7 @@ public interface BaseMapper<T> {
 //    int update(T entity);
 
     /**
-     * 根据ID查询记录
+     * 根据 ID 查询记录
      *
      * @param id 主键ID
      * @return 实体对象

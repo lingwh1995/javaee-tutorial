@@ -87,7 +87,7 @@ public class NettyHttpClient {
                         });
                     }
                 });
-            //完成绑定,内部如果异步实现 bind ，因此需要阻塞拿到返回结果
+            // 完成绑定，内部如果异步实现 bind，因此需要阻塞拿到返回结果
             ChannelFuture future = bootstrap.connect().sync();
             //关闭 future 时也需要阻塞，内部也采用的是异步操作
             future.channel().closeFuture().sync();

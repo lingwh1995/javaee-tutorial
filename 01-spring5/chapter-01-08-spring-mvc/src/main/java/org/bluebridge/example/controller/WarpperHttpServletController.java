@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * SpringMVC高级特性
+ * SpringMVC 高级特性
  *
  * @author lingwh
  * @date 2019/7/26 15:44

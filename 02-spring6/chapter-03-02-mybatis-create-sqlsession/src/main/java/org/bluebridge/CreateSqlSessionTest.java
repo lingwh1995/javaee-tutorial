@@ -9,7 +9,7 @@ import org.junit.Test;
 import java.io.InputStream;
 
 /**
- * 创建SqlSession测试
+ * 创建 SqlSession 测试
  *
  * @author lingwh
  * @date 2026/7/13 14:30
@@ -22,7 +22,7 @@ public class CreateSqlSessionTest {
     public void testMybatisHelloWorld() {
         SqlSession sqlSession = null;
         try {
-            // 1. 创建SqlSessionFactoryBuilder对象
+            // 1. 创建 SqlSessionFactoryBuilder 对象
             SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
             // 2. 读取配置文件
                 //  方式一：Resources.getResourceAsStream 默认就是从类的根路径下开始查找资源
@@ -32,9 +32,9 @@ public class CreateSqlSessionTest {
                 //  方式三：使用系统类加载器加载资源
             InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream(ENV + "/mybatis-config.xml");
 
-            // 3. 创建SqlSessionFactory对象
+            // 3. 创建 SqlSessionFactory 对象
             SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(is);
-            // 4. 创建SqlSession对象
+            // 4. 创建 SqlSession 对象
             sqlSession = sqlSessionFactory.openSession();
             System.out.println("创建的SqlSession对象 : " + sqlSession);
         } catch (Exception e) {

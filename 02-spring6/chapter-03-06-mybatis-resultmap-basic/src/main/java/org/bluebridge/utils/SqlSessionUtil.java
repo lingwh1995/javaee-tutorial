@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 /**
- * MyBatis工具类
+ * MyBatis 工具类
  *
  * @author lingwh
  * @date 2026/7/13 14:30
@@ -18,7 +18,7 @@ public class SqlSessionUtil {
     private SqlSessionUtil() {}
 
     /**
-     * 类加载时初始化sqlSessionFactory对象
+     * 类加载时初始化 sqlSessionFactory 对象
      */
     static {
         try {

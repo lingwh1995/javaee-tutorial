@@ -18,7 +18,7 @@ import java.util.Set;
  * 界面版即时通讯Server端(群聊、单聊)
  *
  * @author lingwh
- * @date 2026/7/14 10:32
+ * @date 2025/9/23 15:10
  */
 @Slf4j
 public class ChatServer {
@@ -27,8 +27,8 @@ public class ChatServer {
     private static final int PORT = 8080;
 
     /**
-     * 定义一个集合存放所有在线的socket
-     * 在线集合只需要一个，存储客户端socket的同时还需要知道这个Socket的客户端名称
+     * 定义一个集合存放所有在线的 socket
+     * 在线集合只需要一个，存储客户端 socket 的同时还需要知道这个 Socket 的客户端名称
      */
     public static Map<Socket,String> onLineSockets = new HashMap<>();
 
@@ -41,7 +41,7 @@ public class ChatServer {
             // 循环一直等待所有可能的客户端连接
             while (true){
                 Socket socket = serverSocket.accept();
-                // 把客户端的socket管道单独配置一个线程来处理
+                // 把客户端的 socket 管道单独配置一个线程来处理
                 new ChatServerThread(socket).start();
             }
         }catch (Exception e){
@@ -69,7 +69,7 @@ class ChatServerThread extends Thread {
             // 2. 读取当前的消息类型：登录，群发，私聊，@消息
                 int flag = dis.readInt();
                 if(flag == 1){
-                    // 先将当前登录的客户端socket存到在线人数的socket集合中
+                    // 先将当前登录的客户端 socket 存到在线人数的 socket 集合中
                     String name = dis.readUTF();
                     System.out.println(name + "----->" +
                             socket.getRemoteSocketAddress());

@@ -14,10 +14,10 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * 测试直接解析 flowableui生成的bpmn.xml文件
+ * 测试直接解析 flowableui 生成的 bpmn.xml 文件
  *
  * @author lingwh
- * @date 2026/7/13 20:48
+ * @date 2026/1/1 14:35
  */
 public class ProcessByFlowableUITest {
 
@@ -44,9 +44,9 @@ public class ProcessByFlowableUITest {
         // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         System.out.println(processEngine);
-        // 2. 获取RepositoryService对象
+        // 2. 获取 RepositoryService 对象
         RepositoryService repositoryService = processEngine.getRepositoryService();
-        // 3. 获取DeploymentBuilder对象
+        // 3. 获取 DeploymentBuilder 对象
         Deployment deploy = repositoryService.createDeployment()
                 .addClasspathResource("holiday-process-flowableui.bpmn20.xml")// 关联要部署的流程文件
                 .name("请假流程-FlowableUI版")// 设置流程名称
@@ -63,7 +63,7 @@ public class ProcessByFlowableUITest {
         // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
-        // 使用key查询已经定义的流程，这里的key就是流程id
+        // 使用 key 查询已经定义的流程，这里的 key 就是流程 id
         /**/
         ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery()
                 .processDefinitionKey("holidayProcessFlowableUI")
@@ -89,7 +89,7 @@ public class ProcessByFlowableUITest {
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
         // 删除部署的流程，如果流程启动了，就不可以被删除了
-            // 第一个参数:流程id  第二个参数: 级联删除，如果流程启动了，相关的任务一并会被删除
+            // 第一个参数：流程 id  第二个参数： 级联删除，如果流程启动了，相关的任务一并会被删除
         repositoryService.deleteDeployment("92501",true);
     }
 

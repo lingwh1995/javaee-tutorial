@@ -7,7 +7,7 @@ import lombok.ToString;
  * 创建聊天组响应消息
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 19:35
  */
 @Data
 @ToString(callSuper = true)

@@ -11,7 +11,7 @@ import org.junit.Test;
  * netty 中的零拷贝
  *
  * @author lingwh
- * @date 2026/7/14 10:32
+ * @date 2025/10/10 15:30
  */
 @Slf4j
 public class NettyZeroCopyTest {
@@ -82,7 +82,7 @@ public class NettyZeroCopyTest {
         byteBufs.addComponent(byteBuf1);
         byteBufs.addComponent(byteBuf2);
         */
-        // true 表示增加新的 ByteBuf 自动递增 write index, 否则 write index 会始终为 0
+        // true 表示增加新的 ByteBuf 自动递增 write index，否则 write index 会始终为 0
         byteBufs.addComponents(true, byteBuf1, byteBuf2);
         ByteBufUtil.debugAll(byteBufs);
     }

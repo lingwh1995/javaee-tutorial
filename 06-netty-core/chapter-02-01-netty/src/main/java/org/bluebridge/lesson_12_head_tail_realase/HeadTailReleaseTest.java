@@ -10,7 +10,7 @@ import org.bluebridge.utils.ByteBufUtil;
  * 应当理解到： netty 中的创建的 Bytebuf 使用完成后最终必然要被释放，而不是什么处理都不做
  *
  * @author lingwh
- * @date 2026/7/14 10:30
+ * @date 2025/10/11 16:20
  */
 public class HeadTailReleaseTest {
 

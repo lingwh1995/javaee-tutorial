@@ -17,7 +17,7 @@ public class ResponseBodyController {
 
     /**
      * @ResponseBody 注解需要引用下面的三个包
-     * SpringMVC使用:HttpMessageConverter将数据转换为Json格式
+     * SpringMVC 使用：HttpMessageConverter 将数据转换为 Json 格式
      */
     /*
     <dependency>
@@ -38,7 +38,7 @@ public class ResponseBodyController {
     */
 
     /**
-     * 返回Json格式数据
+     * 返回 Json 格式数据
      *
      * @return
      */

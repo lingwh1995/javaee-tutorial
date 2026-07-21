@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * ant风格通配符
+ * ant 风格通配符
  *
  * 1. ? 匹配一个任意的字符
  * 2. * 匹配任意字符

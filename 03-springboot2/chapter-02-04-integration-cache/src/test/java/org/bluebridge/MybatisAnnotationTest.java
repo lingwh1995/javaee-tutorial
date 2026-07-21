@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * Mybatis注解测试类
+ * Mybatis 注解测试类
  *
  * @author lingwh
  * @date 2019/11/18 14:37
@@ -22,7 +22,7 @@ public class MybatisAnnotationTest {
     private UserController userController;
 
     /**
-     * 测试@Cacheable注解
+     * 测试@Cacheable 注解
      */
     @Test
     public void fun1() {
@@ -36,7 +36,7 @@ public class MybatisAnnotationTest {
     }
 
     /**
-     * 测试@Caching注解
+     * 测试@Caching 注解
      */
     @Test
     public void fun2() {

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 
 /**
- * 简单读取spring配置信息
+ * 简单读取 spring 配置信息
  *
  * 通过@Value("${property}")读取比较简单的配置信息，Spring并不推荐@value这种方式
  *
@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 @Controller
 public class ConfigurationFileController {
 
-    //-----------使用@Value读取配置文件开始-----------
+    //-----------使用@Value 读取配置文件开始-----------
     @Value("${version}")
     private String version;
 
@@ -52,7 +52,7 @@ public class ConfigurationFileController {
 
     @Value("${library.books[2].description}")
     private String book2description;
-    //-----------使用@Value读取配置文件结束-----------
+    //-----------使用@Value 读取配置文件结束-----------
 
     //-----------使用@ConfigurationProperties读取配置文件(@Configuration将配置bean注入到容器中)开始-----------
     @Resource
@@ -69,10 +69,10 @@ public class ConfigurationFileController {
     private LibraryConfigConfigurationPropertiesRecommendUsage libraryConfigConfigurationPropertiesRecommendUsage;
     //-----------使用@ConfigurationProperties读取配置文件(推荐用法 @Configuration + @Bean + @ConfigurationProperties)结束-----------
 
-    //-----------使用@PropertySource读取properties文件内容开始-----------
+    //-----------使用@PropertySource 读取 properties 文件内容开始-----------
     @Resource
     private User user;
-    //-----------使用@PropertySource读取properties文件内容结束-----------
+    //-----------使用@PropertySource 读取 properties 文件内容结束-----------
 
     /**
      * 访问   http://localhost:8080/read-configuration     查看效果
@@ -104,9 +104,9 @@ public class ConfigurationFileController {
         System.out.println(libraryConfigConfigurationPropertiesRecommendUsage);
         System.out.println("-----------使用@ConfigurationProperties读取配置文件(推荐用法 @Configuration + @Bean + @ConfigurationProperties)结束-----------");
 
-        //-----------使用@PropertySource读取properties文件内容开始-----------
+        //-----------使用@PropertySource 读取 properties 文件内容开始-----------
         System.out.println("user = " + user);
-        //-----------使用@PropertySource读取properties文件内容结束-----------
+        //-----------使用@PropertySource 读取 properties 文件内容结束-----------
         return "请在控制台查看打印的配置文件内容~";
     }
 }

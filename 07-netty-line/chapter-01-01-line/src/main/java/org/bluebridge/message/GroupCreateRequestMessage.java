@@ -9,7 +9,7 @@ import java.util.Set;
  * 创建聊天组请求消息
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 19:30
  */
 @Data
 @ToString(callSuper = true)

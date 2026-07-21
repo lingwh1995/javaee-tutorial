@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Autowired注解位置配置类
+ * Autowired 注解位置配置类
  *
  * @author lingwh
  * @date 2019/4/11 10:40

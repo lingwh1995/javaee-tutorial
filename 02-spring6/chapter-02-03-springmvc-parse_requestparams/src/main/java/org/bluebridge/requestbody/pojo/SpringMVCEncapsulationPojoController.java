@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * 使用SpringMVC提供的封装参数到POJO方式解析请求参数
+ * 使用 SpringMVC 提供的封装参数到 POJO 方式解析请求参数
  */
 @RequestMapping(value = "/parseRequestParams")
 @Controller

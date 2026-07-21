@@ -6,7 +6,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 /**
- * SpringMVC测试基类
+ * SpringMVC 测试基类
  *
  * @author lingwh
  * @date 2019/7/22 14:34

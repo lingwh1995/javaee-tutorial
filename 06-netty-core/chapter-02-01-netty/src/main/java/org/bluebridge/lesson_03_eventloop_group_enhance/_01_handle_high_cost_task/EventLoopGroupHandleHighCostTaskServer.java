@@ -43,7 +43,7 @@ public class EventLoopGroupHandleHighCostTaskServer {
                             ByteBuf buf = (ByteBuf) msg;
                             String s = buf.toString(Charset.defaultCharset());
                             log.info("NioEventLoopGroup 名称：{}，第一个handler开始处理耗时任务： {}", Thread.currentThread().getName(), s);
-                            // 让消息传递给下一个handler
+                            // 让消息传递给下一个 handler
                             ctx.fireChannelRead(msg);
                         }
                     });
@@ -52,7 +52,7 @@ public class EventLoopGroupHandleHighCostTaskServer {
                         public void channelRead(ChannelHandlerContext ctx, Object msg) {
                         ByteBuf buf = (ByteBuf) msg;
                         String s = buf.toString(Charset.defaultCharset());
-                        // 使用异步方式处理耗时任务，避免阻塞I/O线程
+                        // 使用异步方式处理耗时任务，避免阻塞 I/O 线程
                         eventExecutors.submit(() -> {
                             log.info("NioEventLoopGroup 名称：{}，第二个handler开始处理耗时任务，内容：{}", Thread.currentThread().getName(), s);
 

@@ -4,7 +4,7 @@ import org.bluebridge.ioc.factory.domain.ColorFactoryBean;
 import org.springframework.context.annotation.Import;
 
 /**
- * Spring循环依赖
+ * Spring 循环依赖
  *
  * @author lingwh
  * @date 2019/4/5 14:44

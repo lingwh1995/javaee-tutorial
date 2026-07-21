@@ -18,7 +18,7 @@ import java.util.Set;
  * 3. 接收服务器消息
  *
  * @author lingwh
- * @date 2026/7/14 10:45
+ * @date 2025/6/20 15:10
  */
 public class GroupChatClient {
 

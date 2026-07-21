@@ -10,7 +10,7 @@ import java.util.Properties;
  * 配置类
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2025/10/27 14:15
  */
 public abstract class Config {
 

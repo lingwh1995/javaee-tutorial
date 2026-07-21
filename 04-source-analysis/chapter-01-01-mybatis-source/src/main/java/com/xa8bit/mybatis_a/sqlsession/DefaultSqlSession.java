@@ -11,20 +11,20 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * mybatis暴露给外部的接口，实现增删改查功能
+ * mybatis 暴露给外部的接口，实现增删改查功能
  *
- * 1. 对象提供数据访问的api
- * 2. 对内将请求转发给Executor
+ * 1. 对象提供数据访问的 api
+ * 2. 对内将请求转发给 Executor
  *
  * @author lingwh
- * @date 2026/7/13 17:10
+ * @date 2025/12/20 17:10
  */
 public class DefaultSqlSession implements SqlSession {
 
     private final Configuration config;
 
     /**
-     * 注意:这个执行器不能定义为final类型
+     * 注意：这个执行器不能定义为 final 类型
      */
     private Executor executor;
 

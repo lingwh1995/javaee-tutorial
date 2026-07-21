@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringValueResolver;
 
 /**
- * Spring框架会回调这些实现了XXXAware的方法
+ * Spring 框架会回调这些实现了 XXXAware 的方法
  *
  * @author lingwh
  * @date 2019/4/6 13:43

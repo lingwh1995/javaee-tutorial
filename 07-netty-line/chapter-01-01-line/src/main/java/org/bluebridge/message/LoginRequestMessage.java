@@ -7,7 +7,7 @@ import lombok.ToString;
  * 登录请求消息
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 20:15
  */
 @Data
 @ToString(callSuper = true)

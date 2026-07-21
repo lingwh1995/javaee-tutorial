@@ -10,7 +10,7 @@ import java.util.Map;
  * 消息基类
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 20:25
  */
 @Data
 public abstract class Message implements Serializable {

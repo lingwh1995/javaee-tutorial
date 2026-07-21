@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.annotation.Resource;
 
 /**
- * 测试SpringBootTestController
+ * 测试 SpringBootTestController
  *
  * @author lingwh
  * @date 2025/11/4 17:50

@@ -18,7 +18,7 @@ import java.net.URI;
 import java.util.Map;
 
 /**
- * WebSocket配置类
+ * WebSocket 配置类
  *
  * @author lingwh
  * @date 2025/10/18 18:32
@@ -34,12 +34,12 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        // 注册WebSocket处理器，允许跨域访问
+        // 注册 WebSocket 处理器，允许跨域访问
         WebSocketHandlerRegistration registration = registry.addHandler(new MyWebSocketServerHandler(),
                         webSocketProperties.getEndpointPathPrefix() + "/{userId}")
                 .addInterceptors(handshakeInterceptor())
                 .setAllowedOriginPatterns(webSocketProperties.getAllowedOrigins().toArray(new String[0]));
-        // 是否开启SockJs
+        // 是否开启 SockJs
         if(webSocketProperties.isEnableSockjs()){
             registration.withSockJS();
         }

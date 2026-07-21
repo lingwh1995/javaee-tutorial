@@ -4,7 +4,7 @@ import java.net.URI;
 import java.util.Scanner;
 
 /**
- * WebSocket客户端测试类3
+ * WebSocket 客户端测试类 3
  *
  * @author lingwh
  * @date 2025/10/18 14:29
@@ -26,7 +26,7 @@ public class SpringWebSocketClient_USER_0003_Test {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        // 服务端WebSocket地址（示例）
+        // 服务端 WebSocket 地址（示例）
         URI webSocketUri = new URI(FULL_WS_URL);
 
         // 创建客户端并连接

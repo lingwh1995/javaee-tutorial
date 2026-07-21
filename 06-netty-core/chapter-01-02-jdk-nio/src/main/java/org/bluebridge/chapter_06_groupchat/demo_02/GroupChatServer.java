@@ -10,13 +10,13 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * NIO群聊服务端
+ * NIO 群聊服务端
  *
- * 1. 服务器启动并监听6667
- * 2. 服务器端接收客户端消息,并实现处理上线和离线、转发
+ * 1. 服务器启动并监听 6667
+ * 2. 服务器端接收客户端消息，并实现处理上线和离线、转发
  *
  * @author lingwh
- * @date 2026/7/14 10:40
+ * @date 2025/6/20 15:05
  */
 @Slf4j
 public class GroupChatServer {
@@ -31,13 +31,13 @@ public class GroupChatServer {
         try {
             // 得到选择器
             selector = Selector.open();
-            // 得到ServerSocketChannel
+            // 得到 ServerSocketChannel
             listenChannel = ServerSocketChannel.open();
             // 绑定端口
             listenChannel.socket().bind(new InetSocketAddress(PORT));
             // 设置为非阻塞模式
             listenChannel.configureBlocking(false);
-            // 将该listenChannel注册到selector
+            // 将该 listenChannel 注册到 selector
             listenChannel.register(selector, SelectionKey.OP_ACCEPT);
         } catch (IOException e) {
             e.printStackTrace();
@@ -57,25 +57,25 @@ public class GroupChatServer {
                 // 说明有事件发生
                 if(count > 0) {
                     Iterator<SelectionKey> iterator = selector.selectedKeys().iterator();
-                    // 遍历SelectionKey集合
+                    // 遍历 SelectionKey 集合
                     while(iterator.hasNext()) {
-                        // 取出selectionKey
+                        // 取出 selectionKey
                         SelectionKey selectionKey = iterator.next();
-                        // 监听到accept事件
+                        // 监听到 accept 事件
                         if(selectionKey.isAcceptable()) {
                             SocketChannel sc = listenChannel.accept();
                             // 设置非阻塞
                             sc.configureBlocking(false);
-                            // 将该sc注册到selector上
+                            // 将该 sc 注册到 selector 上
                             sc.register(selector,SelectionKey.OP_READ);
                             log.info("提示: {} 上线",sc.getRemoteAddress());
                         }
                         // 通道是可读状态
                         if(selectionKey.isReadable()) {
-                            // 处理读,专门写方法
+                            // 处理读，专门写方法
                             readDate(selectionKey);
                         }
-                        // 处理完成后从SelectionKey集合中删除该SelectionKey,防止重复处理
+                        // 处理完成后从 SelectionKey 集合中删除该 SelectionKey，防止重复处理
                         iterator.remove();
                     }
                 }else {
@@ -96,12 +96,12 @@ public class GroupChatServer {
     public void readDate(SelectionKey selectionKey) {
         SocketChannel socketChannel = null;
         try {
-            // 得到socketChannel
+            // 得到 socketChannel
             socketChannel = (SocketChannel) selectionKey.channel();
-            // 创建buffer
+            // 创建 buffer
             ByteBuffer buffer = ByteBuffer.allocate(1024);
             int count = socketChannel.read(buffer);
-            // 根据count的值做处理
+            // 根据 count 的值做处理
             if(count > 0) {
                 // 把缓冲区数据转为字符串
                 String message = new String(buffer.array());
@@ -134,19 +134,19 @@ public class GroupChatServer {
     public void sendMessageToOtherClient(String message,SocketChannel selfSocketChannel) throws IOException {
         log.info("服务器转发消息中......");
         log.info("服务器转发消息给客户端线程: {}", Thread.currentThread().getName());
-        // 遍历所有的注册到selector上的SocketChannel,并排除自身通道
+        // 遍历所有的注册到 selector 上的 SocketChannel，并排除自身通道
         Set<SelectionKey> socketChannels = selector.keys();
         Iterator<SelectionKey> iterator = socketChannels.iterator();
         while(iterator.hasNext()) {
             SelectionKey selectionKey = iterator.next();
-            // 通过key获取对应的SocketChannel
+            // 通过 key 获取对应的 SocketChannel
             Channel currentChannel = selectionKey.channel();
             if(currentChannel instanceof SocketChannel && currentChannel != selfSocketChannel) {
-                // 将channel转为SocketChannel
+                // 将 channel 转为 SocketChannel
                 SocketChannel destChannel = (SocketChannel) currentChannel;
-                // 将message存储到buffer中
+                // 将 message 存储到 buffer 中
                 ByteBuffer buffer = ByteBuffer.wrap(message.getBytes());
-                // 将buffer的数据写入通道中
+                // 将 buffer 的数据写入通道中
                 destChannel.write(buffer);
             }
         }

@@ -39,7 +39,7 @@ public class SimpleChannelInboundHandlerStringClient {
             .channel();
 
         Student student = new Student("张三");
-        // 将student对象转为字符串并发送
+        // 将 student 对象转为字符串并发送
         channel.writeAndFlush(JSONUtil.toJsonStr(student));
     }
 }

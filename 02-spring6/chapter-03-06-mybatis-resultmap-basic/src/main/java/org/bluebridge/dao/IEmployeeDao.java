@@ -3,7 +3,7 @@ package org.bluebridge.dao;
 import org.bluebridge.domain.Employee;
 
 /**
- * 员工Dao接口
+ * 员工 Dao 接口
  *
  * @author lingwh
  * @date 2026/7/13 14:30
@@ -11,7 +11,7 @@ import org.bluebridge.domain.Employee;
 public interface IEmployeeDao {
 
     /**
-     * 使用ResultMap完成单表查询
+     * 使用 ResultMap 完成单表查询
      *
      * @param id
      * @return
@@ -19,7 +19,7 @@ public interface IEmployeeDao {
     Employee getEmployeeById(String id);
 
     /**
-     * 使用ResultMap完成多表关联查询
+     * 使用 ResultMap 完成多表关联查询
      *
      * @param id
      * @return

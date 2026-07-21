@@ -29,7 +29,7 @@ public class MessageListener {
     }
 
     /**
-     * Spring环境开启异步需要在 applicationContext-event_driven.xml 中配置
+     * Spring 环境开启异步需要在 applicationContext-event_driven.xml 中配置
      * SpringBoot 环境开启异步需要在主启动类中添加 @EnableAsync
      *
      * @param event

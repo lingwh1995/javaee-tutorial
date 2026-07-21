@@ -30,9 +30,9 @@ public class HelloClient {
             // 2.添加 EventLoop
             .group(new NioEventLoopGroup())
             // 3.选择客户 Socket 实现类，NioSocketChannel 表示基于 NIO 的客户端实现
-            // 设置非阻塞,用它来建立新accept的连接，用于构造ServerSocketChannel的工厂类
+            // 设置非阻塞，用它来建立新 accept 的连接，用于构造 ServerSocketChannel 的工厂类
             .channel(NioSocketChannel.class)
-            // 4.添加处理器，仅执行一次，它的作用是待客户端SocketChannel建立连接后，执行initChannel以便添加更多的处理器
+            // 4.添加处理器，仅执行一次，它的作用是待客户端 SocketChannel 建立连接后，执行 initChannel 以便添加更多的处理器
             .handler(new ChannelInitializer<NioSocketChannel>() {
                 @Override // 在连接建立后被调用
                 protected void initChannel(NioSocketChannel ch) {

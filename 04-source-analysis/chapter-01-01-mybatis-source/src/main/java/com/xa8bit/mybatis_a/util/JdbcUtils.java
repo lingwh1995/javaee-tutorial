@@ -11,20 +11,20 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * JDBC工具类，提供连接管理和SQL执行功能
+ * JDBC 工具类，提供连接管理和 SQL 执行功能
  *
  * @author lingwh
- * @date 2026/7/13 09:45
+ * @date 2025/12/20 09:15
  */
 public class JdbcUtils {
 
     /**
-     * 存放与当前线程绑定的Connection
+     * 存放与当前线程绑定的 Connection
      */
     private static final ThreadLocal<Connection> connectionContainer = new ThreadLocal<>();
 
     /**
-     * 私有构造,防止通过new调用
+     * 私有构造，防止通过 new 调用
      */
     private JdbcUtils() {}
 
@@ -32,7 +32,7 @@ public class JdbcUtils {
      * 获取连接对象
      *
      * @return 获取连接对象
-     * @throws SQLException 如果参数有误,则抛出此异常
+     * @throws SQLException 如果参数有误，则抛出此异常
      */
     public static Connection getConnection(Configuration configuration) throws SQLException, ClassNotFoundException {
         Map<String, String> dbConfigMap = configuration.getDbConfigMap();

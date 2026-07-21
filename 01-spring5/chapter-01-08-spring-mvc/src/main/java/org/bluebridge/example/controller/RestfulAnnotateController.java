@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * SpringMVC restful风格常用的注解
+ * SpringMVC restful 风格常用的注解
  *
  * @author lingwh
  * @date 2019/6/20 10:17
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.*;
 public class RestfulAnnotateController {
 
     /**
-     * 使用@PathVariable接收参数
+     * 使用 @PathVariable 接收参数
      *
-     * 注意：id这个参数被接收了两次，一次是接收为Integer类型的数据，一次是被接收为String类型的数据
+     * 注意：id 这个参数被接收了两次，一次是接收为 Integer 类型的数据，一次是被接收为 String 类型的数据
      *
      * @param idStr
      * @param idInt
@@ -29,7 +29,7 @@ public class RestfulAnnotateController {
     }
 
     /**
-     * 使用@PathVariable接收多个参数
+     * 使用 @PathVariable 接收多个参数
      *
      * @param name
      * @param age
@@ -43,10 +43,10 @@ public class RestfulAnnotateController {
     }
 
     /**
-     * restful api增强:
+     * restful api 增强：
      * 增加:@PostMapping：url的post请求，相当于@RequestMapping(method= RequestMethod.POST)，但只能用在方法上，不能用在类上，其他参数和RequestMapping用法完全相同。
-     * 删除:@DeleteMapping：同PostMapping。在Restful API中代表删除
-     * 修改:@PutMapping：同PostMapping。在Restful API中代表更新
-     * 查询:@GetMapping：同PostMapping。在Restful API中代表查找
+     * 删除：@DeleteMapping：同 @PostMapping。在 Restful API 中代表删除
+     * 修改：@PutMapping：同 @PostMapping。在 Restful API 中代表更新
+     * 查询：@GetMapping：同 @PostMapping。在 Restful API 中代表查找
      */
 }

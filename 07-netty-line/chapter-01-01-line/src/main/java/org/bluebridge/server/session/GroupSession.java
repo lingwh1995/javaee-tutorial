@@ -9,7 +9,7 @@ import java.util.Set;
  * 聊天组会话管理接口
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 16:10
  */
 public interface GroupSession {
 
@@ -52,7 +52,7 @@ public interface GroupSession {
     Set<String> getMembers(String name);
 
     /**
-     * 获取组成员的 channel 集合, 只有在线的 channel 才会返回
+     * 获取组成员的 channel 集合，只有在线的 channel 才会返回
      * @param name 组名
      * @return 成员 channel 集合
      */

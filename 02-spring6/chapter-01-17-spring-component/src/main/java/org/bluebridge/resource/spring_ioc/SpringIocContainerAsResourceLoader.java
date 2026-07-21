@@ -10,10 +10,10 @@ import org.springframework.core.io.ResourceLoader;
  * 如果把实现 ResourceLoaderAware 接口的 Bean 类部署在 Spring容器中，Spring 容器会将自身当成 ResourceLoader 作为 setResourceLoader()方法的参数传入。由于 ApplicationContext 的实现类都实现了ResourceLoader接口，Spring容器自身完全可作为ResorceLoader使用。
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 11:10
  */
 public class SpringIocContainerAsResourceLoader implements ResourceLoaderAware {
-    // 注意:在配置文件中配置bean时，我们不会给这个属性赋值，这个属性的赋值由Spring容器自己完成
+    // 注意：在配置文件中配置 bean 时，我们不会给这个属性赋值，这个属性的赋值由 Spring 容器自己完成
     private ResourceLoader resourceLoader;
 
     @Override
@@ -22,7 +22,7 @@ public class SpringIocContainerAsResourceLoader implements ResourceLoaderAware {
     }
 
     /**
-     * 这个方法用于外部获取ResourceLoader的实例对象的引用
+     * 这个方法用于外部获取 ResourceLoader 的实例对象的引用
      * @return
      */
     public ResourceLoader getResourceLoader() {

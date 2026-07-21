@@ -4,7 +4,7 @@ package org.bluebridge._03_groupchat._02_swing_gui;
  * SpringBoot HelloWorld 入门示例的 Hello 控制器
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2025/9/23 14:20
  */
 public class Constants {
 

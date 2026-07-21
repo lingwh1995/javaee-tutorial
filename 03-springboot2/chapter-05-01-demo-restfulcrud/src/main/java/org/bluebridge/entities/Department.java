@@ -4,7 +4,7 @@ package org.bluebridge.entities;
  * 部门实体类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2019/4/13 14:55
  */
 public class Department {
 

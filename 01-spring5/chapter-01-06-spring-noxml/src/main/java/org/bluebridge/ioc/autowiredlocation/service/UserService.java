@@ -20,7 +20,7 @@ public class UserService {
     }
 
     /**
-     * 测试Auto标注在Setter方法上
+     * 测试 Auto 标注在 Setter 方法上
      *
      * @param userDao
      */

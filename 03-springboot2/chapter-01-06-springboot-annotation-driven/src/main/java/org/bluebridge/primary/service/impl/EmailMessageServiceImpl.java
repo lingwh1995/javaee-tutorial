@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
  * 邮件消息发送服务实现类
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 14:22
  */
 @Service
 public class EmailMessageServiceImpl implements IMessageService {

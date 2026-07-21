@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * 测试Aware接口实现
+ * 测试 Aware 接口实现
  *
  * @author lingwh
  * @date 2019/4/6 13:47

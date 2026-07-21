@@ -16,7 +16,7 @@ import javax.annotation.Resource;
  * 聊天请求消息处理器
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/30 20:20
  */
 @Slf4j
 @Component

@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * SpringBoot 启动类
  *
  * @author lingwh
- * @date 2025/10/18 9:00
+ * @date 2026/7/13 9:00
  */
 @SpringBootApplication
 public class Application {

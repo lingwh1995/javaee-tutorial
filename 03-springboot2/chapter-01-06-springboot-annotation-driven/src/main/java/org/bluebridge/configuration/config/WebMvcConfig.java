@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * Spring MVC 自定义配置类
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 09:22
  */
 @Configuration
 @EnableWebMvc

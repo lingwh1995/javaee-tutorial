@@ -20,7 +20,7 @@ import org.bluebridge.protocol.ProcotolFrameDecoder;
  * 聊天客户端
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 15:30
  */
 @Slf4j
 public class ChatClient {

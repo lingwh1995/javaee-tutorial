@@ -18,7 +18,7 @@ import java.util.Map;
  * 测试使用监听器完成任务分配
  *
  * @author lingwh
- * @date 2026/7/13 10:07
+ * @date 2026/1/1 15:48
  */
 public class TaskAllocationByListenerTest {
 
@@ -49,9 +49,9 @@ public class TaskAllocationByListenerTest {
         // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         System.out.println(processEngine);
-        // 2. 获取RepositoryService对象
+        // 2. 获取 RepositoryService 对象
         RepositoryService repositoryService = processEngine.getRepositoryService();
-        // 3. 获取DeploymentBuilder对象
+        // 3. 获取 DeploymentBuilder 对象
         Deployment deploy = repositoryService.createDeployment()
                 .addClasspathResource("taskAllocation-listener.bpmn20.xml")// 关联要部署的流程文件
                 .name("任务分配-监听器版")// 设置流程名称
@@ -68,7 +68,7 @@ public class TaskAllocationByListenerTest {
         // 1. 获取流程引擎对象
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
-        // 使用key查询已经定义的流程，这里的key就是流程id
+        // 使用 key 查询已经定义的流程，这里的 key 就是流程 id
         /**/
         ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery()
                 .processDefinitionKey("holidayProcessXml")
@@ -94,7 +94,7 @@ public class TaskAllocationByListenerTest {
         ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
         // 删除部署的流程，如果流程启动了，就不可以被删除了
-            // 第一个参数:流程id  第二个参数: 级联删除，如果流程启动了，相关的任务一并会被删除
+            // 第一个参数：流程 id  第二个参数： 级联删除，如果流程启动了，相关的任务一并会被删除
         repositoryService.deleteDeployment("165001",true);
     }
 

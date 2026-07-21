@@ -14,12 +14,12 @@ import java.util.List;
  * mybatis 分页
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 11:35
  */
 public class MybatisPageHelperTest {
 
     /**
-     * 分页查询-使用mysql原生方式分页
+     * 分页查询-使用 mysql 原生方式分页
      */
     @Test
     public void testSelectByPageUseMysqlNative(){
@@ -37,14 +37,14 @@ public class MybatisPageHelperTest {
     }
 
     /**
-     * 分页查询-使用PageHelper插件分页
+     * 分页查询-使用 PageHelper 插件分页
      */
     @Test
     public void testSelectByPageUsePageHelper(){
         SqlSession sqlSession = SqlSessionUtil.openSession();
         CarMapper mapper = sqlSession.getMapper(CarMapper.class);
 
-        // 一定一定一定要注意：在执行DQL语句之前。开启分页功能。
+        // 一定一定一定要注意：在执行 DQL 语句之前。开启分页功能。
         int pageNum = 2;
         int pageSize = 3;
         // 开启分页功能，参数一：页码，参数二：页面显示的数据条数
@@ -53,7 +53,7 @@ public class MybatisPageHelperTest {
         List<Car> cars = mapper.selectByPageUsePageHelper();
         // cars.forEach(car -> System.out.println(car));
 
-        // 将分页查询结果封装到PageInfo对象中
+        // 将分页查询结果封装到 PageInfo 对象中
         // new PageInfo(data,navigatepageNum):第一个参数为查询出来的数据,第二个参数为导航选项的个数
         PageInfo<Car> carPageInfo = new PageInfo<>(cars, 3);
 

@@ -6,11 +6,11 @@ import org.opencv.highgui.HighGui;
 import org.opencv.imgcodecs.Imgcodecs;
 
 /**
- * opencv开发环境搭建（windows版）
+ * opencv 开发环境搭建（windows 版）
  *
  * 1. 下载opencv（本次下载的是4.9.0版本） https://opencv.org/releases/
- * 2. 解压后进入 opencv/build/java/x64中，复制dll文件jdk的bin目录中
- * 3. 在maven中引入对应版本的opencv依赖
+ * 2. 解压后进入 opencv/build/java/x64 中，复制 dll 文件 jdk 的 bin 目录中
+ * 3. 在 maven 中引入对应版本的 opencv 依赖
  *
  * @author lingwh
  * @date 2025/9/30 15:50
@@ -18,7 +18,7 @@ import org.opencv.imgcodecs.Imgcodecs;
 public class OpencvHelloWorld {
 
     static {
-        // 加载OpenCV本地库
+        // 加载 OpenCV 本地库
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     }
 

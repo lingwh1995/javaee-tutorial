@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * Autowired注解书写位置测试
+ * Autowired 注解书写位置测试
  *
  * @author lingwh
  * @date 2019/4/11 10:45

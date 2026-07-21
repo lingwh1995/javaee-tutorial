@@ -4,7 +4,7 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 /**
- * Cat实体类，演示Bean生命周期
+ * Cat 实体类，演示 Bean 生命周期
  *
  * @author lingwh
  * @date 2019/4/10 11:19

@@ -7,14 +7,14 @@ import org.bluebridge.configuration.domain.User;
  * 用户服务实现类
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 09:48
  */
 public class UserServiceImpl implements IUserService {
 
     private UserDao userDao;
 
     /**
-     * 使用set方式注入
+     * 使用 set 方式注入
      *
      * @param userDao 用户DAO实例
      */

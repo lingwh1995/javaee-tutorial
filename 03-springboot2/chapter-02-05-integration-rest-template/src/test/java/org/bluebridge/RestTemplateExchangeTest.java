@@ -12,7 +12,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * 测试RestTemplate的exchange方法
+ * 测试 RestTemplate 的 exchange 方法
  *
  * @author lingwh
  * @date 2019/11/15 15:32
@@ -32,7 +32,7 @@ public class RestTemplateExchangeTest {
         // url 格式
         String url = "http://localhost:8080/rest/put";
         HttpHeaders headers = new HttpHeaders();
-        // header可以不设置值
+        // header 可以不设置值
         // headers.set("phone", "1234567");
         MultiValueMap<String, String> params = new LinkedMultiValueMap();
         params.add("name", "zhaoliu");
@@ -51,7 +51,7 @@ public class RestTemplateExchangeTest {
         // url 格式
         String url = "http://localhost:8080/rest/post";
         HttpHeaders headers = new HttpHeaders();
-        // header可以不设置值
+        // header 可以不设置值
         // headers.set("phone", "1234567");
         MultiValueMap<String, String> params = new LinkedMultiValueMap();
         params.add("name", "zhaoliu");
@@ -65,7 +65,7 @@ public class RestTemplateExchangeTest {
     /**
      * exchange()方式发送GET请求:查询单个并且不传递参数
      *
-     * url形式可以为以下形式
+     * url 形式可以为以下形式
      * http://localhost:8080/rest/get/1
      */
     @Test
@@ -79,7 +79,7 @@ public class RestTemplateExchangeTest {
     /**
      * exchange()方式发送GET请求:查询单个并且传递参数
      *
-     * url形式可以为以下形式
+     * url 形式可以为以下形式
      * http://localhost:8080/rest/get?name=zs
      */
     @Test
@@ -93,7 +93,7 @@ public class RestTemplateExchangeTest {
     /**
      * exchange()方式发送DELETE请求:
      *
-     * url形式可以为以下形式
+     * url 形式可以为以下形式
      * http://localhost:8080/rest/delete/1
      */
     @Test
@@ -107,9 +107,9 @@ public class RestTemplateExchangeTest {
     /**
      * exchange()方式发送请求时用替换参数中的占位符
      *
-     * GET、POST、DELETE、PUT这几种REST风格的请求都可以通过下面的方式来传递参数
+     * GET、POST、DELETE、PUT 这几种 REST 风格的请求都可以通过下面的方式来传递参数
      *
-     * url的形式可以是下面的形式
+     * url 的形式可以是下面的形式
      * 1. http://localhost:8080/rest/get/{1}
      * 2. http://localhost:8080/rest/get/{placeholder}
      */

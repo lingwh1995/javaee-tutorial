@@ -4,7 +4,7 @@ package org.bluebridge.server.service;
  * 用户服务工厂
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 17:20
  */
 public abstract class UserServiceFactory {
 

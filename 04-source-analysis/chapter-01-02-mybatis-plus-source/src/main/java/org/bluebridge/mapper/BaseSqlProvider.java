@@ -9,7 +9,7 @@ import org.bluebridge.wrapper.Wrapper;
 import java.lang.reflect.Field;
 
 /**
- * 通用Mapper SQL提供者
+ * 通用 Mapper SQL 提供者
  *
  * @author lingwh
  * @date 2025/12/10 18:46

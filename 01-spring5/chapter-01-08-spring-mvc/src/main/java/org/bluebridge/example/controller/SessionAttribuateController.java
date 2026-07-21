@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
 /**
- * 使用 @SessionAttribuate 获取已经存在的session数据
+ * 使用 @SessionAttribuate 获取已经存在的 session 数据
  *
  * @author lingwh
  * @date 2026/7/13 11:34

@@ -13,7 +13,7 @@ import java.beans.PropertyVetoException;
 import javax.sql.DataSource;
 
 /**
- * @Profile注解
+ * @Profile 注解
  *
  * 注解说明
  * @Profile 是 Spring / Spring Boot 用于环境隔离的核心注解，可以根据当前激活的环境，动态加载 / 启用不同 Bean、配置、类、方法。

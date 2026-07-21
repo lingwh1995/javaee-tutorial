@@ -20,7 +20,7 @@ public class MyTaskListener implements TaskListener {
     public void notify(DelegateTask delegateTask) {
         if("创建请假流程".equals(delegateTask.getName())
             &&"create".equals(delegateTask.getEventName())) {
-            // 满足触发的条件的事件，那么我们就来设置assignee
+            // 满足触发的条件的事件，那么我们就来设置 assignee
             delegateTask.setAssignee("zhangsan");
             System.out.println("MyTaskListener触发了......" + delegateTask.getName());
         }else {

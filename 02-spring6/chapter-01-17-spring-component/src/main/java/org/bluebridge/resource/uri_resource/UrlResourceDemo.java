@@ -14,30 +14,30 @@ import java.net.URL;
  * 访问网络资源演示
  *
  * @author lingwh
- * @date 2026/7/13 16:53
+ * @date 2026/1/10 10:55
  */
 public class UrlResourceDemo {
     private static final Logger logger = LogManager.getLogger(UrlResourceDemo.class);
 
     /**
-     * UrlResource 读取http/file/ftp前缀的资源路径
+     * UrlResource 读取 http/file/ftp 前缀的资源路径
      * @param path
      * @throws IOException
      */
     public void loadAndParseUrlResource(String path) throws IOException {
-        // 1. 创建Resource实现类UrlResource
+        // 1. 创建 Resource 实现类 UrlResource
         Resource resource = new UrlResource(path);
         // 2. 获取资源信息
             // 获取资源名称
         String filename = resource.getFilename();
         logger.info("资源名称: " + filename);
-            // 获取资源uri
+            // 获取资源 uri
         URI uri = resource.getURI();
         logger.info("资源uri: " + uri);
-            // 获取资源url
+            // 获取资源 url
         URL url = resource.getURL();
         logger.info("资源url: " + url);
-            // 获取资源description
+            // 获取资源 description
         String description = resource.getDescription();
         logger.info("资源description: " + description);
             // 读取资源内容

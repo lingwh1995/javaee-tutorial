@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 
 /**
- * 测试Spring提供的测试功能
+ * 测试 Spring 提供的测试功能
  *
  * @author lingwh
  * @date 2019/4/1 10:20

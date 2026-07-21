@@ -15,7 +15,7 @@ import org.junit.Test;
 public class MybatisResultMapBasicTest {
 
     /**
-     * 使用ResultMap完成单表查询
+     * 使用 ResultMap 完成单表查询
      */
     @Test
     public void getEmployeeById() {
@@ -37,7 +37,7 @@ public class MybatisResultMapBasicTest {
     }
 
     /**
-     * 使用ResultMap完成多表关联查询
+     * 使用 ResultMap 完成多表关联查询
      */
     @Test
     public void getEmployeeAndDepartmentById() {

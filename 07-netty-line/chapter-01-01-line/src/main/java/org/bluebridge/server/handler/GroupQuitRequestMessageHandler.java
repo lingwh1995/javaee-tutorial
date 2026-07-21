@@ -12,7 +12,7 @@ import org.bluebridge.server.session.GroupSessionFactory;
  * 退出聊天组请求消息处理器
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 18:05
  */
 @ChannelHandler.Sharable
 public class GroupQuitRequestMessageHandler extends SimpleChannelInboundHandler<GroupQuitRequestMessage> {

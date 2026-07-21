@@ -7,7 +7,7 @@ import org.bluebridge.anno.TableName;
  * 员工实体类
  *
  * @author lingwh
- * @date 2026/7/14 09:18
+ * @date 2025/12/10 13:45
  */
 @Data
 @TableName("t_employee")

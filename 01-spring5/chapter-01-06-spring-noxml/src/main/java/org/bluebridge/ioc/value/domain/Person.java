@@ -3,7 +3,7 @@ package org.bluebridge.ioc.value.domain;
 import org.springframework.beans.factory.annotation.Value;
 
 /**
- * 零配置搭建Spring开发环境测试
+ * 零配置搭建 Spring 开发环境测试
  *
  * @author lingwh
  * @date 2019/4/3 14:28
@@ -11,9 +11,9 @@ import org.springframework.beans.factory.annotation.Value;
 public class Person {
 
     /**
-     * 使用@Value赋值
+     * 使用 @Value 赋值
      * 1. 基本数值
-     * 2. 可以写SpEL
+     * 2. 可以写 SpEL
      * 3. 可以写${},取出配置文件中的值
      */
     @Value("zhangsan")

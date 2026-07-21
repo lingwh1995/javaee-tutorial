@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
- * MVC配置类，配置视图控制器与区域解析器
+ * MVC 配置类，配置视图控制器与区域解析器
  *
  * @author lingwh
  * @date 2019/4/13 14:29

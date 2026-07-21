@@ -15,12 +15,12 @@ import java.nio.charset.Charset;
  * Netty 版 RedisClient 测试类
  *
  * Windows、Linux、Macos、网络通信中换行符总结
- * 1. \r 对应ASCII码13（0x0D）
- * 2. \n 对应ASCII码10（0x0A）
- * 3. 网络协议中常用CRLF（\r\n）作为行分隔符
+ * 1. \r 对应 ASCII 码 13（0x0D）
+ * 2. \n 对应 ASCII 码 10（0x0A）
+ * 3. 网络协议中常用 CRLF（\r\n）作为行分隔符
  * 4. 不同操作系统的换行符差异：
- *    - Windows: CRLF（\r\n）
- *    - Linux/Unix: LF（\n）
+ *    - Windows：CRLF（\r\n）
+ *    - Linux/Unix：LF（\n）
  *    - MacOS(旧版): CR（\r）
  *
  * @author lingwh
@@ -37,7 +37,7 @@ public class NettyRedisClientTest {
 
     public static void main(String[] args) {
         NioEventLoopGroup worker = new NioEventLoopGroup();
-        // 网络通信中通常使用CRLF（\r\n）作为行分隔符
+        // 网络通信中通常使用 CRLF（\r\n）作为行分隔符
 
         try {
             Bootstrap bootstrap = new Bootstrap();

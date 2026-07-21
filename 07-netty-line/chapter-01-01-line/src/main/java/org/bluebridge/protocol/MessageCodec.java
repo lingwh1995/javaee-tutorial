@@ -16,7 +16,7 @@ import java.util.List;
  * 消息编解码器
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/25 10:20
  */
 @Slf4j
 public class MessageCodec extends ByteToMessageCodec<Message> {
@@ -25,7 +25,7 @@ public class MessageCodec extends ByteToMessageCodec<Message> {
     public void encode(ChannelHandlerContext ctx, Message msg, ByteBuf out) throws Exception {
         // 1. 4字节的魔数
         out.writeBytes(new byte[]{1, 2, 3, 4});
-        // 2. 1字节的版本,
+        // 2. 1字节的版本
         out.writeByte(1);
         // 3. 1字节的序列化方式 jdk 0 , json 1
         out.writeByte(0);

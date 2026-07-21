@@ -1,7 +1,7 @@
 package org.bluebridge.ioc.basic.domain;
 
 /**
- * 演示Setter注入
+ * 演示 Setter 注入
  *
  * @author lingwh
  * @date 2019/3/17 9:50
@@ -13,7 +13,7 @@ public class Dog {
     private double price;
 
     /**
-     * Setter注入时用到
+     * Setter 注入时用到
      *
      * @param name
      */
@@ -22,7 +22,7 @@ public class Dog {
     }
 
     /**
-     * Setter注入时用到
+     * Setter 注入时用到
      *
      * @param price
      */

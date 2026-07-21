@@ -6,7 +6,7 @@ import org.bulebridge.domain.User;
  * 用户服务接口
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2023/10/12 14:55
  */
 public interface IUserService {
 

@@ -8,7 +8,7 @@ import org.junit.Test;
 import java.io.InputStream;
 
 /**
- * Mybatis入门程序测试
+ * Mybatis 入门程序测试
  *
  * @author lingwh
  * @date 2026/7/13 14:30
@@ -21,17 +21,17 @@ public class MybatisHelloworldTest {
     public void testMybatisHelloWorld() {
         SqlSession sqlSession = null;
         try {
-            // 1. 创建SqlSessionFactoryBuilder对象
+            // 1. 创建 SqlSessionFactoryBuilder 对象
             SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
-            // 2. 创建SqlSessionFactory对象
+            // 2. 创建 SqlSessionFactory 对象
             InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(ENV + "/mybatis-config.xml");
             SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(is);
-            // 3. 创建SqlSession对象
+            // 3. 创建 SqlSession 对象
             sqlSession = sqlSessionFactory.openSession();
-            // 4. 执行sql
+            // 4. 执行 sql
             int count = sqlSession.insert("emp.insertEmployee"); // 这个"insertEmployee"必须是sql的id
             System.out.println("插入几条数据：" + count);
-            // 5. 提交（mybatis默认采用的事务管理器是JDBC，默认是不提交的，需要手动提交。）
+            // 5. 提交（mybatis 默认采用的事务管理器是 JDBC，默认是不提交的，需要手动提交。）
             sqlSession.commit();
         } catch (Exception e) {
             if (sqlSession != null) {

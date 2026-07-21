@@ -5,6 +5,7 @@ import org.bluebridge.ByteBufferUtil;
 import org.junit.Test;
 
 import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
 import java.nio.charset.StandardCharsets;
 
 /**

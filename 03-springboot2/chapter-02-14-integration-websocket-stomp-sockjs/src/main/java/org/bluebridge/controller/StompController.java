@@ -11,7 +11,7 @@ import java.security.Principal;
 
 /**
  *
- * 基于Stomp的WebSocket的开发两个重要注解
+ * 基于 Stomp 的 WebSocket 的开发两个重要注解
  *
  * 1. @MessageMapping("/chat/broadcast") // @MessageMapping 和 @RequestMapping 功能类似，处理来自客户端的消息。
  * 2. @SendTo("/topic/broadcast") // 如果服务器接受到了消息，就会对订阅了 @SendTo 括号中的地址的客户端发送消息。
@@ -34,7 +34,7 @@ public class StompController {
      */
     @MessageMapping("/chat/ordinary")
     public void handleOrdinaryMessage(Principal principal, String message) {
-        // 获取用户ID
+        // 获取用户 ID
         String userId = principal.getName();
         log.info("用户 {} 发送普通消息: {}", userId, message);
         // 获取消息内容
@@ -51,9 +51,9 @@ public class StompController {
      */
     @MessageMapping("/chat/private")
     public void handlePrivateMessage(Principal principal, String message) {
-        // 获取用户ID
+        // 获取用户 ID
         String userId = principal.getName();
-        // 获取目标用户ID
+        // 获取目标用户 ID
         String targetUserId = message.substring(2, 6);
         // 获取消息内容
         String messageContent = message.substring(6);
@@ -73,7 +73,7 @@ public class StompController {
     @MessageMapping("/chat/broadcast")
     @SendTo("/topic/broadcast")
     public String handlePublicMessage(Principal principal, String message) {
-        // 获取用户ID
+        // 获取用户 ID
         String userId = principal.getName();
         log.info("用户 {} 发送广播消息: {}", userId, message);
         // 获取消息内容

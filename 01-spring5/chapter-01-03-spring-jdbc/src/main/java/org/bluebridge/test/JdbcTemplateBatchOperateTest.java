@@ -15,7 +15,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 /**
- * 测试SpringJdbcTemplate的批量操作
+ * 测试 SpringJdbcTemplate 的批量操作
  *
  * @author lingwh
  * @date 2019/3/25 16:03
@@ -50,7 +50,7 @@ public class JdbcTemplateBatchOperateTest {
     }
 
     /**
-     * 批量增加操作:使用匿名内部类完成数据封装
+     * 批量增加操作：使用匿名内部类完成数据封装
      */
     @Test
     public void fun2() {
@@ -78,7 +78,7 @@ public class JdbcTemplateBatchOperateTest {
     }
 
     /**
-     * 批量增加操作:不使用匿名内部类内部类完成数据封装
+     * 批量增加操作：不使用匿名内部类内部类完成数据封装
      */
     @Test
     public void fun3() {
@@ -92,7 +92,7 @@ public class JdbcTemplateBatchOperateTest {
     }
 
     /**
-     * Account批量参数设置器
+     * Account 批量参数设置器
      */
     class AccountBatchPreparedStatementSetter implements BatchPreparedStatementSetter {
 

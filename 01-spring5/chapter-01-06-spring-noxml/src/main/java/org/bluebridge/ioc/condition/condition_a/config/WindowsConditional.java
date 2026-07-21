@@ -8,7 +8,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
- * Windows环境条件判断
+ * Windows 环境条件判断
  *
  * @author lingwh
  * @date 2019/4/8 11:25
@@ -21,7 +21,7 @@ public class WindowsConditional implements Condition {
         ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
         ClassLoader classLoader = context.getClassLoader();
         Environment environment = context.getEnvironment();
-        //获取bean定义的注册类,可以在这个变量里面查询某个类是不是被注册了,也可以给容器中注册bean
+        // 获取 bean 定义的注册类，可以在这个变量里面查询某个类是不是被注册了，也可以给容器中注册 bean
         BeanDefinitionRegistry registry = context.getRegistry();
         String osname = environment.getProperty("os.name");
         if(osname.contains("Windows")){

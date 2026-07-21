@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * 测试使用Springboot发送各种邮件
+ * 测试使用 Springboot 发送各种邮件
  *
  * @author lingwh
  * @date 2026/7/13 11:25
@@ -31,7 +31,7 @@ public class MailServiceTest {
     }
 
     /**
-     * 测试发送html邮件
+     * 测试发送 html 邮件
      *
      * @throws Exception
      */

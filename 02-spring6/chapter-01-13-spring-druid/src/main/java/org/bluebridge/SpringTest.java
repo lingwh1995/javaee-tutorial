@@ -13,10 +13,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.sql.SQLException;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 11:05
  */
 public class SpringTest {
 

@@ -6,17 +6,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * SpringMVC的Rest风格的URL
+ * SpringMVC 的 Rest 风格的 URL
  *
- * 向后台发送PUT/DELETE请求要求如下
- * 1. 需要在web.xml中配置HiddenHttpMethodFilter
- * 2. 需要发送post请求
+ * 向后台发送 PUT/DELETE 请求要求如下
+ * 1. 需要在 web.xml 中配置 HiddenHttpMethodFilter
+ * 2. 需要发送 post 请求
  * 3. 在发送post请求的时候在表单中携带一个name="_method",value="PUT"/value="DELETE"的隐藏域
  *
  * REST风格的C0RUD(以订单为例)
  *
- * REST风格URL写法      请求方式    传统的URL写法
- * 新增:/order       POST
+ * REST 风格 URL 写法      请求方式    传统的 URL 写法
+ * 新增：/order       POST
  * 修改:/order/1     PUT         /update?id=1
  * 删除:/order/1     DELETE      /delete?id=1
  * 查询:/order/1     GET         /get?id=1

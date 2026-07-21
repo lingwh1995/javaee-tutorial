@@ -5,7 +5,7 @@ import org.bluebridge.utils.SqlSessionUtil;
 import org.junit.Test;
 
 /**
- * SqlSession工具类测试
+ * SqlSession 工具类测试
  *
  * @author lingwh
  * @date 2026/7/13 14:30

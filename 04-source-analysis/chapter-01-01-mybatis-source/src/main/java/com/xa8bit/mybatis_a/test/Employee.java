@@ -4,7 +4,7 @@ package com.xa8bit.mybatis_a.test;
  * 员工实体类
  *
  * @author lingwh
- * @date 2026/7/13 14:20
+ * @date 2025/12/20 14:20
  */
 public class Employee {
 

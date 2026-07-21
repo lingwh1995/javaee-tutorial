@@ -5,7 +5,7 @@ import org.bluebridge.domain.Employee;
 import java.util.List;
 
 /**
- * 员工Dao接口
+ * 员工 Dao 接口
  *
  * @author lingwh
  * @date 2026/7/13 14:30

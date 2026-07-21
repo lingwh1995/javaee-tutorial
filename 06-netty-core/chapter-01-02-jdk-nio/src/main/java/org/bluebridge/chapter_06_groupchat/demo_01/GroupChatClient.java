@@ -13,7 +13,7 @@ import java.util.Scanner;
  * 目标：客户端代码逻辑的实现
  *
  * @author lingwh
- * @date 2026/7/14 10:35
+ * @date 2025/6/20 14:20
  */
 public class GroupChatClient {
 

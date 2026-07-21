@@ -10,9 +10,9 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 /**
- * 方式六获取YML中的值
+ * 方式六获取 YML 中的值
  *
- * 使用Snakeyaml自带类库解析YML
+ * 使用 Snakeyaml 自带类库解析 YML
  *
  * 注意
  * 1. 实体要有无参构造
@@ -25,9 +25,9 @@ import java.util.Map;
 public class YmlControllerSnakeyamllLib {
 
     /**
-     * 通过Spring容器来管理Snakeyaml实例对象
+     * 通过 Spring 容器来管理 Snakeyaml 实例对象
      *
-     * 特别注意:使用@Resource注解来获取注入的对象
+     * 特别注意：使用@Resource 注解来获取注入的对象
      * @return
      */
     @Bean(name="snakeyaml")
@@ -39,7 +39,7 @@ public class YmlControllerSnakeyamllLib {
     private Yaml snakeyaml;
 
     /**
-     * 使用snakeyaml解析yml文件,并将解析结果封装到实体中
+     * 使用 snakeyaml 解析 yml 文件，并将解析结果封装到实体中
      */
     @GetMapping("/yml/snake/student")
     public Student getStudent() {
@@ -48,7 +48,7 @@ public class YmlControllerSnakeyamllLib {
     }
 
     /**
-     * 使用snakeyaml解析yml文件,并将解析结果封装到Map中
+     * 使用 snakeyaml 解析 yml 文件，并将解析结果封装到 Map 中
      */
     @GetMapping("/yml/snake/studentmap")
     public Map getStudentMap() {

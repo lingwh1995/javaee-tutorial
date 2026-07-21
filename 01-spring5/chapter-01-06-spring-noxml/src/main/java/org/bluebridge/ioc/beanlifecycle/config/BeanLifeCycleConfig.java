@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Bean生命周期配置类
+ * Bean 生命周期配置类
  *
  * @author lingwh
  * @date 2019/4/10 11:29

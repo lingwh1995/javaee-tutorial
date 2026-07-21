@@ -10,13 +10,13 @@ import java.util.HashMap;
  * 全局异常处理器，处理用户不存在异常
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2019/4/13 15:12
  */
 @ControllerAdvice
 public class MyExceptionHandler {
 
     /**
-     * 这个版本不管是浏览器还是postman访问都会返回json格式的错误信息,不会自动识别浏览器和postman
+     * 这个版本不管是浏览器还是 postman 访问都会返回 json 格式的错误信息，不会自动识别浏览器和 postman
      * version 1.0
      * @param e
      * @return
@@ -32,7 +32,7 @@ public class MyExceptionHandler {
     }*/
 
     /**
-     * 会自动识别浏览器和postman发出的请求
+     * 会自动识别浏览器和 postman 发出的请求
      * version 2.0
      *
      * @param e

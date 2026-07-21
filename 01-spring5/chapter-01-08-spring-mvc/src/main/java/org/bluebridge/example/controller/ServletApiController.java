@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 在SpingMVC中使用Servlet原生API,HttpServlertRequest HttpServletResponse
+ * 在 SpingMVC 中使用 Servlet 原生 API，HttpServlertRequest HttpServletResponse
  *
  * @author lingwh
  * @date 2026/7/10 10:58
@@ -22,7 +22,7 @@ public class ServletApiController {
     private static final String SUCCESS = "success";
 
     /**
-     * 在SpingMVC中使用Servlet原生API
+     * 在 SpingMVC 中使用 Servlet 原生 API
      *
      * @return
      */

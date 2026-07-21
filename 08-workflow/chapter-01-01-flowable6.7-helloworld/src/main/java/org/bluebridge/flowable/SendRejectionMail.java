@@ -12,7 +12,7 @@ import org.flowable.engine.delegate.JavaDelegate;
 public class SendRejectionMail implements JavaDelegate {
 
     /**
-     * 这是一个Flowable中的触发器
+     * 这是一个 Flowable 中的触发器
      *
      * @param execution
      */

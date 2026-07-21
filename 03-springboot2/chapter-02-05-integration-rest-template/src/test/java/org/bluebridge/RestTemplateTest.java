@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 使用RestTemplate完成远程调用
+ * 使用 RestTemplate 完成远程调用
  *
  * @author lingwh
  * @date 2019/11/15 13:54
@@ -31,13 +31,13 @@ public class RestTemplateTest {
     /**
      * getForEntity()
      *
-     * url的形式可以为下面的形式
+     * url 的形式可以为下面的形式
      * http://localhost:8080/get?name={?}
      * http://localhost:8080/get?name={1}
      * http://localhost:8080/get?name={xxx}
      * http://localhost:8080/get?name={name}
      *
-     * 注意:参数是直接写在方法里面的
+     * 注意：参数是直接写在方法里面的
      */
     @Test
     public void testGetForEntity_1() {
@@ -48,24 +48,24 @@ public class RestTemplateTest {
     /**
      * getForEntity()
      *
-     * url的形式可以为下面的形式
+     * url 的形式可以为下面的形式
      * http://localhost:8080/get?name={?}
      * http://localhost:8080/get?name={1}
      * http://localhost:8080/get?name={xxx}
      * http://localhost:8080/get?name={name}
      *
      * 注意
-     * 1. 参数是通过map传递进的
-     * 2. map的key必须和请求url中?的值保持一致,这里是字符串name
+     * 1. 参数是通过 map 传递进的
+     * 2. map 的 key 必须和请求 url 中?的值保持一致，这里是字符串 name
      */
     @Test
     public void testGetForEntity_2() {
         Map<String, String> map = new HashMap<String,String>();
         map.put("name", "ls");
-        // 泛型为User
+        // 泛型为 User
         ResponseEntity<User> responseEntity1 = restTemplate.getForEntity("http://localhost:8080/get?name={name}", User.class, map);
         System.out.println(responseEntity1);
-        // 泛型为String
+        // 泛型为 String
         ResponseEntity<String> responseEntity2 = restTemplate.getForEntity("http://localhost:8080/get?name={name}", String.class, map);
         System.out.println(responseEntity2);
     }
@@ -73,7 +73,7 @@ public class RestTemplateTest {
     /**
      * getForObject()
      *
-     * url的形式可以为下面的形式
+     * url 的形式可以为下面的形式
      * http://localhost:8080/get?name={?}
      * http://localhost:8080/get?name={1}
      * http://localhost:8080/get?name={xxx}
@@ -81,7 +81,7 @@ public class RestTemplateTest {
      *
      * 注意
      * 1.getForObject()直接就可以返回需要的数据类型，而getForEntity()不会直接返回想要的数据类型，而是把返回结果封装到ResponseEntity中
-     * 2.使用map传递参数
+     * 2.使用 map 传递参数
      */
     @Test
     public void testGetForObject_1() {
@@ -92,7 +92,7 @@ public class RestTemplateTest {
     }
 
     /**
-     * 使用RestTemplate进行远程调用:查询单个并且不传递参数
+     * 使用 RestTemplate 进行远程调用：查询单个并且不传递参数
      */
     @Test
     public void testGetForObject_2() {
@@ -103,7 +103,7 @@ public class RestTemplateTest {
     /**
      * getForObject()
      *
-     * url的形式可以为下面的形式:
+     * url 的形式可以为下面的形式：
      * http://localhost:8080/get?name={?}
      * http://localhost:8080/get?name={1}
      * http://localhost:8080/get?name={xxx}
@@ -111,7 +111,7 @@ public class RestTemplateTest {
      *
      * 注意
      * 1. getForObject()直接就可以返回需要的数据类型，而getForEntity()不会直接返回想要的数据类型，而是把返回结果封装到ResponseEntity中
-     * 2. 不使用map传递参数,适用可变参数传递参数
+     * 2. 不使用 map 传递参数，适用可变参数传递参数
      */
     @Test
     public void testGetForObject_3() {
@@ -124,13 +124,13 @@ public class RestTemplateTest {
      *
      * 注意
      * 1. getForEntity()不会直接返回想要的数据类型,而是把返回结果封装到ResponseEntity中
-     * 2. 使用map传递参数,适用可变参数传递参数
+     * 2. 使用 map 传递参数，适用可变参数传递参数
      */
     @Test
     public void testPostForEntity() {
         String url = "http://localhost:8080/rest/post";
         HttpHeaders headers = new HttpHeaders();
-        // header可以不设置值
+        // header 可以不设置值
         // headers.set("phone", "1234567");
         MultiValueMap<String, String> params = new LinkedMultiValueMap();
         params.add("name", "zhaoliu");
@@ -147,13 +147,13 @@ public class RestTemplateTest {
      *
      * 注意
      * 1. getForObject()直接就可以返回需要的数据类型，而getForEntity()不会直接返回想要的数据类型，而是把返回结果封装到ResponseEntity中
-     * 2. 使用map传递参数,适用可变参数传递参数
+     * 2. 使用 map 传递参数，适用可变参数传递参数
      */
     @Test
     public void testPostForObject_1() {
         String url = "http://localhost:8080/post";
         HttpHeaders headers = new HttpHeaders();
-        // header可以不设置值
+        // header 可以不设置值
         // headers.set("phone", "1234567");
         MultiValueMap<String, String> params = new LinkedMultiValueMap();
         params.add("name", "zhaoliu");
@@ -185,7 +185,7 @@ public class RestTemplateTest {
     public void testPut() {
         String url = "http://localhost:8080/put";
         HttpHeaders headers = new HttpHeaders();
-        // header可以不设置值
+        // header 可以不设置值
         // headers.set("phone", "1234567");
         MultiValueMap<String, String> params = new LinkedMultiValueMap();
         params.add("name", "zhaoliu");
@@ -206,7 +206,7 @@ public class RestTemplateTest {
     /**
      * 占位符处理示例程序
      *
-     * url可以是以下的形式
+     * url 可以是以下的形式
      * http://localhost:8080/get/{1}
      * http://localhost:8080/get/{id}
      * http://localhost:8080/get/{placeholder}

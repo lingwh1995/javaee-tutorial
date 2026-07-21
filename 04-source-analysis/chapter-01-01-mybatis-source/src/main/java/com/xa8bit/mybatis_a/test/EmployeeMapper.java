@@ -1,15 +1,15 @@
 package com.xa8bit.mybatis_a.test;
 
 /**
- * 员工Mapper接口，提供员工查询方法
+ * 员工 Mapper 接口，提供员工查询方法
  *
  * @author lingwh
- * @date 2026/7/13 11:30
+ * @date 2025/12/20 11:45
  */
 public interface EmployeeMapper {
 
     /**
-     * 根据id查询Employee
+     * 根据 id 查询 Employee
      *
      * @param id
      * @return
@@ -17,7 +17,7 @@ public interface EmployeeMapper {
     Employee getEmployeeById(String id);
 
     /**
-     * 根据lastName查询Employee
+     * 根据 lastName 查询 Employee
      *
      * @param lastName
      * @return

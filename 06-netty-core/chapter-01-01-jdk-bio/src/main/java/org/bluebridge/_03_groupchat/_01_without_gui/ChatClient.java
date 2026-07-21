@@ -18,7 +18,7 @@ import java.util.Scanner;
  * 4. 接收客户端的消息，然后推送给当前所有的在线socket接收
  *
  * @author lingwh
- * @date 2026/7/14 10:31
+ * @date 2025/9/23 14:35
  */
 @Slf4j
 public class ChatClient {
@@ -28,7 +28,7 @@ public class ChatClient {
 
     public static void main(String[] args){
         try {
-            // 1. 请求与服务端的Socket对象连接
+            // 1. 请求与服务端的 Socket 对象连接
             Socket socket = new Socket(HOST, PORT);
             log.info("客户端启动......");
             // 收消息
@@ -54,7 +54,7 @@ public class ChatClient {
  * 用于接收服务端消息的线程
  *
  * @author lingwh
- * @date 2026/7/14 10:31
+ * @date 2025/9/23 14:40
  */
 class ChatClientThread extends Thread {
 

@@ -15,7 +15,7 @@ import java.util.Arrays;
  * 界面版客户端界面(群聊、单聊)
  *
  * @author lingwh
- * @date 2026/7/14 10:33
+ * @date 2025/9/23 15:15
  */
 public class ChatClient implements ActionListener {
 

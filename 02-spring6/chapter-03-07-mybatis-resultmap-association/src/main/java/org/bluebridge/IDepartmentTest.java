@@ -15,7 +15,7 @@ import org.junit.Test;
 public class IDepartmentTest {
 
     /**
-     * 根据id获取Department
+     * 根据 id 获取 Department
      */
     @Test
     public void getDeptByIdTest() {

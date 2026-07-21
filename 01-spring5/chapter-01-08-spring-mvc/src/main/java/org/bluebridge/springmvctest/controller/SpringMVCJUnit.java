@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 /**
- * SpringMVC JUnit测试
+ * SpringMVC JUnit 测试
  *
  * @author lingwh
  * @date 2019/7/22 14:26

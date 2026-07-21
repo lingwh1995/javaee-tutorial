@@ -66,7 +66,7 @@ public class MailServiceImpl implements IMailService {
     public void sendHtmlMail(String to, String subject, String content) {
         try {
             MimeMessage message = mailSender.createMimeMessage();
-            // true表示需要创建一个multipart message
+            // true 表示需要创建一个 multipart message
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             helper.setFrom(from);
             helper.setTo(to);

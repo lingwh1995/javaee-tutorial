@@ -5,10 +5,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * SpringBoot启动类
+ * SpringBoot 启动类
  *
  * @author lingwh
- * @date 2026/7/13 9:00
+ * @date 2025/2/27 09:42
  */
 @SpringBootApplication
 @MapperScan("org.bluebridge.mapper")

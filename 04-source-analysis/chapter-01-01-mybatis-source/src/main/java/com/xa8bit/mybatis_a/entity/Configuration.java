@@ -7,10 +7,10 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * MyBatis全局配置类，保存数据库连接和Mapper映射信息
+ * MyBatis 全局配置类，保存数据库连接和 Mapper 映射信息
  *
  * @author lingwh
- * @date 2026/7/13 13:40
+ * @date 2025/12/20 13:40
  */
 public class Configuration {
 
@@ -20,7 +20,7 @@ public class Configuration {
     private String driver;
 
     /**
-     * 数据库连接URL
+     * 数据库连接 URL
      */
     private String url;
 
@@ -35,7 +35,7 @@ public class Configuration {
     private String password;
 
     /**
-     * 保存所有的MapperStatement对象
+     * 保存所有的 MapperStatement 对象
      */
     private Map<String,MapperStatement> mapStatements = new HashMap<> ();
 

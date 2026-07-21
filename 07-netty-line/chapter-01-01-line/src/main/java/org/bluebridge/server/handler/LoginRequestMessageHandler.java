@@ -12,7 +12,7 @@ import org.bluebridge.server.session.SessionFactory;
  * 登录请求消息处理器
  *
  * @author lingwh
- * @date 2026/7/10 10:58
+ * @date 2025/10/16 18:20
  */
 @ChannelHandler.Sharable
 public class LoginRequestMessageHandler extends SimpleChannelInboundHandler<LoginRequestMessage> {

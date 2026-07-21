@@ -11,20 +11,20 @@ import org.springframework.beans.factory.annotation.Value;
 public class User {
 
     /**
-     * 使用@Value赋值:
+     * 使用@Value 赋值：
      * 1. 基本数值
-     * 2. 可以写SpEL
-     * 3. 可以写${},取出配置文件中的值
+     * 2. 可以写 SpEL
+     * 3. 可以写 ${}，取出配置文件中的值
      */
-    //使用@Value直接赋值
+    //使用@Value 直接赋值
     @Value("zhangsan")
     private String name;
 
-    //使用SpEL直接执行计算
+    //使用 SpEL 直接执行计算
     @Value("#{20-4}")
     private Integer age;
 
-    //读取properties中的配置
+    //读取 properties 中的配置
     @Value("${person.school}")
     private String school;
 

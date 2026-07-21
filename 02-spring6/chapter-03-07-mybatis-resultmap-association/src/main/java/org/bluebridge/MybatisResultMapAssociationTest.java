@@ -15,9 +15,9 @@ import org.junit.Test;
 public class MybatisResultMapAssociationTest {
 
     /**
-     * 测试使用ResultMap的association完成多表一对一查询
+     * 测试使用 ResultMap 的 association 完成多表一对一查询
      *
-     * 根据id获取employee信息和关联的部门信息
+     * 根据 id 获取 employee 信息和关联的部门信息
      */
     @Test
     public void getEmployeeAndDepartmentByIdUseAssociationTest() {
@@ -39,9 +39,9 @@ public class MybatisResultMapAssociationTest {
     }
 
     /**
-     * 测试使用ResultMap的association完成多表一对一查询 + 分布查询
+     * 测试使用 ResultMap 的 association 完成多表一对一查询 + 分布查询
      *
-     * 根据id获取employee信息和关联的部门信息
+     * 根据 id 获取 employee 信息和关联的部门信息
      */
     @Test
     public void getEmployeeAndDepartmentByIdUseAssociationByStepTest() {
@@ -53,7 +53,7 @@ public class MybatisResultMapAssociationTest {
             Employee employee = employeeDao.getEmployeeAndDepartmentByIdUseAssociationByStep("1");
             //System.out.println("employee:"+employee);
 
-            // 下面一行代码用于测试association分布查询懒加载
+            // 下面一行代码用于测试 association 分布查询懒加载
             System.out.println(employee.getDepartment());
 
             sqlSession.commit();

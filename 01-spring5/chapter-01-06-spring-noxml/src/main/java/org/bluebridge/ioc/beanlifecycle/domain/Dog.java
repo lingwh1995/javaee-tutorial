@@ -4,7 +4,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /**
- * Dog实体类，演示Bean生命周期
+ * Dog 实体类，演示 Bean 生命周期
  *
  * @author lingwh
  * @date 2019/4/10 11:22

@@ -9,7 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * IoC注解测试
+ * IoC 注解测试
  *
  * @author lingwh
  * @date 2019/3/20 9:38

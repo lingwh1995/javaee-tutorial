@@ -5,7 +5,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
 /**
- * MultiValueMap测试类
+ * MultiValueMap 测试类
  *
  * @author lingwh
  * @date 2019/11/15 15:04

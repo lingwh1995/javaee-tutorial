@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * WebSocket处理器
+ * WebSocket 处理器
  *
  * @author lingwh
  * @date 2025/10/18 18:45
@@ -20,14 +20,14 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class MyWebSocketServerHandler extends TextWebSocketHandler {
 
-    // 添加SESSION_ID和USER_ID的映射
+    // 添加 SESSION_ID 和 USER_ID 的映射
     private static final Map<String, String> ONLINE_SESSION_ID_USER_ID_POOL = new ConcurrentHashMap<>();
-    // 添加SESSION_ID和SESSION的映射
+    // 添加 SESSION_ID 和 SESSION 的映射
     private static final Map<String, WebSocketSession> ONLINE_SESSION_ID_SESSION_POOL = new ConcurrentHashMap<>();
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        // 从attributes中获取userId
+        // 从 attributes 中获取 userId
         String userId = (String) session.getAttributes().get("userId");
         if (userId != null) {
             ONLINE_SESSION_ID_USER_ID_POOL.put(session.getId(), userId);
@@ -60,7 +60,7 @@ public class MyWebSocketServerHandler extends TextWebSocketHandler {
                 String messageContent = payload.substring(6);
                 // 发送消息给目标用户
                 messageContent = "[定向消息 " + userId + " => " + targetUserId + "]: " + messageContent;
-                // 根据userId获取sessionId
+                // 根据 userId 获取 sessionId
                 String targetSessionId = ONLINE_SESSION_ID_USER_ID_POOL.entrySet().stream()
                         .filter(entry -> entry.getValue().equals(targetUserId))
                         .map(Map.Entry::getKey)
@@ -68,7 +68,7 @@ public class MyWebSocketServerHandler extends TextWebSocketHandler {
                         .get();
 
                 if (targetSessionId != null) {
-                    // 获取WebSocketSession（需要维护sessionId到WebSocketSession的映射）
+                    // 获取 WebSocketSession（需要维护 sessionId 到 WebSocketSession 的映射）
                     WebSocketSession targetSession = ONLINE_SESSION_ID_SESSION_POOL.get(targetSessionId);
                     if (targetSession != null && targetSession.isOpen()) {
                         targetSession.sendMessage(new TextMessage(messageContent));

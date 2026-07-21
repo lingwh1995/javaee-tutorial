@@ -3,7 +3,7 @@ package org.bluebridge.ioc.loopdependencies.domain;
 import org.springframework.stereotype.Controller;
 
 /**
- * 零配置搭建Spring开发环境测试
+ * 零配置搭建 Spring 开发环境测试
  *
  * @author lingwh
  * @date 2019/4/4 10:34

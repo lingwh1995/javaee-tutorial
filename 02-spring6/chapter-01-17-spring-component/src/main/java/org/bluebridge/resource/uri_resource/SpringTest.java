@@ -7,10 +7,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.io.IOException;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 09:25
  */
 public class SpringTest {
 

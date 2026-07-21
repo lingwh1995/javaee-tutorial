@@ -4,7 +4,7 @@ package org.bluebridge.configuration.domain;
  * 用户实体类
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 11:02
  */
 public class User {
 

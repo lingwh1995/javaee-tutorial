@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * Spring循环依赖
+ * Spring 循环依赖
  *
  * @author lingwh
  * @date 2019/4/4 10:46

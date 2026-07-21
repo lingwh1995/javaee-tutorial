@@ -7,7 +7,7 @@ import org.springframework.lang.Nullable;
 import java.util.Arrays;
 
 /**
- * 把字符串类型的Employee转换为实体类型的Employee
+ * 把字符串类型的 Employee 转换为实体类型的 Employee
  *
  * @author lingwh
  * @date 2019/6/17 14:58

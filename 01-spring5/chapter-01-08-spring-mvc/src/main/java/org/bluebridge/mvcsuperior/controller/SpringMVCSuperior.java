@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * SpringMVC高级特性
+ * SpringMVC 高级特性
  *
  * @author lingwh
  * @date 2019/7/8 13:32
@@ -33,11 +33,11 @@ public class SpringMVCSuperior {
          *
           * SCOPE_REQUEST：代表请求作用范围
           * SCOPE_SESSION：代表会话作用范围
-          * SCOPE_GLOBAL_SESSION：代表全局会话作用范围，即ServletContext上下文作用范围
+          * SCOPE_GLOBAL_SESSION：代表全局会话作用范围，即 ServletContext 上下文作用范围
          */
         webRequest.setAttribute("name", "value",WebRequest. SCOPE_REQUEST);
         System. out.println(webRequest.getAttribute("name",WebRequest. SCOPE_REQUEST));
-        // nativeWebRequest.getNativeRequest/nativeWebRequest.getNativeResponse：得到本地ServletAPI
+        // nativeWebRequest.getNativeRequest/nativeWebRequest.getNativeResponse：得到本地 ServletAPI
         HttpServletRequest request = nativeWebRequest.getNativeRequest(HttpServletRequest.class);
         HttpServletResponse response = nativeWebRequest.getNativeResponse(HttpServletResponse.class);
         return "success";

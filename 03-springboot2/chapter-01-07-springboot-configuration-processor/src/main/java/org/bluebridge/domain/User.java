@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 /**
  * 配置属性绑定用户实体
  *
- * 1. 在pom中引入 spring-boot-configuration-processor 这个依赖
+ * 1. 在 pom 中引入 spring-boot-configuration-processor 这个依赖
  * 2. 在实体类上配置 @ConfigurationProperties(prefix = "user")
  * 3. 编译代码，在/target/classes/META-INF/下会生成 spring-configuration-metadata.json
- * 4. 在application.yml或application.properties中使用时可以看见有相应的提示，方便我们使用
+ * 4. 在 application.yml 或 application.properties 中使用时可以看见有相应的提示，方便我们使用
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 15:32
  */
 @ConfigurationProperties(prefix = "user")
 @Component

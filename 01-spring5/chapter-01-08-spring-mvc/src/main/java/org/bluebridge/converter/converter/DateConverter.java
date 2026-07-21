@@ -8,12 +8,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * SpringMVC自定义类型转换器 Converter<S,T>（S-原数据类型，T-目标数据类型）
+ * SpringMVC 自定义类型转换器 Converter<S,T>（S-原数据类型，T-目标数据类型）
  *
  * 1. 编写前台代码，把日期格式的字符串传递到后台
  * 2. 编写转换器
  * 3. 注册转换器
- *      配置注解驱动，并将转换器配置到注解驱动中:<mvc:annotation-driven/>
+ *      配置注解驱动，并将转换器配置到注解驱动中：<mvc:annotation-driven/>
  *      配置转换器
  * 4. 在Controller层接收参数的时候采用如下格式写法即可:@RequestParam("time") Date date
  *

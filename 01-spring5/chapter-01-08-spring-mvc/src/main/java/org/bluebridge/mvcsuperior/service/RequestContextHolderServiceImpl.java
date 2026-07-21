@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * RequestContextHolder服务实现类
+ * RequestContextHolder 服务实现类
  *
  * @author lingwh
  * @date 2019/7/23 11:06

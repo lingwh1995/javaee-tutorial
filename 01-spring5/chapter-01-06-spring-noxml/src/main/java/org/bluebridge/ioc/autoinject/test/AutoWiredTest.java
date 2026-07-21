@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * Autowired自动注入测试
+ * Autowired 自动注入测试
  *
  * @author lingwh
  * @date 2019/4/12 12:23

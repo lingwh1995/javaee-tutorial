@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.Map;
 
 /**
- * SpringMVC中的模型
+ * SpringMVC 中的模型
  *
  * 1. Model
  * 2. Map
@@ -26,9 +26,9 @@ public class MutiplyMapContoller {
     private static final String VIEWNAME = "modelView";
 
     /**
-     * 使用Map<String, Object>作为模型
+     * 使用 Map<String, Object> 作为模型
      *
-     * 每个放入Map中的值会被放入到Request域中
+     * 每个放入 Map 中的值会被放入到 Request 域中
      */
     @RequestMapping(value="testMap")
     public String testMap(Map<String,Object> map){
@@ -38,7 +38,7 @@ public class MutiplyMapContoller {
     }
 
     /**
-     * 使用ModelMap作为模型
+     * 使用 ModelMap 作为模型
      */
     @RequestMapping(value="testModelMap")
     public String testModelMap(ModelMap modelMap){
@@ -48,7 +48,7 @@ public class MutiplyMapContoller {
     }
 
     /**
-     * 使用Model作为模型
+     * 使用 Model 作为模型
      */
     @RequestMapping(value="testModel")
     public String testModel(Model model){
@@ -57,7 +57,7 @@ public class MutiplyMapContoller {
     }
 
     /**
-     * ModelAndView和Model高级特性
+     * ModelAndView 和 Model 高级特性
      *
      * ModelAndView.addObject()和Model.addAttribute()放置同名参数问题
      *

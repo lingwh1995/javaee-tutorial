@@ -4,7 +4,7 @@ import org.springframework.beans.factory.FactoryBean;
 import org.springframework.lang.Nullable;
 
 /**
- * Spring循环依赖
+ * Spring 循环依赖
  *
  * @author lingwh
  * @date 2019/4/5 14:42
@@ -25,8 +25,8 @@ public class ColorFactoryBean implements FactoryBean<Color>{
     }
 
     /**
-     * 是否为单例bean，如果这个bean是单实例,在容器中保存一份
-     * false:多实例,m每次获取都会创建一个新的bean
+     * 是否为单例 bean，如果这个 bean 是单实例，在容器中保存一份
+     * false：多实例，m 每次获取都会创建一个新的 bean
      * @return
      */
     @Override

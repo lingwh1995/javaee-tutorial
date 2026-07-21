@@ -1,7 +1,7 @@
 package org.bluebridge.ioc.beanlifecycle.domain;
 
 /**
- * Car实体类，演示Bean生命周期
+ * Car 实体类，演示 Bean 生命周期
  *
  * @author lingwh
  * @date 2019/4/10 11:17

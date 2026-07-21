@@ -6,7 +6,7 @@ import org.bluebridge.configuration.domain.User;
  * 用户服务接口
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 10:05
  */
 public interface IUserService {
 
