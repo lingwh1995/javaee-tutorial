@@ -5,6 +5,9 @@ import org.springframework.http.HttpStatus;
 
 /**
  * Spring框架预先定义了一些Http状态码，我们不用自己去定义了，直接拿来用即可
+ *
+ * @author lingwh
+ * @date 2025/7/1 9:00
  */
 public class HttpStatusTest {
 

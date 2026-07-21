@@ -8,6 +8,9 @@ import java.io.UnsupportedEncodingException;
 
 /**
  * Base64工具类
+ *
+ * @author lingwh
+ * @date 2025/7/1 9:00
  */
 @Slf4j
 public class Base64UtilsTest {

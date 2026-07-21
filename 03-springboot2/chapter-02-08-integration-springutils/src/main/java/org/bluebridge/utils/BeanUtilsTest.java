@@ -18,7 +18,7 @@ import java.util.Map;
  * Bean生命周期配置测试
  *
  * @author lingwh
- * @date 2026/7/13 11:32
+ * @date 2025/7/1 9:00
  */
 @Slf4j
 public class BeanUtilsTest {

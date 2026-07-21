@@ -11,6 +11,9 @@ import java.util.stream.Stream;
 
 /**
  * 字符串工具类测试
+ *
+ * @author lingwh
+ * @date 2025/7/1 14:56
  */
 @Slf4j
 public class StringUtilsTest {
@@ -59,14 +62,14 @@ public class StringUtilsTest {
      */
     @Test
     public void testStartsWithAndEndsWith() {
-        // 使用jdk原生api判断，没有忽略大小写功能
+        // 使用 jdk 原生 api判断，没有忽略大小写功能
         String s = "abcde";
         String prefix = "ab";
         String suffix = "de";
         log.info("使用jdk原生api startsWith : {}", s.startsWith(prefix));
         log.info("使用jdk原生api endWith : {}", s.endsWith(suffix));
 
-        // 使用spring提供的工具类，有忽略大小写功能
+        // 使用 spring 提供的工具类，有忽略大小写功能
         s = "AbcdE";
         log.info("使用spring提供的api startsWithIgnoreCase : {}", StringUtils.startsWithIgnoreCase(s, prefix));
         log.info("使用spring提供的api endsWithIgnoreCase : {}", StringUtils.endsWithIgnoreCase(s, suffix));
@@ -74,7 +77,7 @@ public class StringUtilsTest {
 
     /**
      * 测试将集合元素拼接成字符串
-     *  jdk原生api比较spring提供的api更简单一些，java8的stream api最为强大，可以同时设置分隔符前缀和后缀
+     *  jdk 原生 api 比较 spring 提供的 api 更简单一些，java8 的 stream api 最为强大，可以同时设置分隔符前缀和后缀
      */
     @Test
     public void testCollectionToString() {
@@ -82,28 +85,28 @@ public class StringUtilsTest {
         list.add("a");
         list.add("b");
         list.add("c");
-        // 使用jdk原生api实现将集合元素拼接成字符串
+        // 使用 jdk 原生 api实现将集合元素拼接成字符串
         log.info("使用jdk原生api 集合拼接后的字符串 : {}", String.join(",", list));
         log.info("使用jdk原生api 集合拼接后的字符串 : {}", String.join("-", list));
-        // 使用spring提供的api实现将集合元素拼接成字符串
+        // 使用 spring 提供的 api实现将集合元素拼接成字符串
         log.info("使用spring提供的api 集合拼接后的字符串 : {}", StringUtils.collectionToCommaDelimitedString(list));
         log.info("使用spring提供的api 集合拼接后的字符串 : {}", StringUtils.collectionToDelimitedString(list,"-"));
 
         String[] arr = {"A","B","C"};
-        // 使用jdk原生api实现将数组元素拼接成字符串
+        // 使用 jdk 原生 api实现将数组元素拼接成字符串
         log.info("使用jdk原生api 数组拼接后的字符串 : {}", String.join(",", arr));
         log.info("使用jdk原生api 数组拼接后的字符串 : {}", String.join("-", arr));
-        // 使用spring提供的api实现将数组元素拼接成字符串
+        // 使用 spring 提供的 api实现将数组元素拼接成字符串
         log.info("使用spring提供的api 数组拼接后的字符串 : {}", StringUtils.arrayToCommaDelimitedString(arr));
         log.info("使用spring提供的api 数组拼接后的字符串 : {}", StringUtils.arrayToDelimitedString(arr,"-"));
 
-        // 使用jdk8的stream api实现（填入三个参数）
+        // 使用 jdk8 的 stream api实现（填入三个参数）
         String result = list.stream().collect(Collectors.joining(", ", "[", "]"));
         log.info("result: {}", result);
         result = Stream.of(arr).collect(Collectors.joining("- ", "[", "]"));
         log.info("result: {}", result);
 
-        // 使用jdk8的stream api实现（填入一个参数）
+        // 使用 jdk8 的 stream api实现（填入一个参数）
         result = list.stream().collect(Collectors.joining(" * "));
         log.info("result: {}", result);
         result = Stream.of(arr).collect(Collectors.joining(" | "));
