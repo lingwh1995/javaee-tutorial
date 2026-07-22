@@ -18,6 +18,7 @@ import java.net.URL;
  * @date 2026/7/19 16:35
  */
 public class MobileDataDriver {
+
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException, URISyntaxException {
         // 1. 创建配置对象
         Configuration conf = new Configuration();

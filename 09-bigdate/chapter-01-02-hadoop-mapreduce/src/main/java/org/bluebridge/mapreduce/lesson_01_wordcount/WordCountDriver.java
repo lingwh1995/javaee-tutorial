@@ -1,5 +1,6 @@
 package org.bluebridge.mapreduce.lesson_01_wordcount;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -20,9 +21,12 @@ import java.net.URL;
  * @author lingwh
  * @date 2026/7/18 10:00
  */
+@Slf4j
 public class WordCountDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException, URISyntaxException {
+        log.info("执行链路 - 开始执行 WordCountDriver.main()......");
+
         // 1. 创建配置对象
         Configuration conf = new Configuration();
 
@@ -77,5 +81,7 @@ public class WordCountDriver {
         // 10. 提交任务并设置退出码
         boolean success = job.waitForCompletion(true);
         System.exit(success ? 0 : 1);
+
+        log.info("执行链路 - 结束执行 WordCountDriver.main()......");
     }
 }

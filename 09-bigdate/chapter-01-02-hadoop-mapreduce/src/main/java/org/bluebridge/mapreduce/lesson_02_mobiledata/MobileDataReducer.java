@@ -23,7 +23,6 @@ public class MobileDataReducer extends Reducer<Text, MobileData, Text, MobileDat
      */
     @Override
     protected void reduce(Text key, Iterable<MobileData> values, Reducer<Text, MobileData, Text, MobileData>.Context context) throws IOException, InterruptedException {
-
         // 上行流量
         int totalUplinkData = 0;
         // 下行流量

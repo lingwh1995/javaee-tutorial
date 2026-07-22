@@ -1,5 +1,6 @@
 package org.bluebridge.mapreduce.lesson_01_wordcount;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -23,6 +24,7 @@ import java.io.IOException;
  * @author lingwh
  * @date 2026/7/18 10:00
  */
+@Slf4j
 public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
     /**
@@ -43,8 +45,11 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
      */
     @Override
     protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, Text, IntWritable>.Context context) throws IOException, InterruptedException {
+        log.info("执行链路 - 开始执行 WordCountMapper.map()......");
+
         // 1. 获取当前行数据
         String line = value.toString();
+        log.info("执行链路 - 当前行数据: {}", line);
         // 2. 按空格分隔单词
         String[] words = line.split(" ");
         // 更强的正则表达式，匹配多个空格或制表符等，可以防止空字符串进入数组
@@ -56,5 +61,7 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
             outKey.set(word);
             context.write(outKey, outVal);
         }
+
+        log.info("执行链路 - 结束执行 WordCountMapper.map()......");
     }
 }

@@ -1,5 +1,6 @@
 package org.bluebridge.mapreduce.lesson_01_wordcount;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
@@ -21,6 +22,7 @@ import java.io.IOException;
  * @author lingwh
  * @date 2026/7/18 10:00
  */
+@Slf4j
 public class WordCountReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 
     /**
@@ -40,14 +42,19 @@ public class WordCountReducer extends Reducer<Text, IntWritable, Text, IntWritab
      */
     @Override
     protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+        log.info("执行链路 - 开始执行 WordCountReducer.reduce()......");
+
         int sum = 0;
         // 遍历 values 集合，累加每个 IntWritable 对象的值
         for (IntWritable value : values) {
+            log.info("执行链路 - 当前 key: {}, value: {}", key, value.get());
             sum += value.get();
         }
         // 设置输出值为累加和
         outVal.set(sum);
         // 输出键值对
         context.write(key, outVal);
+
+        log.info("执行链路 - 结束执行 WordCountReducer.reduce()......");
     }
 }
