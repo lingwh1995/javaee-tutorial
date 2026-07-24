@@ -15,14 +15,14 @@ import java.util.Date;
  * 2. type：map 的 value 的 Class 类型，用法见④
  *
  * @author lingwh
- * @date 2026/7/13 11:34
+ * @date 2019/6/19 09:42
  */
 @Controller
 //@SessionAttributes("address")//①
 //@SessionAttributes(value="address")//②
 //@SessionAttributes(value={"user","address"})//③
-//@SessionAttributes(value={"user","address"},types={String.class})//④加了types={String.class}，session同时会存放map的value类型为String的值
-@SessionAttributes(types={User.class,Address.class})//⑤session同时会存放map的value的Class卡类型为User.class和Address.class的值
+//@SessionAttributes(value={"user","address"},types={String.class})//④加了 types={String.class}，session 同时会存放 map 的 value 类型为 String 的值
+@SessionAttributes(types={User.class,Address.class})//⑤session 同时会存放 map 的 value 的 Class 卡类型为 User.class 和 Address.class 的值
 public class SessionAttribuatesController {
 
     private static final String VIEWNAME = "modelView";

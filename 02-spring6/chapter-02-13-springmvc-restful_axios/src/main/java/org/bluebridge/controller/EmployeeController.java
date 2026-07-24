@@ -10,6 +10,12 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Collection;
 
 
+/**
+ * EmployeeController
+ *
+ * @author lingwh
+ * @date 2019/3/16 09:27
+ */
 @RequestMapping(value = "/restfulCase")
 @Controller
 public class EmployeeController {
@@ -52,7 +58,7 @@ public class EmployeeController {
     }
 
     /**
-     * 跳转到编辑Employee页面
+     * 跳转到编辑 Employee 页面
      * @param id
      * @return
      */

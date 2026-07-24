@@ -9,7 +9,7 @@ import java.util.List;
  * 使用 @Configuration 注入的图书馆配置类
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 13:42
  */
 @ConfigurationProperties(prefix = "library")
 @Configuration  //一般用来声明配置类，可以使用@Component 注解替代，不过使用@Configuration 注解声明配置类更加语义

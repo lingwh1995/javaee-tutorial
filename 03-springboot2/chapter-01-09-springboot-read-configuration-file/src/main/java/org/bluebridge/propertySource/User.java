@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
  * 使用 @Value 读取 properties 配置文件的用户实体
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 08:45
  */
 public class User {
 

@@ -59,7 +59,7 @@ public class ObjectUtilsTest {
     }
 
     /**
-     * 测试数组equals   不会出现空指针异常
+     * 测试数组 equals   不会出现空指针异常
      */
     @Test
     public void testArrayEquals() {

@@ -15,23 +15,23 @@ import java.io.InputStream;
  * 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2019/3/16 13:45
  */
 public class IDepartmentResultMapTest {
     /**
-     * 获取SqlSession
+     * 获取 SqlSession
      * @return
      * @throws IOException
      */
     public SqlSession getSqlSession() throws IOException{
         // 1.加载配置文件
         InputStream inputStream = Resources.getResourceAsStream("mysql/mybatis-config.xml");
-        // 2.获取SqlSession对象
+        // 2.获取 SqlSession 对象
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        // 3.获取SqlSession对象
-        // 获取可以自动提交的openSession对象,传入true
+        // 3.获取 SqlSession 对象
+        // 获取可以自动提交的 openSession 对象，传入 true
         // SqlSession sqlSession = sqlSessionFactory.openSession(true);
-        // 获取需要手动提交的openSession对象,传入fasle或者什么都不传
+        // 获取需要手动提交的 openSession 对象，传入 fasle 或者什么都不传
         SqlSession sqlSession = sqlSessionFactory.openSession(false);
         // SqlSession sqlSession = sqlSessionFactory.openSession();
         return sqlSession;
@@ -39,7 +39,7 @@ public class IDepartmentResultMapTest {
 
 
     /**
-     * 根据id查询Department对象和该对象中的List<Employee>
+     * 根据 id 查询 Department 对象和该对象中的 List<Employee>
      * @throws IOException
      */
     @Test
@@ -48,20 +48,20 @@ public class IDepartmentResultMapTest {
         try {
             // 4.获取接口实现类对象
             IDept ideptImpl = sqlSession.getMapper(IDept.class);
-            // 5.根据id获取对象
+            // 5.根据 id 获取对象
             Department department = ideptImpl.getDeptAndEmployeesByIdUseCascade("1");
             System.out.println("department:"+department.getEmps());
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 6.关闭sqlSession
+            // 6.关闭 sqlSession
             sqlSession.close();
         }
     }
 
 
     /**
-     * 根据id查询Department对象和该对象中的List<Employee>
+     * 根据 id 查询 Department 对象和该对象中的 List<Employee>
      * 分步骤查询
      * @throws IOException
      */
@@ -71,16 +71,16 @@ public class IDepartmentResultMapTest {
         try {
             // 4.获取接口实现类对象
             IDept ideptImpl = sqlSession.getMapper(IDept.class);
-            // 5.根据id获取对象
+            // 5.根据 id 获取对象
             Department department = ideptImpl.getDeptAndEmployeesStepById("1");
-            // 只发一条sql
+            // 只发一条 sql
             System.out.println("departmentName:"+department.getDname());
-            // 发两条sql
+            // 发两条 sql
             System.out.println("department:"+department.getEmps());
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 6.关闭sqlSession
+            // 6.关闭 sqlSession
             sqlSession.close();
         }
     }

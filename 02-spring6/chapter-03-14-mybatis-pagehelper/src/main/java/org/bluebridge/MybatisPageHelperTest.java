@@ -54,7 +54,7 @@ public class MybatisPageHelperTest {
         // cars.forEach(car -> System.out.println(car));
 
         // 将分页查询结果封装到 PageInfo 对象中
-        // new PageInfo(data,navigatepageNum):第一个参数为查询出来的数据,第二个参数为导航选项的个数
+        // new PageInfo(data,navigatepageNum)：第一个参数为查询出来的数据，第二个参数为导航选项的个数
         PageInfo<Car> carPageInfo = new PageInfo<>(cars, 3);
 
         // 特别注意： 在控制台可以查询 PageInfo 的结构，这个对象里面封装了特别详细的分页信息，所有常用的不常用的分页信息都在这个参数里面封装的

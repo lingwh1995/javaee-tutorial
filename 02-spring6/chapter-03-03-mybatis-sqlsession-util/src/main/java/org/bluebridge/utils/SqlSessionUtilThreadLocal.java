@@ -13,7 +13,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
  * 3. 这个 threadlocal 中存放的 SqlSession 对象一定要回收，否则会引起内存泄露
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:30
  */
 public class SqlSessionUtilThreadLocal {
 

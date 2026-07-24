@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * ServletSessionScopeController
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2019/7/22 09:40
  */
 @RequestMapping(value = {"/domainObject"})
 @Controller
@@ -28,7 +28,7 @@ public class ServletSessionScopeController {
     }
 
     /**
-     * 直接在参数处写上HttpSession对象
+     * 直接在参数处写上 HttpSession 对象
      * @param session
      * @return
      */

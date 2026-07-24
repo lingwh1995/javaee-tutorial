@@ -1,7 +1,7 @@
 package org.bluebridge.designpattern.adapter_a;
 
 /**
- * HTTP控制器
+ * HTTP 控制器
  *
  * @author lingwh
  * @date 2019/4/15 8:39

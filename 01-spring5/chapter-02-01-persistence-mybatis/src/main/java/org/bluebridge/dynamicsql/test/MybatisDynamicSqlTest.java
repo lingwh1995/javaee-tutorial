@@ -14,27 +14,27 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 测试mybatis动态sql
+ * 测试 mybatis 动态 sql
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2019/3/16 15:22
  */
 public class MybatisDynamicSqlTest {
 
     /**
-     * 获取SqlSession
+     * 获取 SqlSession
      * @return
      * @throws IOException
      */
     public SqlSession getSqlSession() throws IOException{
         // 1. 加载配置文件
         InputStream inputStream = Resources.getResourceAsStream("mysql/mybatis-config.xml");
-        // 2. 获取SqlSession对象
+        // 2. 获取 SqlSession 对象
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        // 3. 获取SqlSession对象
-        // 获取可以自动提交的openSession对象,传入true
+        // 3. 获取 SqlSession 对象
+        // 获取可以自动提交的 openSession 对象，传入 true
         // SqlSession sqlSession = sqlSessionFactory.openSession(true);
-        // 获取需要手动提交的openSession对象,传入fasle或者什么都不传
+        // 获取需要手动提交的 openSession 对象，传入 fasle 或者什么都不传
         SqlSession sqlSession = sqlSessionFactory.openSession(false);
         // SqlSession sqlSession = sqlSessionFactory.openSession();
         return sqlSession;
@@ -43,7 +43,7 @@ public class MybatisDynamicSqlTest {
     /**
      * 使用<if></if>标签进行条件判断
      *
-     * 要求:携带了哪个字段，查询条件就带上这个条件的值
+     * 要求：携带了哪个字段，查询条件就带上这个条件的值
      *
      * @throws IOException
      */
@@ -66,15 +66,15 @@ public class MybatisDynamicSqlTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7. 关闭sqlSession
+            // 7. 关闭 sqlSession
             sqlSession.close();
         }
     }
 
     /**
-     * 使用<if></if>标签进行条件判断,<where></where>标签封装查询参数
+     * 使用<if></if>标签进行条件判断，<where></where>标签封装查询参数
      *
-     * 要求:携带了哪个字段，查询条件就带上这个条件的值
+     * 要求：携带了哪个字段，查询条件就带上这个条件的值
      *
      * @throws IOException
      */
@@ -98,7 +98,7 @@ public class MybatisDynamicSqlTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7. 关闭sqlSession
+            // 7. 关闭 sqlSession
             sqlSession.close();
         }
     }
@@ -106,7 +106,7 @@ public class MybatisDynamicSqlTest {
     /**
      * 使用<choose></choose>标签进行条件判断
      *
-     * 要求:携带了哪个字段，查询条件就带上这个条件的值
+     * 要求：携带了哪个字段，查询条件就带上这个条件的值
      *
      * @throws IOException
      */
@@ -129,13 +129,13 @@ public class MybatisDynamicSqlTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7. 关闭sqlSession
+            // 7. 关闭 sqlSession
             sqlSession.close();
         }
     }
 
     /**
-     * 使用<set></set>标签封装更新操作,根据Id进行更新
+     * 使用<set></set>标签封装更新操作，根据 Id 进行更新
      * @throws IOException
      */
     @Test
@@ -157,13 +157,13 @@ public class MybatisDynamicSqlTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7. 关闭sqlSession
+            // 7. 关闭 sqlSession
             sqlSession.close();
         }
     }
 
     /**
-     * 使用<trim></trim>标签封装更新操作,根据Id进行更新
+     * 使用<trim></trim>标签封装更新操作，根据 Id 进行更新
      * @throws IOException
      */
     @Test
@@ -185,13 +185,13 @@ public class MybatisDynamicSqlTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7. 关闭sqlSession
+            // 7. 关闭 sqlSession
             sqlSession.close();
         }
     }
 
     /**
-     * 使用<trim></trim>标签封装更新操作,根据Id进行更新
+     * 使用<trim></trim>标签封装更新操作，根据 Id 进行更新
      * @throws IOException
      */
     @Test
@@ -213,7 +213,7 @@ public class MybatisDynamicSqlTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7. 关闭sqlSession
+            // 7. 关闭 sqlSession
             sqlSession.close();
         }
     }
@@ -222,7 +222,7 @@ public class MybatisDynamicSqlTest {
     /**
      * 使用<foreach></foreach>实现遍历操作
      *
-     * 拼接出:SELECT * FROM TBL_EMPLOYEE WHERE ID IN(?,?,?)形式的SQL
+     * 拼接出：SELECT * FROM TBL_EMPLOYEE WHERE ID IN(?,?,?)形式的 SQL
      *
      * @throws IOException
      */
@@ -242,7 +242,7 @@ public class MybatisDynamicSqlTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7. 关闭sqlSession
+            // 7. 关闭 sqlSession
             sqlSession.close();
         }
     }
@@ -250,7 +250,7 @@ public class MybatisDynamicSqlTest {
     /**
      * 使用<foreach></foreach>实现遍历操作
      *
-     * 拼接出:SELECT * FROM TBL_EMPLOYEE WHERE ID IN(?,?,?)形式的SQL
+     * 拼接出：SELECT * FROM TBL_EMPLOYEE WHERE ID IN(?,?,?)形式的 SQL
      *
      * @throws IOException
      */
@@ -270,13 +270,13 @@ public class MybatisDynamicSqlTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7. 关闭sqlSession
+            // 7. 关闭 sqlSession
             sqlSession.close();
         }
     }
 
     /**
-     * 注意:此程序运行会因为数据类型不匹配而报错,是个坑，要注意
+     * 注意：此程序运行会因为数据类型不匹配而报错，是个坑，要注意
      *
      * 使用<foreach></foreach>实现遍历操作
      * @throws IOException
@@ -297,7 +297,7 @@ public class MybatisDynamicSqlTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7.关闭sqlSession
+            // 7.关闭 sqlSession
             sqlSession.close();
         }
     }
@@ -326,7 +326,7 @@ public class MybatisDynamicSqlTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7. 关闭sqlSession
+            // 7. 关闭 sqlSession
             sqlSession.close();
         }
     }
@@ -354,7 +354,7 @@ public class MybatisDynamicSqlTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7. 关闭sqlSession
+            // 7. 关闭 sqlSession
             sqlSession.close();
         }
     }

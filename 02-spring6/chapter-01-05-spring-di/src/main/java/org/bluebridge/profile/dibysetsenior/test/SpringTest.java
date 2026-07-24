@@ -8,17 +8,17 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * set方式注入专题测试类
+ * set 方式注入专题测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 11:10
  */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
-     * set方式注入专题之注入     数组
+     * set 方式注入专题之注入     数组
      */
     @Test
     public void testInjectArrayBySetter(){
@@ -28,7 +28,7 @@ public class SpringTest {
     }
 
     /**
-     * set方式注入专题之注入     List集合
+     * set 方式注入专题之注入     List 集合
      */
     @Test
     public void testInjectListBySetter(){
@@ -38,7 +38,7 @@ public class SpringTest {
     }
 
     /**
-     * set方式注入专题之注入     Set集合
+     * set 方式注入专题之注入     Set 集合
      */
     @Test
     public void testInjectSetBySetter(){
@@ -48,7 +48,7 @@ public class SpringTest {
     }
 
     /**
-     * set方式注入专题之注入     Map集合
+     * set 方式注入专题之注入     Map 集合
      */
     @Test
     public void testInjectMapBySetter(){
@@ -58,7 +58,7 @@ public class SpringTest {
     }
 
     /**
-     * set方式注入专题之注入     Properties
+     * set 方式注入专题之注入     Properties
      */
     @Test
     public void testInjectPropertiesBySetter(){
@@ -68,7 +68,7 @@ public class SpringTest {
     }
 
     /**
-     * set方式注入专题之注入     NULL和空字符串
+     * set 方式注入专题之注入     NULL 和空字符串
      */
     @Test
     public void testInjectNULLAndEmptyStringBySetter(){
@@ -84,7 +84,7 @@ public class SpringTest {
     }
 
     /**
-     * set方式注入专题之注入     特殊符号 < > ' " &
+     * set 方式注入专题之注入     特殊符号 < > ' " &
      */
     @Test
     public void testInjectSpecialsymbolsBySetter(){

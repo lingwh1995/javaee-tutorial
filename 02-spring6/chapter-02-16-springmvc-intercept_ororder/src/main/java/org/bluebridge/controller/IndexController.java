@@ -1,4 +1,4 @@
-package org.bluebridge;
+package org.bluebridge.controller;
 
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Import功能测试
  *
  * @author lingwh
- * @date 2026/7/13 14:31
+ * @date 2019/7/22 14:31
  */
 @Controller
 public class IndexController {

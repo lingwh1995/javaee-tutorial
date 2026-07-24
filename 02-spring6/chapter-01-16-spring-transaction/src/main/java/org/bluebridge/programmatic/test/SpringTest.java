@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringTest {
 
     /**
-     * 测试Spring编程式事务
+     * 测试 Spring 编程式事务
      */
     @Test
     public void testTransferDealTransactionByProgrammatic() {

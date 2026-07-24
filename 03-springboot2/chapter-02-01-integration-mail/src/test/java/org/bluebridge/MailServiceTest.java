@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * 测试使用 Springboot 发送各种邮件
  *
  * @author lingwh
- * @date 2026/7/13 11:25
+ * @date 2019/11/28 09:30
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

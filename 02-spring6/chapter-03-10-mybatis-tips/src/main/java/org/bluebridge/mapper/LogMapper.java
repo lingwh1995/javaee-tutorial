@@ -5,10 +5,10 @@ import org.bluebridge.domain.Log;
 import java.util.List;
 
 /**
- * 日志Mapper接口
+ * 日志 Mapper 接口
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:30
  */
 public interface LogMapper {
 

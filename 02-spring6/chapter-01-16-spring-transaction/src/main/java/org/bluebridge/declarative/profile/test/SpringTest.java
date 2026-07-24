@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringTest {
 
     /**
-     * 测试Spring声明式事务
+     * 测试 Spring 声明式事务
      */
     @Test
     public void testTransferDealTransactionByDeclarative() {

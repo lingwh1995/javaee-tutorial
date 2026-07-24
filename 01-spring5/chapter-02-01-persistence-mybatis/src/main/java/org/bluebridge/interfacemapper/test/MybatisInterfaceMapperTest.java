@@ -13,7 +13,7 @@ import java.io.InputStream;
 
 
 /**
- * 测试mybatis接口式编程
+ * 测试 mybatis 接口式编程
  */
 public class MybatisInterfaceMapperTest {
     @Test
@@ -23,11 +23,11 @@ public class MybatisInterfaceMapperTest {
          */
         InputStream inputStream = Resources.getResourceAsStream("mysql/mybatis-config.xml");
         /**
-         * 2.获取SqlSession对象
+         * 2.获取 SqlSession 对象
          */
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         /**
-         * 3.获取SqlSession对象
+         * 3.获取 SqlSession 对象
          */
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
@@ -39,13 +39,13 @@ public class MybatisInterfaceMapperTest {
             System.out.println(employeeDaoImpl.getClass());
             System.out.println("------------------------------");
             /**
-             * 5.根据id获取对象
+             * 5.根据 id 获取对象
              */
             Employee emplyee= employeeDaoImpl.getEmplyeeById("4");
             System.out.println("emplyee:"+emplyee);
 
             /**
-             * 5.根据id获取lastName
+             * 5.根据 id 获取 lastName
              */
             String lastName = employeeDaoImpl.getEmplyeeLastNameById("4");
             System.out.println("lastName:"+lastName);
@@ -53,7 +53,7 @@ public class MybatisInterfaceMapperTest {
             e.printStackTrace();
         }finally {
             /**
-             * 6.关闭sqlSession
+             * 6.关闭 sqlSession
              */
             sqlSession.close();
         }

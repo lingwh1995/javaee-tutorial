@@ -15,7 +15,7 @@ import java.util.Date;
  * 3. 注册转换器
  *      配置注解驱动，并将转换器配置到注解驱动中：<mvc:annotation-driven/>
  *      配置转换器
- * 4. 在Controller层接收参数的时候采用如下格式写法即可:@RequestParam("time") Date date
+ * 4. 在 Controller 层接收参数的时候采用如下格式写法即可：@RequestParam("time") Date date
  *
  * @author lingwh
  * @date 2019/6/17 14:22

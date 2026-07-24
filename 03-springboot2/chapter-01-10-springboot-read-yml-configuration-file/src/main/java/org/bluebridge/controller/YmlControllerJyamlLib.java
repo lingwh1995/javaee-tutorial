@@ -54,7 +54,7 @@ public class YmlControllerJyamlLib {
 
     /**
      * 使用 Jyaml 将 yml 文件解析成 Map
-     *  注意:如果想要使用Map接收解析结果,则Yaml.loadType()的第二个参数一定要为Map的实现类
+     *  注意：如果想要使用 Map 接收解析结果，则 Yaml.loadType() 的第二个参数一定要为 Map 的实现类
      */
     @GetMapping("/yml/jyaml/studentmap")
     public Map getStudentMap() {

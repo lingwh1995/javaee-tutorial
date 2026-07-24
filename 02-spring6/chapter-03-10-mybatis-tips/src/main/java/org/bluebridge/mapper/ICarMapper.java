@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 汽车Mapper接口
+ * 汽车 Mapper 接口
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:30
  */
 public interface ICarMapper {
 
@@ -39,7 +39,7 @@ public interface ICarMapper {
     List<Car> selectAllCarsSetParamsUseDollarSymbol(String sortOrder);
 
     /**
-     * 模糊查询实现方式一：使用mysql的concat()函数实现模糊查询
+     * 模糊查询实现方式一：使用 mysql 的 concat() 函数实现模糊查询
      *
      * @param brand
      * @return

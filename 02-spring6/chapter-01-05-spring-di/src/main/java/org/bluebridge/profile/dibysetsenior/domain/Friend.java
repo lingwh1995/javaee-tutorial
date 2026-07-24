@@ -4,7 +4,7 @@ package org.bluebridge.profile.dibysetsenior.domain;
  * 朋友实体类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 17:03
  */
 public class Friend {
 

@@ -1,10 +1,10 @@
 package org.bluebridge.profile.dibysetsenior.inject;
 
 /**
- * set方式注入专题之注入   特殊符号 < > ' " &
+ * set 方式注入专题之注入   特殊符号 < > ' " &
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 12:14
  */
 public class MathInjectSpecialsymbolsBySetter {
 

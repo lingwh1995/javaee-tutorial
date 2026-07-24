@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * Mybatis抽取可重用sql片段
+ * Mybatis 抽取可重用 sql 片段
  */
 public interface IEmpDao {
 

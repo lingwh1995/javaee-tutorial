@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 /**
- * 用来增强Servlet的Filter
+ * 用来增强 Servlet 的 Filter
  */
 public class ExpandHttpServletFilter implements Filter {
     private static  Logger logger = Logger.getLogger("ExpandHttpServletFilter.class");
@@ -20,7 +20,7 @@ public class ExpandHttpServletFilter implements Filter {
     }
 
     /**
-     * 获取项目完整上下文根路径，并放于request域中
+     * 获取项目完整上下文根路径，并放于 request 域中
      * @param servletRequest
      * @param servletResponse
      * @param filterChain

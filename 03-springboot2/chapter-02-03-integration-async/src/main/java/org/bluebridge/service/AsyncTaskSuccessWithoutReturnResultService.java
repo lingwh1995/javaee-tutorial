@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
  * 异步任务无返回结果服务类
  *
  * @author lingwh
- * @date 2026/7/15 14:08
+ * @date 2019/11/18 15:10
  */
 @Service
 public class AsyncTaskSuccessWithoutReturnResultService {

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 /**
- * SpringMVC使用ModelAndView作为模型:addObject(String attributeName,Object object):默认把值放在request域对象中
+ * SpringMVC 使用 ModelAndView 作为模型：addObject(String attributeName,Object object):默认把值放在 request 域对象中
  *
  * @author lingwh
  * @date 2019/6/20 9:15

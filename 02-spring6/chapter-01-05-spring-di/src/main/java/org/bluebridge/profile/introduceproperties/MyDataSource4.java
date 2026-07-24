@@ -9,10 +9,10 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.util.logging.Logger;
 
 /**
- * 使用 context:property-placeholder 引入外部的properties文件
+ * 使用 context:property-placeholder 引入外部的properties 文件
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 09:45
  */
 public class MyDataSource4 implements DataSource {
 
@@ -25,7 +25,7 @@ public class MyDataSource4 implements DataSource {
     private String url;
 
     /**
-     * 使用set方式注入为属性赋值
+     * 使用set 方式注入为属性赋值
      * @param driver
      */
     public void setDriver(String driver) {

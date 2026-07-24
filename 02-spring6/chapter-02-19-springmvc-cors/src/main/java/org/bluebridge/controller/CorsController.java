@@ -13,7 +13,7 @@ import java.util.List;
  * 测试跨域功能的后台接口
  *
  * @author lingwh
- * @date 2026/7/13 15:44
+ * @date 2019/7/22 15:44
  */
 @RequestMapping("/cors")
 @Controller

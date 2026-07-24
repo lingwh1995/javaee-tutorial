@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * 测试SpringBoot环境下使用SpringDataJPA
+ * 测试 SpringBoot 环境下使用 SpringDataJPA
  *
  * @author lingwh
  * @date 2019/11/19 11:26
@@ -22,7 +22,7 @@ public class SpringBoot_SpringDataJPATest {
     private IUserDao userDao;
 
     /**
-     * 注意:初次测试程序只进行了自动建表服务，并没有表里面添加数据,如果要进行测试,需要
+     * 注意：初次测试程序只进行了自动建表服务，并没有表里面添加数据，如果要进行测试，需要
      *      添加数据
      */
     @Test

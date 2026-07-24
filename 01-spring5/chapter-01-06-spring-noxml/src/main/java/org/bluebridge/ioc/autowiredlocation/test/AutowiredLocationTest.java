@@ -21,7 +21,7 @@ public class AutowiredLocationTest {
         userController.say();
 
         /**
-         * 测试Config中public UserDao userDao(Dbutils dbutils){}的dbutils这个参数是容器中获取的
+         * 测试 Config 中 public UserDao userDao(Dbutils dbutils){}的 dbutils 这个参数是容器中获取的
          */
         UserDao userDao = (UserDao) context.getBean("userDao2");
         System.out.println(userDao);

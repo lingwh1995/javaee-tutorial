@@ -16,7 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * 使用JdbcTemplate提供的批处理操作数据库
+ * 使用 JdbcTemplate 提供的批处理操作数据库
  */
 @Component
 public class JdbcTemplateBatchOperate {
@@ -48,7 +48,7 @@ public class JdbcTemplateBatchOperate {
 
     /**
      * 批量新增数据方式一    非常推荐
-     *      使用List作为参数，该List泛型类型为Object[]
+     *      使用 List 作为参数，该 List 泛型类型为 Object[]
      * @return
      */
     public int[] batchInsert1(List<Object[]> users) {
@@ -58,7 +58,7 @@ public class JdbcTemplateBatchOperate {
 
     /**
      * 批量新增数据方式二    不推荐使用
-     *           有可能引起sql注入问题
+     *           有可能引起 sql 注入问题
      * @return
      */
     public int[] batchInsert2() {
@@ -102,7 +102,7 @@ public class JdbcTemplateBatchOperate {
 
     /**
      * 批量更新数据方式二    不推荐使用
-     *           有可能引起sql注入问题
+     *           有可能引起 sql 注入问题
      * @return
      */
     public int[] batchUpdate2() {
@@ -148,7 +148,7 @@ public class JdbcTemplateBatchOperate {
 
     /**
      * 批量删除据方式二 不推荐使用
-     *      有可能引起sql注入问题
+     *      有可能引起 sql 注入问题
      * @return
      */
     public int[] batchDelete2() {

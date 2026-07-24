@@ -8,10 +8,10 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.util.logging.Logger;
 
 /**
- * 使用 context:property-placeholder 引入外部的properties文件
+ * 使用 context:property-placeholder 引入外部的properties 文件
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 13:21
  */
 public class MyDataSource5 implements DataSource {
 

@@ -8,7 +8,10 @@ import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 /**
- * 使用时直接将原来的切点表达式替换为被@Pointcut注解标注的方法的方法名，如果该方法在其他包下，则需要在方法名前添加全路径名即可
+ * 使用时直接将原来的切点表达式替换为被 @Pointcut 注解标注的方法的方法名，如果该方法在其他包下，则需要在方法名前添加全路径名即可
+ *
+ * @author lingwh
+ * @date 2026/1/10 09:00
  */
 @Aspect
 @Component

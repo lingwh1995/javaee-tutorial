@@ -6,7 +6,7 @@ import org.springframework.beans.factory.FactoryBean;
  * 坦克工厂
  *
  * @author lingwh
- * @date 2026/7/13 10:07
+ * @date 2026/1/10 11:40
  */
 public class TankFactoryBean implements FactoryBean<Weapon> {
 

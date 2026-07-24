@@ -11,7 +11,7 @@ import java.util.Arrays;
  * 缓存配置类
  *
  * @author lingwh
- * @date 2026/7/13 9:00
+ * @date 2019/11/18 09:45
  */
 @Configuration
 public class ApplicationConfig {

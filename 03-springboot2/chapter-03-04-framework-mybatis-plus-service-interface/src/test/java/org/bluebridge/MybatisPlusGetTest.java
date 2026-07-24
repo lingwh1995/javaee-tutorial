@@ -21,7 +21,7 @@ import java.util.Map;
  * <V> V getObj(Wrapper<T> queryWrapper, Function<? super Object, V> mapper);   // 根据 Wrapper，查询一条记录
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2025/2/27 18:22
  */
 @SpringBootTest
 public class MybatisPlusGetTest {

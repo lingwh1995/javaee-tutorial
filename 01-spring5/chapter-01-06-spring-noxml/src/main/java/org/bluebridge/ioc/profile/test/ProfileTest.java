@@ -7,10 +7,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 /**
  * 如何切换配置环境
  *
- * 1. 在运行时给动态的给JVM配置参数-Dspring.profiles.active=test
+ * 1. 在运行时给动态的给 JVM 配置参数-Dspring.profiles.active=test
  * 2. 在代码层面进行控制
  * 3. @Profile 写在配置类上，标注哪个是要用到的环境
- *    前提是: context.getEnvironment().setActiveProfiles("test");里面已经把环境设置进去了
+ *    前提是： context.getEnvironment().setActiveProfiles("test");里面已经把环境设置进去了
  *
  * @author lingwh
  * @date 2019/4/2 10:30

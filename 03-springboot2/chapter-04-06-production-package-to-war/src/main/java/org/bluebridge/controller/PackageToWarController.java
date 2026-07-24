@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class PackageToWarController {
 
     /**
-     *  访问: http://localhost:8100/package-to-war
+     *  访问： http://localhost:8100/package-to-war
      * @return
      */
     @ResponseBody

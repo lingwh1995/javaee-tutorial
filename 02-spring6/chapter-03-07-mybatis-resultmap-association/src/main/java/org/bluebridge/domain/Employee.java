@@ -4,7 +4,7 @@ package org.bluebridge.domain;
  * 员工实体类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:30
  */
 public class Employee {
 

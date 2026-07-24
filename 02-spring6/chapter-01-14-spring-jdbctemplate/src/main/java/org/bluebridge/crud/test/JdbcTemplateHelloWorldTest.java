@@ -9,14 +9,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
- * 测试从Spring容器中获取JdbcTemplate对象
+ * 测试从 Spring 容器中获取 JdbcTemplate 对象
  */
 public class JdbcTemplateHelloWorldTest {
 
     private static final Logger logger = LogManager.getLogger(JdbcTemplateHelloWorldTest.class);
 
     /**
-     * 测试从Spring容器中获取JdbcTemplate对象
+     * 测试从 Spring 容器中获取 JdbcTemplate 对象
      */
     @Test
     public void testGetJdbcTemplateFromSpring() {

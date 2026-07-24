@@ -12,7 +12,7 @@ public class EnvironmentController {
     private String environment;
 
     /**
-     *  访问: http://localhost:8200/environment
+     *  访问： http://localhost:8200/environment
      * @return
      */
     @ResponseBody

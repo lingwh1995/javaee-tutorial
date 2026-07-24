@@ -6,7 +6,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
 /**
- * BeanPostProcessor：可以在Bean实例化之前和之后添加一些附加操作
+ * BeanPostProcessor：可以在 Bean 实例化之前和之后添加一些附加操作
  *      最佳应用场景之一是 日志的处理
  */
 public class LogBeanPostProcessor implements BeanPostProcessor {

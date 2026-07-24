@@ -21,7 +21,7 @@ import java.util.Map;
  * boolean removeByIds(Collection<? extends Serializable> idList);  // 删除（根据ID 批量删除）
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2025/2/27 15:05
  */
 @SpringBootTest
 public class MybatisPlusRemoveTest {

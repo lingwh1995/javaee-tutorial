@@ -4,7 +4,7 @@ package org.bluebridge.common.constant;
  * 用户密码加密工具类
  *
  * @author lingwh
- * @date 2026/7/13 17:16
+ * @date 2026/2/1 09:30
  */
 public final class Pbkdf2Constants {
 

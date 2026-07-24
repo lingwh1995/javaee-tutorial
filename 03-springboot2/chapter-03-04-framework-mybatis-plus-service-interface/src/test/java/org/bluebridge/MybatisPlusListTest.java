@@ -25,7 +25,7 @@ import java.util.Map;
  * List<Object> listObjs(Wrapper<T> queryWrapper);  // 根据 Wrapper 条件，查询全部记录
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2025/2/27 17:30
  */
 @SpringBootTest
 public class MybatisPlusListTest {

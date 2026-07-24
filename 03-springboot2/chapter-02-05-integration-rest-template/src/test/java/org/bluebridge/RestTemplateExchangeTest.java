@@ -25,7 +25,7 @@ public class RestTemplateExchangeTest {
     private RestTemplate restTemplate;
 
     /**
-     * exchange()方式发送PUT请求
+     * exchange() 方式发送 PUT 请求
      */
     @Test
     public void fun1() {
@@ -44,7 +44,7 @@ public class RestTemplateExchangeTest {
     }
 
     /**
-     * exchange()方式发送POST请求
+     * exchange() 方式发送 POST 请求
      */
     @Test
     public void fun2() {
@@ -63,7 +63,7 @@ public class RestTemplateExchangeTest {
     }
 
     /**
-     * exchange()方式发送GET请求:查询单个并且不传递参数
+     * exchange() 方式发送 GET 请求：查询单个并且不传递参数
      *
      * url 形式可以为以下形式
      * http://localhost:8080/rest/get/1
@@ -77,7 +77,7 @@ public class RestTemplateExchangeTest {
     }
 
     /**
-     * exchange()方式发送GET请求:查询单个并且传递参数
+     * exchange() 方式发送 GET 请求：查询单个并且传递参数
      *
      * url 形式可以为以下形式
      * http://localhost:8080/rest/get?name=zs
@@ -91,7 +91,7 @@ public class RestTemplateExchangeTest {
     }
 
     /**
-     * exchange()方式发送DELETE请求:
+     * exchange() 方式发送 DELETE 请求：
      *
      * url 形式可以为以下形式
      * http://localhost:8080/rest/delete/1
@@ -105,7 +105,7 @@ public class RestTemplateExchangeTest {
     }
 
     /**
-     * exchange()方式发送请求时用替换参数中的占位符
+     * exchange() 方式发送请求时用替换参数中的占位符
      *
      * GET、POST、DELETE、PUT 这几种 REST 风格的请求都可以通过下面的方式来传递参数
      *

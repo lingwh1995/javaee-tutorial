@@ -30,7 +30,7 @@ public class TemplateEnginMailServiceImpl implements ITemplateEnginMailService {
     private JavaMailSender mailSender;
 
     /**
-     * 发送html邮件
+     * 发送 html 邮件
      *
      * @param to 邮件接收者
      * @param subject 邮件主题

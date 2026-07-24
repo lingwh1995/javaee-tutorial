@@ -1,7 +1,7 @@
 package org.bluebridge.beanscope;
 
 /**
- * bean标签的scope配置为singleton
+ * bean 标签的 scope 配置为 singleton
  */
 public class SpringBeanScopeSingleton {
     public SpringBeanScopeSingleton() {

@@ -13,8 +13,8 @@ public class SpringAndMVCHandler {
     private ISpringAndMVCService springAndMVCServiceImpl;
 
     /**
-     * 注意:如果Handler想要获取IOC容器中加载的properties属性的值,则需要在SpringMVC容器中注册
-     *      properties文件，Handler无法加载SpringIOC容器中properties
+     * 注意：如果 Handler 想要获取 IOC 容器中加载的 properties 属性的值，则需要在 SpringMVC 容器中注册
+     *      properties 文件，Handler 无法加载 SpringIOC 容器中 properties
      *
      */
     @Value("${jdbc.user}")

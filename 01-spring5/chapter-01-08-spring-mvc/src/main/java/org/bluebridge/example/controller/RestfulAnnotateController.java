@@ -44,7 +44,7 @@ public class RestfulAnnotateController {
 
     /**
      * restful api 增强：
-     * 增加:@PostMapping：url的post请求，相当于@RequestMapping(method= RequestMethod.POST)，但只能用在方法上，不能用在类上，其他参数和RequestMapping用法完全相同。
+     * 增加：@PostMapping：url 的 post 请求，相当于@RequestMapping(method= RequestMethod.POST)，但只能用在方法上，不能用在类上，其他参数和 RequestMapping 用法完全相同。
      * 删除：@DeleteMapping：同 @PostMapping。在 Restful API 中代表删除
      * 修改：@PutMapping：同 @PostMapping。在 Restful API 中代表更新
      * 查询：@GetMapping：同 @PostMapping。在 Restful API 中代表查找

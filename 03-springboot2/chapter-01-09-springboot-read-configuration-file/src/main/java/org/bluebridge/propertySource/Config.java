@@ -13,7 +13,7 @@ import org.springframework.context.annotation.PropertySource;
  *    可以使用@Component 注解声明配置类，不过使用@Configuration 注解声明配置类更加语义
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 09:15
  */
 @PropertySource(value={"classpath:/user.properties"})
 @Configuration

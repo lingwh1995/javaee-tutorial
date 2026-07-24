@@ -3,10 +3,10 @@ package org.bluebridge.profile.dibysetsenior.inject;
 import java.util.Properties;
 
 /**
- * set方式注入专题之注入   Properties
+ * set 方式注入专题之注入   Properties
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 11:05
  */
 public class UserInjectPropertiesBySetter {
 

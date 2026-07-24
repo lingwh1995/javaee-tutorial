@@ -6,7 +6,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 /**
- * 后置处理器:初始化前后进行处理工作
+ * 后置处理器：初始化前后进行处理工作
  *
  * @author lingwh
  * @date 2019/4/10 11:25

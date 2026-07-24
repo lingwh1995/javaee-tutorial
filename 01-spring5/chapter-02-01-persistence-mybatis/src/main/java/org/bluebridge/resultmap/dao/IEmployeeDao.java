@@ -6,29 +6,29 @@ import org.bluebridge.resultmap.domain.Employee;
 import java.util.List;
 
 /**
- * 返回结果为resultMap
+ * 返回结果为 resultMap
  *
  * @author lingwh
- * @date 2026/7/13 18:36
+ * @date 2019/3/16 11:48
  */
 public interface IEmployeeDao {
 
     /**
-     * 根据id获取Employee对象
+     * 根据 id 获取 Employee 对象
      * @param id
      * @return
      */
     Employee getEmployeeById(String id);
 
     /**
-     * 根据id获取List<Employee>对象
+     * 根据 id 获取 List<Employee> 对象
      * @param id
      * @return
      */
     List<Employee> getEmployeeListById(String id);
 
     /**
-     * 根据id获取Employee和Department对象(多表联查结果封装到Javabean中)
+     * 根据 id 获取 Employee 和 Department 对象(多表联查结果封装到 Javabean 中)
      * 使用属性级联封装
      * @param id
      * @return
@@ -36,16 +36,16 @@ public interface IEmployeeDao {
     Employee getEmployeeAndDepartmentByIdUseCascade(String id);
 
     /**
-     * 根据id获取Employee和Department对象(多表联查结果封装到Javabean中)
-     * 使用Association
+     * 根据 id 获取 Employee 和 Department 对象(多表联查结果封装到 Javabean 中)
+     * 使用 Association
      * @param id
      * @return
      */
     Employee getEmployeeAndDepartmentByIdUseAssociation(String id);
 
     /**
-     * 根据id获取Employee和Department对象(多表联查结果封装到Javabean中)
-     * 使用Asscoation进行分步骤查询
+     * 根据 id 获取 Employee 和 Department 对象(多表联查结果封装到 Javabean 中)
+     * 使用 Asscoation 进行分步骤查询
      * @param id
      * @return
      */
@@ -53,8 +53,8 @@ public interface IEmployeeDao {
 
 
     /**
-     * 根据id获取Employee和Department对象(多表联查结果封装到Javabean中)
-     * 使用Asscoation进行分步骤查询+使用discriminator(鉴别器)对数据进行处理
+     * 根据 id 获取 Employee 和 Department 对象(多表联查结果封装到 Javabean 中)
+     * 使用 Asscoation 进行分步骤查询+使用 discriminator(鉴别器)对数据进行处理
      * @param id
      * @return
      */

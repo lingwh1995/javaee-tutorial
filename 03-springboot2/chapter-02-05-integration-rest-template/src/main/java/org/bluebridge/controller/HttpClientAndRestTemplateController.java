@@ -18,8 +18,8 @@ import java.util.List;
 public class HttpClientAndRestTemplateController {
 
     /**
-     * 测试@ResponseBody注解:加在类位置
-     * 模拟get请求的接口
+     * 测试 @ResponseBody 注解：加在类位置
+     * 模拟 get 请求的接口
      * @return
      */
     /*
@@ -34,8 +34,8 @@ public class HttpClientAndRestTemplateController {
     }*/
 
     /**
-     * 测试@ResponseBody注解:加在返回值位置
-     * 模拟get请求的接口
+     * 测试 @ResponseBody 注解：加在返回值位置
+     * 模拟 get 请求的接口
      * @return
      */
     /*
@@ -49,10 +49,10 @@ public class HttpClientAndRestTemplateController {
     }*/
 
     /**
-     * 测试@RequestMapping注解的produces属性:值为produces = {"application/json;charset=UTF-8"}
-     * 返回json格式数据注意事项:
-     * 1. 加了@ResponseBody注解后，produes={"application/json;charset=UTF-8"}可以省略
-     * 2. produces属性取值有两种:
+     * 测试 @RequestMapping 注解的 produces 属性：值为 produces = {"application/json;charset=UTF-8"}
+     * 返回 json 格式数据注意事项：
+     * 1. 加了 @ResponseBody 注解后，produes={"application/json;charset=UTF-8"} 可以省略
+     * 2. produces 属性取值有两种：
      *      produces = {"application/json;charset=UTF-8"}
      *      produces = MediaType.APPLICATION_JSON_VALUE
      *
@@ -82,18 +82,18 @@ public class HttpClientAndRestTemplateController {
     }
 
     /**
-     * 测试@RequestMapping注解的produces属性:值为"produces = {"application/xml;charset=UTF-8}
-     * 返回xml格式数据注意事项:
-     * 1. 要返回xml格式的数据,需要在pom中加入以下依赖
+     * 测试 @RequestMapping 注解的 produces 属性：值为"produces = {"application/xml;charset=UTF-8}
+     * 返回 xml 格式数据注意事项：
+     * 1. 要返回 xml 格式的数据，需要在 pom 中加入以下依赖
      *    <dependency>
      *        <groupId>com.fasterxml.jackson.dataformat</groupId>
      *        <artifactId>jackson-dataformat-xml</artifactId>
      *    </dependency>
-     * 2. produces属性的取值有两种:
+     * 2. produces 属性的取值有两种：
      *    produces = {"application/xml;charset=UTF-8"}
      *    produces = MediaType.APPLICATION_XML_VALUE
-     * 3. consumes="application/json"属性作用:
-     *    方法仅处理request Content-Type为"application/json"类型的请求
+     * 3. consumes="application/json"属性作用：
+     *    方法仅处理 request Content-Type 为"application/json"类型的请求
      *
      * @return
      */

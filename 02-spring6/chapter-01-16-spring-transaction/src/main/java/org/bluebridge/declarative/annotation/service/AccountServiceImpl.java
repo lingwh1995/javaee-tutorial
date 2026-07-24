@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * 使用PlatformTransactionManager 实现编程式事务
+ * 使用 PlatformTransactionManager 实现编程式事务
  *
  * @author lingwh
  * @date 2019/3/25 11:18

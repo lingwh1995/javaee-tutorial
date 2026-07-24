@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * MyBatis-Plus配置类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2025/2/27 12:40
  */
 @EnableTransactionManagement
 @Configuration

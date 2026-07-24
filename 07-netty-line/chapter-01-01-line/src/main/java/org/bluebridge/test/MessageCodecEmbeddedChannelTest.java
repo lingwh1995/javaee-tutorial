@@ -12,10 +12,9 @@ import org.bluebridge.protocol.MessageCodecSharable;
 import org.junit.Test;
 
 /**
- * 测试MessageCodec编解码
+ * 测试 MessageCodec 编解码
  *
- * 抽取公共的Handler测试LengthFieldBasedFrameDecoder解码器处理黏包半包问题
- *
+ * 抽取公共的 Handler 测试 LengthFieldBasedFrameDecoder 解码器处理黏包半包问题
  *
  * @author lingwh
  * @date 2025/11/11 17:22
@@ -23,7 +22,7 @@ import org.junit.Test;
 public class MessageCodecEmbeddedChannelTest {
 
     /**
-     * 使用LengthFieldBasedFrameDecoder解决黏包半包问题
+     * 使用 LengthFieldBasedFrameDecoder 解决黏包半包问题
      * @throws Exception
      */
     @Test
@@ -32,27 +31,27 @@ public class MessageCodecEmbeddedChannelTest {
                 /**
                  * 配置帧解码器：解决黏包半包问题
                  *
-                 * int maxFrameLength: 每一帧最大的长度
-                 * int lengthFieldOffset: 偏移量
-                 * int lengthFieldLength: 单个字符的长度(如:byte占4个字节)
-                 * int lengthAdjustment: 调整值,从长度之后要跳跃几个字节才是内容
-                 * int initialBytesToStrip: 剥离数据的长度
+                 * int maxFrameLength：每一帧最大的长度
+                 * int lengthFieldOffset：偏移量
+                 * int lengthFieldLength：单个字符的长度(如：byte 占 4 个字节)
+                 * int lengthAdjustment：调整值，从长度之后要跳跃几个字节才是内容
+                 * int initialBytesToStrip：剥离数据的长度
                  */
                 new LengthFieldBasedFrameDecoder(1024,12,4,0,0),
                 new LoggingHandler(LogLevel.DEBUG),
                 new MessageCodec());
         LoginRequestMessage message = new LoginRequestMessage("zhangsan", "123456");
-        // 消息出站，测试encode()方法
+        // 消息出站，测试 encode() 方法
         embeddedChannel.writeOutbound(message);
 
-        // 消息入站，测试decode()方法
+        // 消息入站，测试 decode() 方法
         ByteBuf byteBuf = ByteBufAllocator.DEFAULT.buffer();
         new MessageCodec().encode(null,message,byteBuf);
         embeddedChannel.writeInbound(byteBuf);
     }
 
     /**
-     * 验证不使用LengthFieldBasedFrameDecoder无法处理黏包半包问题
+     * 验证不使用 LengthFieldBasedFrameDecoder 无法处理黏包半包问题
      *
      * @throws Exception
      */
@@ -62,42 +61,42 @@ public class MessageCodecEmbeddedChannelTest {
                 /**
                  * 配置帧解码器：解决黏包半包问题
                  *
-                 * int maxFrameLength: 每一帧最大的长度
-                 * int lengthFieldOffset: 偏移量
-                 * int lengthFieldLength: 单个字符的长度(如:byte占4个字节)
-                 * int lengthAdjustment: 调整值,从长度之后要跳跃几个字节才是内容
-                 * int initialBytesToStrip: 剥离数据的长度
+                 * int maxFrameLength：每一帧最大的长度
+                 * int lengthFieldOffset：偏移量
+                 * int lengthFieldLength：单个字符的长度(如：byte 占 4 个字节)
+                 * int lengthAdjustment：调整值，从长度之后要跳跃几个字节才是内容
+                 * int initialBytesToStrip：剥离数据的长度
                  */
                 new LengthFieldBasedFrameDecoder(1024,12,4,0,0),
                 new LoggingHandler(LogLevel.DEBUG),
                 new MessageCodec());
         LoginRequestMessage message = new LoginRequestMessage("zhangsan", "123456");
-        // 消息出站，测试encode()方法
+        // 消息出站，测试 encode() 方法
         embeddedChannel.writeOutbound(message);
 
-        // 消息入站，测试decode()方法
+        // 消息入站，测试 decode() 方法
         ByteBuf byteBuf = ByteBufAllocator.DEFAULT.buffer();
         new MessageCodec().encode(null,message,byteBuf);
 
-        // 对ByteBuf进行切片
+        // 对 ByteBuf 进行切片
         ByteBuf slice1 = byteBuf.slice(0, 100);
         ByteBuf slice2 = byteBuf.slice(100,byteBuf.readableBytes() - 100);
-        // 小坑: 调用了writeInbound()后,byteBuf的引用计数会自动减去1
-        // 解决: 在调用方法之前先给slice1的引用计数+1
+        // 小坑：调用了 writeInbound() 后，byteBuf 的引用计数会自动减去 1
+        // 解决：在调用方法之前先给 slice1 的引用计数+1
         slice1.retain();
         embeddedChannel.writeInbound(slice1);
         embeddedChannel.writeInbound(slice2);
     }
 
     /**
-     * 在fun1的基础上把Handler抽取出来，可以实现Handler复用
+     * 在 fun1 的基础上把 Handler 抽取出来，可以实现 Handler 复用
      *
      * 注意事项
-     * 1. 有的Handler在多线程环境下使用会出错,如: LengthFieldBasedFrameDecoder
-     * 2. 有的Handler支持多线程环境使用,如: LoggingHandler
+     * 1. 有的 Handler 在多线程环境下使用会出错，如：LengthFieldBasedFrameDecoder
+     * 2. 有的 Handler 支持多线程环境使用，如：LoggingHandler
      *
-     * 如何判断一个Handler是否支持多线程环境下使用？
-     * 点进去具体的Handler源码查看，如果类上加了@Sharable这个注解，说明这个Handler支持多线程环境下使用
+     * 如何判断一个 Handler 是否支持多线程环境下使用？
+     * 点进去具体的 Handler 源码查看，如果类上加了 @Sharable 这个注解，说明这个 Handler 支持多线程环境下使用
      *
      * @throws Exception
      */
@@ -108,11 +107,11 @@ public class MessageCodecEmbeddedChannelTest {
          *
          * 配置帧解码器：解决黏包半包问题
          *
-         * int maxFrameLength: 每一帧最大的长度
-         * int lengthFieldOffset: 偏移量
-         * int lengthFieldLength: 单个字符的长度(如:byte占4个字节)
-         * int lengthAdjustment: 调整值,从长度之后要跳跃几个字节才是内容
-         * int initialBytesToStrip: 剥离数据的长度
+         * int maxFrameLength：每一帧最大的长度
+         * int lengthFieldOffset：偏移量
+         * int lengthFieldLength：单个字符的长度(如：byte 占 4 个字节)
+         * int lengthAdjustment：调整值，从长度之后要跳跃几个字节才是内容
+         * int initialBytesToStrip：剥离数据的长度
          */
         LengthFieldBasedFrameDecoder FRAME_DECODER = new LengthFieldBasedFrameDecoder(1024, 12, 4, 0, 0);
         // 多线程使用不会出问题
@@ -122,32 +121,32 @@ public class MessageCodecEmbeddedChannelTest {
                 LOGGING_HANDLER,
                 new MessageCodec());
         LoginRequestMessage message = new LoginRequestMessage("zhangsan", "123456");
-        // 消息出站,测试encode()方法
+        // 消息出站，测试 encode() 方法
         embeddedChannel.writeOutbound(message);
 
-        // 消息入站,测试decode()方法
+        // 消息入站，测试 decode() 方法
         ByteBuf byteBuf = ByteBufAllocator.DEFAULT.buffer();
         new MessageCodec().encode(null,message,byteBuf);
 
-        // 对ByteBuf进行切片
+        // 对 ByteBuf 进行切片
         ByteBuf slice1 = byteBuf.slice(0, 100);
         ByteBuf slice2 = byteBuf.slice(100,byteBuf.readableBytes() - 100);
-        // 小坑: 调用了writeInbound()后,byteBuf的引用计数会自动减去1
-        // 解决: 在调用方法之前先给slice1的引用计数+1
+        // 小坑：调用了 writeInbound() 后，byteBuf 的引用计数会自动减去 1
+        // 解决：在调用方法之前先给 slice1 的引用计数+1
         slice1.retain();
         embeddedChannel.writeInbound(slice1);
         embeddedChannel.writeInbound(slice2);
     }
 
     /**
-     * 在fun3的基础上把Handler抽取出来,可以实现Handler复用 + 处理某些Handler线程不安全问题
+     * 在 fun3 的基础上把 Handler 抽取出来，可以实现 Handler 复用 + 处理某些 Handler 线程不安全问题
      *
      * 注意事项
-     * 1. 有的Handler在多线程环境下使用会出错,如: LengthFieldBasedFrameDecoder
-     * 2. 有的Handler支持多线程环境使用,如: LoggingHandler
+     * 1. 有的 Handler 在多线程环境下使用会出错，如：LengthFieldBasedFrameDecoder
+     * 2. 有的 Handler 支持多线程环境使用，如：LoggingHandler
      *
-     * 如何判断一个Handler是否支持多线程环境下使用？
-     * 点进去具体的Handler源码查看,如果类上加了@Sharable这个注解,说明这个Handler支持多线程环境下使用
+     * 如何判断一个 Handler 是否支持多线程环境下使用？
+     * 点进去具体的 Handler 源码查看，如果类上加了 @Sharable 这个注解，说明这个 Handler 支持多线程环境下使用
      *
      * @throws Exception
      */
@@ -161,42 +160,42 @@ public class MessageCodecEmbeddedChannelTest {
                  *
                  * 配置帧解码器：解决黏包半包问题
                  *
-                 * int maxFrameLength: 每一帧最大的长度
-                 * int lengthFieldOffset: 偏移量
-                 * int lengthFieldLength: 单个字符的长度(如:byte占4个字节)
-                 * int lengthAdjustment: 调整值,从长度之后要跳跃几个字节才是内容
-                 * int initialBytesToStrip: 剥离数据的长度
+                 * int maxFrameLength：每一帧最大的长度
+                 * int lengthFieldOffset：偏移量
+                 * int lengthFieldLength：单个字符的长度(如：byte 占 4 个字节)
+                 * int lengthAdjustment：调整值，从长度之后要跳跃几个字节才是内容
+                 * int initialBytesToStrip：剥离数据的长度
                  */
                 new LengthFieldBasedFrameDecoder(1024, 12, 4, 0, 0),
                 LOGGING_HANDLER,
                 new MessageCodec());
         LoginRequestMessage message = new LoginRequestMessage("zhangsan", "123456");
-        // 消息出站,测试encode()方法
+        // 消息出站，测试 encode() 方法
         embeddedChannel.writeOutbound(message);
 
-        // 消息入站,测试decode()方法
+        // 消息入站，测试 decode() 方法
         ByteBuf byteBuf = ByteBufAllocator.DEFAULT.buffer();
         new MessageCodec().encode(null,message,byteBuf);
 
-        // 对ByteBuf进行切片
+        // 对 ByteBuf 进行切片
         ByteBuf slice1 = byteBuf.slice(0, 100);
         ByteBuf slice2 = byteBuf.slice(100,byteBuf.readableBytes() - 100);
-        // 小坑: 调用了writeInbound()后,byteBuf的引用计数会自动减去1
-        // 解决: 在调用方法之前先给slice1的引用计数+1
+        // 小坑：调用了 writeInbound() 后，byteBuf 的引用计数会自动减去 1
+        // 解决：在调用方法之前先给 slice1 的引用计数+1
         slice1.retain();
         embeddedChannel.writeInbound(slice1);
         embeddedChannel.writeInbound(slice2);
     }
 
     /**
-     * 在fun4的基础上更换线程不安全的消息解码器MessageCodec为线程安全的消息解码器MessageCodecSharable
+     * 在 fun4 的基础上更换线程不安全的消息解码器 MessageCodec 为线程安全的消息解码器 MessageCodecSharable
      *
      * 注意事项
-     * 1. 有的Handler在多线程环境下使用会出错,如: LengthFieldBasedFrameDecoder
-     * 2.有的Handler支持多线程环境使用,如: LoggingHandler
+     * 1. 有的 Handler 在多线程环境下使用会出错，如：LengthFieldBasedFrameDecoder
+     * 2. 有的 Handler 支持多线程环境使用，如：LoggingHandler
      *
-     * 如何判断一个Handler是否支持多线程环境下使用？
-     * 点进去具体的Handler源码查看，如果类上加了@Sharable这个注解，说明这个Handler支持多线程环境下使用
+     * 如何判断一个 Handler 是否支持多线程环境下使用？
+     * 点进去具体的 Handler 源码查看，如果类上加了 @Sharable 这个注解，说明这个 Handler 支持多线程环境下使用
      *
      * @throws Exception
      */
@@ -212,28 +211,28 @@ public class MessageCodecEmbeddedChannelTest {
                  *
                  * 配置帧解码器：解决黏包半包问题
                  *
-                 * int maxFrameLength: 每一帧最大的长度
-                 * int lengthFieldOffset: 偏移量
-                 * int lengthFieldLength: 单个字符的长度(如:byte占4个字节)
-                 * int lengthAdjustment: 调整值,从长度之后要跳跃几个字节才是内容
-                 * int initialBytesToStrip: 剥离数据的长度
+                 * int maxFrameLength：每一帧最大的长度
+                 * int lengthFieldOffset：偏移量
+                 * int lengthFieldLength：单个字符的长度(如：byte 占 4 个字节)
+                 * int lengthAdjustment：调整值，从长度之后要跳跃几个字节才是内容
+                 * int initialBytesToStrip：剥离数据的长度
                  */
                 new LengthFieldBasedFrameDecoder(1024, 12, 4, 0, 0),
                 LOGGING_HANDLER,
                 MESSAG_ECODEC_SHARABLE);
         LoginRequestMessage message = new LoginRequestMessage("zhangsan", "123456");
-        // 消息出站,测试encode()方法
+        // 消息出站，测试 encode() 方法
         embeddedChannel.writeOutbound(message);
 
-        // 消息入站,测试decode()方法
+        // 消息入站，测试 decode() 方法
         ByteBuf byteBuf = ByteBufAllocator.DEFAULT.buffer();
         new MessageCodec().encode(null,message,byteBuf);
 
-        // 对ByteBuf进行切片
+        // 对 ByteBuf 进行切片
         ByteBuf slice1 = byteBuf.slice(0, 100);
         ByteBuf slice2 = byteBuf.slice(100,byteBuf.readableBytes() - 100);
-        // 小坑: 调用了writeInbound()后,byteBuf的引用计数会自动减去1
-        // 解决: 在调用方法之前先给slice1的引用计数+1
+        // 小坑：调用了 writeInbound() 后，byteBuf 的引用计数会自动减去 1
+        // 解决：在调用方法之前先给 slice1 的引用计数+1
         slice1.retain();
         embeddedChannel.writeInbound(slice1);
         embeddedChannel.writeInbound(slice2);

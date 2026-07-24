@@ -12,7 +12,7 @@ public class ViewController {
     private static final Logger logger = LoggerFactory.getLogger(ViewController.class);
 
     /**
-     * 测试ThymeleafViewResolver
+     * 测试 ThymeleafViewResolver
      * @return
      */
     @RequestMapping("/testThymeleafViewResolver")

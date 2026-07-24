@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 测试JdbcTemplate增删改查
+ * 测试 JdbcTemplate 增删改查
  */
 public class JdbcTemplateCrudTest {
 
@@ -138,7 +138,7 @@ public class JdbcTemplateCrudTest {
     }
 
     /**
-     * 查询一个对象，把查询到的结果封装到Map中
+     * 查询一个对象，把查询到的结果封装到 Map 中
      */
     @Test
     public void testJdbcTemplateCrudQueryOneObjectUseRowMapper() {

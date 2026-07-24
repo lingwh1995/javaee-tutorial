@@ -18,7 +18,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * JdbcTemplate提供的原生Jdbc操作方法，需要使用回调函数实现
+ * JdbcTemplate 提供的原生 Jdbc 操作方法，需要使用回调函数实现
  */
 @Component
 public class JdbcTemplateNativeJdcOperate {

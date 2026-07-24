@@ -4,7 +4,7 @@ package org.bluebridge.crud.domain;
  * EMP
  *
  * @author lingwh
- * @date 2026/7/13 15:46
+ * @date 2019/3/16 08:12
  */
 public class Emp {
     

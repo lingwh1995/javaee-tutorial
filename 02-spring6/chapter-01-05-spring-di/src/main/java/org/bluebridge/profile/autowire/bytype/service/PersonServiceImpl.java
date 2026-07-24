@@ -3,7 +3,7 @@ package org.bluebridge.profile.autowire.bytype.service;
 import org.bluebridge.profile.autowire.bytype.dao.PersonDao;
 
 /**
- * 根据属性类型autowire   需要为属性创建setter方法
+ * 根据属性类型 autowire   需要为属性创建 setter 方法
  */
 public class PersonServiceImpl implements IPersonService {
 

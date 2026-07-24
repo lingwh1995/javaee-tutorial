@@ -1,7 +1,7 @@
 package org.bluebridge.beanscope;
 
 /**
- * bean标签的scope配置为prototype
+ * bean 标签的 scope 配置为 prototype
  */
 public class SpringBeanScopePrototype {
     public SpringBeanScopePrototype() {

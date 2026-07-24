@@ -24,7 +24,7 @@ public interface IBaseService<T> {
     /**
      * 根据主键删除记录
      *
-     * @param id 主键ID
+     * @param id 主键 ID
      * @return 影响行数
      */
     int deleteById(Serializable id);
@@ -46,7 +46,7 @@ public interface IBaseService<T> {
     /**
      * 根据主键查询记录
      *
-     * @param id 主键ID
+     * @param id 主键 ID
      * @return 实体对象
      */
     T getById(Serializable id);

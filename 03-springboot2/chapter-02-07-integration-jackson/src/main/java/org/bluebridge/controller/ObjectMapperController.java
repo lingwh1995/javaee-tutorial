@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 
 /**
- * ObjectMapper控制器
+ * ObjectMapper 控制器
  *
  * @author lingwh
  * @date 2019/12/9 13:45
@@ -36,11 +36,11 @@ public class ObjectMapperController {
         user.setUsername("张三");
         user.setAddress("北京");
 
-        // 把java对象转换成json字符串
+        // 把 java 对象转换成 json 字符串
         String userJson = objectMapper.writeValueAsString(user);
         System.out.println("userJson = " + userJson);
 
-        // 把json字符串转换成JsonNode对象
+        // 把 json 字符串转换成 JsonNode 对象
         JsonNode jsonNode = objectMapper.readTree(userJson);
         System.out.println(jsonNode);
         int id = jsonNode.get("id").asInt();
@@ -50,7 +50,7 @@ public class ObjectMapperController {
         System.out.println("username = " + username);
         System.out.println("address = " + address);
 
-        // JsonNode对象只能读取值，不能设置值，要设置值，将JsonNode对象转换成ObjectNode对象
+        // JsonNode 对象只能读取值，不能设置值，要设置值，将 JsonNode 对象转换成 ObjectNode 对象
         ObjectNode objectNodeFromJsonNode = (ObjectNode) jsonNode;
         objectNodeFromJsonNode.put("id",2);
         objectNodeFromJsonNode.put("username","李四");
@@ -62,7 +62,7 @@ public class ObjectMapperController {
         objectNode.put("id", 3);
         objectNode.put("username", "王五");
         objectNode.put("address", "上海");
-        // 将objectNode对象转换成java对象
+        // 将 objectNode 对象转换成 java 对象
         user = objectMapper.treeToValue(objectNode, User.class);
         System.out.println("user = " + user);
         return user;

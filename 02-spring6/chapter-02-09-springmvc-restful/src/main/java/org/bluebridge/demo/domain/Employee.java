@@ -1,10 +1,16 @@
 package org.bluebridge.demo.domain;
 
+/**
+ * Employee
+ *
+ * @author lingwh
+ * @date 2019/3/16 09:27
+ */
 public class Employee {
     private Integer id;
     private String lastName;
     private String email;
-    // 0=男, 1=女
+    // 0=男， 1=女
     private Integer gender;
 
     public Employee() {

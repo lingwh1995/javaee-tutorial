@@ -5,10 +5,10 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 
 /**
- * 把自己通过new创建的Bean交给Spring容器管理
+ * 把自己通过 new 创建的 Bean 交给 Spring 容器管理
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 10:25
  */
 public class RegisterBeanTest {
 

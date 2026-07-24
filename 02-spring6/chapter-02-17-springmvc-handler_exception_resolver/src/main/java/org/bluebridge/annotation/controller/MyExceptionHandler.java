@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 /**
- * 这个类中写的代码替代了xml中异常处理器的配置
+ * 这个类中写的代码替代了 xml 中异常处理器的配置
  * @ControllerAdvice    将当前类标注为处理异常的组件
  */
 @ControllerAdvice

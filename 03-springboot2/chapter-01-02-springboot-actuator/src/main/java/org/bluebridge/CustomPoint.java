@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class CustomPoint {
 
     /**
-     * 访问url: 注意传参方式
+     * 访问 url：注意传参方式
      *      http://localhost:8080/actuator/customPoint/path?name=xx
      *
      * @param name 名称参数

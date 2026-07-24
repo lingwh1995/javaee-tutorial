@@ -10,15 +10,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Mybatis使用pojo和map封装查询结果
+ * Mybatis 使用 pojo 和 map 封装查询结果
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:30
  */
 public class MybatisUsePojoAndMapAsResultType {
 
     /**
-     * 使用Pojo封装查询结果
+     * 使用 Pojo 封装查询结果
      */
     @Test
     public void testUsePojoAsResultType() {
@@ -32,7 +32,7 @@ public class MybatisUsePojoAndMapAsResultType {
     }
 
     /**
-     * 使用map封装查询结果
+     * 使用 map 封装查询结果
      */
     @Test
     public void testUseMapAsResultType() {

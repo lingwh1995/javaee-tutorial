@@ -15,7 +15,7 @@ import org.springframework.util.ClassUtils;
 public class ClassUtilsTest {
 
     /**
-     * 测试Class工具类
+     * 测试 Class 工具类
      * @throws Exception
      */
     @Test

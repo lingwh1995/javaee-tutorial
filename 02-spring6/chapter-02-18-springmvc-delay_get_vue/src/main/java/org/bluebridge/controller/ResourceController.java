@@ -16,7 +16,7 @@ import java.io.IOException;
 public class ResourceController {
 
     /**
-     * 延迟获取vue
+     * 延迟获取 vue
      * @return
      */
     @ResponseBody

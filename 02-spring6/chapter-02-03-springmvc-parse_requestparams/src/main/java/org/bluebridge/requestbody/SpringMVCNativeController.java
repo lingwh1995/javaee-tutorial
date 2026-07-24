@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.Arrays;
 
 /**
- * 使用SpringMVC提供的原生方式解析请求参数
+ * 使用 SpringMVC 提供的原生方式解析请求参数
  *
  * @author lingwh
  * @date 2019/7/22 14:26

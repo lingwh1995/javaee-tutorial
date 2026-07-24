@@ -13,17 +13,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.sql.SQLException;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 09:33
  */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
-     * set方式注入提升     P命名空间注入
+     * set 方式注入提升     P 命名空间注入
      */
     @Test
     public void testInjectValueByPNamespace(){
@@ -33,7 +33,7 @@ public class SpringTest {
     }
 
     /**
-     * 构造方式注入提升     C命名空间注入
+     * 构造方式注入提升     C 命名空间注入
      */
     @Test
     public void testInjectValueByCNamespace(){
@@ -45,7 +45,7 @@ public class SpringTest {
     }
 
     /**
-     * Spring配置文件复用     util命名空间注入
+     * Spring 配置文件复用     util 命名空间注入
      */
     @Test
     public void testUtilNamespace() throws SQLException {

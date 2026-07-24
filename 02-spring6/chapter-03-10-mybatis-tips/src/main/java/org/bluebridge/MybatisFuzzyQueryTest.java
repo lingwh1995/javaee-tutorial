@@ -12,12 +12,12 @@ import java.util.List;
  * mybatis 模糊查询测试
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:30
  */
 public class MybatisFuzzyQueryTest {
 
     /**
-     * 模糊查询实现方式一：使用mysql的concat()函数实现模糊查询
+     * 模糊查询实现方式一：使用 mysql 的 concat() 函数实现模糊查询
      */
     @Test
     public void testFuzzyQueryUseMysqlConcat() {
@@ -53,7 +53,7 @@ public class MybatisFuzzyQueryTest {
     }
 
     /**
-     * 模糊查询实现方式四：使用 mybatis的bind标签 拼接实现模糊查询(实际上相当于传入的时候就把参数拼接好了)
+     * 模糊查询实现方式四：使用 mybatis 的 bind 标签 拼接实现模糊查询(实际上相当于传入的时候就把参数拼接好了)
      */
     @Test
     public void testFuzzyQueryUseMybatisBindTagConcat() {

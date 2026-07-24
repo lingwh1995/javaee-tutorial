@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * 向后台发送 PUT/DELETE 请求要求如下
  * 1. 需要在 web.xml 中配置 HiddenHttpMethodFilter
  * 2. 需要发送 post 请求
- * 3. 在发送post请求的时候在表单中携带一个name="_method",value="PUT"/value="DELETE"的隐藏域
+ * 3. 在发送 post 请求的时候在表单中携带一个 name="_method",value="PUT"/value="DELETE" 的隐藏域
  *
- * REST风格的C0RUD(以订单为例)
+ * REST 风格的 C0RUD(以订单为例)
  *
  * REST 风格 URL 写法      请求方式    传统的 URL 写法
  * 新增：/order       POST
- * 修改:/order/1     PUT         /update?id=1
- * 删除:/order/1     DELETE      /delete?id=1
- * 查询:/order/1     GET         /get?id=1
+ * 修改：/order/1     PUT         /update?id=1
+ * 删除：/order/1     DELETE      /delete?id=1
+ * 查询：/order/1     GET         /get?id=1
  *
- * 3. PathVariable("id"):使用这个注解获取URL中的参数值
+ * 3. PathVariable("id")：使用这个注解获取 URL 中的参数值
  *
  * @author lingwh
  * @date 2019/6/20 10:17

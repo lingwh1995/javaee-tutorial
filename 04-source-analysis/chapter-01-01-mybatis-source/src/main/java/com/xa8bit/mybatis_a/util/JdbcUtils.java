@@ -87,7 +87,7 @@ public class JdbcUtils {
      * 执行查询操作
      *
      * @param configuration 全局配置文件
-     * @param ms 封装了每一个增删改查标签的Model
+     * @param ms 封装了每一个增删改查标签的 Model
      * @param params 方法执行需要的参数
      * @param <E> 目标返回 类型
      * @return

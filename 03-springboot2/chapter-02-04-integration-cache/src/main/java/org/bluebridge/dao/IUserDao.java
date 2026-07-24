@@ -14,8 +14,8 @@ import org.bluebridge.domain.User;
 public interface IUserDao {
 
     /**
-     * 初步测试@Cacheable
-     * 根据id获取User对象
+     * 初步测试 @Cacheable
+     * 根据 id 获取 User 对象
      * @param id
      * @return
      */
@@ -23,8 +23,8 @@ public interface IUserDao {
     User getUserByIdWithCacheable(String id);
 
     /**
-     * 测试自定义生成缓存数据的key
-     * 根据id获取User对象
+     * 测试自定义生成缓存数据的 key
+     * 根据 id 获取 User 对象
      * @param id
      * @return
      */
@@ -32,7 +32,7 @@ public interface IUserDao {
     User getUserByIdWithCustomerKeyGenerator(String id);
 
     /**
-     * 根据id获取User对象
+     * 根据 id 获取 User 对象
      * @param id
      * @return
      */
@@ -40,8 +40,8 @@ public interface IUserDao {
     User getUserById(String id);
 
     /**
-     * 测试@Caching()配置复杂缓存策略+@CachePut高级用法:根据id获取User对象部分
-     * 根据id获取User对象
+     * 测试 @Caching() 配置复杂缓存策略 + @CachePut 高级用法：根据 id 获取 User 对象部分
+     * 根据 id 获取 User 对象
      * @param id
      * @return
      */
@@ -50,7 +50,7 @@ public interface IUserDao {
 
     /**
      * 测试@Caching()配置复杂缓存策略+@CachePut高级用法:根据username获取User对象部分
-     * 根据id获取User对象
+     * 根据 id 获取 User 对象
      * @param username
      * @return
      */

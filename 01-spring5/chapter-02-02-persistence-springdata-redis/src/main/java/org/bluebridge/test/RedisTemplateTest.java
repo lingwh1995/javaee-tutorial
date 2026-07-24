@@ -9,7 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * RedisTemplate操作测试类
+ * RedisTemplate 操作测试类
  *
  * @author lingwh
  * @date 2019/12/9 15:11

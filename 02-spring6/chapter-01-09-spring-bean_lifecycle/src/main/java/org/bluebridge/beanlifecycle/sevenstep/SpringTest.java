@@ -7,17 +7,17 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 09:50
  */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
-     * 测试Bean的生命周期：七步
+     * 测试 Bean 的生命周期：七步
      */
     @Test
     public void testSpringBeanLifeCycleSevenStep() {

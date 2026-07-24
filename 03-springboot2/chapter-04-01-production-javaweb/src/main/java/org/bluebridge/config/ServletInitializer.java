@@ -8,7 +8,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * Servlet 初始化器，用于将 SpringBoot 应用部署为 WAR 包
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2025/2/27 14:05
  */
 public class ServletInitializer extends SpringBootServletInitializer {
 

@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
  * SpringBoot集成异步任务启动类
  *
  * @author lingwh
- * @date 2026/7/15 9:12
+ * @date 2019/11/18 08:30
  */
 @EnableAsync
 @SpringBootApplication

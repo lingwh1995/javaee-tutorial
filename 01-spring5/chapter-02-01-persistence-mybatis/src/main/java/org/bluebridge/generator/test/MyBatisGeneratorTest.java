@@ -19,7 +19,7 @@ import org.mybatis.generator.internal.DefaultShellCallback;
  * mybatis 生成器测试
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2019/3/16 17:33
  */
 public class MyBatisGeneratorTest {
 
@@ -30,7 +30,7 @@ public class MyBatisGeneratorTest {
     }
 
     /**
-     * 测试生成mybatis自动生成代码
+     * 测试生成 mybatis 自动生成代码
      * @throws Exception
      */
     @Test

@@ -38,7 +38,7 @@ public class LoginRequestMessageHandler extends SimpleChannelInboundHandler<Logi
         if(isLogin) {
             log.info("用户 {} 登录成功", username);
             message = new LoginResponseMessage(true, "登录成功");
-            // 登录成功后，将channel与用户名绑定
+            // 登录成功后，将 channel 与用户名绑定
             session.bind(ctx.channel(), username);
         } else {
             log.info("用户 {} 登录失败", username);

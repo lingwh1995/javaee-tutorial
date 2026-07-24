@@ -30,7 +30,7 @@ public class UserDao {
 
     public User getUserById(String id) {
         logger.info("正在执行查询用户操作...");
-        // 模拟从数据库中查询到了一个User对象
+        // 模拟从数据库中查询到了一个 User 对象
         User user = new User("001", "张三", 20);
         return user;
     }

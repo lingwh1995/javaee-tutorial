@@ -4,7 +4,7 @@ package org.bluebridge.multiplexsql.domain;
  * EMP
  *
  * @author lingwh
- * @date 2026/7/13 15:46
+ * @date 2019/3/16 16:29
  */
 public class Emp {
     

@@ -18,7 +18,7 @@ import java.util.List;
  * boolean saveBatch(Collection<T> entityList, int batchSize); // 插入（批量）
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2025/2/27 13:15
  */
 @SpringBootTest
 public class MybatisPlusSaveTest {

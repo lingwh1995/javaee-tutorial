@@ -10,7 +10,7 @@ import org.junit.Test;
  * Mybatis ResultMap 基础测试
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 11:35
  */
 public class MybatisResultMapBasicTest {
 

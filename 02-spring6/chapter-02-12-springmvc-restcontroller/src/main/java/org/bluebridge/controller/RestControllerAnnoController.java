@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * 1.@RestController的作用相当于给Controller中每一个方法都添加了@ResponseBody注解
- * 2.在使用了@RestController后，如果要进行页面跳转，使用ModelAndView封装视图
- * 3.@RestController(value="xxx")中xxx相当于@Controller(value="xxx"),是按名称查找时bean的id，不是路径
- *      如果要设置最顶层访问路径，则还是需要使用@RequestMapping配置
+ * 1.@RestController 的作用相当于给 Controller 中每一个方法都添加了 @ResponseBody 注解
+ * 2.在使用了 @RestController 后，如果要进行页面跳转，使用 ModelAndView 封装视图
+ * 3.@RestController(value="xxx") 中 xxx 相当于 @Controller(value="xxx")，是按名称查找时 bean 的 id，不是路径
+ *      如果要设置最顶层访问路径，则还是需要使用 @RequestMapping 配置
  *      @RestController 效果等同于 @Controller + @ResponseBody，不等同于 @Controller + @ResponseBody + @RequestMapping
  */
 @RestController
@@ -21,7 +21,7 @@ public class RestControllerAnnoController {
     private static final Logger logger = LoggerFactory.getLogger(RestControllerAnnoController.class);
 
     /**
-     * 在使用了@RestController后，如果要进行页面跳转，使用ModelAndView封装视图
+     * 在使用了 @RestController 后，如果要进行页面跳转，使用 ModelAndView 封装视图
      * @return
      */
     @RequestMapping("/success")
@@ -33,7 +33,7 @@ public class RestControllerAnnoController {
     }
 
     /**
-     * 这里在使用了@RestController后，没有使用ModelAndView封装视图，只会返回一个字符串，不会进行页面跳转
+     * 这里在使用了 @RestController 后，没有使用 ModelAndView 封装视图，只会返回一个字符串，不会进行页面跳转
      * @return
      */
     @RequestMapping(value = "/testRestControllerAnno")

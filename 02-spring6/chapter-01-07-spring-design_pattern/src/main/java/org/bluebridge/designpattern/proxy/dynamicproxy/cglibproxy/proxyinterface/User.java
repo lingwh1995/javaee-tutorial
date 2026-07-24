@@ -4,7 +4,7 @@ package org.bluebridge.designpattern.proxy.dynamicproxy.cglibproxy.proxyinterfac
  * User
  *
  * @author lingwh
- * @date 2026/7/13 16:53
+ * @date 2019/7/22 16:53
  */
 public class User {
     private String id;

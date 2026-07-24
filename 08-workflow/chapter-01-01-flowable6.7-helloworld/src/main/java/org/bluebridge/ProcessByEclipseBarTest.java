@@ -50,7 +50,7 @@ public class ProcessByEclipseBarTest {
         RepositoryService repositoryService = processEngine.getRepositoryService();
         InputStream in = this.getClass().getClassLoader().getResourceAsStream("holiday-process-eclipse.bar");
         ZipInputStream zipInputStream = new ZipInputStream(in);
-        // 3. 获取DeploymentBuilder对象，zip和bar使用addZipInputStream()进行关联
+        // 3. 获取 DeploymentBuilder 对象，zip 和 bar 使用 addZipInputStream() 进行关联
         Deployment deploy = repositoryService.createDeployment()
                 .addZipInputStream(zipInputStream)// 关联要部署的流程文件
                 .name("请假流程-Eclipse版")// 设置流程名称

@@ -8,20 +8,20 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:30
  */
 public class SpringTest {
 
     /**
-     * 测试在AOP环境中使用getBean()方法
+     * 测试在 AOP 环境中使用 getBean() 方法
      */
     @Test
     public void testGetBean() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("annotation/base/applicationContext-aop-annotation-base.xml");
-        // 特别注意：当使用AOP功能时，getBean()方法的第二个参数必须是接口类型
+        // 特别注意：当使用 AOP 功能时，getBean() 方法的第二个参数必须是接口类型
         IUserService userService = applicationContext.getBean("userServiceImpl", IUserService.class);
         userService.addUser(new User("001","张三",20));
     }

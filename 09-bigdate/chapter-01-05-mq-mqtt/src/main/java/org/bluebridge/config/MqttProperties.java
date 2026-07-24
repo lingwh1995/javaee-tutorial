@@ -23,7 +23,7 @@ public class MqttProperties {
     private String brokerUrl;
 
     /**
-     * 客户端id
+     * 客户端 id
      */
     private String clientId;
 

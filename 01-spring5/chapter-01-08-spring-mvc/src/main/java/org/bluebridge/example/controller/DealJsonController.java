@@ -40,7 +40,7 @@ public class DealJsonController {
     @ResponseBody
     @PostMapping("/dealSignJsonUseJsonString")
     public Map<String,String> dealSignJsonUseJsonString(@RequestBody Map<String,String> map){
-        // 如果用@RequestParam接受$.ajax()传递过来的json格式数据,接收到的是空
+        // 如果用 @RequestParam 接受 $.ajax() 传递过来的 json 格式数据，接收到的是空
         System.out.println(map);
         return map;
     }

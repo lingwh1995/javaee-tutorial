@@ -50,7 +50,7 @@ public class JdbcTemplateBatchOperateTest {
     public void testJdbcTemplateBatchOperateInsert1() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         JdbcTemplateBatchOperate jdbcTemplateBatchOperate = applicationContext.getBean("jdbcTemplateBatchOperate", JdbcTemplateBatchOperate.class);
-        // 参数为List，泛型为Object[]
+        // 参数为 List，泛型为 Object[]
         List<Object[]> users = new ArrayList<>();
         users.add(new Object[]{"004","赵六",22});
         users.add(new Object[]{"005", "孙七", 25});
@@ -95,7 +95,7 @@ public class JdbcTemplateBatchOperateTest {
     public void testJdbcTemplateBatchOperateUpdate1() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         JdbcTemplateBatchOperate jdbcTemplateBatchOperate = applicationContext.getBean("jdbcTemplateBatchOperate", JdbcTemplateBatchOperate.class);
-        // 参数为List，泛型为Object[]
+        // 参数为 List，泛型为 Object[]
         List<Object[]> users = new ArrayList<>();
         users.add(new Object[]{"张三修改后",28,"001"});
         users.add(new Object[]{"李四修改后",28,"002"});
@@ -141,7 +141,7 @@ public class JdbcTemplateBatchOperateTest {
     public void testJdbcTemplateBatchOperateDelete1() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         JdbcTemplateBatchOperate jdbcTemplateBatchOperate = applicationContext.getBean("jdbcTemplateBatchOperate", JdbcTemplateBatchOperate.class);
-        // 参数为List，泛型为Object[]
+        // 参数为 List，泛型为 Object[]
         List<Object[]> users = new ArrayList<>();
         users.add(new Object[]{"001"});
         users.add(new Object[]{"002"});

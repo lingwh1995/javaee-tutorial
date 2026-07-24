@@ -42,7 +42,7 @@ public class WarpperHttpServletFilter implements Filter{
         }
 
         /**
-         * 对getParameter()这个方法进行增强
+         * 对 getParameter() 这个方法进行增强
          *
          * @param name
          * @return

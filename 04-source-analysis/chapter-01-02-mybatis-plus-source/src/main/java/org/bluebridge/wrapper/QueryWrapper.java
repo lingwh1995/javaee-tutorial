@@ -202,7 +202,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
     }
 
     /**
-     * 获取实体类的Class对象
+     * 获取实体类的 Class 对象
      *
      * @return 实体类的Class对象
      */
@@ -211,7 +211,7 @@ public class QueryWrapper<T> implements Wrapper<T> {
     }
 
     /**
-     * 设置实体类的Class对象
+     * 设置实体类的 Class 对象
      *
      * @param entityClass 实体类的Class对象
      */

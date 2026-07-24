@@ -30,7 +30,7 @@ public class MySqlInjector extends DefaultSqlInjector {
          * 以下 3 个为内置选装件
          * 头 2 个支持字段筛选函数
          */
-        // 例: 不要指定了 update 填充的字段
+        // 例：不要指定了 update 填充的字段
         methodList.add(new InsertBatchSomeColumn(i -> i.getFieldFill() != FieldFill.UPDATE));
         methodList.add(new AlwaysUpdateSomeColumnById());
         methodList.add(new LogicDeleteByIdWithFill());

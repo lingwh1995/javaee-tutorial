@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringTest {
 
     /**
-     * 测试使用@Autowired可以配置的位置
+     * 测试使用 @Autowired 可以配置的位置
      */
     @Test
     public void testInjectValueAutowiredAndQualifierByNameByAnnotation() {

@@ -9,7 +9,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * SpringBoot启动类
  *
  * @author lingwh
- * @date 2026/7/13 9:00
+ * @date 2026/1/1 09:15
  */
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {

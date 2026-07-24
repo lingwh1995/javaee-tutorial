@@ -11,13 +11,12 @@ import org.springframework.aop.ThrowsAdvice;
 import java.lang.reflect.Method;
 
 /**
- * 切面类  使用xml配置
+ * 切面类  使用 xml 配置
  * 切面 = 切点 + 通知
  *
  * @author lingwh
- * @date 2026/7/13 9:00
+ * @date 2026/1/10 09:00
  */
-
 public class AspectConfigByXmlUseAdvisorTag implements
         MethodBeforeAdvice, AfterReturningAdvice, MethodInterceptor, ThrowsAdvice {
 

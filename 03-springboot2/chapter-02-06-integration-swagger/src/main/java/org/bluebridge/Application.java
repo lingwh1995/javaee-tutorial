@@ -4,13 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * 原生swagger访问url
+ * 原生 swagger 访问 url
  *   http://localhost:8080/swagger-ui.html
  *
- * bootstramp swagger访问url:
+ * bootstramp swagger 访问 url：
  *   http://localhost:8080/doc.html
  *
- * 与SpringSecurity集成:
+ * 与 SpringSecurity 集成：
  *   @Override
  *   public void configure(WebSecurity web) throws Exception {
  *       web.ignoring()

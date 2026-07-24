@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * SpringBoot启动类
  *
  * @author lingwh
- * @date 2026/7/13 9:00
+ * @date 2019/11/14 10:30
  */
 @MapperScan("org.bluebridge.mapper")
 @SpringBootApplication

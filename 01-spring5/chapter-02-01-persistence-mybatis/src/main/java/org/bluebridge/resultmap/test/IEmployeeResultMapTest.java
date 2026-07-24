@@ -13,34 +13,34 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
- * 测试mybatis接口式编程
+ * 测试 mybatis 接口式编程
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2019/3/16 11:08
  */
 public class IEmployeeResultMapTest {
 
     /**
-     * 获取SqlSession
+     * 获取 SqlSession
      * @return
      * @throws IOException
      */
     public SqlSession getSqlSession() throws IOException{
         // 1. 加载配置文件
         InputStream inputStream = Resources.getResourceAsStream("mysql/mybatis-config.xml");
-        // 2. 获取SqlSession对象
+        // 2. 获取 SqlSession 对象
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        // 3. 获取SqlSession对象
-        // 获取可以自动提交的openSession对象,传入true
+        // 3. 获取 SqlSession 对象
+        // 获取可以自动提交的 openSession 对象，传入 true
         // SqlSession sqlSession = sqlSessionFactory.openSession(true);
-        // 获取需要手动提交的openSession对象,传入fasle或者什么都不传
+        // 获取需要手动提交的 openSession 对象，传入 fasle 或者什么都不传
         SqlSession sqlSession = sqlSessionFactory.openSession(false);
         // SqlSession sqlSession = sqlSessionFactory.openSession();
         return sqlSession;
     }
 
     /**
-     * 根据id查询使用resultMap封装的对象,
+     * 根据 id 查询使用 resultMap 封装的对象，
      * @throws IOException
      */
     @Test
@@ -49,19 +49,19 @@ public class IEmployeeResultMapTest {
         try {
             // 4. 获取接口实现类对象
             IEmployeeDao employeePlusDaoImpl = sqlSession.getMapper(IEmployeeDao.class);
-            // 5. 根据id获取对象
+            // 5. 根据 id 获取对象
             Employee employee = employeePlusDaoImpl.getEmployeeById("1");
             System.out.println("employee:"+employee);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 6. 关闭sqlSession
+            // 6. 关闭 sqlSession
             sqlSession.close();
         }
     }
 
     /**
-     * 根据id查询使用resultMap封装的对象,
+     * 根据 id 查询使用 resultMap 封装的对象，
      * @throws IOException
      */
     @Test
@@ -70,19 +70,19 @@ public class IEmployeeResultMapTest {
         try {
             // 4. 获取接口实现类对象
             IEmployeeDao employeePlusDaoImpl = sqlSession.getMapper(IEmployeeDao.class);
-            // 5. 根据id获取对象
+            // 5. 根据 id 获取对象
             List<Employee> employeeList = employeePlusDaoImpl.getEmployeeListById("1");
             System.out.println("employeeList:"+employeeList);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 6. 关闭sqlSession
+            // 6. 关闭 sqlSession
             sqlSession.close();
         }
     }
 
     /**
-     * 根据id获取Employee和Department对象(多表联查结果封装到Javabean中)
+     * 根据 id 获取 Employee 和 Department 对象(多表联查结果封装到 Javabean 中)
      * 使用属性级联封装
      * @throws IOException
      */
@@ -92,20 +92,20 @@ public class IEmployeeResultMapTest {
         try {
             // 4. 获取接口实现类对象
             IEmployeeDao employeePlusDaoImpl = sqlSession.getMapper(IEmployeeDao.class);
-            // 5. 根据id获取对象
+            // 5. 根据 id 获取对象
             Employee employee = employeePlusDaoImpl.getEmployeeAndDepartmentByIdUseCascade("1");
             System.out.println("employee:"+employee);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 6. 关闭sqlSession
+            // 6. 关闭 sqlSession
             sqlSession.close();
         }
     }
 
     /**
-     * 根据id获取Employee和Department对象(多表联查结果封装到Javabean中)
-     * 使用Assocation
+     * 根据 id 获取 Employee 和 Department 对象(多表联查结果封装到 Javabean 中)
+     * 使用 Assocation
      * @throws IOException
      */
     @Test
@@ -114,20 +114,20 @@ public class IEmployeeResultMapTest {
         try {
             // 4. 获取接口实现类对象
             IEmployeeDao employeePlusDaoImpl = sqlSession.getMapper(IEmployeeDao.class);
-            // 5. 根据id获取对象
+            // 5. 根据 id 获取对象
             Employee employee = employeePlusDaoImpl.getEmployeeAndDepartmentByIdUseAssociation("1");
             System.out.println("employee:"+employee);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 6. 关闭sqlSession
+            // 6. 关闭 sqlSession
             sqlSession.close();
         }
     }
 
     /**
-     * 根据id获取Employee和Department对象(多表联查结果封装到Javabean中)
-     * 使用Assocation进行分步骤查询+使用Assocation时可以配置懒加载/延迟加载(基于分步骤查询)
+     * 根据 id 获取 Employee 和 Department 对象(多表联查结果封装到 Javabean 中)
+     * 使用 Assocation 进行分步骤查询+使用 Assocation 时可以配置懒加载/延迟加载(基于分步骤查询)
      * @throws IOException
      */
     @Test
@@ -136,25 +136,25 @@ public class IEmployeeResultMapTest {
         try {
             // 4. 获取接口实现类对象
             IEmployeeDao employeePlusDaoImpl = sqlSession.getMapper(IEmployeeDao.class);
-            // 5. 根据id获取对象
+            // 5. 根据 id 获取对象
             Employee employee = employeePlusDaoImpl.getEmployeeAndDepartmentByIdStepUseAssociate("1");
-            // 发两条sql:查询主表数据+查询子表数据
+            // 发两条 sql：查询主表数据+查询子表数据
             System.out.println("employee:"+employee);
-            // 发两条sql:查询主表数据+查询子表数据
+            // 发两条 sql：查询主表数据+查询子表数据
             System.out.println("employee:"+employee);
 
-            // 懒加载/延迟加载模式:发一条sql:查询主表数据，因为没有用到从表数据
+            // 懒加载/延迟加载模式：发一条 sql：查询主表数据，因为没有用到从表数据
             System.out.println("employee:"+employee.getEmail());
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 6. 关闭sqlSession
+            // 6. 关闭 sqlSession
             sqlSession.close();
         }
     }
     /**
-     * 根据id获取Employee和Department对象(多表联查结果封装到Javabean中)
-     * 使用Assocation进行分步骤查询+使用Assocation时可以配置懒加载/延迟加载(基于分步骤查询)+discriminator鉴别器
+     * 根据 id 获取 Employee 和 Department 对象(多表联查结果封装到 Javabean 中)
+     * 使用 Assocation 进行分步骤查询+使用 Assocation 时可以配置懒加载/延迟加载(基于分步骤查询)+discriminator 鉴别器
      * @throws IOException
      */
     @Test
@@ -163,19 +163,19 @@ public class IEmployeeResultMapTest {
         try {
             // 4. 获取接口实现类对象
             IEmployeeDao employeePlusDaoImpl = sqlSession.getMapper(IEmployeeDao.class);
-            // 5. 根据id获取对象
+            // 5. 根据 id 获取对象
             Employee employee = employeePlusDaoImpl.getEmployeeAndDepartmentByIdStepUseDiscriminator("4");
-            // 发两条sql:查询主表数据+查询子表数据
+            // 发两条 sql：查询主表数据+查询子表数据
             System.out.println("employee:"+employee);
-            // 发两条sql:查询主表数据+查询子表数据
+            // 发两条 sql：查询主表数据+查询子表数据
             System.out.println("employee:"+employee);
 
-            // 懒加载/延迟加载模式:发一条sql:查询主表数据，因为没有用到从表数据
+            // 懒加载/延迟加载模式：发一条 sql：查询主表数据，因为没有用到从表数据
             System.out.println("employee:"+employee.getEmail());
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 6. 关闭sqlSession
+            // 6. 关闭 sqlSession
             sqlSession.close();
         }
     }

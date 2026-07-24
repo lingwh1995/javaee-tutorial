@@ -6,7 +6,7 @@ import java.io.Serializable;
  * 用户实体类
  *
  * @author lingwh
- * @date 2026/7/13
+ * @date 2019/11/14 09:20
  */
 public class User implements Serializable {
 

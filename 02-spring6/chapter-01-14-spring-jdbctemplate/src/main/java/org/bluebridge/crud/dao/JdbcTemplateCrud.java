@@ -19,9 +19,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 使用JdbcTemplate完成增、删、改、查(查一个、查多个)
+ * 使用 JdbcTemplate 完成增、删、改、查(查一个、查多个)
  *
- * 使用RowMapper接口的实现类实现把返回结果封装到任意数据结构中
+ * 使用 RowMapper 接口的实现类实现把返回结果封装到任意数据结构中
  *
  * @author lingwh
  * @date 2019/3/25 16:03
@@ -85,7 +85,7 @@ public class JdbcTemplateCrud {
     }
 
     /**
-     * 查询所有对象，把查询到的结果封装到List中
+     * 查询所有对象，把查询到的结果封装到 List 中
      * @return
      */
     public List<User> queryAll() {
@@ -103,7 +103,7 @@ public class JdbcTemplateCrud {
     }
 
     /**
-     * 查询一个值：查询id为001的记录中name字段的值
+     * 查询一个值：查询 id 为 001 的记录中 name 字段的值
      * @return
      */
     public String queryOneValue_2(String id) {
@@ -112,7 +112,7 @@ public class JdbcTemplateCrud {
     }
 
     /**
-     * 查询所有的姓名，并把查询结果封装到一个List<String>中
+     * 查询所有的姓名，并把查询结果封装到一个 List<String> 中
      * @return
      */
     public List<String> querySingleColumn() {
@@ -121,7 +121,7 @@ public class JdbcTemplateCrud {
     }
 
     /**
-     * 查询一个对象，把查询到的结果封装到Map中
+     * 查询一个对象，把查询到的结果封装到 Map 中
      * @return
      */
     public Map<String,String> queryOneObjectUseRowMapper(String id) {
@@ -145,7 +145,7 @@ public class JdbcTemplateCrud {
 }
 
 /**
- * 把单条查询结果封装到Map中
+ * 把单条查询结果封装到 Map 中
  *
  * @author lingwh
  * @date 2019/3/25 16:03

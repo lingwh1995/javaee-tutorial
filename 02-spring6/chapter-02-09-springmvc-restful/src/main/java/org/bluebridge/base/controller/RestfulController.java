@@ -11,7 +11,7 @@ public class RestfulController {
     /**
      * 使用Restful模拟用户资源的增删改查
      * /user        GET       查询所有用户信息
-     * /user/1      GET       根据id查询用户信息
+     * /user/1      GET       根据 id 查询用户信息
      * /user        POST      添加用户信息
      * /user/1      DELETE    删除用户信息
      * /user        PUT       修改用户信息
@@ -58,7 +58,7 @@ public class RestfulController {
     }
 
     /**
-     * 根据id查询用户信息
+     * 根据 id 查询用户信息
      * @param id
      * @return
      */

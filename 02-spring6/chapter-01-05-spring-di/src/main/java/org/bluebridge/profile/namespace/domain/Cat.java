@@ -4,7 +4,7 @@ package org.bluebridge.profile.namespace.domain;
  * 猫实体类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 16:08
  */
 public class Cat {
 

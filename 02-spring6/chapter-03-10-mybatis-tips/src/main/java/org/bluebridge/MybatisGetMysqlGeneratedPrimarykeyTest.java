@@ -10,14 +10,14 @@ import org.junit.Test;
  * Mybatis 插入数据时对主键的处理
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:30
  */
 public class MybatisGetMysqlGeneratedPrimarykeyTest {
 
     /**
-     * Mysql插入数据时设置主键方式一(写法一): 使用Mysql自动设置主键，sql语句中不用出现主键
+     * Mysql 插入数据时设置主键方式一(写法一): 使用 Mysql 自动设置主键，sql 语句中不用出现主键
      *
-     * 不推荐：插入数据成功后无法读取到Mysql生成的主键
+     * 不推荐：插入数据成功后无法读取到 Mysql 生成的主键
      */
     @Test
     public void testMysqlAutoSetPrimaryKeyWhenInsert_1() {
@@ -31,9 +31,9 @@ public class MybatisGetMysqlGeneratedPrimarykeyTest {
     }
 
     /**
-     * Mysql插入数据时设置主键方式一(写法二): 使用Mysql自动设置主键，sql语句中不用出现主键
+     * Mysql 插入数据时设置主键方式一(写法二): 使用 Mysql 自动设置主键，sql 语句中不用出现主键
      *
-     * 不推荐：插入数据成功后无法读取到Mysql生成的主键
+     * 不推荐：插入数据成功后无法读取到 Mysql 生成的主键
      */
     @Test
     public void testMysqlAutoSetPrimaryKeyWhenInsert_2() {
@@ -47,7 +47,7 @@ public class MybatisGetMysqlGeneratedPrimarykeyTest {
     }
 
     /**
-     * Mysql插入数据时设置主键方式二(写法一): 使用Mybatis读取Mysql生成的主键，在sql语句中使用，sql语句中要出现主键
+     * Mysql 插入数据时设置主键方式二(写法一): 使用 Mybatis 读取 Mysql 生成的主键，在 sql 语句中使用，sql 语句中要出现主键
      *
      * 推荐：插入数据成功后可以读取到Mysql生成的主键
      */
@@ -63,7 +63,7 @@ public class MybatisGetMysqlGeneratedPrimarykeyTest {
     }
 
     /**
-     * Mysql插入数据时设置主键方式二(写法二): 使用Mybatis读取Mysql生成的主键，在sql语句中使用，sql语句中要出现主键
+     * Mysql 插入数据时设置主键方式二(写法二): 使用 Mybatis 读取 Mysql 生成的主键，在 sql 语句中使用，sql 语句中要出现主键
      *
      * 推荐：插入数据成功后可以读取到Mysql生成的主键
      */

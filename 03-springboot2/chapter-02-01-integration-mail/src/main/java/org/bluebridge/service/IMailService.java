@@ -4,7 +4,7 @@ package org.bluebridge.service;
  * 发送邮件接口
  *
  * @author lingwh
- * @date 2026/7/13 9:18
+ * @date 2019/11/28 11:18
  */
 public interface IMailService {
 

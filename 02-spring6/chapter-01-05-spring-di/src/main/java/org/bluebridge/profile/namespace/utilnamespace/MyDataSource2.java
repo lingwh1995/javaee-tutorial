@@ -10,10 +10,10 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 /**
- * 使用util命名空间实现spring配置文件的复用
+ * 使用 util 命名空间实现 spring 配置文件的复用
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 11:42
  */
 public class MyDataSource2 implements DataSource {
 

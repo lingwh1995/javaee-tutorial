@@ -11,7 +11,7 @@ import javax.sql.DataSource;
  * @ConfigurationProperties 推荐用法配置类
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 15:33
  */
 @Configuration
 public class LibraryConfigConfigurationPropertiesRecommendUsage {

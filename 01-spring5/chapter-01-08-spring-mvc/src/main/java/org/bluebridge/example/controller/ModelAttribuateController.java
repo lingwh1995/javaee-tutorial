@@ -24,7 +24,7 @@ import java.util.Map;
  *    从数据库中查询出来的同一个数据被放入到到多个不同域中，Map<String,Object>/Model/ModelMap，以哪个模型中存放的数据为准，是不确定的、随机的。
  * 3. 执行流程
  *    - 执行被 @ModelAttribute 修饰的方法，从数据库中查询出 Person 对象，放在模型中
- *    - 取出模型中存放的 Person对象，把表单中的数据封装到 Person 对象中(只封装发生了变化的属性)
+ *    - 取出模型中存放的 Person 对象，把表单中的数据封装到 Person 对象中(只封装发生了变化的属性)
  *    - 把封装好的数据作为参数传入到目标方法中
  *
  * @ModelAttribute 的常用用法
@@ -34,8 +34,8 @@ import java.util.Map;
  *    注意事项
  *    - 此操作相当于在控制路由跳转的方法中，先查库，获取数据后，再把数据放入到模型中
  *    - 此操作已经将数据放入域中了，可以在页面直接使用了
- *    - 模型(Model/Map/ModelMap)默认都是Request域范围
- * 3. 通过 @ModelAttribute 自动将数据暴露在模型中，不需要再方法入参中写 Model/Model/ModelMap(注意:不包含 ModelAndView)
+ *    - 模型(Model/Map/ModelMap)默认都是 Request 域范围
+ * 3. 通过 @ModelAttribute 自动将数据暴露在模型中，不需要再方法入参中写 Model/Model/ModelMap(注意：不包含 ModelAndView)
  * 4. 数据封装
  *    编辑页面只能部分修改部分字段的的时候，如密码字段不能被修改
  *    常规做法：把密码和其他字段都放入到域中，密码的值存放在隐藏域中，设置一个 name，传递到后台，不改变这个字段的值就可以了
@@ -103,7 +103,7 @@ public class ModelAttribuateController {
      * 模拟更新操作
      *
      * 根据 id 是否为空判断是否为更新操作，并把从数据库中查询出来的数据放在 ModelMap 中
-     * 注意:ModelAttribuate注解(不用在方法参数中)
+     * 注意：ModelAttribuate 注解(不用在方法参数中)
      *
      * @param id
      * @param modelMap
@@ -124,7 +124,7 @@ public class ModelAttribuateController {
      * 模拟更新操作
      *
      * 根据 id 是否为空判断是否为更新操作，并把从数据库中查询出来的数据放在 ModelMap 中
-     * 注意:ModelAttribuate注解(使用在方法参数中)
+     * 注意：ModelAttribuate 注解(使用在方法参数中)
      *
      * @param id
      * @param modelMap
@@ -162,7 +162,7 @@ public class ModelAttribuateController {
     }
 
     /**
-     *测试@ModelAttribuate注解(不用在方法参数中)
+     *测试 @ModelAttribuate 注解(不用在方法参数中)
      *
      * @return
      */
@@ -173,7 +173,7 @@ public class ModelAttribuateController {
     }
 
     /**
-     *测试@ModelAttribuate注解(用在方法参数中)
+     *测试 @ModelAttribuate 注解(用在方法参数中)
      *
      * @return
      */
@@ -187,7 +187,7 @@ public class ModelAttribuateController {
      *
      * @ModelAttritube 绑定请求参数到命令对象高级用法
      *
-     * 将URI模板变量的值自动自动绑定到命令对象中，当你请求的URL中包含“&username=zhang”会自动绑定到命令对象User上，因为User对象中有一个属性是username
+     * 将 URI 模板变量的值自动自动绑定到命令对象中，当你请求的 URL 中包含“&username=zhang”会自动绑定到命令对象 User 上，因为 User 对象中有一个属性是 username
      *
      * 注意事项
      * 当 URI 模板变量和请求参数同名时， 请求参数 具有高优先权。
@@ -294,7 +294,7 @@ public class ModelAttribuateController {
     }
 
     /**
-     * 使用@ModelAttribute自动将数据暴露到模型中(注意:不包含ModelAndView)
+     * 使用 @ModelAttribute 自动将数据暴露到模型中(注意：不包含 ModelAndView)
      *
      * @param user @ModelAttribute("user")
      */

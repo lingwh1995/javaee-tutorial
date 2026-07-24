@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * 使用setter方式为属性注入引用类型的值
+ * 使用 setter 方式为属性注入引用类型的值
  */
 @Service
 public class UserServiceImple implements IUserService {

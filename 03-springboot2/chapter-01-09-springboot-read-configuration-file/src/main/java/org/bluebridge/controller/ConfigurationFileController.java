@@ -14,15 +14,15 @@ import javax.annotation.Resource;
 /**
  * 简单读取 spring 配置信息
  *
- * 通过@Value("${property}")读取比较简单的配置信息，Spring并不推荐@value这种方式
+ * 通过 @Value("${property}") 读取比较简单的配置信息，Spring 并不推荐 @value 这种方式
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 11:20
  */
 @Controller
 public class ConfigurationFileController {
 
-    //-----------使用@Value 读取配置文件开始-----------
+    //-----------使用 @Value 读取配置文件开始-----------
     @Value("${version}")
     private String version;
 
@@ -52,27 +52,27 @@ public class ConfigurationFileController {
 
     @Value("${library.books[2].description}")
     private String book2description;
-    //-----------使用@Value 读取配置文件结束-----------
+    //-----------使用 @Value 读取配置文件结束-----------
 
-    //-----------使用@ConfigurationProperties读取配置文件(@Configuration将配置bean注入到容器中)开始-----------
+    //-----------使用 @ConfigurationProperties 读取配置文件(@Configuration 将配置 bean 注入到容器中)开始-----------
     @Resource
     private LibraryConfigInjectByConfiguration libraryConfigInjectByConfiguration;
-    //-----------使用@ConfigurationProperties读取配置文件(@Configuration将配置bean注入到容器中)结束-----------
+    //-----------使用 @ConfigurationProperties 读取配置文件(@Configuration 将配置 bean 注入到容器中)结束-----------
 
-    //-----------使用@ConfigurationProperties读取配置文件(@EnableConfigurationProperties将配置bean注入到容器中)开始-----------
+    //-----------使用 @ConfigurationProperties 读取配置文件(@EnableConfigurationProperties 将配置 bean 注入到容器中)开始-----------
     @Resource
     private LibraryConfigInjectByEnableConfigurationProperties libraryConfigInjectByEnableConfigurationProperties;
-    //-----------使用@ConfigurationProperties读取配置文件(@EnableConfigurationProperties将配置bean注入到容器中)结束-----------
+    //-----------使用 @ConfigurationProperties 读取配置文件(@EnableConfigurationProperties 将配置 bean 注入到容器中)结束-----------
 
-    //-----------使用@ConfigurationProperties读取配置文件(推荐用法 @Configuration + @Bean + @ConfigurationProperties)开始-----------
+    //-----------使用 @ConfigurationProperties 读取配置文件(推荐用法 @Configuration + @Bean + @ConfigurationProperties)开始-----------
     @Resource
     private LibraryConfigConfigurationPropertiesRecommendUsage libraryConfigConfigurationPropertiesRecommendUsage;
-    //-----------使用@ConfigurationProperties读取配置文件(推荐用法 @Configuration + @Bean + @ConfigurationProperties)结束-----------
+    //-----------使用 @ConfigurationProperties 读取配置文件(推荐用法 @Configuration + @Bean + @ConfigurationProperties)结束-----------
 
-    //-----------使用@PropertySource 读取 properties 文件内容开始-----------
+    //-----------使用 @PropertySource 读取 properties 文件内容开始-----------
     @Resource
     private User user;
-    //-----------使用@PropertySource 读取 properties 文件内容结束-----------
+    //-----------使用 @PropertySource 读取 properties 文件内容结束-----------
 
     /**
      * 访问   http://localhost:8080/read-configuration     查看效果
@@ -104,9 +104,9 @@ public class ConfigurationFileController {
         System.out.println(libraryConfigConfigurationPropertiesRecommendUsage);
         System.out.println("-----------使用@ConfigurationProperties读取配置文件(推荐用法 @Configuration + @Bean + @ConfigurationProperties)结束-----------");
 
-        //-----------使用@PropertySource 读取 properties 文件内容开始-----------
+        //-----------使用 @PropertySource 读取 properties 文件内容开始-----------
         System.out.println("user = " + user);
-        //-----------使用@PropertySource 读取 properties 文件内容结束-----------
+        //-----------使用 @PropertySource 读取 properties 文件内容结束-----------
         return "请在控制台查看打印的配置文件内容~";
     }
 }

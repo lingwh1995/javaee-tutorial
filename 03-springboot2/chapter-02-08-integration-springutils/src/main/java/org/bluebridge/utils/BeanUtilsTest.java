@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Bean生命周期配置测试
+ * Bean 生命周期配置测试
  *
  * @author lingwh
  * @date 2025/7/1 9:00
@@ -52,7 +52,7 @@ public class BeanUtilsTest {
     }
 
     /**
-     *测试获取指定类的指定方法
+     * 测试获取指定类的指定方法
      */
     @Test
     public void testFindDeclaredMethod() {

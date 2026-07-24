@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
  * 坦克类
  *
  * @author lingwh
- * @date 2026/7/13 10:07
+ * @date 2019/4/4 10:07
  */
 public class Tank extends Weapon{
 

@@ -8,7 +8,7 @@ import org.opencv.imgcodecs.Imgcodecs;
 /**
  * opencv 开发环境搭建（windows 版）
  *
- * 1. 下载opencv（本次下载的是4.9.0版本） https://opencv.org/releases/
+ * 1. 下载 opencv（本次下载的是 4.9.0 版本） https://opencv.org/releases/
  * 2. 解压后进入 opencv/build/java/x64 中，复制 dll 文件 jdk 的 bin 目录中
  * 3. 在 maven 中引入对应版本的 opencv 依赖
  *

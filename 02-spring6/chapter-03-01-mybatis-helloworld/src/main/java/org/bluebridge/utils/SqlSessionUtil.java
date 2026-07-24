@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
  * MyBatis 工具类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:30
  */
 public class SqlSessionUtil {
 
@@ -32,7 +32,7 @@ public class SqlSessionUtil {
     }
 
     /**
-     * 每调用一次openSession()可获取一个新的会话，该会话支持自动提交。
+     * 每调用一次 openSession() 可获取一个新的会话，该会话支持自动提交。
      *
      * @return 新的会话对象
      */

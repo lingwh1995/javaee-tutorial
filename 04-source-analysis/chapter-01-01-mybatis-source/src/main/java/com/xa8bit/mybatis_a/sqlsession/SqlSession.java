@@ -34,7 +34,7 @@ public interface SqlSession {
      * 根据 class 的类型创建 T 类型的对象
      *
      * @param type 指定的类型
-     * @param <T> T类型的对象
+     * @param <T> T 类型的对象
      * @return
      */
     <T> T getMapper(Class<T> type);

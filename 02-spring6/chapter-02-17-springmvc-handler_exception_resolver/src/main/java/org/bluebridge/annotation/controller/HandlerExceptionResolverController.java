@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * 测试时需要修改web.xml中使用的配置文件为    classpath:annotation/springMVC-annotation.xml
  *
  * @author lingwh
- * @date 2026/7/13 8:43
+ * @date 2019/7/22 08:43
  */
 @RequestMapping(value = "/handlerExceptionResolver")
 @Controller
 public class HandlerExceptionResolverController {
 
     /**
-     * 测试SpringMVC的异常处理器    注解方式
+     * 测试 SpringMVC 的异常处理器    注解方式
      * @return
      */
     @RequestMapping(value = "/testHandlerExceptionResolverByAnnotation")

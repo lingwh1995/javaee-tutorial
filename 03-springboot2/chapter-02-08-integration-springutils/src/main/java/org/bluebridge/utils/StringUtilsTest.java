@@ -62,7 +62,7 @@ public class StringUtilsTest {
      */
     @Test
     public void testStartsWithAndEndsWith() {
-        // 使用 jdk 原生 api判断，没有忽略大小写功能
+        // 使用 jdk 原生 api 判断，没有忽略大小写功能
         String s = "abcde";
         String prefix = "ab";
         String suffix = "de";
@@ -85,28 +85,28 @@ public class StringUtilsTest {
         list.add("a");
         list.add("b");
         list.add("c");
-        // 使用 jdk 原生 api实现将集合元素拼接成字符串
+        // 使用 jdk 原生 api 实现将集合元素拼接成字符串
         log.info("使用jdk原生api 集合拼接后的字符串 : {}", String.join(",", list));
         log.info("使用jdk原生api 集合拼接后的字符串 : {}", String.join("-", list));
-        // 使用 spring 提供的 api实现将集合元素拼接成字符串
+        // 使用 spring 提供的 api 实现将集合元素拼接成字符串
         log.info("使用spring提供的api 集合拼接后的字符串 : {}", StringUtils.collectionToCommaDelimitedString(list));
         log.info("使用spring提供的api 集合拼接后的字符串 : {}", StringUtils.collectionToDelimitedString(list,"-"));
 
         String[] arr = {"A","B","C"};
-        // 使用 jdk 原生 api实现将数组元素拼接成字符串
+        // 使用 jdk 原生 api 实现将数组元素拼接成字符串
         log.info("使用jdk原生api 数组拼接后的字符串 : {}", String.join(",", arr));
         log.info("使用jdk原生api 数组拼接后的字符串 : {}", String.join("-", arr));
-        // 使用 spring 提供的 api实现将数组元素拼接成字符串
+        // 使用 spring 提供的 api 实现将数组元素拼接成字符串
         log.info("使用spring提供的api 数组拼接后的字符串 : {}", StringUtils.arrayToCommaDelimitedString(arr));
         log.info("使用spring提供的api 数组拼接后的字符串 : {}", StringUtils.arrayToDelimitedString(arr,"-"));
 
-        // 使用 jdk8 的 stream api实现（填入三个参数）
+        // 使用 jdk8 的 stream api 实现（填入三个参数）
         String result = list.stream().collect(Collectors.joining(", ", "[", "]"));
         log.info("result: {}", result);
         result = Stream.of(arr).collect(Collectors.joining("- ", "[", "]"));
         log.info("result: {}", result);
 
-        // 使用 jdk8 的 stream api实现（填入一个参数）
+        // 使用 jdk8 的 stream api 实现（填入一个参数）
         result = list.stream().collect(Collectors.joining(" * "));
         log.info("result: {}", result);
         result = Stream.of(arr).collect(Collectors.joining(" | "));

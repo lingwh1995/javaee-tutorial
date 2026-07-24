@@ -4,7 +4,7 @@ package org.bluebridge.dynamicsql.domain;
  * EMP
  *
  * @author lingwh
- * @date 2026/7/13 15:46
+ * @date 2019/3/16 15:51
  */
 public class Emp {
     

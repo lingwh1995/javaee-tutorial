@@ -4,7 +4,7 @@ package org.bluebridge.circulardependence.injectbyset.prototype;
  * Wife
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2026/1/10 09:30
  */
 public class Wife {
 
@@ -12,7 +12,7 @@ public class Wife {
     private Husband husband;
 
     /**
-     * 这个方法没有实际意义，只是为了在toString()方法中使用时不会引发递归问题
+     * 这个方法没有实际意义，只是为了在toString() 方法中使用时不会引发递归问题
      * @return
      */
     public String getName() {

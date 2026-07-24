@@ -8,7 +8,7 @@ import java.util.List;
  * 使用 @EnableConfigurationProperties 注入的图书馆配置类
  *
  * @author lingwh
- * @date 2026/7/13 09:30
+ * @date 2019/11/19 14:08
  */
 @ConfigurationProperties(prefix = "library")
 public class LibraryConfigInjectByEnableConfigurationProperties {

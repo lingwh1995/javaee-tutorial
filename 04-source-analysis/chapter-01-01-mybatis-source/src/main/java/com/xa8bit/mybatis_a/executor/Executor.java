@@ -15,8 +15,8 @@ public interface Executor {
     /**
      * Executor 会真正的执行查询操作
      *
-     * @param mapperStatement 封装了Mapper.xml中<select></select>等标签中保存的信息
-     * @param params 指定的sql语句执行对应要传入的参数
+     * @param mapperStatement 封装了 Mapper.xml 中<select></select>等标签中保存的信息
+     * @param params 指定的 sql 语句执行对应要传入的参数
      * @param <E> 返回指定的类型
      * @return
      */

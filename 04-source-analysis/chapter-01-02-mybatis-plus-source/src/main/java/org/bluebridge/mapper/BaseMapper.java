@@ -27,7 +27,7 @@ public interface BaseMapper<T> {
     /**
      * 根据 ID 删除记录
      *
-     * @param id 主键ID
+     * @param id 主键 ID
      * @return 影响行数
      */
     @DeleteProvider(type = BaseSqlProvider.class, method = "deleteById")
@@ -47,7 +47,7 @@ public interface BaseMapper<T> {
     /**
      * 根据 ID 查询记录
      *
-     * @param id 主键ID
+     * @param id 主键 ID
      * @return 实体对象
      */
     @SelectProvider(type = BaseSqlProvider.class, method = "selectById")

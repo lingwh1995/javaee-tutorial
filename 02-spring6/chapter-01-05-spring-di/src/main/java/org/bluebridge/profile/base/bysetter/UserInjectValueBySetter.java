@@ -1,7 +1,7 @@
 package org.bluebridge.profile.base.bysetter;
 
 /**
- * set方式注入
+ * set 方式注入
  */
 public class UserInjectValueBySetter {
     private String type;

@@ -59,7 +59,7 @@ public interface GroupSession {
     Set<String> getMembers(String groupName);
 
     /**
-     * 获取组成员的Channel
+     * 获取组成员的 Channel
      *
      * @param groupName 聊天组名称
      * @return 聊天组成员的Channel

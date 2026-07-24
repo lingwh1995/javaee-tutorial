@@ -13,34 +13,34 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
- * 测试mybatis两个内置参数_databaseId _parameter
+ * 测试 mybatis 两个内置参数 _databaseId _parameter
  *
  * @author lingwh
- * @date 2026/7/13 14:37
+ * @date 2019/3/16 09:12
  */
 public class MybatisBuiltinParamTest {
 
     /**
-     * 获取SqlSession
+     * 获取 SqlSession
      * @return
      * @throws IOException
      */
     public SqlSession getSqlSession() throws IOException{
         // 1. 加载配置文件
         InputStream inputStream = Resources.getResourceAsStream("mysql/mybatis-config.xml");
-        // 2. 获取SqlSession对象
+        // 2. 获取 SqlSession 对象
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        // 3. 获取SqlSession对象
-        // 获取可以自动提交的openSession对象,传入true
+        // 3. 获取 SqlSession 对象
+        // 获取可以自动提交的 openSession 对象，传入 true
         // SqlSession sqlSession = sqlSessionFactory.openSession(true);
-        // 获取需要手动提交的openSession对象,传入fasle或者什么都不传
+        // 获取需要手动提交的 openSession 对象，传入 fasle 或者什么都不传
         SqlSession sqlSession = sqlSessionFactory.openSession(false);
         // SqlSession sqlSession = sqlSessionFactory.openSession();
         return sqlSession;
     }
 
     /**
-     * 新增一个Emp对象,不返回任何值
+     * 新增一个 Emp 对象，不返回任何值
      * @throws IOException
      */
     @Test
@@ -60,7 +60,7 @@ public class MybatisBuiltinParamTest {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            // 7.关闭sqlSession
+            // 7.关闭 sqlSession
             sqlSession.close();
         }
     }

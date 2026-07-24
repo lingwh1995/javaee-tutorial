@@ -30,7 +30,7 @@ import java.util.Map;
  * Integer selectCount(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);  // 根据 Wrapper 条件，查询总记录数
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2025/2/27 10:15
  */
 @SpringBootTest
 public class MybatisPlusSelectTest {
@@ -132,7 +132,7 @@ public class MybatisPlusSelectTest {
     }
 
     /**
-     * 测试 根据 Wrapper 条件，查询全部记录。注意： 只返回第一个字段的值,这里返回的值实际上是id
+     * 测试 根据 Wrapper 条件，查询全部记录。注意： 只返回第一个字段的值，这里返回的值实际上是 id
      *
      * List<Object> selectObjs(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);
      */

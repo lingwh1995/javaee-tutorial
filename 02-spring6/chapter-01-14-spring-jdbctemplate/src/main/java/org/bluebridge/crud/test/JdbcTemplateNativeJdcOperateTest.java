@@ -37,7 +37,7 @@ public class JdbcTemplateNativeJdcOperateTest {
     }
 
     /**
-     * 测试使用JdbcTemplate提供的原生jdbc操作  查询所有数据
+     * 测试使用 JdbcTemplate 提供的原生 jdbc 操作  查询所有数据
      */
     @Test
     public void testJdbcTemplateNativeJdcOperateQueryAll() {
@@ -48,7 +48,7 @@ public class JdbcTemplateNativeJdcOperateTest {
     }
 
     /**
-     * 测试使用JdbcTemplate提供的原生jdbc操作  查询单条记录
+     * 测试使用 JdbcTemplate 提供的原生 jdbc 操作  查询单条记录
      */
     @Test
     public void testJdbcTemplateNativeJdcOperateQueryOneObject() {

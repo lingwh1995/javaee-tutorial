@@ -13,8 +13,8 @@ public class RequestMappingController {
     private static final Logger logger = LoggerFactory.getLogger(RequestMappingController.class);
 
     /**
-     * 测试@RequestMapping()注解的value属性
-     *      传递的value/path不匹配时报 404 错误
+     * 测试 @RequestMapping() 注解的 value 属性
+     *      传递的 value/path 不匹配时报 404 错误
      * @return
      */
     @RequestMapping(value = {"/valueProperty_1","/valueProperty_2"})
@@ -24,8 +24,8 @@ public class RequestMappingController {
     }
 
     /**
-     * 测试@RequestMapping()注解的method属性
-     *      传递的method不匹配时报 405 错误
+     * 测试 @RequestMapping() 注解的 method 属性
+     *      传递的 method 不匹配时报 405 错误
      * @return
      */
     @RequestMapping(value = "methodProperty",method = {RequestMethod.GET,RequestMethod.POST})
@@ -35,9 +35,9 @@ public class RequestMappingController {
     }
 
     /**
-     * 测试@RequestMapping()注解的params属性
-     *      要求参数中必须要有 username和password这个参数，且password的值必须是123456，才能成功匹配该请求
-     *      传递的params不匹配时报 400 错误
+     * 测试 @RequestMapping() 注解的 params 属性
+     *      要求参数中必须要有 username 和 password 这个参数，且 password 的值必须是 123456，才能成功匹配该请求
+     *      传递的 params 不匹配时报 400 错误
      * @return
      */
     @RequestMapping(value = "paramsProperty",params = {"username","password=123456"})
@@ -47,8 +47,8 @@ public class RequestMappingController {
     }
 
     /**
-     * 测试@RequestMapping()注解的headers属性
-     *      传递的headers不匹配时报 404 错误
+     * 测试 @RequestMapping() 注解的 headers 属性
+     *      传递的 headers 不匹配时报 404 错误
      * @return
      */
     @RequestMapping(value = "headersProperty", headers = {"Host"})
@@ -58,9 +58,9 @@ public class RequestMappingController {
     }
 
     /**
-     * 测试@RequestMapping注解的value属性支持ant风格的url路径
+     * 测试 @RequestMapping 注解的 value 属性支持 ant 风格的 url 路径
      *      ?   表示任意的单个字符
-     *      *   表示任意的0或者对个字符
+     *      *   表示任意的 0 或者对个字符
      *      **  表示任意的一层或者多层目录
      * @return
      */

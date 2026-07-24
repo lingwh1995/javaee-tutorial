@@ -35,19 +35,19 @@ public class UserServiceImpl implements IUserService {
      * 注解属性
      * 1. cacheNames：数组形式，可以指定多个名称
      * 2. key：默认是方法参数的值
-     *    生成 key 的方式:
-     *    - spel表达式获取
+     *    生成 key 的方式
+     *    - spel 表达式获取
      *      #root.methodName：获取方法名
-     *      #id：获取方法参数id的值
-     *    - keyGenerator：key的生成器
+     *      #id：获取方法参数 id 的值
+     *    - keyGenerator：key 的生成器
      * 3. condition：指定什么条件下进行缓存
-     *    condition="#id!='002'" -> id不等于002的时候缓存
-     * 4. unless：条件为true不缓存，表示否定
-     *    unless="#id=='002'" -> id等于002的时候不缓存
+     *    condition="#id!='002'" -> id 不等于 002 的时候缓存
+     * 4. unless：条件为 true 不缓存，表示否定
+     *    unless="#id=='002'" -> id 等于 002 的时候不缓存
      * 5. sync：是否异步
      *
      * CacheManager
-     * 管理多个Cache组件，对缓存真正的CRUD操作在Cache组件中的，每一个缓存组件有自己 唯一的名字
+     * 管理多个 Cache 组件，对缓存真正的 CRUD 操作在 Cache 组件中的，每一个缓存组件有自己 唯一的名字
      *
      * @param id
      * @return
@@ -59,7 +59,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     /**
-     * 测试自定义生成缓存数据的key
+     * 测试自定义生成缓存数据的 key
      *
      * @param id
      * @return
@@ -71,7 +71,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     /**
-     * 根据id获取User对象
+     * 根据 id 获取 User 对象
      *
      * @param id
      * @return
@@ -83,33 +83,33 @@ public class UserServiceImpl implements IUserService {
     }
 
     /**
-     * 测试@CachePut注解
+     * 测试 @CachePut 注解
      * 
      * 注解说明
-     * 同步更新缓存的功能(更新数据库中的数据，并且根据id更新缓存中的数据)，被 @CachePut 注解标注的方法一定会执行
+     * 同步更新缓存的功能(更新数据库中的数据，并且根据 id 更新缓存中的数据)，被 @CachePut 注解标注的方法一定会执行
      * 
      * 注解属性
      * 1. cacheNames：数组形式，可以指定多个名称
-     * 2. key的写法
+     * 2. key 的写法
      *    - key="#id"
-     *    - key="#result.id"  注意:这个表达式只能在 @CachePut 中使用，不能在 @Cacheable 中使用
+     *    - key="#result.id"  注意：这个表达式只能在 @CachePut 中使用，不能在 @Cacheable 中使用
      *    - key="#user.id"
      * 3. bug java.lang.ClassCastException: java.lang.Integer cannot be cast to org.bluebridge.domain.User 解决？
      *    - 解决方式1   
-     *      Service 层写法：返回值为User类型数据
+     *      Service 层写法：返回值为 User 类型数据
      *        public User updateUser(User user) {}
-     *      Dao层写法：返回值为int类型数据
+     *      Dao 层写法：返回值为 int 类型数据
      *        int updateUser(User user);
-     *      总之不能直接把dao层的返回值直接返回到 Controlelr 层
+     *      总之不能直接把 dao 层的返回值直接返回到 Controlelr 层
      *    - 解决方式2
-     *      Service层写法：返回值为int类型数据
-     *      查询方法:@Cacheable中不要配置key属性相关的内容
+     *      Service 层写法：返回值为 int 类型数据
+     *      查询方法：@Cacheable 中不要配置 key 属性相关的内容
      *        @Cacheable(cacheNames = {"user"})
      *        public User getUserById(String id) {}
-     *      更新方法：@CachePut中不要配置key属性相关的内容
+     *      更新方法：@CachePut 中不要配置 key 属性相关的内容
      *        @CachePut(cacheNames={"user"},key="#user.id")
      *        public int updateUser(User user) {}
-     *      Dao层写法：返回值为int类型数据
+     *      Dao 层写法：返回值为 int 类型数据
      *        int updateUser(User user);
      * 
      * @param user

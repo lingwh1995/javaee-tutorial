@@ -50,7 +50,7 @@ public class MessageCodecSharable extends MessageToMessageCodec<ByteBuf, Message
         int magicNum = in.readInt();
         byte version = in.readByte();
         byte serializerType = in.readByte(); // 0 或 1
-        byte messageType = in.readByte(); // 0,1,2...
+        byte messageType = in.readByte(); // 0，1，2...
         int sequenceId = in.readInt();
         in.readByte();
         int length = in.readInt();

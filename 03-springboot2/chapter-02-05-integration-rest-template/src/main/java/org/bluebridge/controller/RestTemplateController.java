@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class RestTemplateController {
 
     /**
-     * GET方式的请求:需要传递参数
+     * GET 方式的请求：需要传递参数
      *
      * @param name
      * @return
@@ -33,7 +33,7 @@ public class RestTemplateController {
     }
 
     /**
-     * GET方式的请求:不需要传递参数
+     * GET 方式的请求：不需要传递参数
      *
      * @return
      */
@@ -52,7 +52,7 @@ public class RestTemplateController {
     }
 
     /**
-     * POST方式的请求
+     * POST 方式的请求
      *
      * @param user 前台传递的是普通的表单数据
      * @return
@@ -65,7 +65,7 @@ public class RestTemplateController {
     }
 
     /**
-     * POST方式的请求
+     * POST 方式的请求
      *
      * @param user 前台传递的是json格式的参数
      * @return
@@ -78,7 +78,7 @@ public class RestTemplateController {
     }
 
     /**
-     * PUT方式的请求
+     * PUT 方式的请求
      *
      * @param user 前台传递的是普通的表单数据格式
      * @return
@@ -91,7 +91,7 @@ public class RestTemplateController {
     }
 
     /**
-     * PUT方式的请求
+     * PUT 方式的请求
      *
      * @param user 前台传递的是json格式的参数
      * @return
@@ -104,7 +104,7 @@ public class RestTemplateController {
     }
 
     /**
-     * DELETE方式的请求
+     * DELETE 方式的请求
      *
      * @param id 路径传参
      * @return
@@ -117,7 +117,7 @@ public class RestTemplateController {
     }
 
     /**
-     * DELETE方式的请求
+     * DELETE 方式的请求
      *
      * @param id 问号传参
      * @return

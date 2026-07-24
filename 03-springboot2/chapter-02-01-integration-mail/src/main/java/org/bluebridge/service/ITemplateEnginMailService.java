@@ -9,7 +9,7 @@ package org.bluebridge.service;
 public interface ITemplateEnginMailService {
 
     /**
-     * 发送html邮件
+     * 发送 html 邮件
      * @param to 邮件接收者
      * @param subject 邮件主题
      * @param content 邮件内容

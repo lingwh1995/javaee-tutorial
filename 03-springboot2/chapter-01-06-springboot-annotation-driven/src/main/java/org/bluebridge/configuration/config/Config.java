@@ -14,16 +14,16 @@ import javax.sql.DataSource;
 /**
  * SpringBoot 注解驱动之注解 + Java 代码 驱动配置
  *
- * 1. 使用@Configuration + @Bean + @Scope 代替 XML 配置
+ * 1. 使用 @Configuration + @Bean + @Scope 代替 XML 配置
  * 2. @Configuration 介绍
- *      @Configuration 可理解为使用 Spring 框架时的 XML 文件中的<beans/>,一般用来声明配置类，可以使用 @Component 注解替代，不过使用@Configuration 注解声明配置类更加语义
+ *      @Configuration 可理解为使用 Spring 框架时的 XML 文件中的 <beans/>，一般用来声明配置类，可以使用 @Component 注解替代，不过使用 @Configuration 注解声明配置类更加语义
  *      proxyBeanMethods = true  创建单实例对象
- *      proxyBeanMethods = false 不进行检查IOC容器中是否存在，而是简单的调用方法进行创建对象，无法保持单实例
+ *      proxyBeanMethods = false 不进行检查 IOC 容器中是否存在，而是简单的调用方法进行创建对象，无法保持单实例
  * 3. @Bean 介绍
- *      @Bean 可理解为使用 Spring 框架时 XML 里面的<bean/> 标签
- *      @Bean 的 name 属性来指定 id，相当于<bean/> 标签的 id 属性
+ *      @Bean 可理解为使用 Spring 框架时 XML 里面的 <bean/> 标签
+ *      @Bean 的 name 属性来指定 id，相当于 <bean/> 标签的 id 属性
  * 4. @Scope 介绍
- *      @Scope 可理解为使用 Spring 框架时 XML 里面的 <bean scope=""/> 标签中的scope属性
+ *      @Scope 可理解为使用 Spring 框架时 XML 里面的 <bean scope=""/> 标签中的 scope 属性
  *      @Scope("singleton")                 唯一 bean 实例，Spring 中的 bean 默认都是单例的。
  *      @Scope("prototype")                 每次请求都会创建一个新的 bean 实例
  *      @Scope("request")                   每一次 HTTP 请求都会产生一个新的 bean，该 bean 仅在当前 HTTP request 内有效

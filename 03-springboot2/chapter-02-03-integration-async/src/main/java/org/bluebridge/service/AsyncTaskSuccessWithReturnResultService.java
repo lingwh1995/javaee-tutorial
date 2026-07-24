@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
  * 异步任务带返回结果服务类
  *
  * @author lingwh
- * @date 2026/7/15 15:42
+ * @date 2019/11/18 14:22
  */
 @Service
 public class AsyncTaskSuccessWithReturnResultService {

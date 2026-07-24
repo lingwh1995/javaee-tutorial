@@ -14,14 +14,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Spring测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 08:50
  */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
-     * 测试Spring示例化bean的第二种方式： 使用简单(静态)工厂实例化bean
+     * 测试Spring 示例化 bean的第二种方式： 使用简单(静态)工厂实例化bean
      */
     @Test
     public void testBeanInstantiationBySimpleFactory() {

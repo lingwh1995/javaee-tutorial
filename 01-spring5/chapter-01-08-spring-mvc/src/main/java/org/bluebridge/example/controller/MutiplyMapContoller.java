@@ -59,7 +59,7 @@ public class MutiplyMapContoller {
     /**
      * ModelAndView 和 Model 高级特性
      *
-     * ModelAndView.addObject()和Model.addAttribute()放置同名参数问题
+     * ModelAndView.addObject() 和 Model.addAttribute() 放置同名参数问题
      *
      * @param model
      * @return
@@ -73,7 +73,7 @@ public class MutiplyMapContoller {
         mv.addObject("a", "update");
         //3. 修改 1 处同名模型数据
         model.addAttribute("a", "new");
-        // 视图页面的a将显示为"update" 而不是"new"
+        // 视图页面的 a 将显示为 "update" 而不是 "new"
         return mv;
     }
 }

@@ -46,7 +46,7 @@ public class EmployeeDao {
     }
 
     /**
-     * 根据id查询单个员工信息
+     * 根据 id 查询单个员工信息
      * @param id
      */
     public Employee getEmployeeById(Integer id) {

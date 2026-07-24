@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringTest {
 
     /**
-     * 测试基于XML配置的日志切面类
+     * 测试基于 XML 配置的日志切面类
      */
     @Test
     public void testLogAspectConfigByXml() {

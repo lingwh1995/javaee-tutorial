@@ -1,7 +1,7 @@
 package org.bluebridge.message;
 
 /**
- * Pong响应消息
+ * Pong 响应消息
  *
  * @author lingwh
  * @date 2025/10/16 20:35

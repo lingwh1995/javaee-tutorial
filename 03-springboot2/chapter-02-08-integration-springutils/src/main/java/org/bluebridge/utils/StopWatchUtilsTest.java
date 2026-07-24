@@ -20,7 +20,7 @@ public class StopWatchUtilsTest {
      */
     @Test
     public void testStopWatchHelloWorld() throws InterruptedException {
-        // 创建一个StopWatch对象
+        // 创建一个 StopWatch 对象
         StopWatch stopWatch = new StopWatch("秒表");
         // 开始计时
         stopWatch.start("task-1");
@@ -37,7 +37,7 @@ public class StopWatchUtilsTest {
      */
     @Test
     public void testStopWatch() throws InterruptedException {
-        // 创建一个StopWatch对象
+        // 创建一个 StopWatch 对象
         StopWatch stopWatch = new StopWatch("秒表");
         // task-1开始计时
         stopWatch.start("task-1");

@@ -1,7 +1,7 @@
 package org.bluebridge.designpattern.adapter_a;
 
 /**
- * HTTP处理器适配器
+ * HTTP 处理器适配器
  *
  * @author lingwh
  * @date 2019/4/15 8:47

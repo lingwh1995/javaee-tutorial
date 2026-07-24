@@ -45,8 +45,8 @@ public class YmlControllerSpringBootLib {
     /**
      * 获取 YML 中值方式四
      *
-     * 使用@Component("personYml")+@Qualifier("personYml")将yml中的值注入到对象中
-     * 特别注意 :Dog是Person的属性,@Component("personYml")只需要加在Person实体上,不需要加在Dog实体上
+     * 使用 @Component("personYml")+@Qualifier("personYml") 将 yml 中的值注入到对象中
+     * 特别注意：Dog 是 Person 的属性，@Component("personYml") 只需要加在 Person 实体上，不需要加在 Dog 实体上
      */
     @Qualifier("personYml")
     @Autowired

@@ -5,10 +5,10 @@ import org.bluebridge.profile.dibysetsenior.domain.Friend;
 import java.util.Set;
 
 /**
- * set方式注入专题之注入   Set集合
+ * set 方式注入专题之注入   Set 集合
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 09:18
  */
 public class UserInjectSetBySetter {
 

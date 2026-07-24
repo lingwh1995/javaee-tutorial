@@ -6,14 +6,14 @@ import org.bluebridge.builtinparam.domain.Emp;
 import java.util.List;
 
 /**
- * Mybatis两个内置参数
+ * Mybatis 两个内置参数
  */
 public interface IEmpDao {
 
     /**
-     * 测试mybatis内置参数
+     * 测试 mybatis 内置参数
      * @param employee
      * @return
      */
-    public List<Emp> getEmpsTestInnerParameter(Emp employee);
+    List<Emp> getEmpsTestInnerParameter(Emp employee);
 }

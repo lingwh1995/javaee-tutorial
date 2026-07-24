@@ -4,7 +4,7 @@ package org.bluebridge.guard.constant;
  * PBKDF2 常量类
  *
  * @author lingwh
- * @date 2026/7/13 17:16
+ * @date 2026/2/1 10:15
  */
 public final class Pbkdf2Constants {
 

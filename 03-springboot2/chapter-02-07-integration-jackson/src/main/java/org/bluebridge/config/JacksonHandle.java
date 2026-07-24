@@ -53,7 +53,7 @@ public class JacksonHandle {
         objectMapper.registerModule(javaTimeModule);
         // 自定义序列化器
         SimpleModule module = new SimpleModule();
-        // 添加将long序列化为string
+        // 添加将 long 序列化为 string
         module.addSerializer(Long.class, new ToStringSerializer());
         // 注册序列化器
         objectMapper.registerModule(module);

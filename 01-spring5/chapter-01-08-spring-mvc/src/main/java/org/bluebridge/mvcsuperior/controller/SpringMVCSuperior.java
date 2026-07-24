@@ -26,7 +26,7 @@ public class SpringMVCSuperior {
      */
     @RequestMapping("testwebrequest")
     public String webRequest(WebRequest webRequest, NativeWebRequest nativeWebRequest) {
-        // webRequest.getParameter：访问请求参数区的数据，可以通过getHeader()访问请求头数据
+        // webRequest.getParameter：访问请求参数区的数据，可以通过 getHeader() 访问请求头数据
         System.out.println(webRequest.getParameter("test"));
         /**
           * webRequest.setAttribute/getAttribute：到指定的作用范围内取/放属性数据， Servlet 定义的三个作用范围分别使用如下常量代表

@@ -1,7 +1,7 @@
 package org.bluebridge.beanscope;
 
 /**
- * 不配置bean标签的scope
+ * 不配置 bean 标签的 scope
  */
 public class SpringBeanScopeDefault {
     public SpringBeanScopeDefault() {

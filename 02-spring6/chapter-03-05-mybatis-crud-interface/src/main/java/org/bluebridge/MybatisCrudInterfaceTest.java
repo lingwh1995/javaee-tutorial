@@ -12,7 +12,7 @@ import java.util.List;
  * Mybatis 基于接口的 CRUD 测试
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 11:35
  */
 public class MybatisCrudInterfaceTest {
 

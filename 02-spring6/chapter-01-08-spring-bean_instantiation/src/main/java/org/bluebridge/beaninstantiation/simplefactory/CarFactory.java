@@ -1,10 +1,10 @@
 package org.bluebridge.beaninstantiation.simplefactory;
 
 /**
- * Spring示例化bean的第二种方式： 使用简单(静态)工厂实例化bean
+ * Spring 示例化 bean的第二种方式： 使用简单(静态)工厂实例化bean
  *
  * @author lingwh
- * @date 2026/7/13 11:32
+ * @date 2026/1/10 09:30
  */
 public class CarFactory {
 

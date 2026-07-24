@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringTest {
 
     /**
-     * 测试使用@Resource完成di
+     * 测试使用 @Resource 完成 di
      */
     @Test
     public void testResource() {

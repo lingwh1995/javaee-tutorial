@@ -80,8 +80,8 @@ public class RestTemplateTest {
      * http://localhost:8080/get?name={name}
      *
      * 注意
-     * 1.getForObject()直接就可以返回需要的数据类型，而getForEntity()不会直接返回想要的数据类型，而是把返回结果封装到ResponseEntity中
-     * 2.使用 map 传递参数
+     * 1. getForObject() 直接就可以返回需要的数据类型，而 getForEntity() 不会直接返回想要的数据类型，而是把返回结果封装到 ResponseEntity 中
+     * 2. 使用 map 传递参数
      */
     @Test
     public void testGetForObject_1() {
@@ -110,7 +110,7 @@ public class RestTemplateTest {
      * http://localhost:8080/get?name={name}
      *
      * 注意
-     * 1. getForObject()直接就可以返回需要的数据类型，而getForEntity()不会直接返回想要的数据类型，而是把返回结果封装到ResponseEntity中
+     * 1. getForObject() 直接就可以返回需要的数据类型，而 getForEntity() 不会直接返回想要的数据类型，而是把返回结果封装到 ResponseEntity 中
      * 2. 不使用 map 传递参数，适用可变参数传递参数
      */
     @Test
@@ -123,7 +123,7 @@ public class RestTemplateTest {
      * postForEntity()
      *
      * 注意
-     * 1. getForEntity()不会直接返回想要的数据类型,而是把返回结果封装到ResponseEntity中
+     * 1. getForEntity() 不会直接返回想要的数据类型，而是把返回结果封装到 ResponseEntity 中
      * 2. 使用 map 传递参数，适用可变参数传递参数
      */
     @Test
@@ -146,7 +146,7 @@ public class RestTemplateTest {
      * postForObject()
      *
      * 注意
-     * 1. getForObject()直接就可以返回需要的数据类型，而getForEntity()不会直接返回想要的数据类型，而是把返回结果封装到ResponseEntity中
+     * 1. getForObject() 直接就可以返回需要的数据类型，而 getForEntity() 不会直接返回想要的数据类型，而是把返回结果封装到 ResponseEntity 中
      * 2. 使用 map 传递参数，适用可变参数传递参数
      */
     @Test

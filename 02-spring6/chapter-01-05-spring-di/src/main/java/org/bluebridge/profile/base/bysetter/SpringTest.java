@@ -7,17 +7,17 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:35
  */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
-     * 测试使用setter方式为属性注入非引用数据类型的值
+     * 测试使用 setter 方式为属性注入非引用数据类型的值
      */
     @Test
     public void testInjectValueBySetter(){

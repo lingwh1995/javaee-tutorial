@@ -39,7 +39,7 @@ public class GroupCreateRequestMessageHandler extends SimpleChannelInboundHandle
         String groupName = groupCreateRequestMessage.getGroupName();
         // 获取群成员
         Set<String> members = groupCreateRequestMessage.getMembers();
-        // 根据Channel获取Channel对应的用户名
+        // 根据 Channel 获取 Channel 对应的用户名
         String owner = session.getUsername(ctx.channel());
         // 创建聊天组
         Group group = groupSession.createGroup(groupName, members, owner);

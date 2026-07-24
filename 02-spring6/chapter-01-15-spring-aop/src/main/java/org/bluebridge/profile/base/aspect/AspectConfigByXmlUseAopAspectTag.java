@@ -6,8 +6,11 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 
 /**
- * 切面类  使用xml配置
+ * 切面类  使用 xml 配置
  * 切面 = 切点 + 通知
+ *
+ * @author lingwh
+ * @date 2026/1/10 09:00
  */
 public class AspectConfigByXmlUseAopAspectTag {
 

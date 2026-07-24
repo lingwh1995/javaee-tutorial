@@ -9,19 +9,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.sql.SQLException;
 
 /**
- * 引入properties文件测试类
+ * 引入properties 文件测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 08:47
  */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
-     * 测试使用 context:property-placeholder 引入外部的properties文件
+     * 测试使用 context:property-placeholder 引入外部的properties 文件
      *
-     * key的命名是不规范的，无法获取到properties文件中正确的username属性的值
+     * key的命名是不规范的，无法获取到properties 文件中正确的username 属性的值
      */
     @Test
     public void testIntroducePropertiesProfileKeyInvalid() throws SQLException {
@@ -31,9 +31,9 @@ public class SpringTest {
     }
 
     /**
-     * 测试使用 context:property-placeholder 引入外部的properties文件
+     * 测试使用 context:property-placeholder 引入外部的properties 文件
      *
-     * key的命名是标准的，可以获取到properties文件中正确的jdbc.username属性的值
+     * key的命名是标准的，可以获取到properties 文件中正确的jdbc.username 属性的值
      */
     @Test
     public void testIntroducePropertiesProfileKeyStandard() throws SQLException {

@@ -19,7 +19,7 @@ import java.net.URL;
  *
  * 注意：在本地 IDEA 中测试时，输出结果文件路径在 target/classes/hadoop/output/part-r-00000 中，需要手动查看内容
  * @author lingwh
- * @date 2026/7/18 10:00
+ * @date 2025/8/20 09:17
  */
 @Slf4j
 public class WordCountDriver {
@@ -40,7 +40,7 @@ public class WordCountDriver {
         job.setMapperClass(WordCountMapper.class);
         job.setReducerClass(WordCountReducer.class);
 
-        // 5. 设置Map端输出KV类型
+        // 5. 设置 Map 端输出 KV 类型
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(IntWritable.class);
 

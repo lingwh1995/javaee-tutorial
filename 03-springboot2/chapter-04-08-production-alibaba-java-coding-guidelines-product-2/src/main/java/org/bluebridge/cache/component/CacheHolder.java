@@ -20,7 +20,7 @@ public class CacheHolder<T> {
     private final Map<String, T> pool = new ConcurrentHashMap<>();
 
     /**
-     * 获取缓存对象: 使用 Optional 包装，避免调用方直接处理 null
+     * 获取缓存对象：使用 Optional 包装，避免调用方直接处理 null
      *
      * @param key 缓存键
      * @return 缓存的对象

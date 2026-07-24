@@ -7,15 +7,15 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:40
  */
 public class SpringTest {
 
     /**
-     * 测试使用@Autowired和@Qualifier按名称注入
+     * 测试使用 @Autowired 和 @Qualifier 按名称注入
      */
     @Test
     public void testAutowiredConfigLocation() {

@@ -10,12 +10,12 @@ import java.sql.SQLException;
  * Spring测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:45
  */
 public class SpringTest {
 
     /**
-     * 测试set方式注入经典应用场景，把数据库配置从硬编码中提取到Spring配置文件中
+     * 测试 set 方式注入经典应用场景，把数据库配置从硬编码中提取到 Spring 配置文件中
      * @throws SQLException
      */
     @Test

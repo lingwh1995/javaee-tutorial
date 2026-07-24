@@ -14,13 +14,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * RedisTemplate 操作测试
  *
- * 1. RedisTemplate:操作的k-v都是对象的
- * 2. Redis五大数据类型:
- *    - String(字符串): stringRedisTemplate.opsForValue()
- *    - List(列表): stringRedisTemplate.opsForList()
- *    - Set(集合): stringRedisTemplate.opsForSet()
- *    - Hash(散列表): stringRedisTemplate.opsForHash()
- *    - ZSet(有序集合): stringRedisTemplate.opsForZSet()
+ * 1. RedisTemplate：操作的 k-v 都是对象的
+ * 2. Redis 五大数据类型：
+ *    - String(字符串)： stringRedisTemplate.opsForValue()
+ *    - List(列表)： stringRedisTemplate.opsForList()
+ *    - Set(集合)： stringRedisTemplate.opsForSet()
+ *    - Hash(散列表)： stringRedisTemplate.opsForHash()
+ *    - ZSet(有序集合)： stringRedisTemplate.opsForZSet()
  *
  * @author lingwh
  * @date 2019/11/14 10:59
@@ -36,7 +36,7 @@ public class RedisTemplateTest {
     private StringRedisTemplate stringRedisTemplate;
 
     /**
-     * 注入自定义的RedisTempate
+     * 注入自定义的 RedisTempate
      */
     @Autowired
     private RedisTemplate<Object, User> userRedisTemplate;
@@ -45,63 +45,63 @@ public class RedisTemplateTest {
     @Test
     public void fun1() throws JsonProcessingException {
         System.out.println("-------------------------------------------------------");
-        // 操作String
+        // 操作 String
         ValueOperations<String, String> stringOperator = redisTemplate.opsForValue();
         stringOperator.set("message","Hello Redis!");
         String message = stringOperator.get("message");
         System.out.println("message"+":"+message);
         System.out.println("-------------------------------------------------------");
-        // 把对象转换成Json格式字符换进行存储,注意:不需要实现序列化接口
+        // 把对象转换成 Json 格式字符换进行存储，注意：不需要实现序列化接口
         User user = new User("001", "zhangsan", "123456");
         stringOperator.set("user_str", JsonUtils.objectToJson(user));
         String userStr = stringOperator.get("user_str");
         System.out.println("userStr:"+userStr);
         System.out.println("-------------------------------------------------------");
-        // 直接对User对象进行存储,注意:不需要实现序列化接口
+        // 直接对 User 对象进行存储，注意：不需要实现序列化接口
         ValueOperations<String, User> stringOperatorUser = redisTemplate.opsForValue();
         stringOperatorUser.set("user_obj",user);
         User user_obj = stringOperatorUser.get("user_obj");
         System.out.println("user_obj:"+user_obj.toString());
 
-        // 操作List
+        // 操作 List
         ListOperations<String, String> listOperator = redisTemplate.opsForList();
-        // 操作Set
+        // 操作 Set
         SetOperations<String, String> setOperator = redisTemplate.opsForSet();
-        // 操作Hash
+        // 操作 Hash
         HashOperations<String, Object, Object> hashOperator = redisTemplate.opsForHash();
-        // 操作ZSet
+        // 操作 ZSet
         ZSetOperations<String, String> zSetOperator = redisTemplate.opsForZSet();
     }
 
     @Test
     public void fun2() throws JsonProcessingException {
         System.out.println("-------------------------------------------------------");
-        // 操作String
+        // 操作 String
         ValueOperations<String, String> stringOperator = stringRedisTemplate.opsForValue();
         stringOperator.set("message","Hello Redis!");
         String message = stringOperator.get("message");
         System.out.println("message"+":"+message);
         System.out.println("-------------------------------------------------------");
-        // 把对象转换成Json格式字符换进行存储,注意:不需要实现序列化接口
+        // 把对象转换成 Json 格式字符换进行存储，注意：不需要实现序列化接口
         User user = new User("001", "zhangsan", "123456");
         stringOperator.set("user", JsonUtils.objectToJson(user));
         String userStr = stringOperator.get("user");
         System.out.println("userStr:"+userStr);
         System.out.println("-------------------------------------------------------");
-        // 操作List
+        // 操作 List
         ListOperations<String, String> listOperator = stringRedisTemplate.opsForList();
-        // 操作Set
+        // 操作 Set
         SetOperations<String, String> setOperator = stringRedisTemplate.opsForSet();
-        // 操作Hash
+        // 操作 Hash
         HashOperations<String, Object, Object> hashOperator = stringRedisTemplate.opsForHash();
-        // 操作ZSet
+        // 操作 ZSet
         ZSetOperations<String, String> zSetOperator = stringRedisTemplate.opsForZSet();
     }
 
     /**
-     * 测试自定义的RedisTempate
+     * 测试自定义的 RedisTempate
      *
-     * 使用自定义的RedisTempate可以省略序列化步骤，直接传入对象即可
+     * 使用自定义的 RedisTempate 可以省略序列化步骤，直接传入对象即可
      */
     @Test
     public void fun3(){

@@ -17,11 +17,11 @@ public class FirstInterceptor implements HandlerInterceptor {
 
     /**
      * 该方法在目标方法之前被调用
-     *      若返回值为 true, 则继续调用后续的拦截器和目标方法
-     *      若返回值为 false, 则不会再调用后续的拦截器和目标方法
+     *      若返回值为 true，则继续调用后续的拦截器和目标方法
+     *      若返回值为 false，则不会再调用后续的拦截器和目标方法
      * 可以考虑做权限、 日志、事务等
-     *      执行时机:   org.springframework.web.servlet.DispatcherServlet.doDispatch()中
-     *      具体位置:   mv = ha.handle()方法执行之前  if (!mappedHandler.applyPreHandle(processedRequest, response)) {} 这行代码中执行
+     *      执行时机：   org.springframework.web.servlet.DispatcherServlet.doDispatch()中
+     *      具体位置：   mv = ha.handle()方法执行之前  if (!mappedHandler.applyPreHandle(processedRequest, response)) {} 这行代码中执行
      *
      * @param request current HTTP request
      * @param response current HTTP response
@@ -36,10 +36,10 @@ public class FirstInterceptor implements HandlerInterceptor {
     }
 
     /**
-     * 调用目标方法之后, 但渲染视图之前
+     * 调用目标方法之后，但渲染视图之前
      *      可以对请求域中的属性或视图做出修改
-     *      执行时机:   org.springframework.web.servlet.DispatcherServlet.doDispatch()中
-     *      具体位置:   mv = ha.handle()方法执行之后  mappedHandler.applyPostHandle(processedRequest, response, mv); 这一行代码中执行
+     *      执行时机：   org.springframework.web.servlet.DispatcherServlet.doDispatch()中
+     *      具体位置：   mv = ha.handle()方法执行之后  mappedHandler.applyPostHandle(processedRequest, response, mv); 这一行代码中执行
      * @param request current HTTP request
      * @param response current HTTP response
      * @param handler the handler (or {@link HandlerMethod}) that started asynchronous
@@ -56,8 +56,8 @@ public class FirstInterceptor implements HandlerInterceptor {
 
     /**
      * 在视图渲染完成之后执行，通常用来释放资源
-     *      法执时机:   org.springframework.web.servlet.DispatcherServlet.processDispatchResult()中
-     *      具体位置:   mappedHandler.triggerAfterCompletion(request, response, null);执行时调用
+     *      法执时机：   org.springframework.web.servlet.DispatcherServlet.processDispatchResult()中
+     *      具体位置：   mappedHandler.triggerAfterCompletion(request, response, null);执行时调用
      * @param request current HTTP request
      * @param response current HTTP response
      * @param handler the handler (or {@link HandlerMethod}) that started asynchronous

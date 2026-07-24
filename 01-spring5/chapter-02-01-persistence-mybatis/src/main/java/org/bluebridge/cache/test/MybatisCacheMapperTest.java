@@ -14,15 +14,15 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * 测试mybatis接口式编程
+ * 测试 mybatis 接口式编程
  *
  * @author lingwh
- * @date 2026/7/13 14:37
+ * @date 2019/3/16 08:55
  */
 public class MybatisCacheMapperTest {
 
     /**
-     * 获取SqlSessionFactory
+     * 获取 SqlSessionFactory
      *
      * @return
      * @throws IOException
@@ -38,15 +38,15 @@ public class MybatisCacheMapperTest {
      * 一级缓存 / 本地缓存
      *
      * 1. 工作机制
-     *    - sqlSession级别的缓存，一级缓存是一直开启的，SqlSession级别的一个Map
+     *    - sqlSession 级别的缓存，一级缓存是一直开启的，SqlSession 级别的一个 Map
      *    - 与数据库同一次会话期间查询到的数据会放在本地缓存中
      *    - 以后如果需要获取相同的数据，直接从缓存中拿，没必要再去查询数据库
      *
      *  2. 一级缓存失效情况（没有使用到当前一级缓存的情况，效果就是，还需要再向数据库发出查询）
-     *    - sqlSession不同。
-     *    - sqlSession相同，查询条件不同.(当前一级缓存中还没有这个数据)
-     *    - sqlSession相同，两次查询之间执行了增删改操作(这次增删改可能对当前数据有影响)
-     *    - sqlSession相同，手动清除了一级缓存（缓存清空）
+     *    - sqlSession 不同。
+     *    - sqlSession 相同，查询条件不同.(当前一级缓存中还没有这个数据)
+     *    - sqlSession 相同，两次查询之间执行了增删改操作(这次增删改可能对当前数据有影响)
+     *    - sqlSession 相同，手动清除了一级缓存（缓存清空）
      */
     @Test
     public void testFirstLevelCache() throws IOException{
@@ -61,16 +61,16 @@ public class MybatisCacheMapperTest {
             System.out.println(emp02);
             System.out.println(emp01==emp02);
 
-            // 一级缓存失效: 1. sqlSession不同
+            // 一级缓存失效： 1. sqlSession 不同
             SqlSession openSession2 = sqlSessionFactory.openSession();
             IEmployeeDao employeeDao2 = openSession2.getMapper(IEmployeeDao.class);
             Employee emp03 = employeeDao2.getEmployeeById("4");
             System.out.println(emp03);
             System.out.println(emp01==emp03);
 
-            // 一级缓存失效: 2. sqlSession相同，查询条件不同
+            // 一级缓存失效： 2. sqlSession 相同，查询条件不同
 
-            // 一级缓存失效: 3. sqlSession相同，两次查询之间执行了增删改操作(这次增删改可能对当前数据有影响)
+            // 一级缓存失效： 3. sqlSession 相同，两次查询之间执行了增删改操作(这次增删改可能对当前数据有影响)
             SqlSession openSession3 = sqlSessionFactory.openSession();
             IEmployeeDao employeeDao3 = openSession3.getMapper(IEmployeeDao.class);
             Employee emp04 = employeeDao3.getEmployeeById("4");
@@ -81,7 +81,7 @@ public class MybatisCacheMapperTest {
             System.out.println(emp05);
             System.out.println(emp04==emp05);
 
-            // 一级缓存失效: 4. sqlSession相同，手动清除了一级缓存（缓存清空）
+            // 一级缓存失效： 4. sqlSession 相同，手动清除了一级缓存（缓存清空）
             IEmployeeDao employeeDao4 = openSession.getMapper(IEmployeeDao.class);
             Employee emp06 = employeeDao4.getEmployeeById("4");
             System.out.println(emp06);
@@ -99,7 +99,7 @@ public class MybatisCacheMapperTest {
      * 二级缓存 / 全局缓存
      *
      * 工作机制
-     * 1. 基于namespace级别的缓存，一个namespace对应一个二级缓存
+     * 1. 基于 namespace 级别的缓存，一个 namespace 对应一个二级缓存
      * 2. 一个会话，查询一条数据，这个数据就会被放在当前会话的一级缓存中
      * 3. 如果会话关闭，一级缓存中的数据会被保存到二级缓存中，新的会话查询信息，就可以参照二级缓存中的内容
      * 4. 不同 namespace 查出的数据会放在自己对应的缓存中（map）
@@ -107,9 +107,9 @@ public class MybatisCacheMapperTest {
      *
      * 使用方式
      * 1. 开启全局二级缓存配置：<setting name="cacheEnabled" value="true"/>
-     * 2. 去mapper.xml中配置使用二级缓存
+     * 2. 去 mapper.xml 中配置使用二级缓存
      *      <cache></cache>
-     * 3. 我们的POJO需要实现序列化接口
+     * 3. 我们的 POJO 需要实现序列化接口
      *
      * @throws IOException
      */
@@ -126,10 +126,10 @@ public class MybatisCacheMapperTest {
             System.out.println(emp01);
             openSession.close();
 
-            // 第二次查询是从二级缓存中拿到的数据，并没有发送新的sql
+            // 第二次查询是从二级缓存中拿到的数据，并没有发送新的 sql
             Employee emp02 = mapper2.getEmployeeById("4");
             System.out.println(emp02);
-            // <cache/>标签中配置readOnly="true":返回true,配置readOnly="false":返回false
+            // <cache/> 标签中配置 readOnly="true":返回 true，配置 readOnly="false":返回 false
             System.out.println(emp01 == emp02);
             openSession2.close();
         }finally{
@@ -141,10 +141,10 @@ public class MybatisCacheMapperTest {
     /**
      * 和缓存有关的设置 / 属性
      * 1. cacheEnabled = true / false：关闭二级缓存(一级缓存一直可用的)
-     * 2. 每个select标签都有useCache= true / false：不使用二级缓存（一级缓存依然使用）
+     * 2. 每个 select 标签都有 useCache= true / false：不使用二级缓存（一级缓存依然使用）
      * 3. 每个增删改标签的：flushCache="true"：（一级二级缓存都会清除）
-     * 4. sqlSession.clearCache()：只是清除当前session的一级缓存
-     * 5. localCacheScope：本地缓存作用域（一级缓存SESSION），当前会话的所有数据保存在会话缓存中
+     * 4. sqlSession.clearCache()：只是清除当前 session 的一级缓存
+     * 5. localCacheScope：本地缓存作用域（一级缓存 SESSION），当前会话的所有数据保存在会话缓存中
      *    STATEMENT：可以禁用一级缓存
      */
     @Test
@@ -163,7 +163,7 @@ public class MybatisCacheMapperTest {
             System.out.println(dept02);
             System.out.println(dept01 == dept02);
             openSession2.close();
-            // 第二次查询是从二级缓存中拿到的数据，并没有发送新的sql
+            // 第二次查询是从二级缓存中拿到的数据，并没有发送新的 sql
         }finally{
 
         }
@@ -175,7 +175,7 @@ public class MybatisCacheMapperTest {
      *
      * 1. 导入第三方缓存包即可；
      * 2. 导入与第三方缓存整合的适配包；官方有；
-     * 3. mybatis.mapper.xml中使用自定义缓存
+     * 3. mybatis.mapper.xml 中使用自定义缓存
      *      <cache type="org.mybatis.mapper.caches.ehcache.EhcacheCache"></cache>
      */
     @Test
@@ -194,7 +194,7 @@ public class MybatisCacheMapperTest {
             System.out.println(dept02);
             System.out.println(dept01 == dept02);
             openSession2.close();
-            // 第二次查询是从二级缓存中拿到的数据，并没有发送新的sql
+            // 第二次查询是从二级缓存中拿到的数据，并没有发送新的 sql
         }finally{
 
         }

@@ -4,7 +4,7 @@ package org.bluebridge.designpattern.proxy.staticproxy.staticproxy1;
  * 客户端
  *
  * @author lingwh
- * @date 2026/7/13 8:62
+ * @date 2019/4/4 10:25
  */
 public class Client {
     public static void main(String[] args) {

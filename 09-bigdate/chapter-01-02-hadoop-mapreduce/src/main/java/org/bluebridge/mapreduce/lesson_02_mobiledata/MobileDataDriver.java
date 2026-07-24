@@ -15,7 +15,7 @@ import java.net.URL;
 /**
  *
  * @author lingwh
- * @date 2026/7/19 16:35
+ * @date 2025/8/20 14:51
  */
 public class MobileDataDriver {
 
@@ -33,7 +33,7 @@ public class MobileDataDriver {
         job.setMapperClass(MobileDataMapper.class);
         job.setReducerClass(MobileDataReducer.class);
 
-        // 5. 设置Map端输出KV类型
+        // 5. 设置 Map 端输出 KV 类型
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(MobileData.class);
 

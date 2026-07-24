@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ResponseEntityController {
 
     /**
-     * 使用@ResponseEntity以字符串形式给响应浏览器一个字符串(不会把success作为视图名称解析了，只会给浏览器返回 success 这个字符串)
+     * 使用 @ResponseEntity 以字符串形式给响应浏览器一个字符串(不会把 success 作为视图名称解析了，只会给浏览器返回 success 这个字符串)
      *
      * @return
      */
@@ -35,7 +35,7 @@ public class ResponseEntityController {
     }
 
     /**
-     * 使用@ResponseBody以Xml文本形式给响应浏览器一个对象(不会把success作为视图名称解析了，只会给浏览器返回 user 这个对象的xml文本)
+     * 使用 @ResponseBody 以 Xml 文本形式给响应浏览器一个对象(不会把 success 作为视图名称解析了，只会给浏览器返回 user 这个对象的 xml 文本)
      * @return
      */
     @ResponseBody

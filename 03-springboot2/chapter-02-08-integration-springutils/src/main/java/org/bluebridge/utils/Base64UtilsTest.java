@@ -16,7 +16,7 @@ import java.io.UnsupportedEncodingException;
 public class Base64UtilsTest {
 
     /**
-     * 测试Base64编码解码
+     * 测试 Base64 编码解码
      */
     @Test
     public void testBase64EncodeAndDecode() throws UnsupportedEncodingException {

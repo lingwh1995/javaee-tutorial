@@ -5,10 +5,10 @@ import org.bluebridge.profile.dibysetsenior.domain.Friend;
 import java.util.Arrays;
 
 /**
- * set方式注入专题之注入   数组
+ * set 方式注入专题之注入   数组
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 08:55
  */
 public class UserInjectArrayBySetter {
 

@@ -12,7 +12,7 @@ public class SpringTest {
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
-     * 测试使用构造方式为属性注入非引用数据类型的值，使用name声明具体的属性
+     * 测试使用构造方式为属性注入非引用数据类型的值，使用 name 声明具体的属性
      */
     @Test
     public void testInjectValueByConstructorParamName(){
@@ -22,7 +22,7 @@ public class SpringTest {
     }
 
     /**
-     * 测试使用构造方式为属性注入非引用数据类型的值，使用name声明具体的属性
+     * 测试使用构造方式为属性注入非引用数据类型的值，使用 name 声明具体的属性
      */
     @Test
     public void testInjectValueByConstructorParamIndex(){

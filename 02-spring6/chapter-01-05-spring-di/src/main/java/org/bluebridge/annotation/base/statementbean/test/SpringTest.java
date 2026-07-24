@@ -11,17 +11,17 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:39
  */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
-     * 测试使用注解方式为属性注入非引用数据类型的值，使用@Component注解注入
+     * 测试使用注解方式为属性注入非引用数据类型的值，使用@Component 注解注入
      */
     @Test
     public void testInjectByAnnotationComponent() {
@@ -31,7 +31,7 @@ public class SpringTest {
     }
 
     /**
-     * 测试使用注解方式为属性注入非引用数据类型的值，使用@Repository注解注入
+     * 测试使用注解方式为属性注入非引用数据类型的值，使用@Repository 注解注入
      */
     @Test
     public void testInjectByAnnotationRepository() {
@@ -41,7 +41,7 @@ public class SpringTest {
     }
 
     /**
-     * 测试使用注解方式为属性注入非引用数据类型的值，使用@Service注解注入
+     * 测试使用注解方式为属性注入非引用数据类型的值，使用@Service 注解注入
      */
     @Test
     public void testInjectByAnnotationService() {
@@ -51,7 +51,7 @@ public class SpringTest {
     }
 
     /**
-     * 测试使用注解方式为属性注入非引用数据类型的值，使用@Controller注解注入
+     * 测试使用注解方式为属性注入非引用数据类型的值，使用@Controller 注解注入
      */
     @Test
     public void testInjectByAnnotationController() {

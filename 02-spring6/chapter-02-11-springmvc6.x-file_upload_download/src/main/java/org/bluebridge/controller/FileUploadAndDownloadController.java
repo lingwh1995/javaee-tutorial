@@ -21,10 +21,10 @@ import java.io.IOException;
 import java.util.UUID;
 
 /**
- * SpingMVC6.x上传功能需要在放在所在的类上添加@MultipartConfig注解
+ * SpingMVC6.x 上传功能需要在放在所在的类上添加 @MultipartConfig 注解
  *
  * @author lingwh
- * @date 2026/7/13 15:20
+ * @date 2019/7/22 15:20
  */
 @MultipartConfig
 @RequestMapping(value = "/fileUploadAndDownload")
@@ -54,7 +54,7 @@ public class FileUploadAndDownloadController {
         // 5. 创建HttpHeaders对象设置响应头信息
         HttpHeaders headers = new HttpHeaders();
         headers.setContentDispositionFormData("attachment", downloadFileName);
-            // MediaType:互联网媒介类型  contentType：具体请求中的媒体类型信息
+            // MediaType：互联网媒介类型  contentType：具体请求中的媒体类型信息
         headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
         // 6. 设置响应状态码
         HttpStatus statusCode = HttpStatus.OK;
@@ -64,7 +64,7 @@ public class FileUploadAndDownloadController {
     }
 
     /**
-     * 单文件上传(SpingMVC6.x上传功能需要在放在所在的类上添加@MultipartConfig注解)
+     * 单文件上传(SpingMVC6.x 上传功能需要在放在所在的类上添加 @MultipartConfig 注解)
      * @param uploadFile
      * @param session
      * @return
@@ -72,15 +72,15 @@ public class FileUploadAndDownloadController {
      */
     @RequestMapping("/upload/file")
     public String uploadFile(@RequestParam("uploadFile") MultipartFile uploadFile, HttpSession session) throws IOException {
-        // 1. 获取上传的文件的文件名,主要是用来确定文件的后缀
+        // 1. 获取上传的文件的文件名，主要是用来确定文件的后缀
         String fileName = uploadFile.getOriginalFilename();
-        // 2. 处理文件重名问题,从最后一个"."开始截取直到最后就是上传文件的后缀名,
+        // 2. 处理文件重名问题，从最后一个"."开始截取直到最后就是上传文件的后缀名，
         String fileNameSuffix = fileName.substring(fileName.lastIndexOf("."));
         logger.info("文件名后缀: " + fileNameSuffix);
         // 3. 使用java.util包下的UUID生成随机值的工具类
         fileName = (UUID.randomUUID().toString()).replaceAll("-","") + fileNameSuffix;
         logger.info("文件名: " + fileName);
-        // 4. 设置文件上传的位置比如服务器中的upload目录,这个目录如果不存在我们还需要创建一个
+        // 4. 设置文件上传的位置比如服务器中的 upload 目录，这个目录如果不存在我们还需要创建一个
         ServletContext servletContext = session.getServletContext();
         String uploadDirRealPath = servletContext.getRealPath("upload");
         File uploadDir = new File(uploadDirRealPath);
@@ -89,13 +89,13 @@ public class FileUploadAndDownloadController {
         }
         // 5. 获取文件最终在服务器中的位置
         String fileDestRealPath = uploadDir + File.separator + fileName;
-        // 6. 实现上传功能(本质是文件的复制,先读后写),将MultipartFile中封装的文件数据转移到最终的文件位置
+        // 6. 实现上传功能(本质是文件的复制，先读后写)，将 MultipartFile 中封装的文件数据转移到最终的文件位置
         FileUtils.copyInputStreamToFile(uploadFile.getInputStream(),new File(fileDestRealPath));
         return "success";
     }
 
     /**
-     * 多文件上传(SpingMVC6.x上传功能需要在放在所在的类上添加@MultipartConfig注解)
+     * 多文件上传(SpingMVC6.x 上传功能需要在放在所在的类上添加 @MultipartConfig 注解)
      * @param uploadFiles
      * @param session
      * @return
@@ -104,15 +104,15 @@ public class FileUploadAndDownloadController {
     @RequestMapping("/upload/files")
     public String uploadFiles(@RequestParam("uploadFiles") MultipartFile[] uploadFiles, HttpSession session) throws IOException {
         for(MultipartFile uploadFile: uploadFiles) {
-            // 1. 获取上传的文件的文件名,主要是用来确定文件的后缀
+            // 1. 获取上传的文件的文件名，主要是用来确定文件的后缀
             String fileName = uploadFile.getOriginalFilename();
-            // 2. 处理文件重名问题,从最后一个"."开始截取直到最后就是上传文件的后缀名,
+            // 2. 处理文件重名问题，从最后一个"."开始截取直到最后就是上传文件的后缀名，
             String fileNameSuffix = fileName.substring(fileName.lastIndexOf("."));
             logger.info("文件名后缀: " + fileNameSuffix);
             // 3. 使用java.util包下的UUID生成随机值的工具类
             fileName = (UUID.randomUUID().toString()).replaceAll("-","") + fileNameSuffix;
             logger.info(fileName);
-            // 4. 设置文件上传的位置比如服务器中的upload目录,这个目录如果不存在我们还需要创建一个
+            // 4. 设置文件上传的位置比如服务器中的 upload 目录，这个目录如果不存在我们还需要创建一个
             ServletContext servletContext = session.getServletContext();
             String uploadDirRealPath = servletContext.getRealPath("upload");
             File uploadDir = new File(uploadDirRealPath);
@@ -121,7 +121,7 @@ public class FileUploadAndDownloadController {
             }
             // 5. 获取文件最终在服务器中的位置
             String fileDestRealPath = uploadDir + File.separator + fileName;
-            // 6. 实现上传功能(本质是文件的复制,先读后写),将MultipartFile中封装的文件数据转移到最终的文件位置
+            // 6. 实现上传功能(本质是文件的复制，先读后写)，将 MultipartFile 中封装的文件数据转移到最终的文件位置
             FileUtils.copyInputStreamToFile(uploadFile.getInputStream(),new File(fileDestRealPath));
         }
         return "success";

@@ -3,10 +3,10 @@ package org.bluebridge.designpattern.factory.factorymethod;
 /**
  * 客户端
  *
- * 单纯的工厂方法模式的缺点，下面测试代码中任然出现了new这个关键字，可以使用简单工厂模式对下面代码再次进行优化
+ * 单纯的工厂方法模式的缺点，下面测试代码中任然出现了 new 这个关键字，可以使用简单工厂模式对下面代码再次进行优化
  *
  * @author lingwh
- * @date 2026/7/13 8:62
+ * @date 2019/4/4 11:05
  */
 public class Client {
 

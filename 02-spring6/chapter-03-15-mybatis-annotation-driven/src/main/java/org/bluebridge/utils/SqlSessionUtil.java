@@ -10,12 +10,12 @@ import java.io.IOException;
 
 public class SqlSessionUtil {
 
-    private static SqlSessionFactory sqlSessionFactory = null; // 默认使用数据库环境对应的SqlSessionFactory
-    private static ThreadLocal<SqlSession> local = new ThreadLocal<>(); // 保证一个线程对应一个SqlSession
+    private static SqlSessionFactory sqlSessionFactory = null; // 默认使用数据库环境对应的 SqlSessionFactory
+    private static ThreadLocal<SqlSession> local = new ThreadLocal<>(); // 保证一个线程对应一个 SqlSession
 
     static {
         try {
-            // 获取默认使用数据库环境对应的SqlSessionFactory对象
+            // 获取默认使用数据库环境对应的 SqlSessionFactory 对象
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream("mybatis-config.xml"));
         } catch (IOException e) {
             e.printStackTrace();
@@ -46,7 +46,7 @@ public class SqlSessionUtil {
 
     /**
      * 关闭会话对象
-     * 关闭SqlSession对象并从当前线程中移除SqlSession对象
+     * 关闭 SqlSession 对象并从当前线程中移除 SqlSession 对象
      */
     public static void close() {
         SqlSession sqlSession = local.get(); // 获取当前线程对应的数据库会话对象

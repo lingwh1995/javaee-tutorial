@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * 测试Spring事务传播行为
+ * 测试 Spring 事务传播行为
  */
 public class SpringTest {
 

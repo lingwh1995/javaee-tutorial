@@ -56,7 +56,7 @@ public class SqlExplainListener extends JdbcEventListener {
     }
 
     private void explainSql(Connection connection, String sql, long timeElapsedNanos) {
-        // 建议仅对耗时较长或特定的SQL进行分析，减少性能损耗
+        // 建议仅对耗时较长或特定的 SQL 进行分析，减少性能损耗
         long elapsedMillis = timeElapsedNanos / 1_000_000;
 
         String explainSql = "EXPLAIN " + sql;

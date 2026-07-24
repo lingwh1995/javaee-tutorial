@@ -6,15 +6,15 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
- * @date 2026/7/13 14:30
+ * @date 2026/1/10 14:47
  */
 public class SpringTest {
 
     /**
-     * 测试Spring的全注解开发
+     * 测试 Spring 的全注解开发
      */
     @Test
     public void testNoXml() {

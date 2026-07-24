@@ -4,7 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * 根据属性名称autowire   需要为属性创建setter方法
+ * 根据属性名称 autowire   需要为属性创建 setter 方法
  */
 public class OrderDao {
     private static final Logger logger = LogManager.getLogger(OrderDao.class);

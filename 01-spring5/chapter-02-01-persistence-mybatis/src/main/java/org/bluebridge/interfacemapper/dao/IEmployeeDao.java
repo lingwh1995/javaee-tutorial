@@ -4,14 +4,14 @@ import org.bluebridge.interfacemapper.domain.Employee;
 
 public interface IEmployeeDao {
     /**
-     * 根据id获取对象
+     * 根据 id 获取对象
      * @param id
      * @return
      */
     Employee getEmplyeeById(String id);
 
     /**
-     * 根据id获取lastname
+     * 根据 id 获取 lastname
      * @param id
      * @return
      */
