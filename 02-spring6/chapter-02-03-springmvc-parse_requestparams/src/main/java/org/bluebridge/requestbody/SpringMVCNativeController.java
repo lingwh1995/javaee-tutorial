@@ -20,9 +20,9 @@ public class SpringMVCNativeController {
     public String parseRequestParamsBySpringMVCByNative(String username,String password,String hobbies,String[] colors) {
         // 获取一个 key 对应一个 value 的请求参数
         System.out.println("一个key对应一个value的请求参数 - username: " + username + ",password:" + password);
-        // 获取一个key对应多个value的请求参数
+        // 获取一个 key 对应多个 value 的请求参数
         System.out.println("一个key对应多个value的请求参数 - hobbies: " + hobbies);
-        // 获取一个key对应多个value的请求参数
+        // 获取一个 key 对应多个 value 的请求参数
         System.out.println("一个key对应多个value的请求参数 - colors: " + Arrays.toString(colors));
         return "success";
     }

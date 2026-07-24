@@ -14,13 +14,13 @@ import org.springframework.stereotype.Service;
 public class CatServiceImpl implements ICatService{
 
     /**
-     * 位置1 @Autowired 可以配置在属性上
+     * 位置 1 @Autowired 可以配置在属性上
      */
     //@Autowired
     private CatDao catDao;
 
     /**
-     * 位置2 @Autowired 可以配置在setter方法上
+     * 位置 2 @Autowired 可以配置在 setter 方法上
      */
     @Autowired
     public void setCatDao(CatDao catDao) {
@@ -28,7 +28,7 @@ public class CatServiceImpl implements ICatService{
     }
 
     /**
-     * 位置3     @Autowired 可以配置在构造方法上
+     * 位置 3     @Autowired 可以配置在构造方法上
      */
 //    @Autowired
 //    public CatServiceImpl(CatDao catDao) {

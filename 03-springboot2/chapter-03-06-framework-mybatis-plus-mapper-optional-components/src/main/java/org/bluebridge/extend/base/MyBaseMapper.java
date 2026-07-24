@@ -12,7 +12,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 自定义基础Mapper接口，扩展BaseMapper
+ * 自定义基础 Mapper 接口，扩展 BaseMapper
  *
  * @author lingwh
  * @date 2025/2/27 14:00

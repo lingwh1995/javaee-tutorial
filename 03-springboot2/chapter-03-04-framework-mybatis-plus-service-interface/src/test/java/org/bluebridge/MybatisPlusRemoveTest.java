@@ -18,7 +18,7 @@ import java.util.Map;
  * boolean remove(Wrapper<T> queryWrapper);  // 根据 queryWrapper 设置的条件，删除记录
  * boolean removeById(Serializable id);  // 根据 ID 删除
  * boolean removeByMap(Map<String, Object> columnMap);  // 根据 columnMap 条件，删除记录
- * boolean removeByIds(Collection<? extends Serializable> idList);  // 删除（根据ID 批量删除）
+ * boolean removeByIds(Collection<? extends Serializable> idList);  // 删除（根据 ID 批量删除）
  *
  * @author lingwh
  * @date 2025/2/27 15:05
@@ -34,7 +34,7 @@ public class MybatisPlusRemoveTest {
      */
     @Test
     public void init(){
-        // 删除数据库中t_employee表中所有数据
+        // 删除数据库中 t_employee 表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 
@@ -93,7 +93,7 @@ public class MybatisPlusRemoveTest {
     }
 
     /**
-     * 测试删除（根据ID 批量删除）
+     * 测试删除（根据 ID 批量删除）
      *
      * boolean removeByIds(Collection<? extends Serializable> idList);
      */
@@ -105,7 +105,7 @@ public class MybatisPlusRemoveTest {
     }
 
     /**
-     * 测试删除（根据ID 批量删除）
+     * 测试删除（根据 ID 批量删除）
      *
      * boolean removeByIds(Collection<? extends Serializable> idList);
      */
@@ -117,14 +117,14 @@ public class MybatisPlusRemoveTest {
     }
 
     /**
-     * 测试删除（根据ID 批量删除）
+     * 测试删除（根据 ID 批量删除）
      *
      * boolean removeByIds(Collection<? extends Serializable> idList);
      */
     @Test
     public void testRemoveByIdsWithBatchSize() {
         List<Long> idList = Arrays.asList(9l, 10l);
-        // 设置batchSize为2
+        // 设置 batchSize 为 2
         boolean isRemoveBatchByIds = employeeService.removeBatchByIds(idList,2);
         System.out.println("isRemoveBatchByIds = " + isRemoveBatchByIds);
     }

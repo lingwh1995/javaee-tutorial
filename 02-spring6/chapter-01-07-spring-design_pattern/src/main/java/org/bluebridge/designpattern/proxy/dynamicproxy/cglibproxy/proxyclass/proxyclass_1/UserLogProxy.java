@@ -23,7 +23,7 @@ public class UserLogProxy implements MethodInterceptor {
         Enhancer enhancer = new Enhancer();
         // 为加强器指定要代理的业务类（即：为下面生成的代理类指定父类）
         enhancer.setSuperclass(this.target.getClass());
-        // 设置回调：对于代理类上所有方法的调用，都会调用CallBack，而Callback则需要实现intercept()方法进行拦
+        // 设置回调：对于代理类上所有方法的调用，都会调用 CallBack，而 Callback 则需要实现 intercept() 方法进行拦
         enhancer.setCallback(this);
         // 创建动态代理类对象并返回
         return enhancer.create();

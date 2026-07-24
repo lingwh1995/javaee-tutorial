@@ -13,7 +13,7 @@ import org.bluebridge.extend.methods.FindOne;
 import java.util.List;
 
 /**
- * 自定义SQL注入器
+ * 自定义 SQL 注入器
  *
  * @author lingwh
  * @date 2025/2/27 13:36

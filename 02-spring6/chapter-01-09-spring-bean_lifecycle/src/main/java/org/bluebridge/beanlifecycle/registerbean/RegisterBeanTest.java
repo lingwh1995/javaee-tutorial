@@ -18,9 +18,9 @@ public class RegisterBeanTest {
         User user = new User();
         logger.info(user.toString());
 
-        // 1. 创建DefaultListableBeanFactory
+        // 1. 创建 DefaultListableBeanFactory
         DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
-        // 2. 注册一个单例的bean到Spring容器中
+        // 2. 注册一个单例的 bean 到 Spring 容器中
         factory.registerSingleton("user",user);
         User userFromBeanFactory = factory.getBean("user", User.class);
         logger.info(userFromBeanFactory.toString());

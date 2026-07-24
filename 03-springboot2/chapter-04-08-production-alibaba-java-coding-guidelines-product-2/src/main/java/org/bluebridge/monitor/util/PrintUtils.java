@@ -25,7 +25,7 @@ public class PrintUtils {
             case GREEN:
                 log = "\033[32m" + log + "\033[0m";
                 break;
-            // 蓝色字体显示sql
+            // 蓝色字体显示 sql
             case BLUE:
                 log = "\033[34m" + log + "\033[0m";
                 break;

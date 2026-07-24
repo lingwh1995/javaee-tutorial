@@ -7,7 +7,7 @@ import java.net.URI;
 import java.util.Scanner;
 
 /**
- * WebSocket客户端端点3
+ * WebSocket 客户端端点 3
  *
  * @author lingwh
  * @date 2025/10/17 16:42

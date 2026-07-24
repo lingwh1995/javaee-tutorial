@@ -21,7 +21,7 @@ import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
 /**
- * Netty WebSocket服务器
+ * Netty WebSocket 服务器
  *
  * @author lingwh
  * @date 2025/10/21 16:28
@@ -57,13 +57,13 @@ public class NettyWebSocketServer {
                 @Override
                 protected void initChannel(SocketChannel ch) throws Exception {
                     ChannelPipeline pipeline = ch.pipeline();
-                    // 添加HTTP编解码器
+                    // 添加 HTTP 编解码器
                     pipeline.addLast(new HttpServerCodec());
                     // 添加日志处理器
                     pipeline.addLast(new LoggingHandler(LogLevel.DEBUG));
                     // 添加聚合器
                     pipeline.addLast(new HttpObjectAggregator(65536));
-                    // 添加WebSocket支持
+                    // 添加 WebSocket 支持
                     pipeline.addLast(new WebSocketServerProtocolHandler(wsUrl));
                     // 添加自定义处理器
                     pipeline.addLast(nettyWebSocketServerHandler);

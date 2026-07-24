@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 从 3.4.3.2 开始，下面方法返回值修改为long
+ * 从 3.4.3.2 开始，下面方法返回值修改为 long
  * long count();    // 查询总记录数
  * long count(Wrapper<T> queryWrapper); // 根据 Wrapper 条件，查询总记录数
  *
@@ -29,7 +29,7 @@ public class MybatisPlusCountTest {
      */
     @Test
     public void init(){
-        // 删除数据库中t_employee表中所有数据
+        // 删除数据库中 t_employee 表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 

@@ -2,6 +2,9 @@ package org.bluebridge.beaninstantiation.factorymethod;
 
 /**
  * 武器
+ *
+ * @author lingwh
+ * @date 2026/1/10 13:25
  */
 public abstract class Weapon {
 

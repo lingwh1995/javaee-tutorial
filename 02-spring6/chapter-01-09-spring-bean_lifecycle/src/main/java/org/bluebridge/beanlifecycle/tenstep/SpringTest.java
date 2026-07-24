@@ -24,7 +24,7 @@ public class SpringTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-tenstep.xml");
         SpringBeanLifeCycleTenStep springBeanLifeCycleTenStep = applicationContext.getBean("springBeanLifeCycleTenStep", SpringBeanLifeCycleTenStep.class);
         logger.info("第六步：使用Bean-" + springBeanLifeCycleTenStep.toString());
-        // 手动关闭Spring容器
+        // 手动关闭 Spring 容器
         ClassPathXmlApplicationContext context = (ClassPathXmlApplicationContext) applicationContext;
         context.close();
     }

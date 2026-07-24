@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ResponeBodyController {
 
     /**
-     * 使用@ResponseBody以字符串形式给响应浏览器一个字符串(不会把success作为视图名称解析了，只会给浏览器返回 success 这个字符串)
+     * 使用 @ResponseBody 以字符串形式给响应浏览器一个字符串(不会把 success 作为视图名称解析了，只会给浏览器返回 success 这个字符串)
      *
      * @return 响应字符串
      */
@@ -27,7 +27,7 @@ public class ResponeBodyController {
     }
 
     /**
-     * 使用@ResponseBody以JSON字符串形式给响应浏览器一个对象(不会把success作为视图名称解析了，只会给浏览器返回 user 这个对象的json字符串)
+     * 使用 @ResponseBody 以 JSON 字符串形式给响应浏览器一个对象(不会把 success 作为视图名称解析了，只会给浏览器返回 user 这个对象的 json 字符串)
      *
      * @return 响应的 User 对象
      */
@@ -39,7 +39,7 @@ public class ResponeBodyController {
     }
 
     /**
-     * 使用@ResponseBody以Xml文本形式给响应浏览器一个对象(不会把success作为视图名称解析了，只会给浏览器返回 user 这个对象的xml文本)
+     * 使用 @ResponseBody 以 Xml 文本形式给响应浏览器一个对象(不会把 success 作为视图名称解析了，只会给浏览器返回 user 这个对象的 xml 文本)
      *
      * @return 响应的 User 对象
      */

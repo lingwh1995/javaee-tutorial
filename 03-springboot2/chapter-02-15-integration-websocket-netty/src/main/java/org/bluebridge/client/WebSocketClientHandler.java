@@ -21,7 +21,7 @@ public class WebSocketClientHandler extends SimpleChannelInboundHandler<TextWebS
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
-        // 可以在这里处理handler添加事件
+        // 可以在这里处理 handler 添加事件
         super.handlerAdded(ctx);
     }
 

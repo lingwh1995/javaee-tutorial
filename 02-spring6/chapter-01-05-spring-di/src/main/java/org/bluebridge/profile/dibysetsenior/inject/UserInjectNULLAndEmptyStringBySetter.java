@@ -17,7 +17,7 @@ public class UserInjectNULLAndEmptyStringBySetter {
     }
 
     /**
-     * 用于测试注入的值是NULL 还是空字符串
+     * 用于测试注入的值是 NULL 还是空字符串
      *
      * @return
      */
@@ -34,7 +34,7 @@ public class UserInjectNULLAndEmptyStringBySetter {
     }
 
     /**
-     * 用于测试注入的值是NULL 还是空字符串
+     * 用于测试注入的值是 NULL 还是空字符串
      *
      * @return
      */

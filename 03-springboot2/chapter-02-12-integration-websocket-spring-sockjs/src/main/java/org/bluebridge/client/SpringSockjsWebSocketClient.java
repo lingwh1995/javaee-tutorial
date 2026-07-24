@@ -37,7 +37,7 @@ public class SpringSockjsWebSocketClient {
          * 原生 WebSocket 客户端
          */
         /*
-        // 创建WebSocket客户端（基于标准JSR-356）
+        // 创建 WebSocket 客户端（基于标准 JSR-356）
         StandardWebSocketClient client = new StandardWebSocketClient();
         // 连接服务端，指定消息处理器
         this.session = client.doHandshake(new MyWebSocketClientHandler(), webSocketUri.toString()).get();

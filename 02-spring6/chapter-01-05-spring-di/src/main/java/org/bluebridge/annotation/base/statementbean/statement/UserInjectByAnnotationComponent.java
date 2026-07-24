@@ -3,6 +3,12 @@ package org.bluebridge.annotation.base.statementbean.statement;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+/**
+ * UserInjectByAnnotationComponent
+ *
+ * @author lingwh
+ * @date 2026/1/10 20:34
+ */
 @Component
 public class UserInjectByAnnotationComponent {
 

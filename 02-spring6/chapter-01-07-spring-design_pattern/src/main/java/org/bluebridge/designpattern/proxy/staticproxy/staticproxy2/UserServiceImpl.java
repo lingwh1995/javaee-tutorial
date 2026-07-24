@@ -31,7 +31,7 @@ public class UserServiceImpl implements IUserService{
     @Override
     public User getUserById(String id) {
         logger.info("正在执行查询用户操作...");
-        // 模拟从数据中根据id查询到了一个用户
+        // 模拟从数据中根据 id 查询到了一个用户
         User user = new User("001","张三",25);
         return user;
     }

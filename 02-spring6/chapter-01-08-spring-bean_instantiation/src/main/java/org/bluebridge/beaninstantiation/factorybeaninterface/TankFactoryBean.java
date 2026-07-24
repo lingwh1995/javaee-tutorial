@@ -12,7 +12,7 @@ public class TankFactoryBean implements FactoryBean<Weapon> {
 
     @Override
     public Weapon getObject() throws Exception {
-        // 注意这里这个对象是我们通过new手动创建的，如果使用简单工厂模式实例化bean，这个对象不能通过Spring的IOC创建
+        // 注意这里这个对象是我们通过 new 手动创建的，如果使用简单工厂模式实例化 bean，这个对象不能通过 Spring 的 IOC 创建
         return new Tank();
     }
 

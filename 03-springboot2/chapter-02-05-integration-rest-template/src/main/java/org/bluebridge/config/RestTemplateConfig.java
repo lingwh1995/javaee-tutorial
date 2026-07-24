@@ -38,7 +38,7 @@ public class RestTemplateConfig {
     private Integer defaultMaxPerRoute;
 
     /**
-     * 连接上服务器(握手成功)的时间，超出抛出connect timeout
+     * 连接上服务器(握手成功)的时间，超出抛出 connect timeout
      */
     @Value("${http.connectTimeout}")
     private Integer connectTimeout;
@@ -47,7 +47,7 @@ public class RestTemplateConfig {
     private Integer connectionRequestTimeout;
 
     /**
-     * 服务器返回数据(response)的时间，超过抛出read timeout
+     * 服务器返回数据(response)的时间，超过抛出 read timeout
      */
     @Value("${http.socketTimeout}")
     private Integer socketTimeout;

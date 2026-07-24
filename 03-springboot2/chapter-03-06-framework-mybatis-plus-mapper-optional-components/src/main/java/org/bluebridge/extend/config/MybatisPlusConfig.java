@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * MyBatis-Plus配置类
+ * MyBatis-Plus 配置类
  *
  * @author lingwh
  * @date 2025/2/27 13:25

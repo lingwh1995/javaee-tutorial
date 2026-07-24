@@ -21,7 +21,7 @@ public class MybatisPlusMpgTest {
     private EmployeeController employeeController;
 
     /**
-     * 测试使用MybatisPlus的代码生成器生成的代码
+     * 测试使用 MybatisPlus 的代码生成器生成的代码
      */
     @Test
     public void testMybatisPlusMpg() {

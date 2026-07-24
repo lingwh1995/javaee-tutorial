@@ -35,10 +35,10 @@ public class AsyncTaskSuccessController {
     private AsyncTaskSuccessWithReturnResultService asyncTaskSuccessWithReturnResultService;
 
     /**
-     * 测试:
-     *      http://localhost:8080/async/test-async-success-with-out-result
+     * 测试
+     *   http://localhost:8080/async/test-async-success-with-out-result
      * 此种情况下异步调度成功
-     *      异步的代码要放在Service层中(将异步部分代码放入另一个类中)
+     *   异步的代码要放在 Service 层中(将异步部分代码放入另一个类中)
      * @throws InterruptedException
      */
     @ResponseBody
@@ -55,10 +55,10 @@ public class AsyncTaskSuccessController {
     }
 
     /**
-     * 测试:
+     * 测试：
      *      http://localhost:8080/async/test-async-success-with-result
      * 此种情况下异步调度成功
-     *      异步的代码要放在Service层中(将异步部分代码放入另一个类中)
+     *      异步的代码要放在 Service 层中(将异步部分代码放入另一个类中)
      * @throws InterruptedException
      */
     @ResponseBody
@@ -73,7 +73,7 @@ public class AsyncTaskSuccessController {
                 // 三个任务都调用完成，退出循环等待
                 break;
             }
-            // 配合while(true)实现每隔1000ms判断一次是否所有方法都执行完成
+            // 配合 while(true) 实现每隔 1000ms 判断一次是否所有方法都执行完成
             Thread.sleep(1000);
         }
         // 注意：异步调用在执行这个代码的时候会导致阻塞，睡眠 5000ms 后才会去执行下面的代码

@@ -38,7 +38,7 @@ public class MybatisReadTransferMultiplyParamsTest {
     }
 
     /**
-     * 读取使用 Map 传递的多个参数的一种方式(只有这一种方式可以读取到map中封装的参数)
+     * 读取使用 Map 传递的多个参数的一种方式(只有这一种方式可以读取到 map 中封装的参数)
      *
      * @throws Exception
      */

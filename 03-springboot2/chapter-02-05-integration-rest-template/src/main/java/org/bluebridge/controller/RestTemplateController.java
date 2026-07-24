@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * 为RestTemplate调用提供数据
+ * 为 RestTemplate 调用提供数据
  *
  * @author lingwh
  * @date 2019/11/15 13:53

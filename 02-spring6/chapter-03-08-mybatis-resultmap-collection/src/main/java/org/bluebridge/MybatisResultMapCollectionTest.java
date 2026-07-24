@@ -18,9 +18,9 @@ import java.util.List;
 public class MybatisResultMapCollectionTest {
 
     /**
-     * 使用ResultMap的Collecion完成多表一对多关联查询
+     * 使用 ResultMap 的 Collecion 完成多表一对多关联查询
      *
-     * 根据id获取Department信息和该部门所有员工信息
+     * 根据 id 获取 Department 信息和该部门所有员工信息
      */
     @Test
     public void getDeptAndEmployeesByDeptIdUseCollectionTest() {
@@ -42,9 +42,9 @@ public class MybatisResultMapCollectionTest {
     }
 
     /**
-     * 测试使用ResultMap的Collecion完成多表一对多关联查询 + 分步查询
+     * 测试使用 ResultMap 的 Collecion 完成多表一对多关联查询 + 分步查询
      *
-     * 根据id获取Department信息和该部门所有员工信息
+     * 根据 id 获取 Department 信息和该部门所有员工信息
      */
     @Test
     public void getDeptAndEmployeesByDeptIdUseCollectionByStepTest() {

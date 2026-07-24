@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * MyBatis-Plus配置类
+ * MyBatis-Plus 配置类
  *
  * @author lingwh
  * @date 2025/2/27 11:10

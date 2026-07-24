@@ -11,7 +11,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Spring测试类
+ * Spring 测试类
  *
  * @author lingwh
  * @date 2023/12/14 10:46

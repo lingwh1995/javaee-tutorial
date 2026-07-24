@@ -12,10 +12,10 @@ import java.util.Map;
  */
 public class UserInjectMapBySetter {
 
-    //注入Map，且数组元素数据类型为非引用类型数组
+    //注入 Map，且数组元素数据类型为非引用类型数组
     private Map<String,String> phones;
 
-    //注入Map，且数组元素数据类型为引用类型数组
+    //注入 Map，且数组元素数据类型为引用类型数组
     private Map<String, Friend> friends;
 
     public void setPhones(Map<String, String> phones) {

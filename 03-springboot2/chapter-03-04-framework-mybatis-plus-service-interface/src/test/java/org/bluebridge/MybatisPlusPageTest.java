@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * MybatisPlus 逆向工程分页方法配置
  *
- * 需要MybatisPlusConfig在中配置分页插件，否则page方法查询返回的total值为0
+ * 需要 MybatisPlusConfig 在中配置分页插件，否则 page 方法查询返回的 total 值为 0
  *
  * IPage<T> page(IPage<T> page);    // 无条件分页查询
  * IPage<T> page(IPage<T> page, Wrapper<T> queryWrapper);   // 条件分页查询
@@ -37,7 +37,7 @@ public class MybatisPlusPageTest {
      */
     @Test
     public void init(){
-        // 删除数据库中t_employee表中所有数据
+        // 删除数据库中 t_employee 表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 

@@ -4,6 +4,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 
+/**
+ * OrderInjectByAnnotationComponent
+ *
+ * @author lingwh
+ * @date 2026/1/10 20:34
+ */
 @Component
 public class OrderInjectByAnnotationComponent {
 

@@ -5,7 +5,12 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-
+/**
+ * SpringTest
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:45
+ */
 public class SpringTest {
 
     /**

@@ -11,6 +11,12 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.SQLFeatureNotSupportedException;
 
+/**
+ * MyDataSource1
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:45
+ */
 @Component
 public class MyDataSource1 implements DataSource {
     private static final Logger logger = LogManager.getLogger(MyDataSource1.class);

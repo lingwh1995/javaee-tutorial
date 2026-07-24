@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.springframework.web.util.HtmlUtils;
 
 /**
- * html转义工具类测试类
+ * html 转义工具类测试类
  *
  * @author lingwh
  * @date 2025/7/1 9:00

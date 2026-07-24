@@ -2,6 +2,12 @@ package org.bluebridge.beaninstantiation.factorybeaninterface.demo;
 
 import java.util.Date;
 
+/**
+ * User
+ *
+ * @author lingwh
+ * @date 2026/1/10 13:25
+ */
 public class User {
 
     private String id;

@@ -95,13 +95,13 @@ public class UserServiceImpl implements IUserService {
      *    - key="#result.id"  注意：这个表达式只能在 @CachePut 中使用，不能在 @Cacheable 中使用
      *    - key="#user.id"
      * 3. bug java.lang.ClassCastException: java.lang.Integer cannot be cast to org.bluebridge.domain.User 解决？
-     *    - 解决方式1   
+     *    - 解决方式 1   
      *      Service 层写法：返回值为 User 类型数据
      *        public User updateUser(User user) {}
      *      Dao 层写法：返回值为 int 类型数据
      *        int updateUser(User user);
      *      总之不能直接把 dao 层的返回值直接返回到 Controlelr 层
-     *    - 解决方式2
+     *    - 解决方式 2
      *      Service 层写法：返回值为 int 类型数据
      *      查询方法：@Cacheable 中不要配置 key 属性相关的内容
      *        @Cacheable(cacheNames = {"user"})
@@ -123,9 +123,9 @@ public class UserServiceImpl implements IUserService {
     }
 
     /**
-     *  CacheEvict注解属性配置
+     *  CacheEvict 注解属性配置
      * 
-     *  allEntries = true，为true会删除 cacheNames="user"的缓存中 中所有的缓存
+     *  allEntries = true，为 true 会删除 cacheNames="user"的缓存中 中所有的缓存
      *  beforeInvocation = false，在方法执行之后清空缓存，方法发生了异常缓存就不会被清除
      *  beforeInvocation = true，在方法执行之前清空缓存，方法发生了异常缓存也会被清除
      *
@@ -144,7 +144,7 @@ public class UserServiceImpl implements IUserService {
      * 根据 id 获取 User 对象，并以 id 作为 key 将 User 对象放入缓存中
      *   同时以 username 作为 key 将 User 对象放入缓存中
      *   同时以 password 作为 key 将 User 对象放入缓存中
-     * 效果: 根据id查询后，根据id/username/password查询都会从缓存中获取
+     * 效果：根据 id 查询后，根据 id/username/password 查询都会从缓存中获取
      *
      * @param id
      * @return
@@ -171,7 +171,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     /**
-     * 测试CacheManger的API
+     * 测试 CacheManger 的 API
      *      
      * 1. 获取所有缓存的名称
      * 2. 根据缓存名称获取具体的缓存对象

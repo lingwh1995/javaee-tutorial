@@ -31,7 +31,7 @@ public class UserDao {
     }
     
     public void update(User user) {
-        // Map的put方法会根据key自动去重
+        // Map 的 put 方法会根据 key 自动去重
         users.put(user.getId(),user);
     }
     

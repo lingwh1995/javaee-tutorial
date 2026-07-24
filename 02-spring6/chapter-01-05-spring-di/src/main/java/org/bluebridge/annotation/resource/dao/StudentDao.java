@@ -4,6 +4,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
+/**
+ * StudentDao
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:45
+ */
 @Repository
 public class StudentDao {
 

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class MyExceptionHandler {
 
     /**
-     * 用注解代替xml文件中的配置
+     * 用注解代替 xml 文件中的配置
      * @param e
      * @param model
      * @return

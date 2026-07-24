@@ -28,9 +28,9 @@ public class BusinessException extends RuntimeException {
      */
     public BusinessException(String message) {
         super(message);
-        // 设置异常状态码为BAD_REQUEST
+        // 设置异常状态码为 BAD_REQUEST
         this.code = ResponseStatusEnum.BAD_REQUEST.getCode();
-        // 初始化数据对象为null
+        // 初始化数据对象为 null
         this.data = null;
     }
 

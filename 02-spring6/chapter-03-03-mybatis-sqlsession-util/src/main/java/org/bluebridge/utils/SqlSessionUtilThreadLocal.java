@@ -52,7 +52,7 @@ public class SqlSessionUtilThreadLocal {
     }
 
     /**
-     * 关闭SqlSession对象(从当前线程中移除SqlSession对象。)
+     * 关闭 SqlSession 对象(从当前线程中移除 SqlSession 对象。)
      *
      * @param sqlSession
      */

@@ -12,7 +12,7 @@ public class Wife {
     private Husband husband;
 
     /**
-     * 这个方法没有实际意义，只是为了在toString() 方法中使用时不会引发递归问题
+     * 这个方法没有实际意义，只是为了在 toString() 方法中使用时不会引发递归问题
      * @return
      */
     public String getName() {

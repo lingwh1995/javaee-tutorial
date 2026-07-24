@@ -4,12 +4,18 @@ import org.bluebridge.base.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * ResponseEntity 响应控制器
+ *
+ * @author lingwh
+ * @date 2026/7/13 17:02
+ */
 @RequestMapping(value = "/restful")
 @Controller
 public class RestfulController {
 
     /**
-     * 使用Restful模拟用户资源的增删改查
+     * 使用 Restful 模拟用户资源的增删改查
      * /user        GET       查询所有用户信息
      * /user/1      GET       根据 id 查询用户信息
      * /user        POST      添加用户信息

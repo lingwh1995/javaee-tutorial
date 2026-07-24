@@ -12,10 +12,10 @@ import java.util.List;
  */
 public class UserInjectListBySetter {
 
-    //注入List，且数组元素数据类型为非引用类型数组
+    //注入 List，且数组元素数据类型为非引用类型数组
     private List<String> hobbies;
 
-    //注入List，且数组元素数据类型为引用类型数组
+    //注入 List，且数组元素数据类型为引用类型数组
     private List<Friend> friends;
 
     public void setHobbies(List<String> hobbies) {

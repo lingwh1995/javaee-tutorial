@@ -49,7 +49,7 @@ public interface IUserDao {
     User getUserByIdWithCaching(String id);
 
     /**
-     * 测试@Caching()配置复杂缓存策略+@CachePut高级用法:根据username获取User对象部分
+     * 测试 @Caching() 配置复杂缓存策略 + @CachePut 高级用法：根据 username 获取 User 对象部分
      * 根据 id 获取 User 对象
      * @param username
      * @return

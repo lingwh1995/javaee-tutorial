@@ -8,6 +8,12 @@ import org.aspectj.lang.annotation.Before;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+/**
+ * AspectConfigByAnnotationOrder1
+ *
+ * @author lingwh
+ * @date 2019/7/22 14:29
+ */
 @Aspect
 @Component
 @Order(2)

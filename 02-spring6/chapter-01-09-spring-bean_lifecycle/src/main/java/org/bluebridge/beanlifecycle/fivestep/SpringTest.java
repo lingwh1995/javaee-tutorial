@@ -24,7 +24,7 @@ public class SpringTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-fivestep.xml");
         SpringBeanLifeCycleFiveStep springBeanLifeCycleFiveStep = applicationContext.getBean("springBeanLifeCycleFiveStep", SpringBeanLifeCycleFiveStep.class);
         logger.info("第四步：使用Bean-" + springBeanLifeCycleFiveStep.toString());
-        // 手动关闭Spring容器
+        // 手动关闭 Spring 容器
         ClassPathXmlApplicationContext context = (ClassPathXmlApplicationContext) applicationContext;
         context.close();
     }

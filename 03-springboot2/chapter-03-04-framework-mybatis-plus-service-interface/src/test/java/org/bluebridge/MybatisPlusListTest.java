@@ -17,7 +17,7 @@ import java.util.Map;
  *
  * List<T> list();  // 查询所有
  * List<T> list(Wrapper<T> queryWrapper);   // 查询列表
- * Collection<T> listByIds(Collection<? extends Serializable> idList);  // 查询（根据ID 批量查询）
+ * Collection<T> listByIds(Collection<? extends Serializable> idList);  // 查询（根据 ID 批量查询）
  * Collection<T> listByMap(Map<String, Object> columnMap);  // 查询（根据 columnMap 条件）
  * List<Map<String, Object>> listMaps();    // 查询所有列表
  * List<Map<String, Object>> listMaps(Wrapper<T> queryWrapper); // 查询列表
@@ -38,7 +38,7 @@ public class MybatisPlusListTest {
      */
     @Test
     public void init(){
-        // 删除数据库中t_employee表中所有数据
+        // 删除数据库中 t_employee 表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 
@@ -78,7 +78,7 @@ public class MybatisPlusListTest {
     }
 
     /**
-     * 测试查询（根据ID 批量查询）
+     * 测试查询（根据 ID 批量查询）
      *
      * List<T> list(Wrapper<T> queryWrapper);
      */
@@ -127,7 +127,7 @@ public class MybatisPlusListTest {
     }
 
     /**
-     * 测试查询全部记录的id
+     * 测试查询全部记录的 id
      *
      * List<Object> listObjs();
      */
@@ -138,7 +138,7 @@ public class MybatisPlusListTest {
     }
 
     /**
-     * 测试根据 Wrapper 条件，查询全部记录的id
+     * 测试根据 Wrapper 条件，查询全部记录的 id
      *
      * List<Object> listObjs(Wrapper<T> queryWrapper);
      */

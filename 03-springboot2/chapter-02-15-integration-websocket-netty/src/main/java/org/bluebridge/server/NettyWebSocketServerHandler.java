@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @ChannelHandler.Sharable
 public class NettyWebSocketServerHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
 
-    // 使用Map存储Channel与用户的关系
+    // 使用 Map 存储 Channel 与用户的关系
     private static final Map<Channel, String> CHANNEL_USER_MAP = new ConcurrentHashMap<>();
 
     @Override

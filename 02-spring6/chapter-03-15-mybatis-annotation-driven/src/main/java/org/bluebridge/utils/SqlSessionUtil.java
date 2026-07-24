@@ -8,6 +8,12 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 
+/**
+ * SqlSessionUtil
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:30
+ */
 public class SqlSessionUtil {
 
     private static SqlSessionFactory sqlSessionFactory = null; // 默认使用数据库环境对应的 SqlSessionFactory
@@ -38,7 +44,7 @@ public class SqlSessionUtil {
         if (sqlSession == null) {
             sqlSession = sqlSessionFactory.openSession();
             // 保存本线程对应的数据库会话对象
-            // 将sqlSession对象绑定到当前线程上。
+            // 将 sqlSession 对象绑定到当前线程上。
             local.set(sqlSession);
         }
         return sqlSession;
@@ -53,8 +59,8 @@ public class SqlSessionUtil {
         // 如果当前线程有相应的数据库会话对象就进行关闭
         if (sqlSession != null) {
             sqlSession.close();
-            // 注意移除SqlSession对象和当前线程的绑定关系。
-            // 因为Tomcat服务器支持线程池。也就是说：用过的线程对象t1，可能下一次还会使用这个t1线程。
+            // 注意移除 SqlSession 对象和当前线程的绑定关系。
+            // 因为 Tomcat 服务器支持线程池。也就是说：用过的线程对象 t1，可能下一次还会使用这个 t1 线程。
             local.remove();
         }
     }

@@ -46,19 +46,19 @@ public class ProxyFactory{
                 }
             }
         );
-        // 4创建子类对象，即代理对象
+        // 4 创建子类对象，即代理对象
         return enhancer.create();
     }
 
     /**
-     * cglib动态代理调用目标方法之前执行的方法
+     * cglib 动态代理调用目标方法之前执行的方法
      */
     public void beforeJdkInvoke() {
         logger.info("cglib动态代理调用目标方法之前执行的增强操作...");
     }
 
     /**
-     * cglib动态代理调用目标方法之后执行的方法
+     * cglib 动态代理调用目标方法之后执行的方法
      */
     public void afterJdkInvoke() {
         logger.info("cglib动态代理调用目标方法之后执行的增强操作...");

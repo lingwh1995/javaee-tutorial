@@ -57,7 +57,7 @@ public class ObjectMapperController {
         objectNodeFromJsonNode.put("address","西安");
         System.out.println("objectNodeFromJsonNode = " + objectNodeFromJsonNode);
 
-        // 创建ObjectNode对象
+        // 创建 ObjectNode 对象
         ObjectNode objectNode = objectMapper.createObjectNode();
         objectNode.put("id", 3);
         objectNode.put("username", "王五");

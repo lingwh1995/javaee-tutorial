@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ServletSessionScopeController {
 
     /**
-     * 使用HttpServletRequest对象获取HttpSession对象
+     * 使用 HttpServletRequest 对象获取 HttpSession 对象
      * @param request
      * @return
      */

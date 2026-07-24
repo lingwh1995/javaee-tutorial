@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * mybatis 中的 DbKit
  *
- * 注意：  DbKit相关api需要写mapper，否则会报错
+ * 注意：  DbKit 相关 api 需要写 mapper，否则会报错
  *
  * @author lingwh
  * @date 2025/2/27 14:15
@@ -66,7 +66,7 @@ public class MybatisPlusDbKitTest {
     }
 
     /**
-     * 测试 根据QueryWrapper封装的条件查询
+     * 测试 根据 QueryWrapper 封装的条件查询
      */
     @Test
     public void testListByQueryWrapper() {
@@ -109,7 +109,7 @@ public class MybatisPlusDbKitTest {
     }
 
     /**
-     * 测试 根据UpdateWrapper更新Employee
+     * 测试 根据 UpdateWrapper 更新 Employee
      */
     @Test
     public void testUpdateByUpdateWrapper() {

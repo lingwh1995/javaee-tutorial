@@ -12,10 +12,10 @@ import java.util.Set;
  */
 public class UserInjectSetBySetter {
 
-    //注入Set，且数组元素数据类型为非引用类型数组
+    //注入 Set，且数组元素数据类型为非引用类型数组
     private Set<String> hobbies;
 
-    //注入Set，且数组元素数据类型为引用类型数组
+    //注入 Set，且数组元素数据类型为引用类型数组
     private Set<Friend> friends;
 
     public void setHobbies(Set<String> hobbies) {

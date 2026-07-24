@@ -17,7 +17,7 @@ public class SqlSessionUtilTest {
         SqlSession sqlSession = null;
         try {
             sqlSession = SqlSessionUtil.openSession();
-            int count = sqlSession.insert("emp.insertEmployee"); // 这个"insertCar"必须是sql的id
+            int count = sqlSession.insert("emp.insertEmployee"); // 这个"insertCar"必须是 sql 的 id
             System.out.println("插入几条数据：" + count);
             sqlSession.commit();
         } catch (Exception e) {

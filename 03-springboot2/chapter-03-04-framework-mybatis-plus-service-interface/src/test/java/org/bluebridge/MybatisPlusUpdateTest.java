@@ -14,11 +14,11 @@ import java.util.List;
 /**
  * MybatisPlus 更新相关方法
  *
- * boolean update(Wrapper<T> updateWrapper);    // 根据 UpdateWrapper 条件，更新记录 需要设置sqlset
+ * boolean update(Wrapper<T> updateWrapper);    // 根据 UpdateWrapper 条件，更新记录 需要设置 sqlset
  * boolean update(T updateEntity, Wrapper<T> whereWrapper);  // 根据 whereWrapper 条件，更新记录
  * boolean updateById(T entity);    // 根据 ID 选择修改
- * boolean updateBatchById(Collection<T> entityList);   // 根据ID 批量更新
- * boolean updateBatchById(Collection<T> entityList, int batchSize);    // 根据ID 批量更新
+ * boolean updateBatchById(Collection<T> entityList);   // 根据 ID 批量更新
+ * boolean updateBatchById(Collection<T> entityList, int batchSize);    // 根据 ID 批量更新
  *
  * @author lingwh
  * @date 2025/2/27 16:23
@@ -34,7 +34,7 @@ public class MybatisPlusUpdateTest {
      */
     @Test
     public void init(){
-        // 删除数据库中t_employee表中所有数据
+        // 删除数据库中 t_employee 表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 

@@ -6,7 +6,7 @@ import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlSource;
 
 /**
- * 根据ID查询单个记录的自定义方法
+ * 根据 ID 查询单个记录的自定义方法
  *
  * @author lingwh
  * @date 2025/2/27 13:48

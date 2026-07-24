@@ -14,7 +14,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringTest {
 
     /**
-     * 测试使用@Autowired完成按类型注入
+     * 测试使用 @Autowired 完成按类型注入
      */
     @Test
     public void testInjectValueByAutowiredByTypeByAnnotation() {

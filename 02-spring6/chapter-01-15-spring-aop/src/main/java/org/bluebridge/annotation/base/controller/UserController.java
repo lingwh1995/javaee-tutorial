@@ -1,11 +1,16 @@
 package org.bluebridge.annotation.base.controller;
 
-
 import org.bluebridge.annotation.base.domain.User;
 import org.bluebridge.annotation.base.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+/**
+ * UserController
+ *
+ * @author lingwh
+ * @date 2019/7/22 14:29
+ */
 @Controller
 public class UserController {
 

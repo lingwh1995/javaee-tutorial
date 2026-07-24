@@ -15,7 +15,7 @@ import java.util.List;
  * MybatisPlus 保存相关方法
  *
  *  boolean saveOrUpdate(T entity);  // TableId 注解属性值存在则更新记录，否插入一条记录
- *  boolean saveOrUpdate(T entity, Wrapper<T> updateWrapper);  // 根据updateWrapper尝试更新，否继续执行saveOrUpdate(T)方法
+ *  boolean saveOrUpdate(T entity, Wrapper<T> updateWrapper);  // 根据 updateWrapper 尝试更新，否继续执行 saveOrUpdate(T) 方法
  *  boolean saveOrUpdateBatch(Collection<T> entityList); // 批量修改插入
  *  boolean saveOrUpdateBatch(Collection<T> entityList, int batchSize);  // 批量修改插入
  *
@@ -33,7 +33,7 @@ public class MybatisPlusSaveOrUpdateTest {
      */
     @Test
     public void init(){
-        // 删除数据库中t_employee表中所有数据
+        // 删除数据库中 t_employee 表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
     }

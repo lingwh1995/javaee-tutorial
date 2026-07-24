@@ -36,7 +36,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public int createProduct(ProductCreateDTO productCreateDTO) {
-        // 使用 MapStruct 转换DTO为实体
+        // 使用 MapStruct 转换 DTO 为实体
         ProductDO productDO = productConverter.toProductDO(productCreateDTO);
         
         // 保存到数据库
@@ -101,7 +101,7 @@ public class ProductServiceImpl implements ProductService {
         // 2. 转为实体
         productDO = productConverter.toProductDO(productPatchDTO);
 
-        // 3. 设置商品ID
+        // 3. 设置商品 ID
         productDO.setId(id);
 
         // 4. 更新商品

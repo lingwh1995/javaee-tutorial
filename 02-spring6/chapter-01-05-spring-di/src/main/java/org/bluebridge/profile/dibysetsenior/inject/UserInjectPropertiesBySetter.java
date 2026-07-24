@@ -10,7 +10,7 @@ import java.util.Properties;
  */
 public class UserInjectPropertiesBySetter {
 
-    //注入Properties，Properties和Map很像，但是其键值对只能是String
+    //注入 Properties，Properties 和 Map 很像，但是其键值对只能是 String
     private Properties properties;
 
     public void setProperties(Properties properties) {

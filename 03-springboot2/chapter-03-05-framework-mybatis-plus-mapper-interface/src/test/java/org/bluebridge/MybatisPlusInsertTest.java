@@ -23,7 +23,7 @@ public class MybatisPlusInsertTest {
      */
     @Test
     public void init(){
-        // 删除数据库中t_employee表中所有数据
+        // 删除数据库中 t_employee 表中所有数据
         int delete = employeeMapper.delete(new QueryWrapper<>());
         System.out.println("delete = " + delete);
     }

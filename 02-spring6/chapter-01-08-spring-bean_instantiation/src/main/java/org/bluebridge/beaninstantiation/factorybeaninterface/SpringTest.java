@@ -10,12 +10,18 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * SpringTest
+ *
+ * @author lingwh
+ * @date 2026/1/10 13:25
+ */
 public class SpringTest {
 
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
-     * 测试Spring 示例化 bean的第四种方式： 通过实现FactoryBean 接口来实例化bean，这种方式是第三种方式的简化，只不过之前工厂模式中的抽象类由Spring框架提供的FactoryBean代替了
+     * 测试 Spring 示例化 bean 的第四种方式： 通过实现 FactoryBean 接口来实例化 bean，这种方式是第三种方式的简化，只不过之前工厂模式中的抽象类由 Spring 框架提供的 FactoryBean 代替了
      */
     @Test
     public void testBeanInstantiationByFactoryBean() {
@@ -25,7 +31,7 @@ public class SpringTest {
     }
 
     /**
-     * 测试Spring 示例化 bean的第四种方式的实际应用： 为属性注入Date 类型的值
+     * 测试 Spring 示例化 bean 的第四种方式的实际应用： 为属性注入 Date 类型的值
      */
     @Test
     public void testBeanInstantiationByFactoryBeanInjectDate() {

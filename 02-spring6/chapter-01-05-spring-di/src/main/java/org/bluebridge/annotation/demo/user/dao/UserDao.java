@@ -4,6 +4,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
+/**
+ * UserDao
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:45
+ */
 @Repository
 public class UserDao {
     private static final Logger logger = LogManager.getLogger(UserDao.class);

@@ -6,6 +6,12 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * Spring 测试类
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:30
+ */
 public class SpringTest {
 
     /**

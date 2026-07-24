@@ -4,6 +4,12 @@ import jakarta.annotation.Resource;
 import org.bluebridge.annotation.resource.service.IStudentService;
 import org.springframework.stereotype.Controller;
 
+/**
+ * StudentController
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:45
+ */
 @Controller
 public class StudentController {
 

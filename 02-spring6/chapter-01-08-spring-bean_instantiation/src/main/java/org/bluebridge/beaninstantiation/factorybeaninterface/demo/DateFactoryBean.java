@@ -5,6 +5,12 @@ import org.springframework.beans.factory.FactoryBean;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * DateFactoryBean
+ *
+ * @author lingwh
+ * @date 2026/1/10 13:25
+ */
 public class DateFactoryBean implements FactoryBean<Date> {
 
     private String date;

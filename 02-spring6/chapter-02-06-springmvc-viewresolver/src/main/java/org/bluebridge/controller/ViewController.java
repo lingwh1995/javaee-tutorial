@@ -5,6 +5,12 @@ import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * ViewController
+ *
+ * @author lingwh
+ * @date 2026/1/10 20:34
+ */
 @RequestMapping(value = "/viewResolver")
 @Controller
 public class ViewController {

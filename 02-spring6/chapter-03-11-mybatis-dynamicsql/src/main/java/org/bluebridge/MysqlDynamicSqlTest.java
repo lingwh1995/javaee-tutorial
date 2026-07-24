@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 /**
- * Mybatis动态sql
+ * Mybatis 动态 sql
  *
  * @author lingwh
  * @date 2026/1/10 14:30
@@ -19,7 +19,7 @@ import java.util.stream.IntStream;
 public class MysqlDynamicSqlTest {
 
     /**
-     * 测试 mybatis动态sql-使用if标签动态拼接多个查询条件
+     * 测试 mybatis 动态 sql-使用 if 标签动态拼接多个查询条件
      */
     @Test
     public void selectByMultiConditionUseIfTag() {
@@ -41,7 +41,7 @@ public class MysqlDynamicSqlTest {
     }
 
     /**
-     * 测试 mybatis动态sql-使用where标签更智能(优雅)的动态拼接多个查询条件
+     * 测试 mybatis 动态 sql-使用 where 标签更智能(优雅)的动态拼接多个查询条件
      */
     @Test
     public void testSelectByMultiConditionUseWhereTag() {
@@ -60,7 +60,7 @@ public class MysqlDynamicSqlTest {
     }
 
     /**
-     * 测试 mybatis动态sql-使用trim标签更细致的处理动态拼接多个查询条件多余的 and 或者 or
+     * 测试 mybatis 动态 sql-使用 trim 标签更细致的处理动态拼接多个查询条件多余的 and 或者 or
      */
     @Test
     public void testSelectByMultiConditionUseTrimTag() {
@@ -79,7 +79,7 @@ public class MysqlDynamicSqlTest {
     }
 
     /**
-     * 测试 mybatis动态sql-使用trim标签更细致的处理动态拼接多个查询条件多余的 and 或者 or
+     * 测试 mybatis 动态 sql-使用 trim 标签更细致的处理动态拼接多个查询条件多余的 and 或者 or
      */
     @Test
     public void testUpdateCarUseSetTag() {
@@ -97,7 +97,7 @@ public class MysqlDynamicSqlTest {
     }
 
     /**
-     * 测试 mybatis动态sql-使用choose、when、otherwise标签动态从多个查询条件中选出最先符合要求的一个查询条件
+     * 测试 mybatis 动态 sql-使用 choose、when、otherwise 标签动态从多个查询条件中选出最先符合要求的一个查询条件
      */
     @Test
     public void testSelectUseChooseWhenOtherwiseTge() {
@@ -116,7 +116,7 @@ public class MysqlDynamicSqlTest {
     }
 
     /**
-     * 测试 mybatis动态sql-使用foreach标签实现批量删除：使用in关键字拼接参数
+     * 测试 mybatis 动态 sql-使用 foreach 标签实现批量删除：使用 in 关键字拼接参数
      */
     @Test
     public void testDeleteByIdsUseForeachTagIn() {
@@ -130,7 +130,7 @@ public class MysqlDynamicSqlTest {
     }
 
     /**
-     * 测试 mybatis动态sql-使用foreach标签实现批量删除：使用or关键字拼接参数
+     * 测试 mybatis 动态 sql-使用 foreach 标签实现批量删除：使用 or 关键字拼接参数
      */
     @Test
     public void testDeleteByIdsUseForeachTagOr() {
@@ -144,7 +144,7 @@ public class MysqlDynamicSqlTest {
     }
 
     /**
-     * 测试 mybatis动态sql-使用foreach标签实现批量插入
+     * 测试 mybatis 动态 sql-使用 foreach 标签实现批量插入
      */
     @Test
     public void testInsertBatchUseForeachTag() {
@@ -165,7 +165,7 @@ public class MysqlDynamicSqlTest {
     }
 
     /**
-     * 测试 mybatis动态sql-使用sql和include标签抽取可重用sql
+     * 测试 mybatis 动态 sql-使用 sql 和 include 标签抽取可重用 sql
      */
     @Test
     public void testSelectAllRetMapUseSqlAndIncludeTag() {

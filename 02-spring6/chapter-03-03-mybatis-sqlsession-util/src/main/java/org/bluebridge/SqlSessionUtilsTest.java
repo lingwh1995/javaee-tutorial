@@ -6,7 +6,7 @@ import org.bluebridge.utils.SqlSessionUtilThreadLocal;
 import org.junit.Test;
 
 /**
- * SqlSession工具类测试
+ * SqlSession 工具类测试
  *
  * @author lingwh
  * @date 2026/1/10 14:30
@@ -35,7 +35,7 @@ public class SqlSessionUtilsTest {
         SqlSession sqlSession2 = SqlSessionUtilThreadLocal.openSession();
         System.out.println("sqlSession2 = " + sqlSession2);
 
-        // 关闭SqlSession
+        // 关闭 SqlSession
         SqlSessionUtilThreadLocal.close(sqlSession2);
 
         SqlSession sqlSession3 = SqlSessionUtilThreadLocal.openSession();

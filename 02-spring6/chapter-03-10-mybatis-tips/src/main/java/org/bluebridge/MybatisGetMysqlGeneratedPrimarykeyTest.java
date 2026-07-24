@@ -49,7 +49,7 @@ public class MybatisGetMysqlGeneratedPrimarykeyTest {
     /**
      * Mysql 插入数据时设置主键方式二(写法一): 使用 Mybatis 读取 Mysql 生成的主键，在 sql 语句中使用，sql 语句中要出现主键
      *
-     * 推荐：插入数据成功后可以读取到Mysql生成的主键
+     * 推荐：插入数据成功后可以读取到 Mysql 生成的主键
      */
     @Test
     public void testUseMybatisReadMysqlGeneratedPrimaryKeyWhenInsert_1() {
@@ -65,7 +65,7 @@ public class MybatisGetMysqlGeneratedPrimarykeyTest {
     /**
      * Mysql 插入数据时设置主键方式二(写法二): 使用 Mybatis 读取 Mysql 生成的主键，在 sql 语句中使用，sql 语句中要出现主键
      *
-     * 推荐：插入数据成功后可以读取到Mysql生成的主键
+     * 推荐：插入数据成功后可以读取到 Mysql 生成的主键
      */
     @Test
     public void testUseMybatisReadMysqlGeneratedPrimaryKeyWhenInsert_2() {

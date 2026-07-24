@@ -11,9 +11,9 @@ import javax.persistence.*;
  *    - @Table(name="T_USER")
  *    - @Basic
  *    - @Column(name="age")
- * 2. 不可以省略的注解:
+ * 2. 不可以省略的注解
  *    - @Transient
- *      这个字段不会被持久化到数据库中，在xml方式中配置该字段也可以实现这个效果
+ *      这个字段不会被持久化到数据库中，在 xml 方式中配置该字段也可以实现这个效果
  *
  * @author lingwh
  * @date 2025/11/23 13:04

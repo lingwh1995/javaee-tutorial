@@ -1,5 +1,11 @@
 package org.bluebridge.annotation.base.domain;
 
+/**
+ * User
+ *
+ * @author lingwh
+ * @date 2019/7/22 14:29
+ */
 public class User {
 
     private String id;

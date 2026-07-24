@@ -23,7 +23,7 @@ public class SqlConstantsProcessor implements EnvironmentPostProcessor {
 
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
-        // 直接设置系统属性，在这里设置优先级别很高，可以解决yml中配置不生效的问题
+        // 直接设置系统属性，在这里设置优先级别很高，可以解决 yml 中配置不生效的问题
         System.setProperty("p6spy.config.logMessageFormat", SqlConstants.P6SPY_FORMATTER_CLASS);
 
         // 1. 基本类型：使用 Optional 或 getProperty 的默认值功能

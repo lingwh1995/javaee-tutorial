@@ -75,7 +75,7 @@ public class SpringTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("profile/dibysetsenior/applicationContext-di-profile-set-senior.xml");
         UserInjectNULLAndEmptyStringBySetter user = applicationContext.getBean("userInjectNULLAndEmptyStringBySetter", UserInjectNULLAndEmptyStringBySetter.class);
         logger.info(user.toString());
-        // 测试注入的是NULL还是null字符串，如果是注入的是NULL会报空指针异常(放开代码执行会报异常)
+        // 测试注入的是 NULL 还是 null 字符串，如果是注入的是 NULL 会报空指针异常(放开代码执行会报异常)
         // user.getId().toString();
         // 测试注入的是空字符串，如果是注入的是空字符串不会报错
         logger.info("-----------------------");

@@ -79,7 +79,7 @@ public final class PersonProto extends com.google.protobuf.GeneratedFile {
   }
   /**
    * <pre>
-   * 定义了一个Person类
+   * 定义了一个 Person 类
    * </pre>
    *
    * Protobuf type {@code org.bluebridge.Person}
@@ -443,7 +443,7 @@ public final class PersonProto extends com.google.protobuf.GeneratedFile {
     }
     /**
      * <pre>
-     * 定义了一个Person类
+     * 定义了一个 Person 类
      * </pre>
      *
      * Protobuf type {@code org.bluebridge.Person}

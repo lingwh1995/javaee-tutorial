@@ -19,7 +19,7 @@ import io.netty.handler.logging.LoggingHandler;
 import java.net.URI;
 
 /**
- * Netty WebSocket客户端
+ * Netty WebSocket 客户端
  *
  * @author lingwh
  * @date 2025/10/21 16:29
@@ -36,7 +36,7 @@ public class NettyWebSocketClient {
 
         // 日志处理器
         LoggingHandler LOGGING_HANDLER = new LoggingHandler(LogLevel.DEBUG);
-        // WebSocket处理器
+        // WebSocket 处理器
         WebSocketClientHandler WEBSOCKET_CLIENT_HANDLER = new WebSocketClientHandler();
 
         try {

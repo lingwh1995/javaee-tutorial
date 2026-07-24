@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 
 /**
- * MyBatis注解测试类
+ * MyBatis 注解测试类
  *
  * @author lingwh
  * @date 2019/11/18 14:37

@@ -15,9 +15,9 @@ import org.junit.Test;
 public class MybatisResultMapDiscriminatorTest {
 
     /**
-     * 部门编号不等于10时就返回空的部门对象，只有等于10时才会封装部分信息到员工信息中
+     * 部门编号不等于 10 时就返回空的部门对象，只有等于 10 时才会封装部分信息到员工信息中
      *
-     * 使用ResultMap的Association完成多表关联查询 + 使用discriminator改变封装行为测试
+     * 使用 ResultMap 的 Association 完成多表关联查询 + 使用 discriminator 改变封装行为测试
      */
     @Test
     public void getEmployeeAndDepartmentByIdUseAssociationDiscriminatorTest() {

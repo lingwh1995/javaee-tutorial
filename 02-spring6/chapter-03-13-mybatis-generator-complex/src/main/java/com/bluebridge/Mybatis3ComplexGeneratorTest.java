@@ -24,23 +24,23 @@ public class Mybatis3ComplexGeneratorTest {
         Car car = mapper.selectByPrimaryKey(4L);
         System.out.println(car);
 
-        // 2. 查询所有（selectByExample，根据条件查询，如果条件是null表示没有条件。）
+        // 2. 查询所有（selectByExample，根据条件查询，如果条件是 null 表示没有条件。）
         List<Car> cars = mapper.selectByExample(null);
         cars.forEach(car1 -> System.out.println(car1));
         System.out.println("=========================================");
 
         // 3. 按照条件进行查询
-        // QBC 风格：Query By Criteria 一种查询方式，比较面向对象，看不到sql语句。
+        // QBC 风格：Query By Criteria 一种查询方式，比较面向对象，看不到 sql 语句。
         // QBC 面向对象查询
-        // 封装条件，通过CarExample对象来封装查询条件
+        // 封装条件，通过 CarExample 对象来封装查询条件
         CarExample carExample = new CarExample();
-        // 调用carExample.createCriteria()方法来创建查询条件
+        // 调用 carExample.createCriteria() 方法来创建查询条件
         // 继续向后调用方法追加查询条件
         carExample.createCriteria()
                 .andBrandLike("帕萨特") // 模糊查询
-                .andGuidePriceGreaterThan(new BigDecimal(20.0)); // 并且价格大于20
-        // 添加or
-        // 上面添加的为and条件，or()开始添加or条件
+                .andGuidePriceGreaterThan(new BigDecimal(20.0)); // 并且价格大于 20
+        // 添加 or
+        // 上面添加的为 and 条件，or() 开始添加 or 条件
         // (... and ... 前面的查询条件) or (...) 生成后的查询条件
         carExample.or().andCarTypeEqualTo("燃油车");
         // 执行查询

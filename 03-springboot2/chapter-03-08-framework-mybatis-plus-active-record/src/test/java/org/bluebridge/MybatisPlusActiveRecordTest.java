@@ -20,7 +20,7 @@ public class MybatisPlusActiveRecordTest {
      */
     @Test
     public void testInsert() {
-        // 创建新Employee并插入数据库
+        // 创建新 Employee 并插入数据库
         Employee employee = Employee.builder()
                 .id(1l)
                 .email("1111111111@qq.com")
@@ -44,7 +44,7 @@ public class MybatisPlusActiveRecordTest {
     }
 
     /**
-     * 测试根据 ID 更新Employee
+     * 测试根据 ID 更新 Employee
      */
     @Test
     public void testUpdateEmployeeById() {
@@ -57,7 +57,7 @@ public class MybatisPlusActiveRecordTest {
     }
 
     /**
-     * 测试根据 ID 删除Employee
+     * 测试根据 ID 删除 Employee
      */
     @Test
     public void testDeleteEmployeeById() {

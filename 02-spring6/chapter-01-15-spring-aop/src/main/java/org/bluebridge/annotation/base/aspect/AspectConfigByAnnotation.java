@@ -9,7 +9,11 @@ import org.springframework.stereotype.Component;
 
 /**
  * 切面类  使用注解配置
+ *
  * 切面 = 切点 + 通知
+ *
+ * @author lingwh
+ * @date 2019/7/22 14:29
  */
 @Aspect
 @Component

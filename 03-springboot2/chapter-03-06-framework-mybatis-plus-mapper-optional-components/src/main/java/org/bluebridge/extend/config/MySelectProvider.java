@@ -1,7 +1,7 @@
 package org.bluebridge.extend.config;
 
 /**
- * SQL提供者
+ * SQL 提供者
  *
  * @author lingwh
  * @date 2025/2/27 13:56

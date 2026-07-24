@@ -7,7 +7,7 @@ import org.springframework.util.ObjectUtils;
 import java.util.*;
 
 /**
- * Object工具类测试
+ * Object 工具类测试
  *
  * @author lingwh
  * @date 2025/7/1 13:45
@@ -16,7 +16,7 @@ import java.util.*;
 public class ObjectUtilsTest {
 
     /**
-     * 测试isEmpty
+     * 测试 isEmpty
      */
     @Test
     public void testEmpty() {
@@ -49,7 +49,7 @@ public class ObjectUtilsTest {
     }
 
     /**
-     * 测试equals
+     * 测试 equals
      */
     @Test
     public void testEquals() {
@@ -69,7 +69,7 @@ public class ObjectUtilsTest {
     }
 
     /**
-     * 测试获取对象十六进制hashcode
+     * 测试获取对象十六进制 hashcode
      */
     @Test
     public void testIdentityHex() {

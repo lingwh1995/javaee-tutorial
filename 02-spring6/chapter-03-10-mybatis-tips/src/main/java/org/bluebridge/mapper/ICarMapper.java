@@ -63,7 +63,7 @@ public interface ICarMapper {
     List<Car> selectCarByBrandFuzzyQueryUseSingleQuotationMarkAndHashSymbolConcat(String brand);
 
     /**
-     * 模糊查询实现方式四：使用 mybatis的bind标签 拼接实现模糊查询
+     * 模糊查询实现方式四：使用 mybatis 的 bind 标签 拼接实现模糊查询
      *
      * @param brand
      * @return
@@ -79,7 +79,7 @@ public interface ICarMapper {
     List<Car> selectCarByBrandFuzzyQueryUseCompleteFuzzyQueryParam(String brand);
 
     /**
-     * Mysql插入数据时设置主键方式一(写法一): 使用Mysql自动设置主键，sql语句中不用出现主键
+     * Mysql 插入数据时设置主键方式一(写法一): 使用 Mysql 自动设置主键，sql 语句中不用出现主键
      *
      * @param car
      * @return
@@ -87,7 +87,7 @@ public interface ICarMapper {
     int insertUseMysqlAutoSetPrimaryKeyWhenInsert_1(Car car);
 
     /**
-     * Mysql插入数据时设置主键方式一(写法二): 使用Mysql自动设置主键，sql语句中不用出现主键
+     * Mysql 插入数据时设置主键方式一(写法二): 使用 Mysql 自动设置主键，sql 语句中不用出现主键
      *
      * @param car
      * @return
@@ -95,7 +95,7 @@ public interface ICarMapper {
     int insertUseMysqlAutoSetPrimaryKeyWhenInsert_2(Car car);
 
     /**
-     * Mysql插入数据时设置主键方式二(写法一): 使用Mybatis读取Mysql生成的主键，在sql语句中使用，sql语句中要出现主键
+     * Mysql 插入数据时设置主键方式二(写法一): 使用 Mybatis 读取 Mysql 生成的主键，在 sql 语句中使用，sql 语句中要出现主键
      *
      * @param car
      * @return
@@ -103,7 +103,7 @@ public interface ICarMapper {
     int insertUseMybatisReadMysqlGeneratedPrimaryKeyWhenInsert_1(Car car);
 
     /**
-     * Mysql插入数据时设置主键方式二(写法二): 使用Mybatis读取Mysql生成的主键，在sql语句中使用，sql语句中要出现主键
+     * Mysql 插入数据时设置主键方式二(写法二): 使用 Mybatis 读取 Mysql 生成的主键，在 sql 语句中使用，sql 语句中要出现主键
      *
      * @param car
      * @return
@@ -111,7 +111,7 @@ public interface ICarMapper {
     int insertUseMybatisReadMysqlGeneratedPrimaryKeyWhenInsert_2(Car car);
 
     /**
-     * Mybatis 使用@Param传递多个参数
+     * Mybatis 使用 @Param 传递多个参数
      *
      * @param brand
      * @param guidePrice
@@ -120,7 +120,7 @@ public interface ICarMapper {
     List<Car> selectCarByBrandAndGuidePriceTransferMultiplyParamsUseParamAnnotation(@Param("brand") String brand, @Param("guidePrice") String guidePrice);
 
     /**
-     * Mybatis 使用Map传递多个参数
+     * Mybatis 使用 Map 传递多个参数
      *
      * @param params
      * @return
@@ -128,7 +128,7 @@ public interface ICarMapper {
     List<Car> selectCarByBrandAndGuidePriceTransferMultiplyParamsUseMap(Map<String,String> params);
 
     /**
-     * Mybatis 使用@Param + Map传递多个参数
+     * Mybatis 使用 @Param + Map 传递多个参数
      *
      * @param params
      * @return
@@ -136,7 +136,7 @@ public interface ICarMapper {
     List<Car> selectCarByBrandAndGuidePriceTransferMultiplyParamsUseParamAnnotationMap(@Param("params") Map<String,String> params);
 
     /**
-     * Mybatis 读取使用@Param传递的多个参数
+     * Mybatis 读取使用 @Param 传递的多个参数
      *
      * @param brand
      * @param guidePrice
@@ -145,7 +145,7 @@ public interface ICarMapper {
     List<Car> selectCarByBrandAndGuidePriceReadTransferMultiplyParamsUseParamAnnotation(@Param("brand") String brand, @Param("guidePrice") String guidePrice);
 
     /**
-     * Mybatis 读取使用Map传递的多个参数
+     * Mybatis 读取使用 Map 传递的多个参数
      *
      * @param params
      * @return
@@ -153,7 +153,7 @@ public interface ICarMapper {
     List<Car> selectCarByBrandAndGuidePriceReadTransferMultiplyParamsUseMap(Map<String,String> params);
 
     /**
-     * Mybatis 读取使用@Param + Map传递多个的参数
+     * Mybatis 读取使用 @Param + Map 传递多个的参数
      *
      * @param params
      * @return

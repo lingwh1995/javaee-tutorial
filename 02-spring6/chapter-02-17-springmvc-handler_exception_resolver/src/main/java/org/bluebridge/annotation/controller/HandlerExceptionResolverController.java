@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * 测试时需要修改web.xml中使用的配置文件为    classpath:annotation/springMVC-annotation.xml
+ * 测试时需要修改 web.xml 中使用的配置文件为    classpath:annotation/springMVC-annotation.xml
  *
  * @author lingwh
  * @date 2019/7/22 08:43

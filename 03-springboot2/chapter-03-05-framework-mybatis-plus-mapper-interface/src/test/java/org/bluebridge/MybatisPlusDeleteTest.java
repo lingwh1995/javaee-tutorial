@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * int delete(@Param(Constants.WRAPPER) Wrapper<T> wrapper);    // 根据 entity 条件，删除记录
- * int deleteBatchIds(@Param(Constants.COLLECTION) Collection<? extends Serializable> idList);  // 删除（根据ID 批量删除）
+ * int deleteBatchIds(@Param(Constants.COLLECTION) Collection<? extends Serializable> idList);  // 删除（根据 ID 批量删除）
  * int deleteById(Serializable id);     // 根据 ID 删除
  * int deleteByMap(@Param(Constants.COLUMN_MAP) Map<String, Object> columnMap);     // 根据 columnMap 条件，删除记录
  */
@@ -52,7 +52,7 @@ public class MybatisPlusDeleteTest {
     }
 
     /**
-     * 测试 删除（根据ID 批量删除）
+     * 测试 删除（根据 ID 批量删除）
      * int deleteBatchIds(@Param(Constants.COLLECTION) Collection<? extends Serializable> idList);
      */
     @Test

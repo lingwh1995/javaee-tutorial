@@ -6,7 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 /**
- * SpringBoot启动类
+ * SpringBoot 启动类
  *
  * @author lingwh
  * @date 2026/1/1 09:15

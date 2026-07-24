@@ -19,10 +19,10 @@ import java.util.Map;
 public class AsyncTaskFailController {
 
     /**
-     * 测试:
-     *      http://localhost:8080/async/test-async-fail
+     * 测试
+     *   http://localhost:8080/async/test-async-fail
      * 此种情况下异步调度失败
-     *      异步的代码要放在Service层中(将异步部分代码放入另一个类中，如果放在同一个类中，异步调度会失败)
+     *   异步的代码要放在 Service 层中(将异步部分代码放入另一个类中，如果放在同一个类中，异步调度会失败)
      * @throws InterruptedException
      */
     @ResponseBody

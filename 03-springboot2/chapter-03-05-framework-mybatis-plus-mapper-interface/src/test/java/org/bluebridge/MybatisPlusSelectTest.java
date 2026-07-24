@@ -20,7 +20,7 @@ import java.util.Map;
  *
  * T selectById(Serializable id);   // 根据 ID 查询
  * T selectOne(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);  // 根据 entity 条件，查询一条记录
- * List<T> selectBatchIds(@Param(Constants.COLLECTION) Collection<? extends Serializable> idList);  // 查询（根据ID 批量查询）
+ * List<T> selectBatchIds(@Param(Constants.COLLECTION) Collection<? extends Serializable> idList);  // 查询（根据 ID 批量查询）
  * List<T> selectList(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);   // 根据 entity 条件，查询全部记录
  * List<T> selectByMap(@Param(Constants.COLUMN_MAP) Map<String, Object> columnMap);     // 查询（根据 columnMap 条件）
  * List<Map<String, Object>> selectMaps(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);     // 根据 Wrapper 条件，查询全部记录
@@ -81,7 +81,7 @@ public class MybatisPlusSelectTest {
     }
 
     /**
-     * 测试 查询（根据ID 批量查询）
+     * 测试 查询（根据 ID 批量查询）
      *
      * List<T> selectBatchIds(@Param(Constants.COLLECTION) Collection<? extends Serializable> idList);
      */

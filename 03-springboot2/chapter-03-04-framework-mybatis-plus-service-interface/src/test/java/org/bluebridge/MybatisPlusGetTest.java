@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * MybatisPlus代码生成器测试
+ * MybatisPlus 代码生成器测试
  *
  * T getById(Serializable id);  // 根据 ID 查询
  * T getOne(Wrapper<T> queryWrapper);   // 根据 Wrapper，查询一条记录。结果集，如果是多个会抛出异常，随机取一条加上限制条件 wrapper.last("LIMIT 1")
@@ -34,7 +34,7 @@ public class MybatisPlusGetTest {
      */
     @Test
     public void init(){
-        // 删除数据库中t_employee表中所有数据
+        // 删除数据库中 t_employee 表中所有数据
         boolean isRemove = employeeService.remove(new QueryWrapper<>());
         System.out.println("isRemove = " + isRemove);
 

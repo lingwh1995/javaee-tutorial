@@ -4,7 +4,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * 枪
+ * Gun
+ *
+ * @author lingwh
+ * @date 2026/1/10 13:25
  */
 public class Gun extends Weapon {
 

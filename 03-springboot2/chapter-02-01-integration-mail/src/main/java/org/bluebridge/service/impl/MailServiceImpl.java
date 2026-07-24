@@ -56,7 +56,7 @@ public class MailServiceImpl implements IMailService {
     }
 
     /**
-     * 发送html邮件
+     * 发送 html 邮件
      *
      * @param to 邮件接收者
      * @param subject 邮件主题

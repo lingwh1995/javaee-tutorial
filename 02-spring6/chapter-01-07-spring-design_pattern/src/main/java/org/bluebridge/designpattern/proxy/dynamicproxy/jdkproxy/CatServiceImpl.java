@@ -31,7 +31,7 @@ public class CatServiceImpl implements ICatService {
     @Override
     public Cat getCatById(String id) {
         logger.info("正在执行查询用户操作...");
-        // 模拟从数据中根据id查询到了一个用户
+        // 模拟从数据中根据 id 查询到了一个用户
         Cat cat = new Cat("001","煤球",2);
         return cat;
     }

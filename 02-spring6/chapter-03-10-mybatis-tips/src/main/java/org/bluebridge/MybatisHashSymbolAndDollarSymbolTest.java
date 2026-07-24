@@ -21,9 +21,9 @@ public class MybatisHashSymbolAndDollarSymbolTest {
     /**
      * 测试使用 #{} 设置参数和使用 ${} 设置参数的不同之处，观察控制台输出的 sql 可以发现
      *
-     * 1. 使用 #{} 设置参数有预编译的效果，可以避免SQL 注入的风险
-     * 2. 使用 ${} 设置参数没有预编译的效果，存在SQL 注入的风险
-     * 3. 优先使用 #{} 设置参数，这是原则。避免SQL 注入的风险。#{}不能实现在考虑${}
+     * 1. 使用 #{} 设置参数有预编译的效果，可以避免 SQL 注入的风险
+     * 2. 使用 ${} 设置参数没有预编译的效果，存在 SQL 注入的风险
+     * 3. 优先使用 #{} 设置参数，这是原则。避免 SQL 注入的风险。#{}不能实现在考虑${}
      */
     @Test
     public void testSetParamsUseHashSymbolOrDollarSymbol() {

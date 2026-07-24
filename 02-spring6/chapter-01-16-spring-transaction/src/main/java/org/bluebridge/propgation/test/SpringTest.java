@@ -7,6 +7,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * 测试 Spring 事务传播行为
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:30
  */
 public class SpringTest {
 

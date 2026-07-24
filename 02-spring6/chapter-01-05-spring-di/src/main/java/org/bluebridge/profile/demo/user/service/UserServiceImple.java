@@ -8,7 +8,7 @@ import org.bluebridge.profile.demo.user.dao.UserDao;
  * @author lingwh
  * @date 2026/1/10 14:35
  */
-public class UserServiceImple implements IUserService{
+public class UserServiceImple implements IUserService {
 
     private UserDao userDao;
 

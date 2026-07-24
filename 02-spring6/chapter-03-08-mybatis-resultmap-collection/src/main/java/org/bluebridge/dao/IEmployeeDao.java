@@ -5,7 +5,7 @@ import org.bluebridge.domain.Employee;
 import java.util.List;
 
 /**
- * 员工Dao接口
+ * 员工 Dao 接口
  *
  * @author lingwh
  * @date 2026/1/10 14:30
@@ -13,7 +13,7 @@ import java.util.List;
 public interface IEmployeeDao {
 
     /**
-     * 根据deptNo查询多个Employee对象
+     * 根据 deptNo 查询多个 Employee 对象
      *
      * @param deptNo
      * @return

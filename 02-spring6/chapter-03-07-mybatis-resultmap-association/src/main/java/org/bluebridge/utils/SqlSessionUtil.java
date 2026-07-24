@@ -30,7 +30,7 @@ public class SqlSessionUtil {
     }
 
     /**
-     * 每调用一次openSession()可获取一个新的会话，该会话支持自动提交。
+     * 每调用一次 openSession() 可获取一个新的会话，该会话支持自动提交。
      *
      * @return 新的会话对象
      */

@@ -6,6 +6,9 @@ import org.springframework.stereotype.Controller;
 
 /**
  * 使用构造方式为属性注入引用类型的值
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:45
  */
 @Controller
 public class UserController {
