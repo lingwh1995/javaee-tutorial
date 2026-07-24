@@ -1,4 +1,4 @@
-package org.bluebridge.hdfs.lesson_01_helloworld.config;
+package org.bluebridge.hdfs.case_01_helloworld.config;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;

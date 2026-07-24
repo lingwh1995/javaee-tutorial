@@ -1,4 +1,4 @@
-package org.bluebridge.hdfs.lesson_01_helloworld.service;
+package org.bluebridge.hdfs.case_01_helloworld.service;
 
 import org.apache.hadoop.fs.FileStatus;
 

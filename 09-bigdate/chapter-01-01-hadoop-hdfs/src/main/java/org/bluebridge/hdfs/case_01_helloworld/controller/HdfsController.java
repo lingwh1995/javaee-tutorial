@@ -1,7 +1,7 @@
-package org.bluebridge.hdfs.lesson_01_helloworld.controller;
+package org.bluebridge.hdfs.case_01_helloworld.controller;
 
 import org.apache.hadoop.fs.FileStatus;
-import org.bluebridge.hdfs.lesson_01_helloworld.service.IHdfsService;
+import org.bluebridge.hdfs.case_01_helloworld.service.IHdfsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

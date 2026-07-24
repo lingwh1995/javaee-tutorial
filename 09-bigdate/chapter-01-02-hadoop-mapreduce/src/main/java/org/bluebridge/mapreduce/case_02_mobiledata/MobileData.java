@@ -1,10 +1,9 @@
-package org.bluebridge.mapreduce.lesson_02_mobiledata;
+package org.bluebridge.mapreduce.case_02_mobiledata;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.hadoop.io.Writable;
-import org.apache.hadoop.thirdparty.org.checkerframework.checker.units.qual.A;
 
 import java.io.DataInput;
 import java.io.DataOutput;

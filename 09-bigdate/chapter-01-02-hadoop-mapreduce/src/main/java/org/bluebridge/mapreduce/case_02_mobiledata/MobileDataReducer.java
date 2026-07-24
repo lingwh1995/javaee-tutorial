@@ -1,4 +1,4 @@
-package org.bluebridge.mapreduce.lesson_02_mobiledata;
+package org.bluebridge.mapreduce.case_02_mobiledata;
 
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
