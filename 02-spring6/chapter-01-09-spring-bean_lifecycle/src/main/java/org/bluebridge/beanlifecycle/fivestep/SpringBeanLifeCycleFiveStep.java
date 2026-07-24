@@ -4,12 +4,16 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Spring 中 Bean 的生命周期五步：
+ * Spring 中 Bean 的生命周期五步
+ *
  *  第一步：实例化 Bean
  *  第二步：Bean 属性赋值
  *  第三步：初始化 Bean
  *  第四步：使用 Bean
  *  第五步：销毁 Bean
+ *
+ * @author lingwh
+ * @date 2025/5/13 9:05
  */
 public class SpringBeanLifeCycleFiveStep {
 

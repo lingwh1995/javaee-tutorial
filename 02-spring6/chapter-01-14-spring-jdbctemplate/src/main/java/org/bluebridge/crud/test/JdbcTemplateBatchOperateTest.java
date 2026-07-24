@@ -16,7 +16,7 @@ import java.util.List;
  * JdbcTemplateBatchOperateTest
  *
  * @author lingwh
- * @date 2019/3/25 16:03
+ * @date 2019/3/25 17:12
  */
 public class JdbcTemplateBatchOperateTest {
 

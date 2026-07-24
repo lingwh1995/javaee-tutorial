@@ -3,6 +3,12 @@ package org.bluebridge.profile.demo.service;
 import org.bluebridge.profile.demo.dao.OrderDao;
 import org.bluebridge.profile.demo.domain.Order;
 
+/**
+ * OrderServiceImpl
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:43
+ */
 public class OrderServiceImpl implements IOrderService {
 
     private OrderDao orderDao;

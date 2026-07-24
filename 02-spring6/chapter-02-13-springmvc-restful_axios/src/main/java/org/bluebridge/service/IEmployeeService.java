@@ -1,11 +1,15 @@
 package org.bluebridge.service;
 
-
-
 import org.bluebridge.domain.Employee;
 
 import java.util.Collection;
 
+/**
+ * IEmployeeService
+ *
+ * @author lingwh
+ * @date 2019/3/16 09:41
+ */
 public interface IEmployeeService {
     void addEmployee(Employee employee);
 

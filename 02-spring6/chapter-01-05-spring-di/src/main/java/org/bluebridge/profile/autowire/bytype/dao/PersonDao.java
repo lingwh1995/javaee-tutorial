@@ -4,7 +4,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * 根据属性类型 autowire   需要为属性创建 setter 方法
+ * PersonDao
+ *
+ * @author lingwh
+ * @date 2023/12/14 10:13
  */
 public class PersonDao {
     private static final Logger logger = LogManager.getLogger(PersonDao.class);

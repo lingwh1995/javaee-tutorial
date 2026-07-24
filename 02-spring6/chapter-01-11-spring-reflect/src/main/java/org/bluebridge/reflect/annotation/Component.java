@@ -9,6 +9,7 @@ import java.lang.annotation.Target;
  * 元注解：用来修饰注解可以出现的位置
  *      ElementType.TYPE     可以出现在类上
  *      ElementType.FIELD    可以出现在属性上
+ *
  */
 @Target(value = {ElementType.TYPE, ElementType.FIELD})
 
@@ -16,6 +17,9 @@ import java.lang.annotation.Target;
  * 用来标注注解可以出现在什么时候
  * RetentionPolicy.RUNTIME     用来标注 @Component 最终保留在 class 文件中，可以被反射机制读取
  * RetentionPolicy.SOURCE      用来标注 @Component 只能出现在源文件中
+ *
+ * @author lingwh
+ * @date 2026/1/10 16:53
  */
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Component {

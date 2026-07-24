@@ -2,6 +2,12 @@ package org.bluebridge.resultmap.domain;
 
 import java.util.List;
 
+/**
+ * Department
+ *
+ * @author lingwh
+ * @date 2019/3/16 11:48
+ */
 public class Department {
     private String id;
     private String dname;

@@ -4,6 +4,9 @@ import org.bluebridge.profile.autowire.bytype.dao.PersonDao;
 
 /**
  * 根据属性类型 autowire   需要为属性创建 setter 方法
+ *
+ * @author lingwh
+ * @date 2023/12/14 10:35
  */
 public class PersonServiceImpl implements IPersonService {
 

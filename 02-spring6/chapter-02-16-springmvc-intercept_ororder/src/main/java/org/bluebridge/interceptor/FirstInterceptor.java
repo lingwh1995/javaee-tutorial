@@ -8,8 +8,10 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * 拦截器  作用于控制器(Controller)执行前后
- *      多个拦截器执行顺序和配置顺序有关，先配置的先执行
+ * 拦截器  作用于控制器(Controller)执行前后多个拦截器执行顺序和配置顺序有关，先配置的先执行
+ *
+ * @author lingwh
+ * @date 2019/7/22 14:05
  */
 public class FirstInterceptor implements HandlerInterceptor {
 

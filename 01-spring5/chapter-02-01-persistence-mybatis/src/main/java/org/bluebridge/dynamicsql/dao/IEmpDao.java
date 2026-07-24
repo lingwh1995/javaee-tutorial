@@ -8,8 +8,12 @@ import java.util.List;
 
 /**
  * Mybatis 动态 sql
+ *
+ * @author lingwh
+ * @date 2019/3/16 14:08
  */
 public interface IEmpDao {
+
     /**
      * 使用 <if test=""></if> 标签进行条件判断
      * 要求：携带了哪个字段，查询条件就带上这个条件的值
@@ -17,6 +21,7 @@ public interface IEmpDao {
      * @return
      */
     List<Emp> getEmpsConditionsByIfTag(Emp emp);
+
     /**
      * 使用 <if test=""></if> 标签进行条件判断，并使用 <where></where> 标签封装查询条件
      * 要求：携带了哪个字段，查询条件就带上这个条件的值
@@ -24,6 +29,7 @@ public interface IEmpDao {
      * @return
      */
     List<Emp> getEmpsConditionsByIfAndWhereTag(Emp emp);
+
     /**
      * 使用 <choose></choose> 标签进行条件判断
      * 要求：携带了哪个字段，查询条件就带上这个条件的值
@@ -31,6 +37,7 @@ public interface IEmpDao {
      * @return
      */
     List<Emp> getEmpsConditionsByChooseTag(Emp emp);
+
     /**
      * 使用 <set></set> 标签封装更新操作
      * 要求：携带了哪个字段，查询条件就带上这个条件的值

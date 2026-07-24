@@ -14,6 +14,9 @@ import org.springframework.beans.factory.*;
  *  第五步：执行 Bean 后处理器的 after 方法
  *  第六步：使用 Bean
  *  第七步：销毁 Bean
+ *
+ * @author lingwh
+ * @date 2025/5/13 11:38
  */
 public class SpringBeanLifeCycleTenStep implements BeanNameAware, BeanClassLoaderAware, BeanFactoryAware, InitializingBean, DisposableBean {
 

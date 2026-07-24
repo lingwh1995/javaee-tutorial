@@ -2,6 +2,9 @@ package org.bluebridge.profile.base.bysetter;
 
 /**
  * set 方式注入
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:35
  */
 public class UserInjectValueBySetter {
     private String type;

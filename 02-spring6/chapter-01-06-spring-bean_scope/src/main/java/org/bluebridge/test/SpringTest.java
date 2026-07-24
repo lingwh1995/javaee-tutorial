@@ -9,14 +9,21 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * SpringTest
+ *
+ * @author lingwh
+ * @date 2023/12/14 10:30
+ */
 public class SpringTest {
     private static final Logger logger = LogManager.getLogger(SpringTest.class);
 
     /**
      * 测试 Spring 容器默认情况下创建的 bean 是否为单例 bean
-     *      1.bean 是在 Spring 容器启动的时候创建的
-     *      2.每次调用的 getBean() 方法时都是去容器中获取创建好的 bean
-     *      3.默认情况下创建的 bean 是单例的
+     *
+     * 1. bean 是在 Spring 容器启动的时候创建的
+     * 2. 每次调用的 getBean() 方法时都是去容器中获取创建好的 bean
+     * 3. 默认情况下创建的 bean 是单例的
      */
     @Test
     public void testSpringBeanDefaultBeanScope(){
@@ -30,9 +37,10 @@ public class SpringTest {
 
     /**
      * bean 的 scope 为 singleton
-     *      1.bean 是在 Spring 容器启动的时候创建的
-     *      2.每次调用的 getBean() 方法时都是去容器中获取创建好的 bean
-     *      3.这个作用域下创建的 bean 是单例的
+     *
+     * 1. bean 是在 Spring 容器启动的时候创建的
+     * 2. 每次调用的 getBean() 方法时都是去容器中获取创建好的 bean
+     * 3. 这个作用域下创建的 bean 是单例的
      */
     @Test
     public void testSpringBeanSingletonBeanScope(){
@@ -46,9 +54,10 @@ public class SpringTest {
 
     /**
      * bean 的 scope 为 prototype
-     *      1.bean 不是在 Spring 容器启动的时候创建的
-     *      2.每次调用的 getBean() 方法时才会创建一个该 bean 对象
-     *      3.这个作用域下创建的 bean 是多例的(原型模式)
+     *
+     * 1. bean 不是在 Spring 容器启动的时候创建的
+     * 2. 每次调用的 getBean() 方法时才会创建一个该 bean 对象
+     * 3. 这个作用域下创建的 bean 是多例的(原型模式)
      */
     @Test
     public void testSpringBeanPrototypeBeanScope(){

@@ -2,6 +2,12 @@ package org.bluebridge.resultmap.dao;
 
 import org.bluebridge.resultmap.domain.Department;
 
+/**
+ * 返回结果为 IDept
+ *
+ * @author lingwh
+ * @date 2019/3/16 11:48
+ */
 public interface IDept {
     /**
      * 根据 id 获取 Department

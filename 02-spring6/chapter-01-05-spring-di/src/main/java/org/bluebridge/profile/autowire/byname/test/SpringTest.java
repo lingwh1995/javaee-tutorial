@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Spring测试类
  *
  * @author lingwh
- * @date 2026/1/10 10:28
+ * @date 2023/12/14 10:46
  */
 public class SpringTest {
 

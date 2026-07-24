@@ -8,6 +8,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
+/**
+ * EmployeeServiceImpl
+ *
+ * @author lingwh
+ * @date 2019/3/16 09:43
+ */
 @Service
 public class EmployeeServiceImpl implements IEmployeeService {
 

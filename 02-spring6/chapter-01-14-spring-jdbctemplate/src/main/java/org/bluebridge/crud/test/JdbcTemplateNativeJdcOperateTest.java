@@ -10,6 +10,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 
+/**
+ * JdbcTemplateHelloWorldTest
+ *
+ * @author lingwh
+ * @date 2019/3/25 15:42
+ */
 public class JdbcTemplateNativeJdcOperateTest {
 
     private static final Logger logger = LogManager.getLogger(JdbcTemplateNativeJdcOperateTest.class);

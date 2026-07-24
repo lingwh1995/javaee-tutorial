@@ -9,7 +9,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
- * 测试从 Spring 容器中获取 JdbcTemplate 对象
+ * JdbcTemplateHelloWorldTest
+ *
+ * @author lingwh
+ * @date 2019/3/25 11:37
  */
 public class JdbcTemplateHelloWorldTest {
 

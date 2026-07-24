@@ -5,6 +5,12 @@ import org.bluebridge.noxml.demo.domain.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * OrderServiceImpl
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:43
+ */
 @Service
 public class OrderServiceImpl implements IOrderService {
 

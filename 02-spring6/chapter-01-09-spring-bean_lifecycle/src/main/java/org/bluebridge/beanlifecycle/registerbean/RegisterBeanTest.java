@@ -8,7 +8,7 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
  * 把自己通过 new 创建的 Bean 交给 Spring 容器管理
  *
  * @author lingwh
- * @date 2026/1/10 10:25
+ * @date 2025/5/13 9:37
  */
 public class RegisterBeanTest {
 

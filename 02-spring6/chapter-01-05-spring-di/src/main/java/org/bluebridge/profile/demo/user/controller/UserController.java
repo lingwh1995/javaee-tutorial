@@ -4,6 +4,9 @@ import org.bluebridge.profile.demo.user.service.IUserService;
 
 /**
  * 使用构造方式为属性注入引用类型的值
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:35
  */
 public class UserController {
 

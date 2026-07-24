@@ -1,6 +1,5 @@
 package org.bluebridge.resultmap.dao;
 
-
 import org.bluebridge.resultmap.domain.Employee;
 
 import java.util.List;

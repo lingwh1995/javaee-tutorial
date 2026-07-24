@@ -12,6 +12,9 @@ import org.apache.logging.log4j.Logger;
  *  第五步：执行 Bean 后处理器的 after 方法
  *  第六步：使用 Bean
  *  第七步：销毁 Bean
+ *
+ * @author lingwh
+ * @date 2025/5/13 10:38
  */
 public class SpringBeanLifeCycleSevenStep {
 

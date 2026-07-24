@@ -1,5 +1,11 @@
 package org.bluebridge.circulardependence.injectbyset.prototype;
 
+/**
+ * Husband
+ *
+ * @author lingwh
+ * @date 2026/1/10 09:38
+ */
 public class Husband {
 
     private String name;

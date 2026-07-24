@@ -2,6 +2,12 @@ package org.bluebridge.interfacemapper.dao;
 
 import org.bluebridge.interfacemapper.domain.Employee;
 
+/**
+ * IEmployeeDao
+ *
+ * @author lingwh
+ * @date 2019/3/16 17:36
+ */
 public interface IEmployeeDao {
     /**
      * 根据 id 获取对象

@@ -1,6 +1,5 @@
 package org.bluebridge.demo.service;
 
-
 import org.bluebridge.demo.dao.EmployeeDao;
 import org.bluebridge.demo.domain.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +7,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
+/**
+ * EmployeeServiceImpl
+ *
+ * @author lingwh
+ * @date 2025/3/16 09:52
+ */
 @Service
 public class EmployeeServiceImpl implements IEmployeeService {
 

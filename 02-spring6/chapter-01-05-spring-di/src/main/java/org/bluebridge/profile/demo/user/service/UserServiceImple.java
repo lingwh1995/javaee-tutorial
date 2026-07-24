@@ -4,6 +4,9 @@ import org.bluebridge.profile.demo.user.dao.UserDao;
 
 /**
  * 使用 setter 方式为属性注入引用类型的值
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:35
  */
 public class UserServiceImple implements IUserService{
 

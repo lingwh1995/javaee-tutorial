@@ -7,6 +7,12 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * EmployeeDao
+ *
+ * @author lingwh
+ * @date 2025/3/16 09:35
+ */
 @Repository
 public class EmployeeDao {
 

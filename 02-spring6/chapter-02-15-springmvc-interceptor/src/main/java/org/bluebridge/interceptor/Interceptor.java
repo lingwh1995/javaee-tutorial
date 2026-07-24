@@ -9,6 +9,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  * 拦截器  作用于控制器(Controller)执行前后
+ *
+ * @author lingwh
+ * @date 2019/7/22 14:05
  */
 public class Interceptor implements HandlerInterceptor {
 

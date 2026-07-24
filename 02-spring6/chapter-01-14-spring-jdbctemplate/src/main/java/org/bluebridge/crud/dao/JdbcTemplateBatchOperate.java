@@ -17,6 +17,9 @@ import java.util.List;
 
 /**
  * 使用 JdbcTemplate 提供的批处理操作数据库
+ *
+ * @author lingwh
+ * @date 2019/3/25 16:38
  */
 @Component
 public class JdbcTemplateBatchOperate {

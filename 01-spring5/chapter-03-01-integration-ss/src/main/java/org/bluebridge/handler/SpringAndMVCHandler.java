@@ -6,6 +6,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * SpringAndMVCHandler
+ *
+ * @author lingwh
+ * @date 2025/12/18 10:30
+ */
 @Controller
 public class SpringAndMVCHandler {
 

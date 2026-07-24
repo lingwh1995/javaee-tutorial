@@ -8,6 +8,12 @@ import java.sql.SQLException;
 import java.sql.SQLFeatureNotSupportedException;
 import java.util.logging.Logger;
 
+/**
+ * MyDataSource
+ *
+ * @author lingwh
+ * @date 2019/3/25 16:26
+ */
 public class MyDataSource implements DataSource {
 
     private String driver;

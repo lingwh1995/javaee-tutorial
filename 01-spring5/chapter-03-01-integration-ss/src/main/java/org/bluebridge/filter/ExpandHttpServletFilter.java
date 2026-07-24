@@ -7,6 +7,9 @@ import java.util.logging.Logger;
 
 /**
  * 用来增强 Servlet 的 Filter
+ *
+ * @author lingwh
+ * @date 2025/12/18 10:30
  */
 public class ExpandHttpServletFilter implements Filter {
     private static  Logger logger = Logger.getLogger("ExpandHttpServletFilter.class");

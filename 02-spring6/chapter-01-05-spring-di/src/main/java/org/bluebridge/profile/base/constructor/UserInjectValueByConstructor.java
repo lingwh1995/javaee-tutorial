@@ -2,6 +2,9 @@ package org.bluebridge.profile.base.constructor;
 
 /**
  * 构造方式注入
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:35
  */
 public class UserInjectValueByConstructor {
     private String type;

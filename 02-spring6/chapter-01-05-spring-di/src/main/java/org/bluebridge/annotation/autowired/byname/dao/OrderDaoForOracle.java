@@ -4,6 +4,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
+/**
+ * OrderDaoForOracle
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:43
+ */
 @Repository("orderDaoForOracle")
 public class OrderDaoForOracle implements IOrderDao {
 

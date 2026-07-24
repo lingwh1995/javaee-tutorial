@@ -4,7 +4,7 @@ package org.bluebridge.demo.domain;
  * Employee
  *
  * @author lingwh
- * @date 2019/3/16 09:27
+ * @date 2025/3/16 09:27
  */
 public class Employee {
     private Integer id;

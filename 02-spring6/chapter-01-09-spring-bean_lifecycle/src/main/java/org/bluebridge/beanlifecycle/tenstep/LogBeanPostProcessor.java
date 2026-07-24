@@ -7,7 +7,11 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 
 /**
  * BeanPostProcessor：可以在 Bean 实例化之前和之后添加一些附加操作
- *      最佳应用场景之一是 日志的处理
+ *
+ * 最佳应用场景之一是 日志的处理
+ *
+ * @author lingwh
+ * @date 2025/5/13 11:06
  */
 public class LogBeanPostProcessor implements BeanPostProcessor {
 

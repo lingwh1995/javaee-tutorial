@@ -9,6 +9,9 @@ import org.apache.ibatis.annotations.Param;
  *
  * 1. 可以返回以下类型数据：void/Integer/Long/Boolean
  * 2. 不需要在 Mapper 中写返回值类型(resultType)
+ *
+ * @author lingwh
+ * @date 2019/3/16 14:08
  */
 public interface IEmpDao {
     /**

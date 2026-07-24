@@ -19,6 +19,9 @@ import java.util.List;
 
 /**
  * JdbcTemplate 提供的原生 Jdbc 操作方法，需要使用回调函数实现
+ *
+ * @author lingwh
+ * @date 2019/3/25 17:05
  */
 @Component
 public class JdbcTemplateNativeJdcOperate {

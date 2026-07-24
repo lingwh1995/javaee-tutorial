@@ -7,6 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * ResponseEntity 响应控制器
+ *
+ * @author lingwh
+ * @date 2019/11/19 17:02
+ */
 @RequestMapping(value = "/httpmessageconverter")
 @Controller
 public class ResponseEntityController {

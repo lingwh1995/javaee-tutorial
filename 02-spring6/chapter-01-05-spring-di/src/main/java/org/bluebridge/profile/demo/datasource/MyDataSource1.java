@@ -9,6 +9,9 @@ import java.util.logging.Logger;
 
 /**
  * Set 方式注入经典应用，getConnection() 获取连接对象时需要用到的四个参数可以通过set 方式注入来实现外部注入，从而分离参数与代码
+ *
+ * @author lingwh
+ * @date 2026/1/10 14:35
  */
 public class MyDataSource1 implements DataSource {
 

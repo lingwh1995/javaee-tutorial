@@ -14,9 +14,9 @@ import java.util.Collection;
  * EmployeeController
  *
  * @author lingwh
- * @date 2019/3/16 09:27
+ * @date 2019/3/16 09:57
  */
-@RequestMapping(value = "/restfulCase")
+@RequestMapping(value = "/restful-case")
 @Controller
 public class EmployeeController {
 
