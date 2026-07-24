@@ -25,8 +25,8 @@
     <modules>
         <module>chapter-01-01-hadoop-hdfs</module>
         <module>chapter-01-02-hadoop-mapreduce</module>
-        <module>chapter-01-04-mq-kafka</module>
-        <module>chapter-01-05-mq-mqtt</module>
+        <module>chapter-02-01-mq-kafka</module>
+        <module>chapter-02-02-mq-mqtt</module>
     </modules>
 
     <dependencyManagement>
