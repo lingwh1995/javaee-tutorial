@@ -30,6 +30,7 @@
         <module>chapter-02-02-zookeeper-curator</module>
         <module>chapter-03-01-mq-kafka</module>
         <module>chapter-03-02-mq-mqtt</module>
+        <module>chapter-03-01-hive-udf</module>
     </modules>
 
     <dependencyManagement>
