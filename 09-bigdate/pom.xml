@@ -21,6 +21,7 @@
         <junit.version>4.12</junit.version>
         <hadoop.version>3.5.0</hadoop.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <hive-exec.version>4.1.0</hive-exec.version>
     </properties>
 
     <modules>
@@ -28,9 +29,9 @@
         <module>chapter-01-02-hadoop-mapreduce</module>
         <module>chapter-02-01-zookeeper-official</module>
         <module>chapter-02-02-zookeeper-curator</module>
-        <module>chapter-03-01-mq-kafka</module>
-        <module>chapter-03-02-mq-mqtt</module>
-        <module>chapter-03-01-hive-udf</module>
+        <module>chapter-03-01-hive-myudf</module>
+        <module>chapter-04-01-mq-kafka</module>
+        <module>chapter-04-02-mq-mqtt</module>
     </modules>
 
     <dependencyManagement>
@@ -62,6 +63,12 @@
                 <groupId>commons-beanutils</groupId>
                 <artifactId>commons-beanutils</artifactId>
                 <version>${commons-beanutils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hive</groupId>
+                <artifactId>hive-exec</artifactId>
+                <version>${hive-exec.version}</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

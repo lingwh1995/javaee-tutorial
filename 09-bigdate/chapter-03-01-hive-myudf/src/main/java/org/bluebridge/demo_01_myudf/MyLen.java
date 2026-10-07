@@ -1,4 +1,4 @@
-package org.bluebridge.demo_01_udf;
+package org.bluebridge.demo_01_myudf;
 
 import org.apache.hadoop.hive.ql.exec.UDFArgumentException;
 import org.apache.hadoop.hive.ql.exec.UDFArgumentLengthException;
@@ -15,7 +15,7 @@ import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectIn
  * @author lingwh
  * @date 2026/9/30 17:03
  */
-public class MyLenFun extends GenericUDF {
+public class MyLen extends GenericUDF {
 
     /*
      * 初始化方法（做一些校验工作）
