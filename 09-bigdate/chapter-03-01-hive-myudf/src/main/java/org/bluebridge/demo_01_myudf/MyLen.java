@@ -18,7 +18,7 @@ import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectIn
 public class MyLen extends GenericUDF {
 
     /*
-     * 初始化方法（做一些校验工作）
+     * 初始化方法（常用来做一些参数校验工作，如参数长度、参数个数、参数数据类型）
      * */
     @Override
     public ObjectInspector initialize(ObjectInspector[] arguments) throws UDFArgumentException {
